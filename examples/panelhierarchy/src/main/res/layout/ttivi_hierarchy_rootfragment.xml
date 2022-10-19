@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.panelhierarchy.root.HierarchyRootViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/frontend_hierarchy_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="?attr/tt_spacing_16"
+            android:gravity="start"
+            android:text="@string/ttivi_hierarchy_header"
+            android:textAlignment="textStart"
+            android:textAppearance="?attr/tt_headline_text_style_m"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?attr/tt_spacing_8" />
+
+        <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                style="?attr/tt_button_style"
+                android:layout_width="match_parent"
+                android:onClick="@{() -> viewModel.onGoToChildClick(viewModel.children[0])}"
+                android:text="@{viewModel.children[0].buttonStringResolver}"
+                auto:ttActionType="primary" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?attr/tt_spacing_8" />
+
+        <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                style="?attr/tt_button_style"
+                android:layout_width="match_parent"
+                android:onClick="@{() -> viewModel.onGoToChildClick(viewModel.children[1])}"
+                android:text="@{viewModel.children[1].buttonStringResolver}"
+                auto:ttActionType="primary" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?attr/tt_spacing_8" />
+
+        <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                style="?attr/tt_button_style"
+                android:layout_width="match_parent"
+                android:onClick="@{() -> viewModel.onGoToChildClick(viewModel.children[2])}"
+                android:text="@{viewModel.children[2].buttonStringResolver}"
+                auto:ttActionType="primary" />
+
+    </LinearLayout>
+
+</layout>

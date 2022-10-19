@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.plugin.frontend.login.AccountLoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/frontend_account_login_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/ttivi_userprofile_login_icon_height"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ttivi_account_login_icon" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/tt_spacing_8" />
+
+            <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/ttivi_account_login_headline"
+                android:textAlignment="center"
+                android:textAppearance="?attr/tt_headline_text_style_m"
+                android:textColor="?attr/tt_surface_content_color_emphasis_high"
+                tools:text="@string/ttivi_account_login_headline" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/tt_spacing_4"
+                />
+
+            <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ttivi_account_login_message"
+                android:textAlignment="center"
+                android:textAppearance="?attr/tt_body_text_style_s"
+                android:textColor="?attr/tt_surface_content_color_emphasis_high"
+                tools:text="@string/ttivi_account_login_message" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/tt_spacing_8" />
+
+            <com.tomtom.tools.android.api.uicontrols.textinputfield.TtTextInputField
+                android:id="@+id/frontend_account_login_screen_login_username_edit"
+                android:layout_width="?attr/ttivi_userprofile_login_textbox_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="textPersonName"
+                android:importantForAutofill="yes"
+                android:inputType="textPersonName|textAutoComplete"
+                android:singleLine="true"
+                android:textAppearance="?attr/tt_label_text_style_l"
+                android:textColor="?attr/tt_surface_content_color_emphasis_high"
+                auto:ttHintText="@string/ttivi_account_login_username"
+                auto:ttInputText="@={viewModel.username}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/tt_spacing_8" />
+
+            <!-- TODO(IVI-7440): TtTextInputField doesnt show asterisks chars for passwords type inputs -->
+            <com.tomtom.tools.android.api.uicontrols.textinputfield.TtTextInputField
+                android:id="@+id/frontend_account_login_screen_login_login_textbox_width"
+                android:layout_width="?attr/ttivi_userprofile_login_textbox_width"
+                android:layout_height="?attr/tt_button_height"
+                android:layout_gravity="center"
+                android:autofillHints="textPassword"
+                android:importantForAutofill="yes"
+                android:inputType="textNoSuggestions|text|textPassword|textAutoComplete"
+                android:singleLine="true"
+                android:textAppearance="?attr/tt_label_text_style_l"
+                android:textColor="?attr/tt_surface_content_color_emphasis_high"
+                auto:ttHintText="@string/ttivi_account_login_password"
+                auto:ttInputText="@={viewModel.password}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/tt_spacing_16" />
+
+            <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                style="?attr/tt_button_style"
+                android:layout_width="?attr/ttivi_userprofile_button_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:enabled="@{viewModel.isLoginEnabled}"
+                android:onClick="@{() -> viewModel.onLoginClick()}"
+                android:text="@string/ttivi_account_login_loginbutton"
+                auto:ttActionType="primary" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

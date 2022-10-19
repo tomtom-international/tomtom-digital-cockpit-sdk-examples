@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:fillColor="?attr/ttivi_mainmenu_content_selected_color_highlight"
+        android:fillType="evenOdd"
+        android:pathData="M32,3C15.9856,3 3,15.9856 3,32C3,48.0144 15.9856,61 32,61C34.6744,61 36.8333,58.8411 36.8333,56.1667C36.8333,54.91 36.35,53.7822 35.5767,52.9122C34.8356,52.0744 34.3522,50.9467 34.3522,49.7222C34.3522,47.0478 36.5111,44.8889 39.1856,44.8889H44.8889C53.7822,44.8889 61,37.6711 61,28.7778C61,14.5356 48.0144,3 32,3ZM14.2778,32C11.6033,32 9.4444,29.8411 9.4444,27.1667C9.4444,24.4922 11.6033,22.3333 14.2778,22.3333C16.9522,22.3333 19.1111,24.4922 19.1111,27.1667C19.1111,29.8411 16.9522,32 14.2778,32ZM23.9444,19.1111C21.27,19.1111 19.1111,16.9522 19.1111,14.2778C19.1111,11.6033 21.27,9.4444 23.9444,9.4444C26.6189,9.4444 28.7778,11.6033 28.7778,14.2778C28.7778,16.9522 26.6189,19.1111 23.9444,19.1111ZM40.0556,19.1111C37.3811,19.1111 35.2222,16.9522 35.2222,14.2778C35.2222,11.6033 37.3811,9.4444 40.0556,9.4444C42.73,9.4444 44.8889,11.6033 44.8889,14.2778C44.8889,16.9522 42.73,19.1111 40.0556,19.1111ZM49.7222,32C47.0478,32 44.8889,29.8411 44.8889,27.1667C44.8889,24.4922 47.0478,22.3333 49.7222,22.3333C52.3967,22.3333 54.5556,24.4922 54.5556,27.1667C54.5556,29.8411 52.3967,32 49.7222,32Z"
+        android:strokeLineCap="round"
+        tools:ignore="VectorPath" />
+    <path
+        android:fillColor="?attr/ttivi_mainmenu_content_selected_color_highlight"
+        android:fillType="evenOdd"
+        android:pathData="M32,3C15.9856,3 3,15.9856 3,32C3,48.0144 15.9856,61 32,61C34.6744,61 36.8333,58.8411 36.8333,56.1667C36.8333,54.91 36.35,53.7822 35.5767,52.9122C34.8356,52.0744 34.3522,50.9467 34.3522,49.7222C34.3522,47.0478 36.5111,44.8889 39.1856,44.8889H44.8889C53.7822,44.8889 61,37.6711 61,28.7778C61,14.5356 48.0144,3 32,3ZM14.2778,32C11.6033,32 9.4444,29.8411 9.4444,27.1667C9.4444,24.4922 11.6033,22.3333 14.2778,22.3333C16.9522,22.3333 19.1111,24.4922 19.1111,27.1667C19.1111,29.8411 16.9522,32 14.2778,32ZM23.9444,19.1111C21.27,19.1111 19.1111,16.9522 19.1111,14.2778C19.1111,11.6033 21.27,9.4444 23.9444,9.4444C26.6189,9.4444 28.7778,11.6033 28.7778,14.2778C28.7778,16.9522 26.6189,19.1111 23.9444,19.1111ZM40.0556,19.1111C37.3811,19.1111 35.2222,16.9522 35.2222,14.2778C35.2222,11.6033 37.3811,9.4444 40.0556,9.4444C42.73,9.4444 44.8889,11.6033 44.8889,14.2778C44.8889,16.9522 42.73,19.1111 40.0556,19.1111ZM49.7222,32C47.0478,32 44.8889,29.8411 44.8889,27.1667C44.8889,24.4922 47.0478,22.3333 49.7222,22.3333C52.3967,22.3333 54.5556,24.4922 54.5556,27.1667C54.5556,29.8411 52.3967,32 49.7222,32Z"
+        android:strokeWidth="?attr/ttivi_mainmenu_icon_stroke_width_selected"
+        android:strokeColor="?attr/ttivi_mainmenu_content_selected_color_emphasis_high"
+        android:strokeLineCap="round"
+        tools:ignore="VectorPath" />
+</vector>

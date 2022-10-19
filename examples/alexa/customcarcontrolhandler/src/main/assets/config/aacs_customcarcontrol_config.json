@@ -1,0 +1,269 @@
+{
+  "aacs.localVoiceControl": {
+    "CarControl": {
+      "CustomAssetsFilePath": "/data/user/10/com.example.ivi.example.alexa.app/files/custom_assets.json"
+    }
+  },
+  "aacs.carControl": {
+    "assets": {
+      "customAssetsPath": "/data/user/10/com.example.ivi.example.alexa.app/files/custom_assets.json"
+    },
+    "endpoints": [
+      {
+        "endpointId": "default.custom_device",
+        "endpointResources": {
+          "friendlyNames": [
+            {
+              "@type": "asset",
+              "value": {
+                "assetId": "My.Alexa.Automotive.DeviceName.CustomDevice"
+              }
+            }
+          ]
+        },
+        "capabilities": [
+          {
+            "type": "AlexaInterface",
+            "interface": "Alexa.PowerController",
+            "version": "3",
+            "properties": {
+              "proactivelyReported": false,
+              "retrievable": false,
+              "supported": [
+                {
+                  "name": "powerState"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "endpointId": "default.light",
+        "endpointResources": {
+          "friendlyNames": [
+            {
+              "@type": "asset",
+              "value": {
+                "assetId": "Alexa.Automotive.DeviceName.Light"
+              }
+            },
+            {
+              "@type": "asset",
+              "value": {
+                "assetId": "Alexa.Automotive.DeviceName.DomeLight"
+              }
+            },
+            {
+              "@type": "asset",
+              "value": {
+                "assetId": "Alexa.Automotive.DeviceName.CabinLight"
+              }
+            }
+          ]
+        },
+        "capabilities": [
+          {
+            "type": "AlexaInterface",
+            "interface": "Alexa.PowerController",
+            "version": "3",
+            "properties": {
+              "proactivelyReported": false,
+              "retrievable": false,
+              "supported": [
+                {
+                  "name": "powerState"
+                }
+              ]
+            }
+          },
+          {
+            "type": "AlexaInterface",
+            "interface": "Alexa.RangeController",
+            "version": "3",
+            "instance": "brightness",
+            "capabilityResources": {
+              "friendlyNames": [
+                {
+                  "@type": "asset",
+                  "value": {
+                    "assetId": "Alexa.Automotive.Setting.Brightness"
+                  }
+                }
+              ]
+            },
+            "properties": {
+              "supported": [
+                {
+                  "name": "rangeValue"
+                }
+              ],
+              "proactivelyReported": false,
+              "retrievable": false
+            },
+            "configuration": {
+              "supportedRange": {
+                "minimumValue": 1,
+                "maximumValue": 10,
+                "precision": 1
+              },
+              "presets": [
+                {
+                  "rangeValue": 1,
+                  "presetResources": {
+                    "friendlyNames": [
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.Low"
+                        }
+                      },
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.Minimum"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "rangeValue": 5,
+                  "presetResources": {
+                    "friendlyNames": [
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.Medium"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "rangeValue": 10,
+                  "presetResources": {
+                    "friendlyNames": [
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.High"
+                        }
+                      },
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.Maximum"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "AlexaInterface",
+            "interface": "Alexa.ModeController",
+            "version": "3",
+            "instance": "color",
+            "capabilityResources": {
+              "friendlyNames": [
+                {
+                  "@type": "asset",
+                  "value": {
+                    "assetId": "Alexa.Automotive.Setting.Color"
+                  }
+                },
+                {
+                  "@type": "asset",
+                  "value": {
+                    "assetId": "Alexa.Automotive.Setting.Mode"
+                  }
+                }
+              ]
+            },
+            "properties": {
+              "supported": [
+                {
+                  "name": "mode"
+                }
+              ],
+              "proactivelyReported": false,
+              "retrievable": false
+            },
+            "configuration": {
+              "ordered": true,
+              "supportedModes": [
+                {
+                  "value": "RED",
+                  "modeResources": {
+                    "friendlyNames": [
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.Red"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "value": "BLUE",
+                  "modeResources": {
+                    "friendlyNames": [
+                      {
+                        "@type": "asset",
+                        "value": {
+                          "assetId": "Alexa.Automotive.Value.Blue"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "AlexaInterface",
+            "interface": "Alexa.ToggleController",
+            "version": "3",
+            "instance": "sensor",
+            "capabilityResources": {
+              "friendlyNames": [
+                {
+                  "@type": "asset",
+                  "value": {
+                    "assetId": "My.Alexa.Automotive.DeviceName.Sensor"
+                  }
+                }
+              ]
+            },
+            "properties": {
+              "proactivelyReported": false,
+              "retrievable": false,
+              "supported": [
+                {
+                  "name": "toggleState"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "zones": [
+      {
+        "zoneId": "zone.default",
+        "members": [
+          {
+            "endpointId": "default.light"
+          },
+          {
+            "endpointId": "default.custom_device"
+          }
+        ]
+      }
+    ]
+  }
+}

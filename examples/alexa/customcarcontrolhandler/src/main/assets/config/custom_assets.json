@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "assetId": "My.Alexa.Automotive.DeviceName.CustomDevice",
+      "values": [
+        {
+          "locales": [
+            "en-US",
+            "en-CA",
+            "en-IN",
+            "es-MX",
+            "es-US",
+            "fr-CA",
+            "de-DE",
+            "en-GB",
+            "hi-IN"
+          ],
+          "defaultValue": "custom device",
+          "synonyms": [
+            "my custom device",
+            "my special device",
+            "special device"
+          ]
+        }
+      ]
+    },
+    {
+      "assetId": "My.Alexa.Automotive.DeviceName.Sensor",
+      "values": [
+        {
+          "locales": [
+            "en-US",
+            "en-CA",
+            "en-IN",
+            "es-MX",
+            "es-US",
+            "fr-CA",
+            "de-DE",
+            "en-GB",
+            "hi-IN"
+          ],
+          "defaultValue": "sensor"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.systemui.custompaneltype.frontend.ExampleCustomViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="?attr/tt_spacing_16"
+            android:gravity="start"
+            android:text="@string/ttivi_systemui_custompaneltype_frontend_panel_header"
+            android:textAlignment="textStart"
+            android:textAppearance="?attr/tt_headline_text_style_l"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="?attr/tt_spacing_16"
+            android:gravity="start"
+            android:text="@string/ttivi_systemui_custompaneltype_frontend_opened"
+            android:textAlignment="textStart"
+            android:textAppearance="?attr/tt_headline_text_style_m"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high"
+            auto:visibleIf="@{viewModel.isTaskPanelOpened}" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="?attr/tt_spacing_16"
+            android:gravity="start"
+            android:text="@string/ttivi_systemui_custompaneltype_frontend_closed"
+            android:textAlignment="textStart"
+            android:textAppearance="?attr/tt_headline_text_style_m"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high"
+            auto:visibleIfNot="@{viewModel.isTaskPanelOpened}" />
+
+    </LinearLayout>
+</layout>

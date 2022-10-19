@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.notifications.NotificationCreationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_weight="0.35"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="?attr/tt_spacing_8"
+            tools:ignore="UselessParent" >
+
+            <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                style="?attr/tt_button_style"
+                android:layout_width="match_parent"
+                android:onClick="@{() -> viewModel.onStockNotificationButtonClicked()}"
+                android:text="@string/stock_notification_button"
+                auto:ttActionType="primary" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/tt_spacing_8" />
+
+            <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                style="?attr/tt_button_style"
+                android:layout_width="match_parent"
+                android:onClick="@{() -> viewModel.onCustomNotificationButtonClicked()}"
+                android:text="@string/notification_button"
+                auto:ttActionType="primary" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

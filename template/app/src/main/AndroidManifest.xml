@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2021 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ivi.template.app">
+
+    <application
+        android:name=".TemplateApplication"
+        android:icon="@drawable/ttivi_product_icon_main"
+        android:label="@string/ttivi_template_app_name"
+        android:theme="@style/TtiviApplicationTheme"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        tools:replace="android:label"
+        >
+
+        <activity
+            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <meta-data
+                android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_APPLICATION_NAME_RES_ID"
+                android:resource="@string/ttivi_template_app_name" />
+            <meta-data
+                android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_MAIN_ACTIVITY_CLASS_NAME"
+                android:value="com.example.ivi.template.app.TemplateActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
+        </activity>
+
+        <activity
+            android:name=".TemplateActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+
+            <intent-filter>
+                <action android:name="com.example.ivi.template.app.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <!-- Both this intent filter and the next one need to be specified for android to
+                     accept an application as the default dialer.
+                     https://developer.android.com/reference/android/telecom/InCallService -->
+                <action android:name="android.intent.action.DIAL" />
+                <data android:scheme="tel" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <!-- This is needed to be able to become the default DIALER application. -->
+                <action android:name="android.intent.action.DIAL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
+        </activity>
+
+    </application>
+</manifest>

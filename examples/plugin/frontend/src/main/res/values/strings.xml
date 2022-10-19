@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<resources>
+    <string name="ttivi_account_menuitem_name">Account</string>
+    <string name="ttivi_account_login_screen">Account Login Screen</string>
+    <string name="ttivi_account_login_headline">Log in</string>
+    <string name="ttivi_account_login_message">Hello, please log in to start your session.</string>
+    <string name="ttivi_account_login_username">Username</string>
+    <string name="ttivi_account_login_password">Password</string>
+    <string name="ttivi_account_login_loginbutton">Log in</string>
+    <string name="ttivi_account_info_avatar_description">Avatar Photo</string>
+    <string name="ttivi_account_info_welcomemessage">Welcome, %1$s</string>
+    <string name="ttivi_account_info_logoutbutton">Logout</string>
+</resources>

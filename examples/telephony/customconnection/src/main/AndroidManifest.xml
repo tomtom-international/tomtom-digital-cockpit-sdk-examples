@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.example.ivi.example.telephony.customconnection">
+
+<!-- This is needed to place and receive calls using Android's TelecomManager. -->
+<uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+<!-- This is needed to read available phone accounts using Android's TelecomManager. -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+<application>
+
+    <!-- Declaration of the custom connection service which can be bound with the TelecomManager. -->
+    <service
+        android:name=".CustomConnectionService"
+        android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
+        <intent-filter>
+            <action android:name="android.telecom.ConnectionService" />
+        </intent-filter>
+    </service>
+</application>
+</manifest>

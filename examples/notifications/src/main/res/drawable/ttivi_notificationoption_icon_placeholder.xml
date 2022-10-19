@@ -1,0 +1,23 @@
+<!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+  <path
+      android:pathData="M33.6,12L14.4,12C13.08,12 12,13.08 12,14.4L12,36L16.8,31.2L33.6,31.2C34.92,31.2 36,30.12 36,28.8L36,14.4C36,13.08 34.92,12 33.6,12ZM32.4,28.8L16.8,28.8L14.4,31.2L14.4,15.6C14.4,14.94 14.94,14.4 15.6,14.4L32.4,14.4C33.06,14.4 33.6,14.94 33.6,15.6L33.6,27.6C33.6,28.26 33.06,28.8 32.4,28.8Z"
+      android:strokeWidth="1"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:strokeColor="@android:color/transparent"/>
+</vector>

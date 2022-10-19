@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+  <path
+      android:pathData="M33.6,26.822C31.8436,30.2213 28.2098,32.5622 24.0004,32.5622C19.7902,32.5622 16.1564,30.2213 14.4,26.822M24.0006,32.5626L24.0006,39.6L24.0006,32.5626ZM19.3319,39.5997L28.6686,39.5997L19.3319,39.5997Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="4"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="@android:color/white"
+      android:fillType="evenOdd"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M23.9201,27C20.6428,26.962 18,24.5883 18,21.6671L18,12.3333C18,9.3875 20.6859,7 24,7C27.313,7 30,9.3875 30,12.3333L30,21.6671C30,24.5883 27.3561,26.962 24.0799,27L24.0799,27"
+      android:strokeWidth="1"
+      android:fillColor="@android:color/white"
+      android:fillType="evenOdd"
+      android:strokeColor="@android:color/transparent"/>
+</vector>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+  <path
+      android:pathData="M40.8108,30.5402C37.5085,30.3643 34.2896,29.7828 34.2896,29.7828C34.2896,29.7828 31.7106,29.3769 31.7042,27.4504C31.7004,26.18 31.0471,23.7979 29.9532,23.5978C28.8593,23.3978 18.0443,23.5977 18.0443,23.5977C18.0443,23.5977 16.8632,23.6768 16.6433,24.2982C16.4233,24.9195 15.5932,28.151 15.5932,28.151C15.5932,28.151 15.0374,29.2736 13.4913,29.5517C11.9306,29.8326 7.2122,30.7884 7.2122,30.7884C7.2122,30.7884 5.3877,30.5792 5.0563,29.1151C4.7253,27.6514 4.7196,24.1067 4.7196,24.1067C4.7196,24.1067 4.9473,22.927 6.9178,21.7117C8.8877,20.497 13.4996,17.6617 23.7034,17.659C33.1398,17.6574 41.5637,21.9308 41.5637,21.9308C41.5637,21.9308 42.8201,22.886 43.1322,24.5431C43.444,26.2005 43.9736,30.7091 40.8108,30.5402L40.8108,30.5402Z"
+      android:strokeWidth="1"
+      android:fillColor="@android:color/white"
+      android:fillType="evenOdd"
+      android:strokeColor="@android:color/transparent"/>
+</vector>

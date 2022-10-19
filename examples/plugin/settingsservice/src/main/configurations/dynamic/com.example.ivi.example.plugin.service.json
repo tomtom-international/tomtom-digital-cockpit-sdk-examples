@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "packageName": "com.example.ivi.example.plugin.service",
+  "keys": [
+    {
+      "name": "onlineLoginValidPeriodInDaysConfigKey",
+      "description": "Number of days that an online login stays valid.",
+      "type": "Long",
+      "values": [
+        {
+          "value": 1,
+          "fromVersion": 1,
+          "updateStrategy": "always"
+        },
+        {
+          "value": 30,
+          "fromVersion": 2,
+          "updateStrategy": "always"
+        }
+      ]
+    }
+  ]
+}

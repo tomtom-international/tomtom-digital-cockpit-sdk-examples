@@ -1,0 +1,11 @@
+{
+  "packageName": "com.example.ivi.example.plugin.service",
+  "keys": [
+    {
+      "name": "onlineAccountEndpointConfigKey",
+      "description": "The URI of the endpoint of the online account API",
+      "type": "String",
+      "value": "https://www.example.com/account/"
+    }
+  ]
+}

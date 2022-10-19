@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.media.userflowpolicy.ExampleMediaSourceViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="?attr/tt_spacing_8"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <com.tomtom.tools.android.api.uicontrols.button.TtButton
+            style="?attr/tt_button_style"
+            android:layout_width="wrap_content"
+            android:onClick="@{() -> viewModel.dismiss()}"
+            android:text="@string/example_media_userflowpolicy_back"
+            auto:ttActionType="secondary" />
+
+        <com.tomtom.ivi.appsuite.media.api.common.frontend.MediaContentView
+            android:id="@+id/example_media_userflowpolicy_categories"
+            style="@style/TtiviMediaContentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            auto:contents="@{viewModel.categories}" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/example_media_userflowpolicy_selectedcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="@{viewModel.selectedCategory.title}"
+            android:textAppearance="?attr/tt_headline_text_style_m"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high" />
+
+        <com.tomtom.ivi.appsuite.media.api.common.frontend.MediaContentView
+            android:id="@+id/example_media_userflowpolicy_contents"
+            style="@style/TtiviMediaContentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            auto:contents="@{viewModel.contents}"
+            auto:visibleIf="@{!viewModel.isLoading &amp;&amp; viewModel.contents.size() > 0}" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/example_media_userflowpolicy_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="@string/example_media_userflowpolicy_empty"
+            android:textAppearance="?attr/tt_headline_text_style_s"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high"
+            auto:visibleIf="@{!viewModel.isLoading &amp;&amp; viewModel.contents.size() == 0}" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/example_media_userflowpolicy_loader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="@string/example_media_userflowpolicy_loading"
+            android:textAppearance="?attr/tt_headline_text_style_s"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high"
+            auto:visibleIf="@{viewModel.isLoading}" />
+    </LinearLayout>
+</layout>

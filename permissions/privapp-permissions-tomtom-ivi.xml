@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright © 2020 TomTom NV. All rights reserved.
+~
+~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+~ used for internal evaluation purposes or commercial use strictly subject to separate
+~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+~ to use this software in accordance with the terms of your license agreement. If you are
+~ not the licensee, you are not authorized to use this software in any manner and should
+~ immediately return or destroy it.
+-->
+
+<permissions>
+    <privapp-permissions package="com.example.ivi.template.app">
+        <permission name="android.permission.ACTIVITY_EMBEDDING"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
+        <permission name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
+        <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
+        <permission name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
+        <permission name="android.permission.INJECT_EVENTS"/>
+        <permission name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+        <permission name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+        <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
+        <permission name="android.permission.START_ANY_ACTIVITY"/>
+        <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+    </privapp-permissions>
+</permissions>
