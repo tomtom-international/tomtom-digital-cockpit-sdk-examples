@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4306-2049
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4333-2078
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -105,7 +105,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Widget ViewPager2](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.17 | MIT License |
-| [annotations](http://robolectric.org) | 4.7.3 | MIT License |
+| [annotations](http://robolectric.org) | 4.8.2 | MIT License |
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
@@ -163,7 +163,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Flutter Fimber](https://github.com/magillus/flutter-fimber) | 0.6.4 | Apache License 2.0 |
 | [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1 | Apache License 2.0 |
 | [Fragment Test Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1 | Apache License 2.0 |
-| [framework](http://robolectric.org) | 4.7.3 | MIT License |
+| [framework](http://robolectric.org) | 4.8.2 | MIT License |
 | [Glide](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
@@ -180,7 +180,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 30.1-android, 30.1.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ianout - a next generation 2d engine](http://sourceforge.net/projects/ianout) | IanOut Public Beta 3 | GNU General Public License v2.0 or later |
-| [ICU4J](http://icu-project.org) | 53.1 | ICU License |
+| [ICU4J](http://icu-project.org) | 70.1 | (Unicode License AND ICU License) |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 1.34.2 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.1, 1.3 | Apache License 2.0 |
 | [JaCoCo](http://www.eclemma.org/jacoco/) | 0.8.7 | Eclipse Public License 2.0 |
@@ -243,7 +243,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [mapbox/mapbox-navigation-android](https://www.mapbox.com/android-docs/navigation/overview/) | qa_release_core_1.0.0-qa.8 | MIT License |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.6.1 | Apache License 2.0 |
 | [Material for MkDocs](http://squidfunk.github.io/mkdocs-material/) | 5.0.0-preview | MIT License |
-| [maven-dependency-resolver](http://robolectric.org) | 4.7.3 | MIT License |
+| [maven-dependency-resolver](http://robolectric.org) | 4.8.2 | MIT License |
 | [messaging](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [MihaiValentin/lunr-languages](https://github.com/MihaiValentin/lunr-languages#readme) | 1.1.1 | Mozilla Public License 1.1 |
 | [MockK](http://mockk.io) | 1.12.3 | Apache License 2.0 |
@@ -257,7 +257,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [MockK Java DSL](http://mockk.io) | 1.12.3 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
 | [moshi-adapters](https://github.com/square/moshi/moshi-adapters) | 1.14.0 | Apache License 2.0 |
-| [nativeruntime](http://robolectric.org) | 4.7.3 | MIT License |
+| [nativeruntime](http://robolectric.org) | 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [Netty Project](http://netty.io/) | 4.1.69.Final | Apache License 2.0 |
 | [Netty/Transport/Native/KQueue](http://netty.io/netty-transport-native-kqueue/) | 4.1.69.Final | Apache License 2.0 |
@@ -273,10 +273,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.7.10 | Apache License 2.0 |
 | [phonecontrol](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 9.0.0_r3 | Apache License 2.0 |
-| [pluginapi](http://robolectric.org) | 4.7.3 | MIT License |
+| [pluginapi](http://robolectric.org) | 4.8.2 | MIT License |
 | [Project Lombok](http://projectlombok.org) | 1.18.18 | MIT License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.1, 3.19.4 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.17.1 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers](https://developers.google.com/protocol-buffers/) | 3.19.1, 3.19.4, 3.21.6 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers](https://developers.google.com/protocol-buffers/) | 3.21.6 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.19.1, 3.21.6 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Lite]](https://developers.google.com/protocol-buffers/protobuf-lite/) | 3.0.1 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Device Client](http://azure.github.io/azure-iot-sdk-java/) | 1.11.2 | MIT License |
@@ -290,15 +291,15 @@ This offer is valid for a period of three years from the date of distribution of
 | [react-native-track-player](https://github.com/Guichaguri/react-native-track-player#readme) | 2.2.0-rc4 | Apache License 2.0 |
 | [reactive-streams](http://www.reactive-streams.org/) | v1.0.3 | Creative Commons Zero v1.0 Universal |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.1.0 | Apache License 2.0 |
-| [reflector](http://robolectric.org) | 4.7.3 | MIT License |
+| [reflector](http://robolectric.org) | 4.8.2 | MIT License |
 | [Release Upload](https://git.automotivelinux.org/staging/release-upload/) | 9.0.1 | Mozilla Public License 2.0 |
-| [resources](http://robolectric.org) | 4.7.3 | MIT License |
+| [resources](http://robolectric.org) | 4.8.2 | MIT License |
 | [restinio](https://github.com/Stiffstream/restinio) | 0.6.6 | (zlib License AND MIT License AND BSD 3-clause "New" or "Revised" License AND Boost Software License 1.0) |
 | [Retrofit 2 Kotlin Serialization Converter](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter/) | 0.8.0 | Apache License 2.0 |
-| [robolectric](http://pivotal.github.com/robolectric) | 4.7.3 | MIT License |
-| [Robolectric Junit](http://robolectric.org) | 4.7.3 | MIT License |
+| [robolectric](http://pivotal.github.com/robolectric) | 4.8.2 | MIT License |
+| [Robolectric Junit](http://robolectric.org) | 4.8.2 | MIT License |
 | [RxJava](https://github.com/ReactiveX/RxJava) | 3.0.4 | Apache License 2.0 |
-| [sandbox](http://robolectric.org) | 4.7.3 | MIT License |
+| [sandbox](http://robolectric.org) | 4.8.2 | MIT License |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.1.0 | Apache License 2.0 |
 | [semver]() | 1.1.1 | [template] Basic MIT-Style License |
 | [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.4.1 | MIT License |
@@ -306,7 +307,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [sentry-android-ndk](https://sentry.io) | 6.4.1 | MIT License |
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.4.1 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.4.1 | MIT License |
-| [shadowapi](http://robolectric.org) | 4.7.3 | MIT License |
+| [shadowapi](http://robolectric.org) | 4.8.2 | MIT License |
 | [SILGraphite: rendering non-roman scripts](http://sourceforge.net/projects/silgraphite) | 1.3.0, 1.3.12 | GNU Lesser General Public License v2.1 or later |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32 | MIT License |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
@@ -320,7 +321,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Timber](http://github.com/JakeWharton/timber/timber/) | 5.0.1 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0 | Apache License 2.0 |
-| [utils](http://robolectric.org) | 4.7.3 | MIT License |
+| [utils](http://robolectric.org) | 4.8.2 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.1.3, 7.2.2 | Apache License 2.0 |
 | [XZ Utils](http://tukaani.org/xz/) | 5.2.2 | (GNU Lesser General Public License v2.1 or later AND Public Domain AND GNU General Public License v2.0 or later AND GNU General Public License v3.0 or later) |

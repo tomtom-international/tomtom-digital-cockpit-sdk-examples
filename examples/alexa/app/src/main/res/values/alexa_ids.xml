@@ -24,7 +24,7 @@ the `alexaDeviceInfoClientId` and `alexaDeviceInfoProductId` properties in the t
 `disableAlexaDeviceIdBuildTimeCheck` to `true`.
 
 For more information on how to obtain a set of Amazon Alexa IDs, see:
-https://developer.tomtom.com/tomtom-digital-cockpit/documentation/integrating-digital-cockpit/integrating-amazon-alexa#register-your-alexa-product-with-amazon
+https://developer.tomtom.com/tomtom-digital-cockpit/documentation/integrating/integrating-amazon-alexa#register-your-alexa-product-with-amazon
 -->
 <resources>
     <!--The client ID used to authorize the client with AVS.-->
