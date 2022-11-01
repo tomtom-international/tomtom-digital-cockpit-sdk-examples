@@ -15,12 +15,10 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceE
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrderBy
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactQueryFlags
 import com.tomtom.ivi.platform.framework.api.testing.ipc.iviservice.datasource.assertIviDataSourceEquals
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.ivi.platform.tools.api.testing.unit.IviTestCase
 import com.tomtom.tools.android.testing.mock.niceMockk
-import java.util.EnumSet
 import kotlin.test.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -45,7 +43,6 @@ internal class CustomContactsServiceTest : IviTestCase() {
             selection = ContactsDataSourceQuery.ContactSelection.All,
             orderBy = ContactItemOrderBy(PRIMARY_SORT_KEY),
             map = null,
-            flags = EnumSet.of(ContactQueryFlags.INCLUDE_IMAGE)
         )
 
         // THEN

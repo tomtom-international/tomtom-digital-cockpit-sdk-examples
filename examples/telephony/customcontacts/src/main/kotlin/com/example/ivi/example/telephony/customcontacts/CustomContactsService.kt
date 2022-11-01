@@ -23,6 +23,7 @@ import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronization
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsServiceBase
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.mirrormap.MutableMirrorableMap
+import com.tomtom.tools.android.api.resourceresolution.drawable.BitmapDrawableResolver
 
 /**
  * A custom contacts service that contains two contacts. Only the contact with the id `1` has an
@@ -48,8 +49,10 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
             addresses = listOf(Address("45 Some Street, SomeCity, SC 10000", AddressType.Home)),
             defaultAddressIndex = 0,
             favorite = true,
-            image = Bitmap.createBitmap(
-                IntArray(50 * 50) { Color.BLACK }, 50, 50, Bitmap.Config.ARGB_8888
+            image = BitmapDrawableResolver(
+                Bitmap.createBitmap(
+                    IntArray(50 * 50) { Color.BLACK }, 50, 50, Bitmap.Config.ARGB_8888
+                )
             ),
             primarySortKey = "John Smith",
             alternativeSortKey = "Smith John"

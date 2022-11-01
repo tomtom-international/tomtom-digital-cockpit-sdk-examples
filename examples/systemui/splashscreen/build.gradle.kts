@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020 TomTom NV. All rights reserved.
+ * Copyright © 2022 TomTom NV. All rights reserved.
  *
  * This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
  * used for internal evaluation purposes or commercial use strictly subject to separate
@@ -9,12 +9,14 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.panelhierarchy.leaf
+import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
-import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
-import com.tomtom.ivi.platform.frontend.api.common.uicontrols.navigation.NavigablePanelViewModel
+ivi {
+    application {
+        enabled = false
+    }
+}
 
-internal class HierarchyLeafViewModel(panel: HierarchyLeafPanel) :
-    FrontendViewModel<HierarchyLeafPanel>(panel), NavigablePanelViewModel<HierarchyLeafPanel> {
-    val selectedItem = panel.node.name
+dependencies {
+    implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
 }
