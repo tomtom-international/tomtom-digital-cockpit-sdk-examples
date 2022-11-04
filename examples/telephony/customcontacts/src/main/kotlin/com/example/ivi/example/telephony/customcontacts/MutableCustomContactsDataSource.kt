@@ -66,12 +66,12 @@ internal class MutableCustomContactsDataSource :
         return MutableContactsPagingSource(
             when (query.selection) {
                 is All -> {
-                    contacts.values.toList().toContactItems(query.flags)
+                    contacts.values.toList().toContactItems()
                 }
                 is Favorites -> {
                     contacts.values.filter {
                         it.favorite
-                    }.toContactItems(query.flags)
+                    }.toContactItems()
                 }
                 is Groups -> {
                     contacts.values.groupBy {
@@ -84,7 +84,7 @@ internal class MutableCustomContactsDataSource :
                             .any { displayName ->
                                 contact.displayName.startsWith(displayName, true)
                             }
-                    }.toContactItems(query.flags)
+                    }.toContactItems()
                 }
                 is FindContactsByPhoneNumber -> {
                     contacts.values.filter {
@@ -94,22 +94,22 @@ internal class MutableCustomContactsDataSource :
                                 phoneNumber.number
                             )
                         }
-                    }.toContactItems(query.flags)
+                    }.toContactItems()
                 }
                 is FindContactsBySource -> {
                     contacts.values.filter {
                         (query.selection as FindContactsBySource).source == it.source
-                    }.toContactItems(query.flags)
+                    }.toContactItems()
                 }
                 is FindContactByContactId -> {
                     contacts.values.filter {
                         (query.selection as FindContactByContactId).contactId == it.contactId
-                    }.toContactItems(query.flags)
+                    }.toContactItems()
                 }
                 is FindContactsBySearchKey -> {
                     findMatchingContacts(
                         (query.selection as FindContactsBySearchKey).searchKey
-                    ).toContactItems(query.flags)
+                    ).toContactItems()
                 }
             }.map { contactElement ->
                 query.map?.invoke(contactElement) ?: contactElement

@@ -13,10 +13,10 @@ package com.example.ivi.example.panelhierarchy.child
 
 import com.example.ivi.example.panelhierarchy.Node
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
-import com.tomtom.ivi.platform.frontend.api.common.uicontrols.navigation.NavigatablePanelViewModel
+import com.tomtom.ivi.platform.frontend.api.common.uicontrols.navigation.NavigablePanelViewModel
 
 internal class HierarchyChildViewModel(panel: HierarchyChildPanel) :
-    FrontendViewModel<HierarchyChildPanel>(panel), NavigatablePanelViewModel<HierarchyChildPanel> {
+    FrontendViewModel<HierarchyChildPanel>(panel), NavigablePanelViewModel<HierarchyChildPanel> {
 
     val selectedItem = panel.node.name
 
