@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4397-2131
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4406-2138
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -148,7 +148,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Dependencies for Iot Hub Java SDK](http://azure.github.io/azure-iot-sdk-java/) | 0.15.3 | MIT License |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1 | Apache License 2.0 |
 | [Doxygen](http://www.doxygen.nl/) | 1.8.13 | GNU General Public License v2.0 or later |
-| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.2.0, 2.3.4, 2.5.1, 2.9.0 | Apache License 2.0 |
+| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.2.0, 2.3.4, 2.9.0 | Apache License 2.0 |
 | [esbuild](https://github.com/evanw/esbuild#readme) | 0.13.9 | MIT License |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
@@ -180,7 +180,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 30.1-android, 30.1.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
+| [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 30.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ianout - a next generation 2d engine](http://sourceforge.net/projects/ianout) | IanOut Public Beta 3 | GNU General Public License v2.0 or later |
 | [ICU4J](http://icu-project.org) | 70.1 | (Unicode License AND ICU License) |
