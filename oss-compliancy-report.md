@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4406-2138
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4414-2143
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -276,7 +276,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [phonecontrol](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.8.2 | MIT License |
-| [Project Lombok](http://projectlombok.org) | 1.18.18 | MIT License |
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.19.1, 3.19.4, 3.21.6 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.17.1 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.19.1, 3.21.6 | BSD 3-clause "New" or "Revised" License |
