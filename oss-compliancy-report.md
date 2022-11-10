@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4404-2137
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4428-2155
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -33,7 +33,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Arch-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0 | Apache License 2.0 |
 | [Android ConstraintLayout](http://tools.android.com) | 2.1.4 | Apache License 2.0 |
 | [Android ConstraintLayout Core](http://tools.android.com) | 1.0.4 | Apache License 2.0 |
-| [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.2.0 | Apache License 2.0 |
+| [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.0.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.0.0 | Apache License 2.0 |
 | [Android KTX Core](https://github.com/android/android-ktx) | 1.7.0, 1.8.0 | Apache License 2.0 |
@@ -65,8 +65,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Resource Inspection - Annotations](https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.0-alpha01) | 1.0.0 | Apache License 2.0 |
 | [Android Resources Library](http://developer.android.com/tools/extras/support-library.html) | 1.4.2 | Apache License 2.0 |
 | [Android Room Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.3 | Apache License 2.0 |
-| [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.2, 2.4.3 | Apache License 2.0 |
-| [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.2, 2.4.3 | Apache License 2.0 |
+| [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.3 | Apache License 2.0 |
+| [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.3 | Apache License 2.0 |
 | [Android Support AnimatedVectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Support CardView v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -94,7 +94,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library View Pager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Palette v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support RecyclerView v7](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
-| [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.2.0 | Apache License 2.0 |
+| [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
 | [Android Support VectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Tracing](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0 | Apache License 2.0 |
 | [Android Transition Support Library](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.4.1 | Apache License 2.0 |
@@ -106,16 +106,17 @@ This offer is valid for a period of three years from the date of distribution of
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.17 | MIT License |
 | [annotations](http://robolectric.org) | 4.8.2 | MIT License |
+| [antlr](http://antlr.org) | 4.11.1 | BSD 3-clause "New" or "Revised" License |
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
-| [ASM](http://asm.ow2.org/) | 7.1, 9.2 | BSD 3-clause "New" or "Revised" License |
-| [ASM Commons](http://asm.objectweb.org/asm-commons/) | 7.1, 9.2 | BSD 3-clause "New" or "Revised" License |
-| [ASM Tree](http://asm.objectweb.org/asm-tree/) | 7.1, 9.2 | BSD 3-clause "New" or "Revised" License |
-| [ASM Util](http://asm.objectweb.org/asm-util/) | 7.1, 9.2 | BSD 3-clause "New" or "Revised" License |
-| [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 7.1, 9.2 | BSD 3-clause "New" or "Revised" License |
+| [ASM](http://asm.ow2.org/) | 9.2 | BSD 3-clause "New" or "Revised" License |
+| [ASM Commons](http://asm.objectweb.org/asm-commons/) | 9.2 | BSD 3-clause "New" or "Revised" License |
+| [ASM Tree](http://asm.objectweb.org/asm-tree/) | 9.2 | BSD 3-clause "New" or "Revised" License |
+| [ASM Util](http://asm.objectweb.org/asm-util/) | 9.2 | BSD 3-clause "New" or "Revised" License |
+| [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.23.1 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.7.4 | Apache License 2.0 |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
@@ -127,8 +128,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [cas](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
-| [Checker Framework](http://checkerframework.org) | 3.1.1 | GNU General Public License v2.0 w/Classpath exception |
-| [Checker Qual](https://checkerframework.org) | 2.5.2, 2.5.5 | MIT License |
+| [Checker Qual](https://checkerframework.org) | 2.5.2, 2.5.5, 3.12.0 | MIT License |
 | [ChickenHook/RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) | 2.2 | Apache License 2.0 |
 | [ClickHouse/ClickHouse](https://clickhouse.tech) | v21.7.1.6948-testing | Apache License 2.0 |
 | [coil-base](https://github.com/coil-kt/coil) | 1.2.1 | Apache License 2.0 |
@@ -145,10 +145,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-adapters](https://maven.google.com/androidx/databinding/databinding-adapters/) | 7.1.3, 7.2.2 | Apache License 2.0 |
 | [databinding-ktx](https://maven.google.com/androidx/databinding/databinding-ktx/) | 7.1.3, 7.2.2 | Apache License 2.0 |
 | [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 7.1.0, 7.1.3, 7.2.2 | Apache License 2.0 |
-| [Dependencies for Iot Hub Java SDK](http://azure.github.io/azure-iot-sdk-java/) | 0.15.3 | MIT License |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1 | Apache License 2.0 |
 | [Doxygen](http://www.doxygen.nl/) | 1.8.13 | GNU General Public License v2.0 or later |
-| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.2.0, 2.3.4, 2.5.1, 2.9.0 | Apache License 2.0 |
+| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.2.0, 2.3.4, 2.9.0 | Apache License 2.0 |
 | [esbuild](https://github.com/evanw/esbuild#readme) | 0.13.9 | MIT License |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
@@ -171,7 +170,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
-| [google-gson](https://github.com/google/gson) | 2.8.9, 2.9.1 | Apache License 2.0 |
+| [google-gson](https://github.com/google/gson) | 2.9.0, 2.9.1 | Apache License 2.0 |
 | [google/gnd-android]() | 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
@@ -180,11 +179,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 30.1-android, 30.1.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
+| [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 31.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ianout - a next generation 2d engine](http://sourceforge.net/projects/ianout) | IanOut Public Beta 3 | GNU General Public License v2.0 or later |
 | [ICU4J](http://icu-project.org) | 70.1 | (Unicode License AND ICU License) |
-| [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 1.34.2 | MIT License |
+| [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.1.1 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.1, 1.3 | Apache License 2.0 |
 | [JaCoCo](http://www.eclemma.org/jacoco/) | 0.8.7 | Eclipse Public License 2.0 |
 | [jansi](https://github.com/fusesource/jansi) | 2.4.0 | Apache License 2.0 |
@@ -193,13 +192,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0, 20.1.0 | Apache License 2.0 |
 | [Jetpack Camera Library Camera2 Implementation/Extensions](https://developer.android.com/jetpack/androidx) | 1.0.0-alpha06 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
-| [jffi - Java Foreign Function Interface](http://github.com/wmeissner/jffi) | 1.2.19 | Apache License 2.0 |
-| [jnr-a64asm](http://nexus.sonatype.org/oss-repository-hosting.html/jnr-a64asm) | 1.0.0 | Apache License 2.0 |
-| [jnr-constants](http://github.com/jnr/jnr-constants) | 0.9.12 | Apache License 2.0 |
-| [jnr-enxio](http://github.com/jnr/jnr-enxio) | 0.21 | Apache License 2.0 |
-| [jnr-ffi](http://github.com/jnr/jnr-ffi) | 2.1.10 | Apache License 2.0 |
-| [jnr-unixsocket](http://github.com/jnr/jnr-unixsocket) | 0.23 | Apache License 2.0 |
-| [jnr-x86asm](http://github.com/wmeissner/jnr-x86asm) | 1.0.2 | MIT License |
 | [Joda Time](http://joda-time.sourceforge.net/) | 2.11.2 | Apache License 2.0 |
 | [joda-time-android Library](https://github.com/dlew/joda-time-android) | 2.11.2 | Apache License 2.0 |
 | [jqno/equalsverifier](http://www.jqno.nl/equalsverifier) | 3.7.1 | Apache License 2.0 |
@@ -265,27 +257,25 @@ This offer is valid for a period of three years from the date of distribution of
 | [Netty/Transport/Native/KQueue](http://netty.io/netty-transport-native-kqueue/) | 4.1.69.Final | Apache License 2.0 |
 | [Netty/Transport/Native/Unix/Common](http://netty.io/netty-transport-native-unix-common/) | 4.1.69.Final | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.1 | Apache License 2.0 |
-| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 3.9.1, 4.0.1, 4.10.0, 4.9.1, 4.9.3 | Apache License 2.0 |
-| [OkIO](https://github.com/square/OkIO) | 1.13.0, 2.10.0, 2.2.2, 2.8.0, 3.0.0 | Apache License 2.0 |
+| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1, 4.10.0, 4.9.1, 4.9.3 | Apache License 2.0 |
+| [OkIO](https://github.com/square/OkIO) | 2.10.0, 2.2.2, 2.8.0, 3.0.0 | Apache License 2.0 |
 | [okio](https://github.com/square/okio/) | 3.0.0 | Apache License 2.0 |
 | [opentrack](https://github.com/opentrack/opentrack) | opentrack-2.3-rc99p11 | ISC License |
-| [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.2 | Eclipse Public License 2.0 |
+| [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | Eclipse Public License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.5.30, 1.7.10 | Apache License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.5.30, 1.6.10, 1.7.10 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.7.10 | Apache License 2.0 |
 | [phonecontrol](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.8.2 | MIT License |
-| [Project Lombok](http://projectlombok.org) | 1.18.18 | MIT License |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.1, 3.19.4, 3.21.6 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.17.1 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.1, 3.19.4, 3.21.4, 3.21.6 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.4 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.19.1, 3.21.6 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Lite]](https://developers.google.com/protocol-buffers/protobuf-lite/) | 3.0.1 | BSD 3-clause "New" or "Revised" License |
-| [Provisioning Device Client](http://azure.github.io/azure-iot-sdk-java/) | 1.11.2 | MIT License |
-| [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 1.5.0 | MIT License |
+| [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.0 | MIT License |
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
-| [qpid-proton](https://github.com/apache/qpid-proton) | 0.33.4 | Apache License 2.0 |
-| [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.3 | MIT License |
+| [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
+| [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
 | [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [react-native-rokt-widget](https://www.npmjs.org/package/react-native-rokt-widget) | 1.0.3 | Unknown License |
