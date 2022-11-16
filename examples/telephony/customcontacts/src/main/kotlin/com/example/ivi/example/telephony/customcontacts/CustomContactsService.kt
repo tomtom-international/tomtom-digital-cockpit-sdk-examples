@@ -16,7 +16,6 @@ import android.graphics.Color
 import com.tomtom.ivi.platform.contacts.api.common.model.Address
 import com.tomtom.ivi.platform.contacts.api.common.model.AddressType
 import com.tomtom.ivi.platform.contacts.api.common.model.Contact
-import com.tomtom.ivi.platform.contacts.api.common.model.ContactId
 import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumber
 import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumberType
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
@@ -38,7 +37,6 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
     // The source of contacts.
     internal val contactsSource = mutableListOf(
         Contact(
-            contactId = ContactId("1"),
             displayName = "John Smith",
             initials = "JS",
             givenName = "John",
@@ -58,7 +56,6 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
             alternativeSortKey = "Smith John"
         ),
         Contact(
-            contactId = ContactId("2"),
             displayName = "Kelly Goodwin",
             initials = "KG",
             givenName = "Kelly",
