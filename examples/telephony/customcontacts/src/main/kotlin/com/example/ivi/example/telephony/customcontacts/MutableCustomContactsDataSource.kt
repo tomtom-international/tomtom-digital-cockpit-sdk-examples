@@ -12,7 +12,6 @@
 package com.example.ivi.example.telephony.customcontacts
 
 import com.tomtom.ivi.platform.contacts.api.common.model.Contact
-import com.tomtom.ivi.platform.contacts.api.common.model.ContactId
 import com.tomtom.ivi.platform.contacts.api.common.util.comparePhoneNumbers
 import com.tomtom.ivi.platform.contacts.api.common.util.toContactItems
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement
@@ -31,7 +30,6 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQ
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrderBy
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.All
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.Favorites
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactByContactId
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsByDisplayNames
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsByPhoneNumber
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsBySearchKey
@@ -49,15 +47,15 @@ internal class MutableCustomContactsDataSource :
         jumpingSupported = true
     ) {
 
-    private val mutableContacts = mutableMapOf<ContactId, Contact>()
+    private val mutableContacts = mutableListOf<Contact>()
 
-    private val contacts: Map<ContactId, Contact> = mutableContacts
+    private val contacts: List<Contact> = mutableContacts
 
     /**
      * Add or update contact page.
      */
     fun addOrUpdateContact(contact: Contact) {
-        mutableContacts[contact.contactId] = contact
+        mutableContacts.add(contact)
         invalidateAllPagingSources()
     }
 
@@ -66,20 +64,20 @@ internal class MutableCustomContactsDataSource :
         return MutableContactsPagingSource(
             when (query.selection) {
                 is All -> {
-                    contacts.values.toList().toContactItems()
+                    contacts.toList().toContactItems()
                 }
                 is Favorites -> {
-                    contacts.values.filter {
+                    contacts.filter {
                         it.favorite
                     }.toContactItems()
                 }
                 is Groups -> {
-                    contacts.values.groupBy {
+                    contacts.groupBy {
                         it.toFirstLetter()
                     }.map { ContactGroup(it.key.toString(), it.value.size) }
                 }
                 is FindContactsByDisplayNames -> {
-                    contacts.values.filter { contact ->
+                    contacts.filter { contact ->
                         (query.selection as FindContactsByDisplayNames).displayNames
                             .any { displayName ->
                                 contact.displayName.startsWith(displayName, true)
@@ -87,7 +85,7 @@ internal class MutableCustomContactsDataSource :
                     }.toContactItems()
                 }
                 is FindContactsByPhoneNumber -> {
-                    contacts.values.filter {
+                    contacts.filter {
                         it.phoneNumbers.any { phoneNumber ->
                             comparePhoneNumbers(
                                 (query.selection as FindContactsByPhoneNumber).phoneNumber,
@@ -97,13 +95,8 @@ internal class MutableCustomContactsDataSource :
                     }.toContactItems()
                 }
                 is FindContactsBySource -> {
-                    contacts.values.filter {
+                    contacts.filter {
                         (query.selection as FindContactsBySource).source == it.source
-                    }.toContactItems()
-                }
-                is FindContactByContactId -> {
-                    contacts.values.filter {
-                        (query.selection as FindContactByContactId).contactId == it.contactId
                     }.toContactItems()
                 }
                 is FindContactsBySearchKey -> {
@@ -121,7 +114,7 @@ internal class MutableCustomContactsDataSource :
 
     private fun findMatchingContacts(key: String): List<Contact> {
         return (
-            contacts.values.filter {
+            contacts.filter {
                 var contactFound = false
                 if (it.givenName.isNotBlank()) {
                     contactFound = it.givenName.startsWith(key, true)
