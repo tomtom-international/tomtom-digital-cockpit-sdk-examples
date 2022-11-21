@@ -38,7 +38,7 @@ plugins {
     id("com.tomtom.ivi.platform.tools.version") apply true
     id("com.tomtom.navtest") apply true
     id("com.tomtom.navtest.android") apply true
-    id("com.tomtom.navui.emulators-plugin") apply false
+    id("com.tomtom.navapp.emulators-plugin") apply false
     id("com.tomtom.tools.android.extractstringsources") apply false
 }
 
