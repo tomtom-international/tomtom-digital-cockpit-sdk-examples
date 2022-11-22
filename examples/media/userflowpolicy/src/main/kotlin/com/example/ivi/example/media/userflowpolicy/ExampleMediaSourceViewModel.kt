@@ -14,12 +14,7 @@ package com.example.ivi.example.media.userflowpolicy
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import com.tomtom.ivi.appsuite.media.api.common.core.IviMediaItem
-import com.tomtom.ivi.appsuite.media.api.common.frontend.ClickAction
-import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaEntryGroupItem
-import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaGroupItem
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
-import com.tomtom.tools.android.api.livedata.ImmutableLiveData
-import com.tomtom.tools.android.api.uicontrols.recyclerview.group.ListGroupItem
 
 /**
  * The view model transforms the panel's data into information ready to use in a view.
@@ -33,24 +28,29 @@ internal class ExampleMediaSourceViewModel(panel: ExampleMediaSourcePanel)
 
     val isLoading: LiveData<Boolean> = panel.isLoading
 
-    val categories: LiveData<List<MediaGroupItem>> = panel.categories.map { list ->
+    val categories: LiveData<List<DisplayMediaItem>> = panel.categories.map { list ->
         list.map { category ->
-            category.asMediaEntryGroupItem { panel.selectCategory(category)}
+            category.asDisplayMediaItem { panel.selectCategory(category)}
         }
     }
 
     val selectedCategory: LiveData<IviMediaItem?> = panel.selectedCategory
 
-    val contents: LiveData<List<MediaGroupItem>> = panel.contents.map { list ->
-        list.map { item -> item.asMediaEntryGroupItem { panel.playMediaId(item.id) } }
+    val contents: LiveData<List<DisplayMediaItem>> = panel.contents.map { list ->
+        list.map { item -> item.asDisplayMediaItem { panel.playMediaId(item.id) } }
     }
 
     fun dismiss(): Unit = panel.dismiss()
 
-    private fun IviMediaItem.asMediaEntryGroupItem(onClick: ClickAction) = MediaEntryGroupItem(
+    private fun IviMediaItem.asDisplayMediaItem(onClick: ClickAction) = DisplayMediaItem(
         item = panel.policyProvider.itemMappingPolicy(this),
-        itemState = ImmutableLiveData(MediaEntryGroupItem.ItemState.IDLE),
-        type = ListGroupItem.ItemType.LIST_ITEM,
         clickAction = onClick
     )
 }
+
+internal typealias ClickAction = (DisplayMediaItem) -> Unit
+
+internal class DisplayMediaItem(
+    val item: IviMediaItem,
+    val clickAction: ClickAction
+)
