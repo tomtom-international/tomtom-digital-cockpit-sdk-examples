@@ -25,8 +25,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.mirrormap.MutableMir
 import com.tomtom.tools.android.api.resourceresolution.drawable.BitmapDrawableResolver
 
 /**
- * A custom contacts service that contains two contacts. Only the contact with the id `1` has an
- * image.
+ * A custom contacts service that contains two contacts.
  */
 internal class CustomContactsService(iviServiceHostContext: IviServiceHostContext) :
     ContactsServiceBase(iviServiceHostContext) {
