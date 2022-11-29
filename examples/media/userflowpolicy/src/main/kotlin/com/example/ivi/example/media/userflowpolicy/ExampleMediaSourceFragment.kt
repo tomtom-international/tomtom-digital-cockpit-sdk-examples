@@ -12,6 +12,7 @@
 package com.example.ivi.example.media.userflowpolicy
 
 import android.content.Context
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ivi.example.media.userflowpolicy.databinding.ExamplesMediaUserflowpolicyPanelBinding
 import com.tomtom.ivi.appsuite.media.api.common.core.SourceClient
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
@@ -29,6 +30,21 @@ internal class ExampleMediaSourceFragment :
     override val viewFactory =
         ViewFactory(ExamplesMediaUserflowpolicyPanelBinding::inflate) { binding ->
             binding.viewModel = viewModel
+
+            val categoriesAdapter = ExampleMediaSourceItemAdapter()
+            binding.exampleMediaUserflowpolicyCategories.adapter = categoriesAdapter
+            binding.exampleMediaUserflowpolicyCategories.layoutManager = LinearLayoutManager(requireContext())
+            val contentAdapter = ExampleMediaSourceItemAdapter()
+            binding.exampleMediaUserflowpolicyContents.adapter = contentAdapter
+            binding.exampleMediaUserflowpolicyContents.layoutManager = LinearLayoutManager(requireContext())
+
+            viewModel.categories.observe(viewLifecycleOwner) {
+                categoriesAdapter.submitList(it)
+            }
+
+            viewModel.contents.observe(viewLifecycleOwner) {
+                contentAdapter.submitList(it)
+            }
         }
 
     /** Set the context on the panel, since its [SourceClient] needs it to connect. */

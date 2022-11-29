@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.4475"
+iviPlatform = "1.0.4522"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.
@@ -43,6 +43,7 @@ iviPlatformFrontendApiCommonUicontrols = { module = "com.tomtom.ivi.platform:pla
 iviPlatformFrontendApiTemplateCompactProcessPanel = { module = "com.tomtom.ivi.platform:platform_frontend_api_template_compactprocesspanel", version.ref = "iviPlatform" }
 iviPlatformFrontendApiTemplateNotificationPanel = { module = "com.tomtom.ivi.platform:platform_frontend_api_template_notificationpanel", version.ref = "iviPlatform" }
 iviPlatformFrontendApiTestingFrontend = { module = "com.tomtom.ivi.platform:platform_frontend_api_testing_frontend", version.ref = "iviPlatform" }
+iviPlatformLocalizationApiCommonSettings = { module = "com.tomtom.ivi.platform:platform_localization_api_common_settings", version.ref = "iviPlatform" }
 iviPlatformMainmenuApiTestingFrontend = { module = "com.tomtom.ivi.platform:platform_mainmenu_api_testing_frontend", version.ref = "iviPlatform" }
 iviPlatformSettingsApiServicesSettingsManagement = { module = "com.tomtom.ivi.platform:platform_settings_api_service_settingsmanagement", version.ref = "iviPlatform" }
 iviPlatformSystemuiApiTestingTools = { module = "com.tomtom.ivi.platform:platform_systemui_api_testing_tools", version.ref = "iviPlatform" }
