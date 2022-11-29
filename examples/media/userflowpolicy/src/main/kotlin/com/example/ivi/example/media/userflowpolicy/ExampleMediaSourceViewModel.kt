@@ -28,29 +28,29 @@ internal class ExampleMediaSourceViewModel(panel: ExampleMediaSourcePanel)
 
     val isLoading: LiveData<Boolean> = panel.isLoading
 
-    val categories: LiveData<List<DisplayMediaItem>> = panel.categories.map { list ->
+    val categories: LiveData<List<MediaItemViewModel>> = panel.categories.map { list ->
         list.map { category ->
-            category.asDisplayMediaItem { panel.selectCategory(category)}
+            category.asMediaItemViewModel { panel.selectCategory(category)}
         }
     }
 
     val selectedCategory: LiveData<IviMediaItem?> = panel.selectedCategory
 
-    val contents: LiveData<List<DisplayMediaItem>> = panel.contents.map { list ->
-        list.map { item -> item.asDisplayMediaItem { panel.playMediaId(item.id) } }
+    val contents: LiveData<List<MediaItemViewModel>> = panel.contents.map { list ->
+        list.map { item -> item.asMediaItemViewModel { panel.playMediaId(item.id) } }
     }
 
     fun dismiss(): Unit = panel.dismiss()
 
-    private fun IviMediaItem.asDisplayMediaItem(onClick: ClickAction) = DisplayMediaItem(
+    private fun IviMediaItem.asMediaItemViewModel(onClick: ClickAction) = MediaItemViewModel(
         item = panel.policyProvider.itemMappingPolicy(this),
         clickAction = onClick
     )
 }
 
-internal typealias ClickAction = (DisplayMediaItem) -> Unit
+internal typealias ClickAction = (MediaItemViewModel) -> Unit
 
-internal class DisplayMediaItem(
+internal class MediaItemViewModel(
     val item: IviMediaItem,
     val clickAction: ClickAction
 )

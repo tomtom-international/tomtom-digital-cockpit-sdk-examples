@@ -23,11 +23,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
 
 /**
- * The simplest adapter for [RecyclerView] to display [DisplayMediaItem]. It only supports the title
+ * The simplest adapter for [RecyclerView] to display [MediaItemViewModel]. It only supports the title
  * and click listener.
  */
 internal class ExampleMediaSourceItemAdapter :
-    ListAdapter<DisplayMediaItem, ExampleMediaSourceItemAdapter.MediaViewHolder>(differConfig) {
+    ListAdapter<MediaItemViewModel, ExampleMediaSourceItemAdapter.MediaViewHolder>(differConfig) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -47,16 +47,16 @@ internal class ExampleMediaSourceItemAdapter :
     }
 
     private companion object {
-        private val diffUtilCallback = object : DiffUtil.ItemCallback<DisplayMediaItem>() {
+        private val diffUtilCallback = object : DiffUtil.ItemCallback<MediaItemViewModel>() {
             override fun areItemsTheSame(
-                oldItem: DisplayMediaItem,
-                newItem: DisplayMediaItem
+                oldItem: MediaItemViewModel,
+                newItem: MediaItemViewModel
             ): Boolean
                 = oldItem == newItem || oldItem.item.id == newItem.item.id
 
             override fun areContentsTheSame(
-                oldItem: DisplayMediaItem,
-                newItem: DisplayMediaItem
+                oldItem: MediaItemViewModel,
+                newItem: MediaItemViewModel
             ): Boolean
                 = oldItem.item.title == newItem.item.title
         }
