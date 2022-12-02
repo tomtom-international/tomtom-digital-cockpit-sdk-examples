@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4544-2238
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4558-2244
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -9,7 +9,6 @@ This offer is valid for a period of three years from the date of distribution of
 | Component | Version | License |
 | :-------- | :------ | :------ |
 | [0 A.D.](http://wildfiregames.com/0ad/) | A21 | (GNU Lesser General Public License v2.1 or later AND MIT License AND GNU General Public License v2.0 or later) |
-| [@angular/compiler-cli](https://github.com/angular/angular/tree/master/packages/compiler-cli) | 13.0.0-rc.0 | MIT License |
 | [@stripe/stripe-react-native](https://github.com/stripe/stripe-react-native/#readme) | 0.7.0 | MIT License |
 | [aacs-annotation-api](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs-annotation-processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
@@ -144,7 +143,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1 | Apache License 2.0 |
 | [Doxygen](http://www.doxygen.nl/) | 1.8.13 | GNU General Public License v2.0 or later |
 | [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.2.0, 2.3.4, 2.9.0 | Apache License 2.0 |
-| [esbuild](https://github.com/evanw/esbuild#readme) | 0.13.6 | MIT License |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
 | [exoplayer-common](https://plugins.gradle.org/m2/com/google/android/exoplayer/exoplayer-common/) | 2.13.3, 2.15.1 | Apache License 2.0 |
@@ -173,6 +171,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2 | Apache License 2.0 |
 | [Gradle Manipulation Extension](https://github.com/project-ncl/gradle-manipulator) | 3.8 | Apache License 2.0 |
 | [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
+| [Grafana](http://grafana.com) | 8.5.6 | GNU Affero General Public License v3.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 31.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
