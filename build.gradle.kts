@@ -215,6 +215,7 @@ subprojects {
         configurations.all {
             resolutionStrategy.force("androidx.core:core:1.8.0")
             resolutionStrategy.force("androidx.core:core-ktx:1.8.0")
+            resolutionStrategy.force("com.google.android.material:material:1.6.1")
         }
 
         compileOptions {

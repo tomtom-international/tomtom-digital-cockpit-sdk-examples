@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4522-2220
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4559-2245
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -9,7 +9,6 @@ This offer is valid for a period of three years from the date of distribution of
 | Component | Version | License |
 | :-------- | :------ | :------ |
 | [0 A.D.](http://wildfiregames.com/0ad/) | A21 | (GNU Lesser General Public License v2.1 or later AND MIT License AND GNU General Public License v2.0 or later) |
-| [@angular/compiler-cli](https://github.com/angular/angular/tree/master/packages/compiler-cli) | 13.0.0-rc.0 | MIT License |
 | [@stripe/stripe-react-native](https://github.com/stripe/stripe-react-native/#readme) | 0.7.0 | MIT License |
 | [aacs-annotation-api](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs-annotation-processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
@@ -106,7 +105,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [antlr](http://antlr.org) | 4.11.1 | BSD 3-clause "New" or "Revised" License |
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
-| [Apereo CAS](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
@@ -123,6 +121,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [byte-buddy-agent](http://bytebuddy.net/byte-buddy-agent) | 1.12.6 | Apache License 2.0 |
 | [Cache Video Player](https://github.com/mohsenzamani22/video_player.git) | 0.0.3 | MIT License |
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
+| [cas](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
 | [Checker Qual](https://checkerframework.org) | 2.5.2, 2.5.5, 3.12.0 | MIT License |
 | [ChickenHook/RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) | 2.2 | Apache License 2.0 |
@@ -144,7 +143,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1 | Apache License 2.0 |
 | [Doxygen](http://www.doxygen.nl/) | 1.8.13 | GNU General Public License v2.0 or later |
 | [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.2.0, 2.3.4, 2.9.0 | Apache License 2.0 |
-| [esbuild](https://github.com/evanw/esbuild#readme) | 0.13.9 | MIT License |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
 | [exoplayer-common](https://plugins.gradle.org/m2/com/google/android/exoplayer/exoplayer-common/) | 2.13.3, 2.15.1 | Apache License 2.0 |
@@ -173,6 +171,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2 | Apache License 2.0 |
 | [Gradle Manipulation Extension](https://github.com/project-ncl/gradle-manipulator) | 3.8 | Apache License 2.0 |
 | [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
+| [Grafana](http://grafana.com) | 8.5.6 | GNU Affero General Public License v3.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 31.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
@@ -228,7 +227,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.5.1 | Apache License 2.0 |
 | [maccandroid](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [mapbox/mapbox-navigation-android](https://www.mapbox.com/android-docs/navigation/overview/) | qa_release_core_1.0.0-qa.8 | MIT License |
-| [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.6.1 | Apache License 2.0 |
+| [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.6.1 | Apache License 2.0 |
 | [Material for MkDocs](http://squidfunk.github.io/mkdocs-material/) | 5.0.0-preview | MIT License |
 | [maven-dependency-resolver](http://robolectric.org) | 4.8.2 | MIT License |
 | [messaging](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
@@ -249,8 +248,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [Netty/Transport/Native/KQueue](http://netty.io/netty-transport-native-kqueue/) | 4.1.69.Final | Apache License 2.0 |
 | [Netty/Transport/Native/Unix/Common](http://netty.io/netty-transport-native-unix-common/) | 4.1.69.Final | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.1 | Apache License 2.0 |
-| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1, 4.9.3 | Apache License 2.0 |
-| [OkIO](https://github.com/square/OkIO) | 2.10.0, 2.2.2, 2.8.0 | Apache License 2.0 |
+| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1 | Apache License 2.0 |
+| [OkIO](https://github.com/square/OkIO) | 2.10.0, 2.2.2 | Apache License 2.0 |
 | [opentrack](https://github.com/opentrack/opentrack) | opentrack-2.3-rc99p11 | ISC License |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.6.21, 1.7.10 | Apache License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.6.10, 1.6.21, 1.7.10 | Apache License 2.0 |
@@ -273,7 +272,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Release Upload](https://git.automotivelinux.org/staging/release-upload/) | 9.0.1 | Mozilla Public License 2.0 |
 | [resources](http://robolectric.org) | 4.8.2 | MIT License |
 | [restinio](https://github.com/Stiffstream/restinio) | 0.6.6 | (zlib License AND MIT License AND BSD 3-clause "New" or "Revised" License AND Boost Software License 1.0) |
-| [Retrofit 2 Kotlin Serialization Converter](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter/) | 0.8.0 | Apache License 2.0 |
 | [robolectric](http://pivotal.github.com/robolectric) | 4.8.2 | MIT License |
 | [Robolectric Junit](http://robolectric.org) | 4.8.2 | MIT License |
 | [RxJava](https://github.com/ReactiveX/RxJava) | 3.0.4 | Apache License 2.0 |
@@ -290,7 +288,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36 | MIT License |
 | [Spring Initializr :: Generator (Spring projects)](https://github.com/spring-io/initializr/initializr-bom/initializr-parent/initializr-generator-spring) | 0.13.0 | Apache License 2.0 |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
-| [square-retrofit](http://square.github.io/retrofit/) | 2.9.0 | Apache License 2.0 |
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [text-to-speech-provider](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
