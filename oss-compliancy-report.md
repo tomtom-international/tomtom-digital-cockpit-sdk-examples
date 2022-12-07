@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4558-2244
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4568-2253
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -105,6 +105,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [antlr](http://antlr.org) | 4.11.1 | BSD 3-clause "New" or "Revised" License |
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
+| [Apereo CAS](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
@@ -121,7 +122,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [byte-buddy-agent](http://bytebuddy.net/byte-buddy-agent) | 1.12.6 | Apache License 2.0 |
 | [Cache Video Player](https://github.com/mohsenzamani22/video_player.git) | 0.0.3 | MIT License |
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
-| [cas](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
 | [Checker Qual](https://checkerframework.org) | 2.5.2, 2.5.5, 3.12.0 | MIT License |
 | [ChickenHook/RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) | 2.2 | Apache License 2.0 |
@@ -169,7 +169,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2 | Apache License 2.0 |
-| [Gradle Manipulation Extension](https://github.com/project-ncl/gradle-manipulator) | 3.8 | Apache License 2.0 |
 | [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
 | [Grafana](http://grafana.com) | 8.5.6 | GNU Affero General Public License v3.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
