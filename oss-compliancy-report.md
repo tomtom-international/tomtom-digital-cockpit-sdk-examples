@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4563-2249
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4584-2261
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -129,7 +129,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [coil-base](https://github.com/coil-kt/coil) | 1.2.1 | Apache License 2.0 |
 | [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 3.8.0, 4.0.7 | Apache License 2.0 |
-| [commons-codec](https://github.com/apache/commons-codec) | 1.15 | Apache License 2.0 |
+| [commons-codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
 | [config - com.typesafe:config](https://github.com/typesafehub/config) | 1.4.1 | Apache License 2.0 |
 | [connectivity](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2.1 | Apache License 2.0 |
 | [core](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
@@ -164,12 +164,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
-| [google-gson](https://github.com/google/gson) | 2.9.0 | Apache License 2.0 |
+| [google-gson](https://github.com/google/gson) | 2.10 | Apache License 2.0 |
 | [google/gnd-android]() | 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2 | Apache License 2.0 |
-| [Gradle Manipulation Extension](https://github.com/project-ncl/gradle-manipulator) | 3.8 | Apache License 2.0 |
 | [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
 | [Grafana](http://grafana.com) | 8.5.6 | GNU Affero General Public License v3.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
@@ -178,7 +177,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ianout - a next generation 2d engine](http://sourceforge.net/projects/ianout) | IanOut Public Beta 3 | GNU General Public License v2.0 or later |
 | [ICU4J](http://icu-project.org) | 70.1 | (Unicode License AND ICU License) |
-| [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.1.1 | MIT License |
+| [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.1.2 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.1, 1.3 | Apache License 2.0 |
 | [jansi](https://github.com/fusesource/jansi) | 2.4.0 | Apache License 2.0 |
 | [JavaWriter](http://github.com/square/javawriter/) | 2.1.1 | Apache License 2.0 |
@@ -195,7 +194,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Kotlin Libraries bill-of-materials](http://kotlinlang.org/) | 1.7.10 | Apache License 2.0 |
 | [Kotlin Test Junit](https://kotlinlang.org/) | 1.7.10 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.7.10 | Apache License 2.0 |
-| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23 | Apache License 2.0 |
+| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23, 3.0.4 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.7.10 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.6.21, 1.7.10 | Apache License 2.0 |
 | [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.7.10 | Apache License 2.0 |
@@ -258,7 +257,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.8.2 | MIT License |
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.21.9 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.4 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.9 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.0 | MIT License |
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
@@ -285,7 +284,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.7.0 | MIT License |
 | [shadowapi](http://robolectric.org) | 4.8.2 | MIT License |
 | [SILGraphite: rendering non-roman scripts](http://sourceforge.net/projects/silgraphite) | 1.3.0, 1.3.12 | GNU Lesser General Public License v2.1 or later |
-| [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36 | MIT License |
+| [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36, 2.0.3 | MIT License |
 | [Spring Initializr :: Generator (Spring projects)](https://github.com/spring-io/initializr/initializr-bom/initializr-parent/initializr-generator-spring) | 0.13.0 | Apache License 2.0 |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |

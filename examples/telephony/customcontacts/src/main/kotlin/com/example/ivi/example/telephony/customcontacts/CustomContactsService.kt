@@ -21,7 +21,6 @@ import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumberType
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsServiceBase
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
-import com.tomtom.ivi.platform.framework.api.ipc.iviservice.mirrormap.MutableMirrorableMap
 import com.tomtom.tools.android.api.resourceresolution.drawable.BitmapDrawableResolver
 
 /**
@@ -31,7 +30,7 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
     ContactsServiceBase(iviServiceHostContext) {
 
     // A mutable contacts data source that can be updated with the contactsSource changes.
-    private val mutableContacts = MutableCustomContactsDataSource()
+    private val mutableContacts = MutableCustomContactsDataSource(context)
 
     // The source of contacts.
     internal val contactsSource = mutableListOf(
