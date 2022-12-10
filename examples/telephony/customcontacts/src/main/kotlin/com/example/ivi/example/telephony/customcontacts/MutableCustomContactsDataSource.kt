@@ -11,8 +11,10 @@
 
 package com.example.ivi.example.telephony.customcontacts
 
+import android.content.Context
 import com.tomtom.ivi.platform.contacts.api.common.model.Contact
 import com.tomtom.ivi.platform.contacts.api.common.util.comparePhoneNumbers
+import com.tomtom.ivi.platform.contacts.api.common.util.contactGroup
 import com.tomtom.ivi.platform.contacts.api.common.util.toContactItems
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactGroup
@@ -23,7 +25,8 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQ
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrderBy
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.COMPANY_NAME_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.CONTACT_GROUP_ASC
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.CONTACT_GROUP_FAMILY_NAME_ASC
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.CONTACT_GROUP_GIVEN_NAME_ASC
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.FAMILY_NAME_ASC
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.GIVEN_NAME_ASC
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
@@ -38,11 +41,13 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQ
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.IviPagingSource
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviDataSource
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviPagingSource
+import java.text.Collator
+import java.util.Locale
 
 /**
  * Load data from a data set and create a page out of it.
  */
-internal class MutableCustomContactsDataSource :
+internal class MutableCustomContactsDataSource(private val context: Context) :
     MutableIviDataSource<ContactsDataSourceElement, ContactsDataSourceQuery>(
         jumpingSupported = true
     ) {
@@ -50,6 +55,21 @@ internal class MutableCustomContactsDataSource :
     private val mutableContacts = mutableListOf<Contact>()
 
     private val contacts: List<Contact> = mutableContacts
+
+    private var collatorLocale: Locale = getSystemLocale()
+    private lateinit var collator: Collator
+
+    private fun getSystemLocale(): Locale = context.resources.configuration.locales.get(0)
+
+    init {
+        setupCollator()
+    }
+
+    private fun setupCollator() {
+        collator = Collator.getInstance(collatorLocale).also {
+            it?.strength = Collator.CANONICAL_DECOMPOSITION
+        }
+    }
 
     /**
      * Add or update contact page.
@@ -73,8 +93,10 @@ internal class MutableCustomContactsDataSource :
                 }
                 is Groups -> {
                     contacts.groupBy {
-                        it.toFirstLetter()
-                    }.map { ContactGroup(it.key.toString(), it.value.size) }
+                        it.contactGroup(
+                            orderBy = query.orderBy ?: ContactGroupOrderBy(GROUP_ASC)
+                        )
+                    }.map { ContactGroup(it.key, it.value.size) }
                 }
                 is FindContactsByDisplayNames -> {
                     contacts.filter { contact ->
@@ -142,13 +164,13 @@ internal class MutableCustomContactsDataSource :
                 it.contact.companyName.ifEmpty { it.contact.displayName }
             }
         }
-        CONTACT_GROUP_ASC -> {
-            contactElements
-                .groupBy { it.contact.toFirstLetter() }
-                .toSortedMap()
-                .flatMap {
-                    it.value
-                }
+        CONTACT_GROUP_GIVEN_NAME_ASC -> {
+            sortContactItems(GIVEN_NAME_ASC, contactElements)
+                .groupedItems(ContactItemOrderBy(GIVEN_NAME_ASC))
+        }
+        CONTACT_GROUP_FAMILY_NAME_ASC -> {
+            sortContactItems(FAMILY_NAME_ASC, contactElements)
+                .groupedItems(ContactItemOrderBy(FAMILY_NAME_ASC))
         }
         FAMILY_NAME_ASC -> {
             contactElements.sortedBy {
@@ -166,6 +188,13 @@ internal class MutableCustomContactsDataSource :
             }
         }
     }
+
+    private fun List<ContactsDataSourceElement>.groupedItems(
+        orderBy: ContactItemOrderBy
+    ) = this.filterIsInstance<ContactItem>()
+        .groupBy { it.contact.contactGroup(orderBy) }
+        .toSortedMap(collator)
+        .flatMap { it.value }
 
     private fun sortContactGroups(
         order: ContactGroupOrder,
@@ -199,19 +228,6 @@ internal class MutableCustomContactsDataSource :
         }
         else -> contactElements
     }
-
-    /**
-     * Groups contact by first letter. Contact starting with no letter character are grouped in
-     * [OTHER_GROUP_HEADER_SORTING_TAG].
-     */
-    private fun Contact.toFirstLetter() =
-        primarySortKey.first().let { firstCharacter ->
-            if (firstCharacter.isLetter()) {
-                firstCharacter
-            } else {
-                OTHER_GROUP_HEADER_SORTING_TAG
-            }
-        }
 
     private class MutableContactsPagingSource(val data: List<ContactsDataSourceElement>) :
         MutableIviPagingSource<ContactsDataSourceElement>() {
@@ -262,7 +278,5 @@ internal class MutableCustomContactsDataSource :
         // avatars. Setting page size to 50 ensures that page size remains under the optimal
         // recommended size.
         private const val DATA_SOURCE_MAX_PAGE_SIZE: Int = 50
-
-        private const val OTHER_GROUP_HEADER_SORTING_TAG = Char.MAX_VALUE
     }
 }
