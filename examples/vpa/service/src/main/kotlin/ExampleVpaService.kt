@@ -15,6 +15,7 @@ import com.tomtom.ivi.platform.bluetoothconnectivity.api.common.model.BluetoothD
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviDiscoverableServiceIdProvider
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
 import com.tomtom.ivi.platform.vpa.api.common.vpa.AuthenticationState
+import com.tomtom.ivi.platform.vpa.api.common.vpa.AuthenticationType
 import com.tomtom.ivi.platform.vpa.api.common.vpa.DialogueState
 import com.tomtom.ivi.platform.vpa.api.common.vpa.PersonalDataType
 import com.tomtom.ivi.platform.vpa.api.common.vpa.VpaAuthenticationStatus
@@ -64,7 +65,7 @@ internal class ExampleVpaService(
         serviceReady = true
     }
 
-    override suspend fun logIn() {
+    override suspend fun logIn(authenticationType: AuthenticationType?) {
         // TODO: Log in to the VPA.
 
         // If the login is successful - update the status.

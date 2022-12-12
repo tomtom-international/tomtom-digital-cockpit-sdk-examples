@@ -20,8 +20,7 @@ internal class ExampleMediaSourceBrowseUserFlow : BrowseSourceUserFlow {
         sourceId: SourceId
     ): UserFlowResult {
         mediaFrontendContext.panels.openMediaTaskPanel(
-            ExampleMediaSourcePanel(mediaFrontendContext),
-            clearStack = false
+            ExampleMediaSourcePanel(mediaFrontendContext)
         )
         return UserFlowResult.Success
     }
