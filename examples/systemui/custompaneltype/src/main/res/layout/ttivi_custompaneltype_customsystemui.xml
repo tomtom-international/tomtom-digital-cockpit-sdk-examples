@@ -46,11 +46,13 @@
             auto:ttiviPanel="@{viewModel.menuPanel}"
             auto:ttiviPanelContainerViewContext="@{panelContainerViewContext}" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.containerviews.TaskPanelContainerView
             android:id="@+id/example_systemui_task_panel_container"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:minWidth="800dp" />
+            android:minWidth="800dp"
+            auto:ttiviPanelContainerData="@{panelRegistry.iviPanelRegistry.taskPanelStackData}"
+            auto:ttiviPanelContainerViewContext="@{panelContainerViewContext}" />
     </LinearLayout>
 </layout>

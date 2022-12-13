@@ -15,14 +15,13 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.OverlayPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.PanelTypeSet
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SearchPanel
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SettingsPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.panelTypeSetOf
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FixedConstructorFactory
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHost
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHostContext
-import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.TaskPanelContainerController
-import com.tomtom.tools.android.core.animation.LifecycleAwareAnimationController
 
 /**
  * The system UI host is the overarching class of the system UI. It's responsible for creating the
@@ -57,7 +56,8 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         ModalPanel::class,
         NotificationPanel::class,
         OverlayPanel::class,
-        SearchPanel::class
+        SearchPanel::class,
+        SettingsPanel::class,
     )
 
     override fun onCreate() {
@@ -71,16 +71,6 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         binding.viewModel = viewModel
         binding.panelRegistry = viewModel.panelRegistry
 
-        val animationController = LifecycleAwareAnimationController(viewLifecycleOwner)
-
-        val taskPanelContainerController = TaskPanelContainerController(
-            ExampleTaskPanelSubContainerManager(animationController),
-            binding.exampleSystemuiTaskPanelContainer,
-            viewModel.panelRegistry.iviPanelRegistry.taskPanelStackData,
-            createPanelContext()
-        )
-
-        register(taskPanelContainerController)
-        registerOnBackPressedConsumer(taskPanelContainerController)
+        registerOnBackPressedConsumer(binding.exampleSystemuiTaskPanelContainer)
     }
 }
