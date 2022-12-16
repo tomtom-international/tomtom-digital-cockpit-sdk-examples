@@ -23,8 +23,8 @@
             type="com.example.ivi.example.systemui.custompaneltype.systemui.CustomPanelRegistry" />
 
         <variable
-            name="panelContainerViewContext"
-            type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.containerviews.PanelContainerViewContext" />
+            name="panelContainerContext"
+            type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
     </data>
 
     <LinearLayout
@@ -32,27 +32,27 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.containerviews.SinglePanelContainerView
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
             android:id="@+id/example_systemui_custompanel_container"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            auto:ttiviPanel="@{viewModel.customPanel}"
-            auto:ttiviPanelContainerViewContext="@{panelContainerViewContext}" />
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{viewModel.customPanel}" />
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.containerviews.SinglePanelContainerView
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
             android:id="@+id/example_systemui_menu_container"
             android:layout_width="?attr/ttivi_mainmenu_panel_size"
             android:layout_height="match_parent"
-            auto:ttiviPanel="@{viewModel.menuPanel}"
-            auto:ttiviPanelContainerViewContext="@{panelContainerViewContext}" />
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.containerviews.TaskPanelContainerView
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelContainer
             android:id="@+id/example_systemui_task_panel_container"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:minWidth="800dp"
-            auto:ttiviPanelContainerData="@{panelRegistry.iviPanelRegistry.taskPanelStackData}"
-            auto:ttiviPanelContainerViewContext="@{panelContainerViewContext}" />
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{panelRegistry.iviPanelRegistry.taskPanelStackData}" />
     </LinearLayout>
 </layout>

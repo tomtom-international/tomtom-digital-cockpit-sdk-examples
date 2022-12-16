@@ -20,6 +20,15 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceE
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactGroup
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactItem
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.ContactItemFilter
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.CompanyName
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.DisplayName
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.GivenName
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.FamilyName
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Favorite
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.PhoneNumber
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.SearchKey
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Source
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrder
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrder.GROUP_ASC
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrderBy
@@ -32,11 +41,6 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQ
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrderBy
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.All
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.Favorites
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsByDisplayNames
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsByPhoneNumber
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsBySearchKey
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.FindContactsBySource
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.Groups
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.IviPagingSource
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviDataSource
@@ -81,52 +85,28 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     override fun createPagingSource(query: ContactsDataSourceQuery):
         MutableIviPagingSource<ContactsDataSourceElement> {
+        val selection: List<ContactsDataSourceElement> = when (query.selection) {
+            is All -> {
+                contacts.toList().toContactItems()
+            }
+            is Groups -> {
+                contacts.groupBy {
+                    it.contactGroup(
+                        orderBy = query.orderBy ?: ContactGroupOrderBy(GROUP_ASC)
+                    )
+                }.map { ContactGroup(it.key, it.value.size) }
+            }
+        }
+
+        val filteredSelection: List<ContactsDataSourceElement> = when (query.filter) {
+            is ContactItemFilter -> {
+                filterContactItems(query.filter as ContactItemFilter, selection)
+            }
+            null -> { selection }
+        }
+
         return MutableContactsPagingSource(
-            when (query.selection) {
-                is All -> {
-                    contacts.toList().toContactItems()
-                }
-                is Favorites -> {
-                    contacts.filter {
-                        it.favorite
-                    }.toContactItems()
-                }
-                is Groups -> {
-                    contacts.groupBy {
-                        it.contactGroup(
-                            orderBy = query.orderBy ?: ContactGroupOrderBy(GROUP_ASC)
-                        )
-                    }.map { ContactGroup(it.key, it.value.size) }
-                }
-                is FindContactsByDisplayNames -> {
-                    contacts.filter { contact ->
-                        (query.selection as FindContactsByDisplayNames).displayNames
-                            .any { displayName ->
-                                contact.displayName.startsWith(displayName, true)
-                            }
-                    }.toContactItems()
-                }
-                is FindContactsByPhoneNumber -> {
-                    contacts.filter {
-                        it.phoneNumbers.any { phoneNumber ->
-                            comparePhoneNumbers(
-                                (query.selection as FindContactsByPhoneNumber).phoneNumber,
-                                phoneNumber.number
-                            )
-                        }
-                    }.toContactItems()
-                }
-                is FindContactsBySource -> {
-                    contacts.filter {
-                        (query.selection as FindContactsBySource).source == it.source
-                    }.toContactItems()
-                }
-                is FindContactsBySearchKey -> {
-                    findMatchingContacts(
-                        (query.selection as FindContactsBySearchKey).searchKey
-                    ).toContactItems()
-                }
-            }.map { contactElement ->
+            filteredSelection.map { contactElement ->
                 query.map?.invoke(contactElement) ?: contactElement
             }.let { contactElements ->
                 orderContactElements(query.orderBy, contactElements)
@@ -134,26 +114,85 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
         )
     }
 
-    private fun findMatchingContacts(key: String): List<Contact> {
-        return (
-            contacts.filter {
-                var contactFound = false
-                if (it.givenName.isNotBlank()) {
-                    contactFound = it.givenName.startsWith(key, true)
+    private fun filterContactItems(
+        filter: ContactItemFilter,
+        selection: List<ContactsDataSourceElement>
+    ): List<ContactsDataSourceElement> {
+        val contactItems = selection.filterIsInstance<ContactItem>()
+        return when (filter) {
+            is CompanyName -> {
+                contactItems.filter { contactItem ->
+                    filter.companyNames.any { companyName ->
+                        contactItem.contact.companyName.startsWith(companyName, true)
+                    }
                 }
-                if (it.familyName.isNotBlank() && !contactFound) {
-                    contactFound = it.familyName.startsWith(key, true)
-                }
-                if (it.companyName.isNotBlank() && !contactFound) {
-                    contactFound = it.companyName.startsWith(key, true)
-                }
-                if (it.displayName.isNotBlank() && !contactFound) {
-                    contactFound = it.displayName.startsWith(key, true)
-                }
-                contactFound
             }
-        )
+            is DisplayName -> {
+                contactItems.filter { contactItem ->
+                    filter.displayNames.any { displayName ->
+                        contactItem.contact.displayName.startsWith(displayName, true)
+                    }
+                }
+            }
+            is FamilyName -> {
+                contactItems.filter { contactItem ->
+                    filter.familyNames.any { familyName ->
+                        contactItem.contact.familyName.startsWith(familyName, true)
+                    }
+                }
+            }
+            is Favorite -> {
+                contactItems.filter { contactItem ->
+                    contactItem.contact.favorite
+                }
+            }
+            is GivenName -> {
+                contactItems.filter { contactItem ->
+                    filter.givenNames.any { givenName ->
+                        contactItem.contact.givenName.startsWith(givenName, true)
+                    }
+                }
+            }
+            is PhoneNumber -> {
+                contactItems.filter { contactItem ->
+                    contactItem.contact.phoneNumbers.any { phoneNumber ->
+                        comparePhoneNumbers(filter.phoneNumber, phoneNumber.number)
+                    }
+                }
+            }
+            is Source -> {
+                contactItems.filter { contactItem ->
+                    filter.source == contactItem.contact.source
+                }
+            }
+            is SearchKey -> {
+                contactItems
+                    .findMatchingContacts(filter.searchKey).toContactItems()
+            }
+            else -> {
+                contactItems
+            }
+        }
     }
+
+    private fun List<ContactItem>.findMatchingContacts(key: String): List<Contact> =
+        map { it.contact }.filter {
+            var contactFound = false
+            if (it.givenName.isNotBlank()) {
+                contactFound = it.givenName.startsWith(key, true)
+            }
+            if (it.familyName.isNotBlank() && !contactFound) {
+                contactFound = it.familyName.startsWith(key, true)
+            }
+            if (it.companyName.isNotBlank() && !contactFound) {
+                contactFound = it.companyName.startsWith(key, true)
+            }
+            if (it.displayName.isNotBlank() && !contactFound) {
+                contactFound = it.displayName.startsWith(key, true)
+            }
+            contactFound
+        }
+
 
     private fun sortContactItems(
         order: ContactItemOrder,
