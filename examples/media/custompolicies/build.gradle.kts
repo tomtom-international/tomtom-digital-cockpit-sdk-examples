@@ -51,6 +51,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.media.custompolicies"
     buildFeatures {
         dataBinding = true
     }

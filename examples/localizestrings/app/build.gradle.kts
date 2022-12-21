@@ -26,6 +26,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.localizestrings.app"
     buildFeatures {
         dataBinding = true
     }

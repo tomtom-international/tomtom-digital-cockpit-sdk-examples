@@ -55,6 +55,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.activityview"
     buildFeatures {
         dataBinding = true
     }

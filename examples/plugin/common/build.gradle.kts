@@ -9,6 +9,10 @@
  * immediately return or destroy it.
  */
 
+android {
+    namespace = "com.example.ivi.example.plugin.common"
+}
+
 dependencies {
     api(libraries.iviPlatformFrameworkApiCommonUid)
 }

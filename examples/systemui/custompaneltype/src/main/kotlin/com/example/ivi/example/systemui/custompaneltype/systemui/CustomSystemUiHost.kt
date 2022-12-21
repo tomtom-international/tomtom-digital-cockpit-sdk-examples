@@ -1,3 +1,14 @@
+/*
+ * Copyright © 2022 TomTom NV. All rights reserved.
+ *
+ * This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+ * used for internal evaluation purposes or commercial use strictly subject to separate
+ * license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+ * to use this software in accordance with the terms of your license agreement. If you are
+ * not the licensee, you are not authorized to use this software in any manner and should
+ * immediately return or destroy it.
+ */
+
 package com.example.ivi.example.systemui.custompaneltype.systemui
 
 import androidx.lifecycle.ViewModelProvider
@@ -15,14 +26,13 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.OverlayPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.PanelTypeSet
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SearchPanel
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SettingsPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.panelTypeSetOf
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FixedConstructorFactory
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHost
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHostContext
-import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.TaskPanelContainerController
-import com.tomtom.tools.android.core.animation.LifecycleAwareAnimationController
 
 /**
  * The system UI host is the overarching class of the system UI. It's responsible for creating the
@@ -57,7 +67,8 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         ModalPanel::class,
         NotificationPanel::class,
         OverlayPanel::class,
-        SearchPanel::class
+        SearchPanel::class,
+        SettingsPanel::class,
     )
 
     override fun onCreate() {
@@ -71,16 +82,6 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         binding.viewModel = viewModel
         binding.panelRegistry = viewModel.panelRegistry
 
-        val animationController = LifecycleAwareAnimationController(viewLifecycleOwner)
-
-        val taskPanelContainerController = TaskPanelContainerController(
-            ExampleTaskPanelSubContainerManager(animationController),
-            binding.exampleSystemuiTaskPanelContainer,
-            viewModel.panelRegistry.iviPanelRegistry.taskPanelStackData,
-            createPanelContext()
-        )
-
-        register(taskPanelContainerController)
-        registerOnBackPressedConsumer(taskPanelContainerController)
+        registerOnBackPressedConsumer(binding.exampleSystemuiTaskPanelContainer)
     }
 }

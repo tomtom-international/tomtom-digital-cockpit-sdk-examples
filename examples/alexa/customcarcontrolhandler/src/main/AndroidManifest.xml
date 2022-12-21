@@ -11,4 +11,4 @@
   ~ immediately return or destroy it.
   -->
 
-<manifest package="com.example.ivi.example.alexa.customcarcontrolhandler" />
+<manifest />

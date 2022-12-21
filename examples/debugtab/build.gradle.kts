@@ -51,6 +51,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.debugtab"
     buildFeatures {
         dataBinding = true
     }

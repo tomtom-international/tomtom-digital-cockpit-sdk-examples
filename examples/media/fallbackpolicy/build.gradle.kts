@@ -57,6 +57,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.media.fallbackpolicy"
     buildFeatures {
         dataBinding = true
     }

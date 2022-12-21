@@ -32,6 +32,10 @@ apply(from = rootProject.file("examples/plugin/frontends-and-menuitems.gradle.kt
 val accountFrontend: FrontendConfig by project.extra
 val accountMenuItem: MenuItemConfig by project.extra
 
+android {
+    namespace = "com.example.ivi.example.plugin.functionaltest.integrationtest"
+}
+
 ivi {
     application {
         enabled = true

@@ -69,6 +69,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.telephony.app"
     buildFeatures {
         dataBinding = true
     }

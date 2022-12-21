@@ -20,6 +20,7 @@ plugins {
 }
 
 android {
+    namespace = "com.example.ivi.example.notifications"
     buildFeatures {
         dataBinding = true
     }

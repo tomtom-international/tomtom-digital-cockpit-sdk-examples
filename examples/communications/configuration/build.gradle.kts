@@ -27,6 +27,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.communication.configuration"
     buildFeatures {
         dataBinding = true
     }

@@ -21,6 +21,7 @@ androidTest {
 }
 
 android {
+    namespace = "com.example.ivi.example.plugin.functionaltest.e2etest"
     navTest.android {
         androidTest {
             enabled.set(true)

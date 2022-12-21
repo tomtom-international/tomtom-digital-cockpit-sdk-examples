@@ -47,6 +47,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.companionapp.app"
     buildFeatures {
         dataBinding = true
     }

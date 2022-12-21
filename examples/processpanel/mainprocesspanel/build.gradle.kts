@@ -20,6 +20,7 @@ plugins {
 }
 
 android {
+    namespace = "com.example.ivi.example.processpanel.mainprocesspanel"
     buildFeatures {
         dataBinding = true
     }

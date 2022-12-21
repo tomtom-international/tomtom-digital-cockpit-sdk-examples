@@ -11,6 +11,10 @@
 
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
+android {
+    namespace = "com.example.ivi.example.applauncher.common.webapp"
+}
+
 ivi {
     // The App base class is currently flagged as experimental, and has to be explicitly opted in.
     optInToExperimentalApis = true

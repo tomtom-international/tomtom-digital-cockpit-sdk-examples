@@ -20,6 +20,7 @@ plugins {
 }
 
 android {
+    namespace = "com.example.ivi.example.systemui.custompaneltype"
     buildFeatures {
         dataBinding = true
     }
@@ -72,6 +73,9 @@ ivi {
 dependencies {
     implementation(project(":examples_common"))
 
+    implementation(iviDependencies.tomtomToolsApiDatabinding)
+    implementation(iviDependencies.tomtomToolsApiLivedata)
+    implementation(iviDependencies.tomtomToolsApiUicontrols)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)
 }

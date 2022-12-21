@@ -57,6 +57,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.alexa.app"
     buildFeatures {
         dataBinding = true
     }

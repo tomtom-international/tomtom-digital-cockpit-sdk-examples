@@ -15,6 +15,10 @@ plugins {
     id("com.tomtom.ivi.platform.framework.frontend")
 }
 
+android {
+    namespace = "com.example.ivi.example.plugin.frontend"
+}
+
 ivi {
     optInToExperimentalApis = true
 }

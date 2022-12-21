@@ -11,6 +11,10 @@
 
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
+android {
+    namespace = "com.example.ivi.example.plugin.service"
+}
+
 ivi {
     configurationGenerator {
         enabled = true
