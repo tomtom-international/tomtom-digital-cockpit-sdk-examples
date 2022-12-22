@@ -15,6 +15,10 @@ plugins {
     id("com.tomtom.ivi.platform.framework.config.activity-test")
 }
 
+android {
+    namespace = "com.example.ivi.example.telephony.functionaltest.integrationtest"
+}
+
 ivi {
     application {
         enabled = true

@@ -17,6 +17,7 @@ plugins {
 }
 
 android {
+    namespace = "com.example.ivi.example.vpa.app"
     buildFeatures {
         dataBinding = true
     }

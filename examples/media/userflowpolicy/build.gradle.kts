@@ -50,6 +50,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.media.userflowpolicy"
     buildFeatures {
         dataBinding = true
     }

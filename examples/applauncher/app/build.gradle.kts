@@ -45,6 +45,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.applauncher.app"
     buildFeatures {
         dataBinding = true
     }

@@ -53,6 +53,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.panelhierarchy"
     buildFeatures {
         dataBinding = true
     }

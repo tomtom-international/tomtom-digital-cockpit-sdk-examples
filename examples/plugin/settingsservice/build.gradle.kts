@@ -15,6 +15,10 @@ plugins {
     `kotlinx-serialization`
 }
 
+android {
+    namespace = "com.example.ivi.example.plugin.settingsservice"
+}
+
 ivi {
     configurationGenerator {
         enabled = true

@@ -41,8 +41,7 @@ internal class CustomContactsServiceTest : IviTestCase() {
         )
         val allContactsQuery = ContactsDataSourceQuery(
             selection = ContactsDataSourceQuery.ContactSelection.All,
-            orderBy = ContactItemOrderBy(PRIMARY_SORT_KEY),
-            map = null,
+            orderBy = ContactItemOrderBy(PRIMARY_SORT_KEY)
         )
 
         // THEN

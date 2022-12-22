@@ -106,11 +106,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
         }
 
         return MutableContactsPagingSource(
-            filteredSelection.map { contactElement ->
-                query.map?.invoke(contactElement) ?: contactElement
-            }.let { contactElements ->
-                orderContactElements(query.orderBy, contactElements)
-            }
+            orderContactElements(query.orderBy, filteredSelection)
         )
     }
 

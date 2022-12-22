@@ -69,6 +69,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.example.plugin.app"
     buildFeatures {
         dataBinding = true
     }

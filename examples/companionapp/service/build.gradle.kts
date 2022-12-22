@@ -9,6 +9,10 @@
  * immediately return or destroy it.
  */
 
+android {
+    namespace = "com.example.ivi.example.companionapp.service"
+}
+
 dependencies {
     implementation(project(":examples_companionapp_serviceapi"))
     implementation(iviDependencies.tomtomCommunicationsSdkClient)

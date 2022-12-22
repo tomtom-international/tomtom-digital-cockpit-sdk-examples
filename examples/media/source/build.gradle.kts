@@ -9,6 +9,10 @@
  * immediately return or destroy it.
  */
 
+android {
+    namespace = "com.example.ivi.example.media.source"
+}
+
 dependencies {
     implementation(iviDependencies.androidxAppcompat)
     implementation(iviDependencies.androidxMedia)

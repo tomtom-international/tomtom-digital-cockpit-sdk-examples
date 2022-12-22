@@ -16,6 +16,7 @@ ivi {
 }
 
 android {
+    namespace = "com.example.ivi.template.app"
     defaultConfig {
         applicationId = "com.example.ivi.template.app"
     }

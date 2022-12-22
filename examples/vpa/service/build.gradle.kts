@@ -12,6 +12,10 @@
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
+android {
+    namespace = "com.example.ivi.example.vpa.service"
+}
+
 ivi {
     // The VpaAdaptationService API is experimental, and has to be explicitly opted in.
     optInToExperimentalApis = true

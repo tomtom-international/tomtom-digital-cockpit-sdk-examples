@@ -13,6 +13,7 @@ import com.tomtom.ivi.buildsrc.environment.ProjectAbis
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
 android {
+    namespace = "com.example.ivi.common"
     buildFeatures {
         dataBinding = true
     }

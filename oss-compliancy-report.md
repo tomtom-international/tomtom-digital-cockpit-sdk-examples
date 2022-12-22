@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4651-2302
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4665-2317
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -19,7 +19,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [aacstts](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
 | [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3, 4.1 | Apache License 2.0 |
 | [Accessibility Test Framework](https://code.google.com/p/eyes-free/) | 3.1 | Apache License 2.0 |
-| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.2.4, 1.3.1 | Apache License 2.0 |
+| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.2.4 | Apache License 2.0 |
 | [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.2.3, 1.3.1 | Apache License 2.0 |
 | [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [Aibo](http://github.com/datasieve/Aibo) | 3.1.1_meet_with_skitter_and_apple | GNU General Public License v2.0 only |
@@ -105,7 +105,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [antlr](http://antlr.org) | 4.11.1 | BSD 3-clause "New" or "Revised" License |
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
-| [Apereo CAS](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
@@ -124,6 +123,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [byte-buddy-agent](http://bytebuddy.net/byte-buddy-agent) | 1.12.6 | Apache License 2.0 |
 | [Cache Video Player](https://github.com/mohsenzamani22/video_player.git) | 0.0.3 | MIT License |
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
+| [cas](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
 | [CBOR for Java](https://github.com/c-rack/cbor-java) | 0.8 | Apache License 2.0 |
 | [Checker Qual](https://checkerframework.org) | 2.5.2, 2.5.5, 3.12.0 | MIT License |
@@ -203,7 +203,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.3, 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.3, 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.3 | Apache License 2.0 |
-| [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1 | Apache License 2.0 |
+| [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1, 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.2.2, 1.3.3 | Apache License 2.0 |
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.2.2, 1.3.3 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.7.5 | Apache License 2.0 |
@@ -250,7 +250,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [reactive-streams](http://www.reactive-streams.org/) | v1.0.3 | Creative Commons Zero v1.0 Universal |
-| [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.1.0 | Apache License 2.0 |
+| [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.2.1 | Apache License 2.0 |
 | [reflector](http://robolectric.org) | 4.8.2 | MIT License |
 | [Release Upload](https://git.automotivelinux.org/staging/release-upload/) | 9.0.1 | Mozilla Public License 2.0 |
 | [resources](http://robolectric.org) | 4.8.2 | MIT License |

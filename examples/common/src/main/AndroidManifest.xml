@@ -9,8 +9,7 @@
   ~ immediately return or destroy it.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ivi.common">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:name=".ExampleApplication"
