@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.tomtom.tools.android.api.resourceresolution.ContextExtensionsKt" />
+
+        <import type="com.tomtom.ivi.platform.frontend.api.template.notificationpanel.R" />
+
+        <import type="com.tomtom.ivi.platform.frontend.api.template.notificationpanel.NotificationExtentionsKt" />
+
+        <variable
+            name="viewModel"
+            type="com.tomtom.ivi.platform.frontend.api.template.notificationpanel.NotificationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ttivi_notification_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/tt_spacing_5"
+        android:orientation="vertical">
+
+        <!-- Header block -->
+        <com.tomtom.tools.android.api.uicontrols.informationcontrol.TtInformationControl
+            android:id="@+id/ttivi_notification_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="?attr/tt_spacing_10"
+            android:paddingVertical="?attr/tt_spacing_4"
+            auto:ttPrimaryTextAppearance="?attr/tt_title_text_style_l"
+            auto:ttPrimaryTextMaxLines="2"
+            auto:ttSecondaryTextColor="?attr/tt_surface_content_color_emphasis_medium"
+            auto:ttSecondaryTextMaxLines="2"
+            auto:ttHeadImage="@{viewModel.headerViewModel.imageDescriptor}"
+            auto:ttPrimaryText="@{viewModel.headerViewModel.title}"
+            auto:ttSecondaryText="@{viewModel.headerViewModel.description}"
+            auto:visibleIfNotNull="@{viewModel.headerViewModel}" />
+
+        <!-- Body text -->
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/ttivi_notification_body_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="?attr/tt_spacing_5"
+            android:layout_marginHorizontal="?attr/tt_spacing_10"
+            android:text="@{viewModel.bodyText}"
+            android:textAppearance="?attr/tt_body_text_style_m"
+            android:textColor="?attr/tt_surface_content_color_emphasis_medium"
+            auto:visibleIfNotNull="@{viewModel.bodyText}"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+        <!-- Action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clipToPadding="false"
+            android:paddingHorizontal="?attr/tt_spacing_10"
+            android:paddingVertical="?attr/ttivi_notification_buttons_padding_vertical"
+            auto:visibleIf="@{viewModel.primaryActionButtonViewModel.isVisible || viewModel.secondaryActionButtonViewModel.isVisible}">
+
+            <!-- Start of custom part. Secondary button first. -->
+            <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                android:id="@+id/ttivi_notification_action_secondary"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="?attr/tt_button_height"
+                auto:ttViewModel="@{viewModel.secondaryActionButtonViewModel}" />
+
+            <Space
+                android:layout_width="?attr/tt_spacing_6"
+                android:layout_height="match_parent"
+                auto:visibleIf="@{viewModel.primaryActionButtonViewModel.isVisible &amp;&amp; viewModel.secondaryActionButtonViewModel.isVisible}" />
+
+            <!-- Then the primary button. End of custom part. -->
+            <com.tomtom.tools.android.api.uicontrols.button.TtButton
+                android:id="@+id/ttivi_notification_action_primary"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="?attr/tt_button_height"
+                auto:ttViewModel="@{viewModel.primaryActionButtonViewModel}" />
+        </LinearLayout>
+
+        <!-- Notification options -->
+        <com.tomtom.tools.android.api.uicontrols.list.TtListTableLayout
+            android:id="@+id/ttivi_notification_option_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/tt_spacing_5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            auto:ttContentLayout="@layout/ttivi_notification_option"
+            auto:ttContents="@{viewModel.optionViewModels}"
+            auto:visibleIf="@{viewModel.optionViewModels.size() > 0}"/>
+
+        <!-- This spacing is only added in case the list option is not the last element of the panel. -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?attr/tt_spacing_5"
+            auto:visibleIf="@{viewModel.optionViewModels.size() == 0}" />
+    </LinearLayout>
+</layout>

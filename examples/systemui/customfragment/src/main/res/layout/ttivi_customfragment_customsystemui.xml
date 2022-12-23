@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.systemui.customfragment.systemui.CustomSystemUiViewModel" />
+        <variable
+            name="panelRegistry"
+            type="com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.IviPanelRegistry" />
+
+        <variable
+            name="panelContainerContext"
+            type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        tools:ignore="ContentDescription">
+
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelContainer
+            android:id="@+id/example_systemui_task_panel_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="800dp"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintLeft_toRightOf="@id/example_systemui_menu_container"
+            auto:layout_constraintTop_toTopOf="parent"
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}" />
+
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.DismissablePanelListContainer
+            android:id="@+id/example_notification_container"
+            style="@style/TtiviNotificationPanelContainer"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginStart="?attr/tt_spacing_10"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintLeft_toRightOf="@id/example_systemui_menu_container"
+            auto:layout_constraintTop_toTopOf="parent"
+            auto:ttiviIgnoreTouchEvents="@{panelRegistry.notificationPanelData.activeNotificationPanels.isEmpty()}"
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{panelRegistry.notificationPanelData.activeNotificationPanels}"
+            auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationpanel_subcontainer" />
+
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+            android:id="@+id/example_systemui_menu_container"
+            android:layout_width="?attr/ttivi_mainmenu_panel_size"
+            android:layout_height="0dp"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toTopOf="parent"
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
