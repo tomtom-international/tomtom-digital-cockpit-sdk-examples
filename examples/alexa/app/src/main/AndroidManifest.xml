@@ -11,5 +11,4 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ivi.example.alexa.app"
     android:sharedUserId="com.tomtom.ivi.IviUserId" />

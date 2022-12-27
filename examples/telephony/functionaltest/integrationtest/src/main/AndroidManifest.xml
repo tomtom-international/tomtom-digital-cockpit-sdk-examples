@@ -10,8 +10,7 @@
   ~ immediately return or destroy it.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ivi.example.telephony.functionaltest.integrationtest">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application android:label="@string/app_name" />
 </manifest>

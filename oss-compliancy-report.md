@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4668-2320
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4680-2328
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -204,8 +204,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.3, 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.3 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1, 0.4.0 | Apache License 2.0 |
-| [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.2.2, 1.3.3 | Apache License 2.0 |
-| [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.2.2, 1.3.3 | Apache License 2.0 |
+| [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.2.2, 1.4.0 | Apache License 2.0 |
+| [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.2.2, 1.4.0 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.7.5 | Apache License 2.0 |
 | [kubeflow](https://github.com/kubeflow/kubeflow) | v0.1.1 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |

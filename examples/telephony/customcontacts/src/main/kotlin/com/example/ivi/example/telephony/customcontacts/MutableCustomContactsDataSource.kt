@@ -20,14 +20,13 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceE
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactGroup
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactItem
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.ContactItemFilter
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.CompanyName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.DisplayName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.GivenName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.FamilyName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Favorite
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.PhoneNumber
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.SearchKey
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Source
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrder
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrder.GROUP_ASC
@@ -98,20 +97,16 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
             }
         }
 
-        val filteredSelection: List<ContactsDataSourceElement> = when (query.filter) {
-            is ContactItemFilter -> {
-                filterContactItems(query.filter as ContactItemFilter, selection)
-            }
-            null -> { selection }
-        }
+        val filteredSelection = query.filter?.let { applyContactFilter(it, selection) } ?: selection
+
 
         return MutableContactsPagingSource(
             orderContactElements(query.orderBy, filteredSelection)
         )
     }
 
-    private fun filterContactItems(
-        filter: ContactItemFilter,
+    private fun applyContactFilter(
+        filter: ContactFilter,
         selection: List<ContactsDataSourceElement>
     ): List<ContactsDataSourceElement> {
         val contactItems = selection.filterIsInstance<ContactItem>()
@@ -151,9 +146,11 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
             }
             is PhoneNumber -> {
                 contactItems.filter { contactItem ->
-                    contactItem.contact.phoneNumbers.any { phoneNumber ->
-                        comparePhoneNumbers(filter.phoneNumber, phoneNumber.number)
-                    }
+                    filter.phoneNumber?.let {
+                        contactItem.contact.phoneNumbers.any { phoneNumber ->
+                            comparePhoneNumbers(it, phoneNumber.number)
+                        }
+                    } ?: contactItem.contact.phoneNumbers.isEmpty()
                 }
             }
             is Source -> {
@@ -161,34 +158,47 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
                     filter.source == contactItem.contact.source
                 }
             }
-            is SearchKey -> {
-                contactItems
-                    .findMatchingContacts(filter.searchKey).toContactItems()
-            }
-            else -> {
-                contactItems
+            is ContactFilter.ContactFilterOperator -> {
+                applyContactFilterGroup(filter, selection)
             }
         }
     }
 
-    private fun List<ContactItem>.findMatchingContacts(key: String): List<Contact> =
-        map { it.contact }.filter {
-            var contactFound = false
-            if (it.givenName.isNotBlank()) {
-                contactFound = it.givenName.startsWith(key, true)
+    private fun applyContactFilterGroup(
+        filterOperator: ContactFilter.ContactFilterOperator,
+        selection: List<ContactsDataSourceElement>
+    ): List<ContactsDataSourceElement> =
+        when (filterOperator.filterOperator) {
+            ContactFilter.ContactFilterOperator.FilterOperator.OR -> {
+                // All the results of the filters in this group will be or-ed.
+                filterOperator.filters.flatMap { applyContactFilter(it, selection) }
             }
-            if (it.familyName.isNotBlank() && !contactFound) {
-                contactFound = it.familyName.startsWith(key, true)
-            }
-            if (it.companyName.isNotBlank() && !contactFound) {
-                contactFound = it.companyName.startsWith(key, true)
-            }
-            if (it.displayName.isNotBlank() && !contactFound) {
-                contactFound = it.displayName.startsWith(key, true)
-            }
-            contactFound
-        }
+            ContactFilter.ContactFilterOperator.FilterOperator.AND -> {
+                // All the results of the filters in this group will be and-ed.
+                val filterResults = filterOperator.filters.map {
+                    applyContactFilter(it, selection).toSet()
+                }
 
+                val filteredSelections = selection.toMutableList()
+
+                filterResults.forEach { filteredSelections.retainAll(it) }
+                filteredSelections
+            }
+            ContactFilter.ContactFilterOperator.FilterOperator.NOT -> {
+                // All the results in the group will be removed from the selection
+                val filterResults = filterOperator.filters.map {
+                    applyContactFilter(it, selection).toSet()
+                }
+
+                val filteredSelections = selection.toMutableList()
+
+                filterResults.forEach { filteredSelections.removeAll(it) }
+                filteredSelections
+            }
+            else -> {
+                error("Invalid FilterGroup provided $filterOperator")
+            }
+        }.distinct()
 
     private fun sortContactItems(
         order: ContactItemOrder,
