@@ -17,6 +17,10 @@ ivi {
     optInToExperimentalApis = true
 }
 
+android {
+    namespace = "com.example.ivi.example.applauncher.services.webappsourceprovider"
+}
+
 dependencies {
     api(project(":examples_applauncher_common_webapp"))
     implementation(libraries.iviAppsuiteAppstoreApiServiceAppsourceprovider)

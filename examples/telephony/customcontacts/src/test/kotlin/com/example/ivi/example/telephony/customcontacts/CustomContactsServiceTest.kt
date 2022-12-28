@@ -14,7 +14,7 @@ package com.example.ivi.example.telephony.customcontacts
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrderBy
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy
 import com.tomtom.ivi.platform.framework.api.testing.ipc.iviservice.datasource.assertIviDataSourceEquals
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.ivi.platform.tools.api.testing.unit.IviTestCase
@@ -40,8 +40,7 @@ internal class CustomContactsServiceTest : IviTestCase() {
             ContactsDataSourceElement.ContactItem(contact = sut.contactsSource[1]),
         )
         val allContactsQuery = ContactsDataSourceQuery(
-            selection = ContactsDataSourceQuery.ContactSelection.All,
-            orderBy = ContactItemOrderBy(PRIMARY_SORT_KEY)
+            orderBy = ContactOrderBy(PRIMARY_SORT_KEY)
         )
 
         // THEN

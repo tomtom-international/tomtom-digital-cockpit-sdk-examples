@@ -17,6 +17,10 @@ ivi {
     optInToExperimentalApis = true
 }
 
+android {
+    namespace = "com.example.ivi.examples.applauncher.services.androidappsourceprovider"
+}
+
 dependencies {
     implementation(libraries.iviAppsuiteAppstoreApiCommonModel)
     implementation(libraries.iviAppsuiteAppstoreApiServiceAppsourceprovider)

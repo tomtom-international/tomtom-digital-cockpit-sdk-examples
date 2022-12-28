@@ -15,6 +15,10 @@ ivi {
     optInToExperimentalApis = true
 }
 
+android {
+    namespace = "com.example.ivi.example.applauncher.services.webapplaunchtrigger"
+}
+
 dependencies {
     api(project(":examples_applauncher_common_webapp"))
     implementation(libraries.iviAppsuiteAppstoreApiServiceApplaunchtrigger)

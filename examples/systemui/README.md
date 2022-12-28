@@ -3,7 +3,8 @@
 ## Introduction
 
 This directory holds a set of example apps that demonstrate how to create your own system UI, such
-as creating a custom panel type.
+as adding a splash screen, replacing the fragment of a panel with a custom fragment and creating a
+custom panel type.
 
 ## Copyright
 

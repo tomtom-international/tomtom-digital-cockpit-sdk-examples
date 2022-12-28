@@ -10,4 +10,4 @@
   ~ immediately return or destroy it.
   -->
 
-<manifest package="com.example.ivi.example.companionapp.app" />
+<manifest />
