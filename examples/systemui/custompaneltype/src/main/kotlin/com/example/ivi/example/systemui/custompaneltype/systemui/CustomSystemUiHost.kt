@@ -82,6 +82,6 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         binding.viewModel = viewModel
         binding.panelRegistry = viewModel.panelRegistry
 
-        registerOnBackPressedConsumer(binding.exampleSystemuiTaskPanelContainer)
+        registerOnBackPressedConsumer(binding.exampleSystemuiTaskPanelStackContainer)
     }
 }

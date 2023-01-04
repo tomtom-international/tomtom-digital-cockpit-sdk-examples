@@ -80,3 +80,18 @@ val customEqualizerControllerHandlerServiceHost by extra {
         )
     )
 }
+
+val exampleAlexaPreviewModeServiceHost by extra {
+    IviServiceHostConfig(
+        serviceHostBuilderName = "ExampleAlexaPreviewModeServiceHostBuilder",
+        implementationModule = ExampleModuleReference("examples_alexa_alexapreviewmode"),
+        interfaces = listOf(
+            IviServiceInterfaceConfig(
+                serviceName = "AlexaPreviewModeService",
+                serviceApiModule = IviPlatformModuleReference(
+                    "platform_alexa_api_service_alexapreviewmode"
+                )
+            )
+        )
+    )
+}

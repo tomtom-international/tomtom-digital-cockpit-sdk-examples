@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4680-2328
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4711-2334
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -167,6 +167,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [google-gson](https://github.com/google/gson) | 2.10 | Apache License 2.0 |
+| [google-guava](https://github.com/google/guava) | 31.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
 | [google/gnd-android]() | 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
@@ -175,7 +176,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Grafana ](http://grafana.org) | 8.5.6 | GNU Affero General Public License v3.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [Guava: Google Core Libraries for Java](https://github.com/google/guava/wiki) | 31.1-android, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ianout - a next generation 2d engine](http://sourceforge.net/projects/ianout) | IanOut Public Beta 3 | GNU General Public License v2.0 or later |
 | [ICU4J](http://icu-project.org) | 70.1 | (Unicode License AND ICU License) |

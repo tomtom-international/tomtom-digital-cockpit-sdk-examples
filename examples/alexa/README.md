@@ -24,6 +24,18 @@ CarControl endpoints and assets. For details see the
 [Customize the Alexa Car Control Feature](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/voice-personal-assistant/customize-the-alexa-car-control-feature)
 portal page.
 
+## Alexa Preview Mode
+
+Alexa Preview Mode allows users to get access to a set of Alexa features without requiring a login
+with an Amazon account.
+
+Subdirectory `alexapreviewmode` holds a simple example implementation of the 
+[`AlexaPreviewModeService`](TTIVI_PLATFORM_API).
+This service is responsible for handling communication with AVS (Alexa Voice Service) to enable or 
+disable Alexa Preview Mode using the `InstantDeviceRegistration` API.
+
+This service must be implemented if an OEM wants to use [Alexa Preview Mode in the setup flow](https://developer.amazon.com/en-US/docs/alexa/alexa-auto/setup.html).
+
 ## Copyright
 
 Copyright © 2022 TomTom NV. All rights reserved.

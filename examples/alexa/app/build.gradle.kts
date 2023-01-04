@@ -25,6 +25,7 @@ apply(from = rootProject.file("examples/alexa/iviservicehosts.gradle.kts"))
 
 val customCarControlHandlerServiceHost: IviServiceHostConfig by project.extra
 val customEqualizerControllerHandlerServiceHost: IviServiceHostConfig by project.extra
+val exampleAlexaPreviewModeServiceHost: IviServiceHostConfig by project.extra
 
 /**
  * IVI configuration for this example application.
@@ -52,6 +53,7 @@ ivi {
             }
             addHost(customCarControlHandlerServiceHost)
             addHost(customEqualizerControllerHandlerServiceHost)
+            addHost(exampleAlexaPreviewModeServiceHost)
         }
     }
 }
@@ -67,4 +69,5 @@ dependencies {
     implementation(project(":examples_common"))
     implementation(project(":examples_alexa_customcarcontrolhandler"))
     implementation(project(":examples_alexa_customequalizercontrollerhandler"))
+    implementation(project(":examples_alexa_alexapreviewmode"))
 }

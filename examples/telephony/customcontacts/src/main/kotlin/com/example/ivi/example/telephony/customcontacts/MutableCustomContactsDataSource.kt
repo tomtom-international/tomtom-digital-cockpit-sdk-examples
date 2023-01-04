@@ -28,19 +28,7 @@ import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQ
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Favorite
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.PhoneNumber
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Source
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrder
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrder.GROUP_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactGroupOrderBy
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.COMPANY_NAME_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.CONTACT_GROUP_FAMILY_NAME_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.CONTACT_GROUP_GIVEN_NAME_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.FAMILY_NAME_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.GIVEN_NAME_ASC
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrderBy
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.All
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactSelection.Groups
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.IviPagingSource
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviDataSource
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviPagingSource
@@ -84,90 +72,86 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     override fun createPagingSource(query: ContactsDataSourceQuery):
         MutableIviPagingSource<ContactsDataSourceElement> {
-        val selection: List<ContactsDataSourceElement> = when (query.selection) {
-            is All -> {
-                contacts.toList().toContactItems()
-            }
-            is Groups -> {
-                contacts.groupBy {
-                    it.contactGroup(
-                        orderBy = query.orderBy ?: ContactGroupOrderBy(GROUP_ASC)
-                    )
-                }.map { ContactGroup(it.key, it.value.size) }
-            }
-        }
+        val allContacts: List<Contact> = contacts.toList()
 
-        val filteredSelection = query.filter?.let { applyContactFilter(it, selection) } ?: selection
+        val filteredSelection = query.filter?.let {
+            applyContactFilter(it, allContacts)
+        } ?: allContacts
+
+        val orderedSelection: List<Contact> = query.orderBy?.let {
+            orderContactElements(it, filteredSelection)
+        } ?: filteredSelection
+
+        val groupedBySelection: List<ContactsDataSourceElement> = query.groupBy?.let {
+            applyGroupBy(it, orderedSelection)
+        } ?: orderedSelection.toContactItems()
 
 
-        return MutableContactsPagingSource(
-            orderContactElements(query.orderBy, filteredSelection)
-        )
+        return MutableContactsPagingSource(groupedBySelection)
     }
 
     private fun applyContactFilter(
         filter: ContactFilter,
-        selection: List<ContactsDataSourceElement>
-    ): List<ContactsDataSourceElement> {
-        val contactItems = selection.filterIsInstance<ContactItem>()
+        allContacts: List<Contact>
+    ): List<Contact> {
         return when (filter) {
             is CompanyName -> {
-                contactItems.filter { contactItem ->
+                allContacts.filter { contact ->
                     filter.companyNames.any { companyName ->
-                        contactItem.contact.companyName.startsWith(companyName, true)
+                        contact.companyName.startsWith(companyName, true)
                     }
                 }
             }
             is DisplayName -> {
-                contactItems.filter { contactItem ->
+                allContacts.filter { contact ->
                     filter.displayNames.any { displayName ->
-                        contactItem.contact.displayName.startsWith(displayName, true)
+                        contact.displayName.startsWith(displayName, true)
                     }
                 }
             }
             is FamilyName -> {
-                contactItems.filter { contactItem ->
+                allContacts.filter { contact ->
                     filter.familyNames.any { familyName ->
-                        contactItem.contact.familyName.startsWith(familyName, true)
+                        contact.familyName.startsWith(familyName, true)
                     }
                 }
             }
             is Favorite -> {
-                contactItems.filter { contactItem ->
-                    contactItem.contact.favorite
+                allContacts.filter { contact ->
+                    contact.favorite
                 }
             }
             is GivenName -> {
-                contactItems.filter { contactItem ->
+                allContacts.filter { contact ->
                     filter.givenNames.any { givenName ->
-                        contactItem.contact.givenName.startsWith(givenName, true)
+                        contact.givenName.startsWith(givenName, true)
                     }
                 }
             }
             is PhoneNumber -> {
-                contactItems.filter { contactItem ->
+                allContacts.filter { contact ->
                     filter.phoneNumber?.let {
-                        contactItem.contact.phoneNumbers.any { phoneNumber ->
+                        contact.phoneNumbers.any { phoneNumber ->
                             comparePhoneNumbers(it, phoneNumber.number)
                         }
-                    } ?: contactItem.contact.phoneNumbers.isEmpty()
+                    } ?: contact.phoneNumbers.isEmpty()
                 }
             }
             is Source -> {
-                contactItems.filter { contactItem ->
-                    filter.source == contactItem.contact.source
+                allContacts.filter { contact ->
+                    filter.source == contact.source
                 }
             }
             is ContactFilter.ContactFilterOperator -> {
-                applyContactFilterGroup(filter, selection)
+                applyContactFilterGroup(filter, allContacts)
             }
         }
     }
 
     private fun applyContactFilterGroup(
         filterOperator: ContactFilter.ContactFilterOperator,
-        selection: List<ContactsDataSourceElement>
-    ): List<ContactsDataSourceElement> =
+        selection: List<Contact>
+    ): List<Contact> =
         when (filterOperator.filterOperator) {
             ContactFilter.ContactFilterOperator.FilterOperator.OR -> {
                 // All the results of the filters in this group will be or-ed.
@@ -200,79 +184,48 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
             }
         }.distinct()
 
-    private fun sortContactItems(
+    private fun sortContacts(
         order: ContactItemOrder,
-        contactElements: List<ContactItem>
-    ): List<ContactsDataSourceElement> = when (order) {
-        COMPANY_NAME_ASC -> {
-            contactElements.sortedBy {
-                it.contact.companyName.ifEmpty { it.contact.displayName }
+        contacts: List<Contact>
+    ): List<Contact> = when (order) {
+        ContactItemOrder.COMPANY_NAME_ASC -> {
+            contacts.sortedBy {
+                it.companyName.ifEmpty { it.displayName }
             }
         }
-        CONTACT_GROUP_GIVEN_NAME_ASC -> {
-            sortContactItems(GIVEN_NAME_ASC, contactElements)
-                .groupedItems(ContactItemOrderBy(GIVEN_NAME_ASC))
-        }
-        CONTACT_GROUP_FAMILY_NAME_ASC -> {
-            sortContactItems(FAMILY_NAME_ASC, contactElements)
-                .groupedItems(ContactItemOrderBy(FAMILY_NAME_ASC))
-        }
-        FAMILY_NAME_ASC -> {
-            contactElements.sortedBy {
-                it.contact.familyName.ifBlank { it.contact.displayName }
+        ContactItemOrder.FAMILY_NAME_ASC -> {
+            contacts.sortedBy {
+                it.familyName.ifBlank { it.displayName }
             }
         }
-        GIVEN_NAME_ASC -> {
-            contactElements.sortedBy {
-                it.contact.givenName.ifBlank { it.contact.displayName }
+        ContactItemOrder.GIVEN_NAME_ASC -> {
+            contacts.sortedBy {
+                it.givenName.ifBlank { it.displayName }
             }
         }
-        PRIMARY_SORT_KEY -> {
-            contactElements.sortedBy {
-                it.contact.primarySortKey.ifBlank { it.contact.displayName }
+        ContactItemOrder.PRIMARY_SORT_KEY -> {
+            contacts.sortedBy {
+                it.primarySortKey.ifBlank { it.displayName }
             }
         }
     }
 
-    private fun List<ContactsDataSourceElement>.groupedItems(
-        orderBy: ContactItemOrderBy
-    ) = this.filterIsInstance<ContactItem>()
-        .groupBy { it.contact.contactGroup(orderBy) }
-        .toSortedMap(collator)
-        .flatMap { it.value }
-
-    private fun sortContactGroups(
-        order: ContactGroupOrder,
-        contactElements: List<ContactsDataSourceElement>
-    ): List<ContactsDataSourceElement> = when (order) {
-        GROUP_ASC -> {
-            contactElements.sortedBy {
-                (it as? ContactGroup)?.group
-            }
-        }
-        else -> {
-            contactElements
-        }
-    }
+    private fun applyGroupBy(
+        groupBy: ContactsDataSourceQuery.ContactGroupBy,
+        contacts: List<Contact>
+    ): List<ContactsDataSourceElement> =
+        contacts.groupBy {
+            it.contactGroup(groupBy)
+        }.toSortedMap(collator)
+            .map { ContactGroup(it.key, it.value.toContactItems()) }
 
     private fun orderContactElements(
-        orderBy: ContactsDataSourceQuery.ContactOrderBy?,
-        contactElements: List<ContactsDataSourceElement>
-    ): List<ContactsDataSourceElement> = when (orderBy) {
-        is ContactItemOrderBy -> {
-            sortContactItems(
-                orderBy.order,
-                contactElements.filterIsInstance<ContactItem>()
-            )
-        }
-        is ContactGroupOrderBy -> {
-            sortContactGroups(
-                orderBy.order,
-                contactElements
-            )
-        }
-        else -> contactElements
-    }
+        orderBy: ContactsDataSourceQuery.ContactOrderBy,
+        contactElements: List<Contact>
+    ): List<Contact> = sortContacts(
+        orderBy.order,
+        contactElements
+    )
 
     private class MutableContactsPagingSource(val data: List<ContactsDataSourceElement>) :
         MutableIviPagingSource<ContactsDataSourceElement>() {
