@@ -19,6 +19,10 @@
         <variable
             name="viewModel"
             type="com.example.ivi.example.panelhierarchy.child.HierarchyChildViewModel" />
+
+        <variable
+            name="iviFragmentId"
+            type="com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragmentId" />
     </data>
 
     <LinearLayout
@@ -34,7 +38,7 @@
             style="?attr/tt_navigationbar_style"
             auto:layout_constraintStart_toStartOf="parent"
             auto:layout_constraintTop_toTopOf="parent"
-            auto:ttViewModel="@{viewModel.navigationBarViewModel}" />
+            auto:ttViewModel="@{viewModel.getNavigationBarViewModel(iviFragmentId)}" />
 
         <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
             android:layout_width="match_parent"
