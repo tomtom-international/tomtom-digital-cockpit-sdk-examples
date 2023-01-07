@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4729-2347
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4735-2353
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -114,6 +114,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [ASM Util](http://asm.objectweb.org/asm-util/) | 9.2 | BSD 3-clause "New" or "Revised" License |
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2 | BSD 3-clause "New" or "Revised" License |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.7.4 | Apache License 2.0 |
+| [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
 | [Biometric](http://developer.android.com/tools/extras/support-library.html) | 1.2.0-alpha03 | Apache License 2.0 |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
 | [Bouncy Castle](http://www.bouncycastle.org) | 1.70 | MIT License |
@@ -155,7 +156,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [exoplayer-smoothstreaming](https://repo.gradle.org/ui/native/jcenter/com/google/android/exoplayer/exoplayer-smoothstreaming) | 2.13.3, 2.15.1 | Apache License 2.0 |
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.1.0 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.1 | Apache License 2.0 |
-| [fetlife/android](https://fetlife.com/android) | 1.0.0 | Unknown License |
 | [FindBugs jsr305](http://code.google.com/p/jsr-305) | 3.0.2 | Apache License 2.0 |
 | [flexbox-layout](https://github.com/google/flexbox-layout) | 2.0.1 | Apache License 2.0 |
 | [Flutter Fimber](https://github.com/magillus/flutter-fimber) | 0.6.4 | Apache License 2.0 |
