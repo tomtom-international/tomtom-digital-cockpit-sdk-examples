@@ -291,7 +291,6 @@ subprojects {
             }
         }
 
-
         apply(plugin = "com.tomtom.ivi.platform.tools.signing-config")
 
         apply(plugin = "com.tomtom.navtest")

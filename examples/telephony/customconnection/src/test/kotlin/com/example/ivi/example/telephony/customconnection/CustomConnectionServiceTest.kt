@@ -78,7 +78,9 @@ internal class CustomConnectionServiceTest : IviTestCase() {
             ),
             CustomConnectionFacade.IVI_CUSTOM_PHONE_ACCOUNT_ID
         )
-        val request = ConnectionRequest(phoneAccountHandle, PHONE_NUMBER.toPhoneUri().uri, Bundle.EMPTY)
+        val request = ConnectionRequest(
+            phoneAccountHandle, PHONE_NUMBER.toPhoneUri().uri, Bundle.EMPTY
+        )
 
         // WHEN
         val connection = sut.onCreateIncomingConnection(phoneAccountHandle, request)
@@ -98,7 +100,9 @@ internal class CustomConnectionServiceTest : IviTestCase() {
             ),
             CustomConnectionFacade.IVI_CUSTOM_PHONE_ACCOUNT_ID
         )
-        val request = ConnectionRequest(phoneAccountHandle, PHONE_NUMBER.toPhoneUri().uri, Bundle.EMPTY)
+        val request = ConnectionRequest(
+            phoneAccountHandle, PHONE_NUMBER.toPhoneUri().uri, Bundle.EMPTY
+        )
 
         // WHEN
         val connection = sut.onCreateOutgoingConnection(phoneAccountHandle, request)

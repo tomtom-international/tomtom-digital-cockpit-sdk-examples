@@ -20,11 +20,11 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ExpandedProce
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.GuidancePanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.HomePanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainMenuPanel
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ModalPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.NotificationPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.OverlayPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.PanelTypeSet
-import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SearchPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SettingsPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskPanel

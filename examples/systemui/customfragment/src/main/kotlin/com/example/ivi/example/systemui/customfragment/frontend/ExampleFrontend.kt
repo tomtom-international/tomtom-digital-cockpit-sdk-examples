@@ -33,30 +33,32 @@ internal class ExampleFrontend(frontendContext: FrontendContext) : Frontend(fron
 
     /** Creates a [StockNotificationPanel] and adds it to [panels]. */
     private fun addNotificationPanel() {
-        addPanel(StockNotificationPanel.create {
-            frontendContext = this@ExampleFrontend.frontendContext
-            this.priority = NotificationPanel.Priority.HIGH
+        addPanel(
+            StockNotificationPanel.create {
+                frontendContext = this@ExampleFrontend.frontendContext
+                this.priority = NotificationPanel.Priority.HIGH
 
-            setBodyText(
-                ResourceStringResolver(
-                    R.string.ttivi_systemui_customfragment_frontend_notificationbody
-                )
-            )
-            setPrimaryActionButtonViewModel(
-                TtButtonViewModel(
-                    text = ResourceStringResolver(
-                        R.string.ttivi_systemui_customfragment_frontend_notificationprimary
+                setBodyText(
+                    ResourceStringResolver(
+                        R.string.ttivi_systemui_customfragment_frontend_notificationbody
                     )
                 )
-            )
-            setSecondaryActionButtonViewModel(
-                TtButtonViewModel(
-                    text = ResourceStringResolver(
-                        R.string.ttivi_systemui_customfragment_frontend_notificationsecondary
-                    ),
-                    actionType = TtButton.ActionType.SECONDARY
+                setPrimaryActionButtonViewModel(
+                    TtButtonViewModel(
+                        text = ResourceStringResolver(
+                            R.string.ttivi_systemui_customfragment_frontend_notificationprimary
+                        )
+                    )
                 )
-            )
-        })
+                setSecondaryActionButtonViewModel(
+                    TtButtonViewModel(
+                        text = ResourceStringResolver(
+                            R.string.ttivi_systemui_customfragment_frontend_notificationsecondary
+                        ),
+                        actionType = TtButton.ActionType.SECONDARY
+                    )
+                )
+            }
+        )
     }
 }

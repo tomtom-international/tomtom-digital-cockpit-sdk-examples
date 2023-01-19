@@ -24,4 +24,3 @@ class WebAppLaunchHandlerServiceHost(
         WebAppLaunchHandlerService(iviServiceHostContext, iviDiscoverableServiceIdProvider)
     )
 }
-

@@ -18,8 +18,8 @@ import androidx.lifecycle.map
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.ivi.example.plugin.common.Account
-import com.example.ivi.example.plugin.serviceapi.AccountsService
 import com.example.ivi.example.plugin.serviceapi.AccountsDataSourceQuery
+import com.example.ivi.example.plugin.serviceapi.AccountsService
 import com.example.ivi.example.plugin.serviceapi.SensitiveString
 import com.example.ivi.example.plugin.serviceapi.createApi
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.IviDataSource

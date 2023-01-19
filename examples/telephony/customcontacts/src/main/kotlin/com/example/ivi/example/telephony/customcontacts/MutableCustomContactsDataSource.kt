@@ -18,14 +18,13 @@ import com.tomtom.ivi.platform.contacts.api.common.util.contactGroup
 import com.tomtom.ivi.platform.contacts.api.common.util.toContactItems
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactGroup
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement.ContactItem
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.CompanyName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.DisplayName
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.GivenName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.FamilyName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Favorite
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.GivenName
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.PhoneNumber
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactFilter.Source
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder
@@ -85,7 +84,6 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
         val groupedBySelection: List<ContactsDataSourceElement> = query.groupBy?.let {
             applyGroupBy(it, orderedSelection)
         } ?: orderedSelection.toContactItems()
-
 
         return MutableContactsPagingSource(groupedBySelection)
     }

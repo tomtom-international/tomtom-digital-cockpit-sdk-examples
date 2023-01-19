@@ -25,6 +25,9 @@ internal class CustomEqualizerControllerHandlerServiceHost(
     IviServiceHostBase(iviServiceHostContext) {
 
     override val iviServices = setOf(
-        CustomEqualizerControllerHandlerService(iviServiceHostContext, iviDiscoverableServiceIdProvider)
+        CustomEqualizerControllerHandlerService(
+            iviServiceHostContext,
+            iviDiscoverableServiceIdProvider
+        )
     )
 }

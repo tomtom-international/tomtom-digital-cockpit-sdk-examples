@@ -24,11 +24,15 @@ plugins {
 val customContactsServiceHost by extra {
     IviServiceHostConfig(
         serviceHostBuilderName = "CustomContactsServiceHostBuilder",
-        implementationModule = ExampleModuleReference("examples_telephony_customcontacts"),
+        implementationModule = ExampleModuleReference(
+            "examples_telephony_customcontacts"
+        ),
         interfaces = listOf(
             IviServiceInterfaceConfig(
                 serviceName = "ContactsService",
-                serviceApiModule = IviPlatformModuleReference("platform_contacts_api_service_contacts")
+                serviceApiModule = IviPlatformModuleReference(
+                    "platform_contacts_api_service_contacts"
+                )
             )
         )
     )
@@ -37,11 +41,15 @@ val customContactsServiceHost by extra {
 val customRecentCallsServiceHost by extra {
     IviServiceHostConfig(
         serviceHostBuilderName = "CustomRecentCallsServiceHostBuilder",
-        implementationModule = ExampleModuleReference("examples_telephony_customrecentcalls"),
+        implementationModule = ExampleModuleReference(
+            "examples_telephony_customrecentcalls"
+        ),
         interfaces = listOf(
             IviServiceInterfaceConfig(
                 serviceName = "RecentCallsService",
-                serviceApiModule = IviPlatformModuleReference("platform_recentcalls_api_service_recentcalls")
+                serviceApiModule = IviPlatformModuleReference(
+                    "platform_recentcalls_api_service_recentcalls"
+                )
             )
         )
     )

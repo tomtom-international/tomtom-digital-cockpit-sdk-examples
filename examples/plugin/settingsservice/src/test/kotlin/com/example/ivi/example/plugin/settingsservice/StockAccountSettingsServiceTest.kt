@@ -36,7 +36,8 @@ internal class StockAccountSettingsServiceTest : IviTestCase() {
     private val mockSettingsManagementService =
         mockkService(SettingsManagementService.Companion::createApi) {
             every { serviceAvailable } returns MutableLiveData(true)
-            every { sessionToken } returns MutableLiveData(SettingsManagementSessionToken(Uid.new()))
+            every { sessionToken } returns
+                MutableLiveData(SettingsManagementSessionToken(Uid.new()))
             coJustRun { coCreateSetting(any(), any<IntSettingKey>(), any(), any()) }
             coJustRun { coCreateSetting(any(), any<StringSettingKey>(), any(), any()) }
             coEvery { coGetSetting(any<IntSettingKey>()) } returns 1
@@ -64,7 +65,7 @@ internal class StockAccountSettingsServiceTest : IviTestCase() {
         val account = Account(username = "username")
 
         coEvery { mockSettingsManagementService.coGetSetting(any<StringSettingKey>()) } returns
-                Json.encodeToString(AccountSerializer, account)
+            Json.encodeToString(AccountSerializer, account)
 
         // WHEN The account settings service is created.
         val sut = createSut()

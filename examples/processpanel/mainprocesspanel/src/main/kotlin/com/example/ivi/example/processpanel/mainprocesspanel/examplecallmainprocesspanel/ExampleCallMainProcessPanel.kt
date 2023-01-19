@@ -23,5 +23,3 @@ internal class ExampleCallMainProcessPanel(
     override fun createInitialFragmentInitializer() =
         IviFragment.Initializer(ExampleCallMainProcessFragment(), this)
 }
-
-

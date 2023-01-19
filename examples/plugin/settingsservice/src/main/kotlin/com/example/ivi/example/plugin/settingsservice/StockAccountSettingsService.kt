@@ -11,9 +11,9 @@
 
 package com.example.ivi.example.plugin.settingsservice
 
+import com.example.ivi.example.plugin.common.Account
 import com.example.ivi.example.plugin.service.DynamicConfiguration.onlineLoginValidPeriodInDaysConfigKey
 import com.example.ivi.example.plugin.service.DynamicConfiguration.settingKeyPrefix
-import com.example.ivi.example.plugin.common.Account
 import com.example.ivi.example.plugin.settingsserviceapi.AccountSettingsServiceBase
 import com.tomtom.ivi.platform.framework.api.configuration.api.LongDynamicConfigurationKey
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
@@ -121,4 +121,3 @@ internal class StockAccountSettingsService(iviServiceHostContext: IviServiceHost
             Json.decodeFromString(AccountSerializer, input)
     }
 }
-

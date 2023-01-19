@@ -18,9 +18,9 @@ import com.tomtom.ivi.platform.contacts.api.common.model.AddressType
 import com.tomtom.ivi.platform.contacts.api.common.model.Contact
 import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumber
 import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumberType
-import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsServiceBase
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
+import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.tools.android.api.resourceresolution.drawable.BitmapDrawableResolver
 
 /**

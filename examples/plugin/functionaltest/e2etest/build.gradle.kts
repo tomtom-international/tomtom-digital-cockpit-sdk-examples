@@ -31,6 +31,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":examples_commonfunctionaltest"))
     implementation(project(":examples_plugin_frontend"))
     implementation(libraries.iviPlatformMainmenuApiTestingFrontend)
     implementation(libraries.iviPlatformSystemuiApiTestingTools)

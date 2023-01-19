@@ -33,10 +33,12 @@ internal class ExampleMediaSourceFragment :
 
             val categoriesAdapter = ExampleMediaSourceItemAdapter()
             binding.exampleMediaUserflowpolicyCategories.adapter = categoriesAdapter
-            binding.exampleMediaUserflowpolicyCategories.layoutManager = LinearLayoutManager(requireContext())
+            binding.exampleMediaUserflowpolicyCategories.layoutManager =
+                LinearLayoutManager(requireContext())
             val contentAdapter = ExampleMediaSourceItemAdapter()
             binding.exampleMediaUserflowpolicyContents.adapter = contentAdapter
-            binding.exampleMediaUserflowpolicyContents.layoutManager = LinearLayoutManager(requireContext())
+            binding.exampleMediaUserflowpolicyContents.layoutManager =
+                LinearLayoutManager(requireContext())
 
             viewModel.categories.observe(viewLifecycleOwner) {
                 categoriesAdapter.submitList(it)

@@ -39,7 +39,7 @@ internal class StockAccountsServiceTest : IviTestCase() {
             every { serviceAvailable } returns MutableLiveData(true)
             every { activeAccount } returns MutableLiveData()
             every { loginTimestamp } returns MutableLiveData(Instant.now().epochSecond)
-            every { onlineLoginValidPeriodInDays} returns MutableLiveData(90L)
+            every { onlineLoginValidPeriodInDays } returns MutableLiveData(90L)
         }
     }.let { StockAccountsService(niceMockk()) }
 

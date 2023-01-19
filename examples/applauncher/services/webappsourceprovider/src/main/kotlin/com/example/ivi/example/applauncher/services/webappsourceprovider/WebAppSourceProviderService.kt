@@ -11,9 +11,9 @@
 
 package com.example.ivi.example.applauncher.services.webappsourceprovider
 
+import com.example.ivi.example.applauncher.common.webapp.WebApp
 import com.tomtom.ivi.appsuite.appstore.api.common.model.ParcelableAppClass
 import com.tomtom.ivi.appsuite.appstore.api.service.appsourceprovider.AppSourceProviderServiceBase
-import com.example.ivi.example.applauncher.common.webapp.WebApp
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviDiscoverableServiceIdProvider
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
 import com.tomtom.tools.android.api.resourceresolution.drawable.ResourceDrawableResolver

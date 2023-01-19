@@ -19,7 +19,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskPanel
 internal class NotificationCreationPanel(
     frontendContext: FrontendContext,
     val addPanel: (AnyPanel) -> Unit,
-) : TaskPanel(frontendContext)  {
+) : TaskPanel(frontendContext) {
 
     override fun createInitialFragmentInitializer() =
         IviFragment.Initializer(NotificationCreationFragment(), this)

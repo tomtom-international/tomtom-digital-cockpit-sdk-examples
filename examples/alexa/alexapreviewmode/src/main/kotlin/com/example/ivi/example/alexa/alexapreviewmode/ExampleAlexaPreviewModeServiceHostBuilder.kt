@@ -26,4 +26,3 @@ class ExampleAlexaPreviewModeServiceHostBuilder : SimpleIviServiceHostBuilder() 
 
     companion object
 }
-

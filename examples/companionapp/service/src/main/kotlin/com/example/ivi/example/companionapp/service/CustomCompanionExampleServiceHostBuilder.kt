@@ -16,9 +16,9 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.SimpleIviServiceHostBuilder
 
 /**
- * The builder class for the `CustomCompanionServiceHost`.
+ * The builder class for the `CustomCompanionExampleServiceHost`.
  */
-class CustomCompanionServiceHostBuilder : SimpleIviServiceHostBuilder() {
+class CustomCompanionExampleServiceHostBuilder : SimpleIviServiceHostBuilder() {
 
     override fun createIviServices(
         iviServiceHostContext: IviServiceHostContext

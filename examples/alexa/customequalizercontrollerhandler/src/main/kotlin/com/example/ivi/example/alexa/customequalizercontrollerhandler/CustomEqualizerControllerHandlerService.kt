@@ -35,7 +35,8 @@ internal class CustomEqualizerControllerHandlerService(
     serviceIdProvider: IviDiscoverableServiceIdProvider
 ) : AlexaHandlerServiceBase(iviServiceHostContext, serviceIdProvider) {
 
-    private val tracer = iviServiceHostContext.createTracer<CustomEqualizerControllerHandlerEvents> { this }
+    private val tracer =
+        iviServiceHostContext.createTracer<CustomEqualizerControllerHandlerEvents> { this }
 
     // Instantiate a JSON object which will be used to parse and encode the AASB JSON messages.
     private val jsonParser = Json {

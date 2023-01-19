@@ -27,7 +27,7 @@ interface CompanionExampleService {
     val testMap: MirrorableMap<Int, String>
 
     @IviServiceFun
-    suspend fun testFunctionCall(bar: String) : String?
+    suspend fun testFunctionCall(bar: String): String?
 
     companion object
 }

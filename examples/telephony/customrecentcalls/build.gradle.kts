@@ -22,6 +22,6 @@ ivi {
 dependencies {
     implementation(libraries.iviPlatformRecentcallsApiServiceRecentcalls)
     implementation(libraries.iviPlatformTelecomApiCommonModel)
-    
+
     testImplementation(libraries.iviPlatformToolsApiTestingUnit)
 }

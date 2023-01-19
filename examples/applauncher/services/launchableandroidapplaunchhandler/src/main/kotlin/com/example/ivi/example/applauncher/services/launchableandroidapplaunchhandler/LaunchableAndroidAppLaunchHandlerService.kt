@@ -42,7 +42,7 @@ class LaunchableAndroidAppLaunchHandlerService(
 
     private fun launchLaunchableAndroidApp(app: LaunchableAndroidApp) {
         val launchIntent =
-            iviServiceHostContext.context.packageManager.getLaunchIntentForPackage(app.packageName);
+            iviServiceHostContext.context.packageManager.getLaunchIntentForPackage(app.packageName)
         iviServiceHostContext.context.startActivity(launchIntent)
     }
 }

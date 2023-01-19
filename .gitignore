@@ -39,7 +39,8 @@ IviTest
 .idea/uiDesigner.xml
 .idea/runConfigurations.xml
 .idea/.gitignore
-.idea/sonarlint/
+.idea/sonarlint*
+.idea/androidTestResultsUserPreferences.xml
 
 # MacOS
 .DS_Store

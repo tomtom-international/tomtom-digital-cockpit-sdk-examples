@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020 TomTom NV. All rights reserved.
+ * Copyright © 2023 TomTom NV. All rights reserved.
  *
  * This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
  * used for internal evaluation purposes or commercial use strictly subject to separate
@@ -9,10 +9,11 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.plugin.functionaltest.e2etest
+package com.example.ivi.common.commonfunctionaltest
 
 import android.content.Intent
-import androidx.test.ext.junit.rules.ActivityScenarioRule
+import androidx.test.platform.app.InstrumentationRegistry
+import com.example.ivi.common.ExampleActivity
 import com.tomtom.ivi.platform.framework.api.common.iviinstance.IviInstanceId
 import com.tomtom.ivi.platform.mainmenu.api.testing.frontend.MainMenuButton
 import com.tomtom.ivi.platform.mainmenu.api.testing.frontend.waitForMainMenuButtonIsDisplayed
@@ -29,29 +30,32 @@ import org.junit.Rule
  * A base class for E2E tests of the example product that provides common functionality,
  * such as accessing frequently used containers or opening the debug panel.
  */
-internal abstract class E2ETestCase :
-    IviActivityTestCase(IviIntent("com.example.ivi.common.MAIN")),
+abstract class E2eTestCase(targetActivity: Intent = exampleActivity) :
+    IviActivityTestCase(targetActivity),
     IviE2eTestCase {
-
-    /**
-     * We cannot use [Intent] due to bug in [ActivityScenarioRule],
-     * [see issue](https://github.com/android/android-test/issues/496).
-     * As workaround, we loose filtering to an action check so the intent is matched by the rule.
-     */
-    private class IviIntent(action: String) : Intent(action) {
-        override fun filterEquals(other: Intent?): Boolean =
-            action == other?.action
-    }
 
     @get:Rule
     val systemUiIdlingResourceRule = SystemUiIdlingResourceRule(activityRule)
 
+    /**
+     * Wait for UI to become ready before each test.
+     *
+     * Override in tests with custom system ui layout to wait for its readiness.
+     */
     @Before
-    fun waitForMainMenuIsDisplayed() {
-        // Wait for system UI to show container for main menu and for home.
+    open fun waitForUiReady() {
+        // Wait for core system UI views in stock system ui
         assertCoreContentsAreDisplayed()
+    }
 
-        // Wait for main menu frontend to display the buttons.
+    /**
+     * Wait for UI menu to become ready before each test.
+     *
+     * Override in tests with custom main menu buttons if [MainMenuButton.NAVIGATION]
+     * is not included.
+     */
+    @Before
+    open fun waitForMenuReady() {
         waitForMainMenuButtonIsDisplayed(
             MainMenuButton.NAVIGATION,
             timeoutMs = DEFAULT_WAIT_MAIN_MENU_TIMEOUT
@@ -87,3 +91,8 @@ internal abstract class E2ETestCase :
         private const val DEFAULT_WAIT_MAIN_MENU_TIMEOUT = 20_000L
     }
 }
+
+private val exampleActivity = Intent(
+    InstrumentationRegistry.getInstrumentation().targetContext,
+    ExampleActivity::class.java
+)

@@ -51,14 +51,14 @@ internal class ExampleMediaSourceItemAdapter :
             override fun areItemsTheSame(
                 oldItem: MediaItemViewModel,
                 newItem: MediaItemViewModel
-            ): Boolean
-                = oldItem == newItem || oldItem.item.id == newItem.item.id
+            ): Boolean =
+                oldItem == newItem || oldItem.item.id == newItem.item.id
 
             override fun areContentsTheSame(
                 oldItem: MediaItemViewModel,
                 newItem: MediaItemViewModel
-            ): Boolean
-                = oldItem.item.title == newItem.item.title
+            ): Boolean =
+                oldItem.item.title == newItem.item.title
         }
 
         private val differConfig =

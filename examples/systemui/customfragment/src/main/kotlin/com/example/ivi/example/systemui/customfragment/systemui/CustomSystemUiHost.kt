@@ -20,12 +20,12 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ExpandedProce
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.GuidancePanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.HomePanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainMenuPanel
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ModalPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.NotificationPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.OverlayPanel
-import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.PanelTypeSet
-import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.Panel
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.PanelTypeSet
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SearchPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SettingsPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskPanel
@@ -49,8 +49,9 @@ import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHostCont
  * [system UI guide](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/development/system-ui)
  * for more information on creating custom system UI's.
  */
-internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
-    SystemUiHost(systemUiHostContext) {
+internal class CustomSystemUiHost(
+    systemUiHostContext: SystemUiHostContext
+) : SystemUiHost(systemUiHostContext) {
 
     /**
      * The fragment factory determines which [IviFragment] is created for which [Panel].

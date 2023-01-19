@@ -13,9 +13,9 @@ package com.example.ivi.example.plugin.settingsservice
 
 import com.example.ivi.example.plugin.common.Account
 import java.time.Instant
+import kotlin.test.assertEquals
 import kotlinx.serialization.json.Json
 import org.junit.Test
-import kotlin.test.assertEquals
 
 internal class AccountSerializerTest {
     @Test
