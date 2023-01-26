@@ -29,7 +29,16 @@ class WebAppLaunchTriggerService(
         // which identifies the broadcast action.
         val webAppLaunchTriggerBroadcastReceiver = WebAppLaunchTriggerBroadcastReceiver()
         val filter = IntentFilter(WEB_APP_BROADCAST_LAUNCH_TRIGGER_ACTION)
-        context.registerReceiver(webAppLaunchTriggerBroadcastReceiver, filter)
+
+        // Register the receiver with a permission to prevent it being triggered insecurely.
+        // Contact the 3rd-party app store provider to add the defined permission when sending the
+        // intent.
+        context.registerReceiver(
+            webAppLaunchTriggerBroadcastReceiver,
+            filter,
+            WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION,
+            null
+        )
 
         // To receive the triggered web apps from the previously registered broadcast, we need to
         // observe [webAppLaunchTriggerBroadcastReceiver.triggeredWebApp].
@@ -42,6 +51,9 @@ class WebAppLaunchTriggerService(
 
     private companion object {
         const val WEB_APP_BROADCAST_LAUNCH_TRIGGER_ACTION =
-            "com.example.ivi.webapplaunchtrigger.action"
+            "com.example.ivi.example.applauncher.WEB_APP_LAUNCH_ACTION"
+
+        const val WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION =
+            "com.example.ivi.example.applauncher.APP_LAUNCH_BROADCAST_PERMISSION"
     }
 }

@@ -54,7 +54,10 @@ import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.FrontendE
  *                 // Configure all frontends and menu items from all groups that do not require an
  *                 // explicit opt-in. The groups are defined by the
  *                 // `com.tomtom.ivi.platform.defaults.core` Gradle plugin.
- *                 applyGroups { includeDefaultGroups() }
+ *                 applyGroups {
+ *                     includeDefaultPlatformGroups()
+ *                     includeDefaultAppsuiteGroups()
+ *                 }
  *
  *                 // Register the `accountFrontend`.
  *                 frontends {

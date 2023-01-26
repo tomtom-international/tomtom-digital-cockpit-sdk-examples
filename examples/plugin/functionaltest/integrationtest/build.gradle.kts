@@ -41,7 +41,8 @@ ivi {
         iviInstances {
             create(IviInstanceIdentifier.default) {
                 applyGroups {
-                    includeDefaultGroups()
+                    includeDefaultPlatformGroups()
+                    includeDefaultAppsuiteGroups()
                     @Suppress(EXPERIMENTAL_API_USAGE)
                     include(IviPlatform.activityTestGroup)
                 }

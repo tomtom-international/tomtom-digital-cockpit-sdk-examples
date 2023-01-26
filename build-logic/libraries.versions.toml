@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.4806"
+iviPlatform = "1.0.4854"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.
@@ -28,7 +28,11 @@ gradlePluginApiToolsEmulators = { module = "com.tomtom.ivi.platform.gradle:api_t
 gradlePluginApiToolsVersionIvi = { module = "com.tomtom.ivi.platform.gradle:api_tools_version", version.ref = "iviPlatform" }
 
 # TomTom Digital Cockpit platform components.
-iviAppsuiteMediaApiCommonFrontend = { module = "com.tomtom.ivi.appsuite:appsuite_media_api_common_frontend", version.ref = "iviPlatform" }
+iviPlatformAlexaApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_alexa_api_common_util", version.ref = "iviPlatform" }
+iviPlatformAlexaApiServiceAlexahandler = { module = "com.tomtom.ivi.platform:platform_alexa_api_service_alexahandler", version.ref = "iviPlatform" }
+iviPlatformAlexaApiServiceAlexapreviewmode = { module = "com.tomtom.ivi.platform:platform_alexa_api_service_alexapreviewmode", version.ref = "iviPlatform" }
+iviPlatformContactsApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_contacts_api_common_util", version.ref = "iviPlatform" }
+iviPlatformContactsApiServiceContacts = { module = "com.tomtom.ivi.platform:platform_contacts_api_service_contacts", version.ref = "iviPlatform" }
 iviPlatformDebugApiFrontendExtensionDebugTab = { module = "com.tomtom.ivi.platform:platform_debug_api_frontendextension_debugtab", version.ref = "iviPlatform" }
 iviPlatformDebugApiTestingTools = { module = "com.tomtom.ivi.platform:platform_debug_api_testing_tools", version.ref = "iviPlatform" }
 iviPlatformFrameworkApiCommonLifecycle = { module = "com.tomtom.ivi.platform:platform_framework_api_common_lifecycle", version.ref = "iviPlatform" }
@@ -47,26 +51,22 @@ iviPlatformFrontendApiTestingFrontend = { module = "com.tomtom.ivi.platform:plat
 iviPlatformLocalizationApiCommonSettings = { module = "com.tomtom.ivi.platform:platform_localization_api_common_settings", version.ref = "iviPlatform" }
 iviPlatformLocationSimulationApiServiceLocationSimulation = { module = "com.tomtom.ivi.platform:platform_locationsimulation_api_service_locationsimulation", version.ref = "iviPlatform" }
 iviPlatformMainmenuApiTestingFrontend = { module = "com.tomtom.ivi.platform:platform_mainmenu_api_testing_frontend", version.ref = "iviPlatform" }
+iviPlatformRecentcallsApiServiceRecentcalls = { module = "com.tomtom.ivi.platform:platform_recentcalls_api_service_recentcalls", version.ref = "iviPlatform" }
 iviPlatformSettingsApiServicesSettingsManagement = { module = "com.tomtom.ivi.platform:platform_settings_api_service_settingsmanagement", version.ref = "iviPlatform" }
+iviPlatformSystemUiApiServiceDebugpanel = { module = "com.tomtom.ivi.platform:platform_systemui_api_service_debugpanel", version.ref = "iviPlatform" }
 iviPlatformSystemuiApiTestingTools = { module = "com.tomtom.ivi.platform:platform_systemui_api_testing_tools", version.ref = "iviPlatform" }
-# TODO(IVI-6507): Remove dependency on stock system ui host.
 iviPlatformSystemuiApiStockSystemuihost = { module = "com.tomtom.ivi.platform:platform_systemui_api_stock_systemuihost", version.ref = "iviPlatform" }
+iviPlatformTelecomApiCommonModel = { module = "com.tomtom.ivi.platform:platform_telecom_api_common_model", version.ref = "iviPlatform" }
+iviPlatformTelecomApiCommonUtils = { module = "com.tomtom.ivi.platform:platform_telecom_api_common_utils", version.ref = "iviPlatform" }
+iviPlatformTelecomApiServiceTelecom = { module = "com.tomtom.ivi.platform:platform_telecom_api_service_telecom", version.ref = "iviPlatform" }
 iviPlatformThemingApiCommonAttributes = { module = "com.tomtom.ivi.platform:platform_theming_api_common_attributes", version.ref = "iviPlatform" }
 iviPlatformToolsApiTestingFunctional = { module = "com.tomtom.ivi.platform:platform_tools_api_testing_functional", version.ref = "iviPlatform" }
 iviPlatformToolsApiTestingUnit = { module = "com.tomtom.ivi.platform:platform_tools_api_testing_unit", version.ref = "iviPlatform" }
+iviPlatformVpaApiServiceVpaadaptation = { module = "com.tomtom.ivi.platform:platform_vpa_api_service_vpaadaptation", version.ref = "iviPlatform" }
 
-# TomTom Digital Cockpit platform service APIs.
+# TomTom Digital Cockpit appsuite components.
 iviAppsuiteAppstoreApiCommonModel = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_common_model", version.ref = "iviPlatform" }
 iviAppsuiteAppstoreApiServiceAppsourceprovider = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_service_appsourceprovider", version.ref = "iviPlatform" }
 iviAppsuiteAppstoreApiServiceApplaunchhandler = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_service_applaunchhandler", version.ref = "iviPlatform" }
 iviAppsuiteAppstoreApiServiceApplaunchtrigger = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_service_applaunchtrigger", version.ref = "iviPlatform" }
-iviPlatformAlexaApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_alexa_api_common_util", version.ref = "iviPlatform" }
-iviPlatformAlexaApiServiceAlexahandler = { module = "com.tomtom.ivi.platform:platform_alexa_api_service_alexahandler", version.ref = "iviPlatform" }
-iviPlatformAlexaApiServiceAlexapreviewmode = { module = "com.tomtom.ivi.platform:platform_alexa_api_service_alexapreviewmode", version.ref = "iviPlatform" }
-iviPlatformContactsApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_contacts_api_common_util", version.ref = "iviPlatform" }
-iviPlatformContactsApiServiceContacts = { module = "com.tomtom.ivi.platform:platform_contacts_api_service_contacts", version.ref = "iviPlatform" }
-iviPlatformRecentcallsApiServiceRecentcalls = { module = "com.tomtom.ivi.platform:platform_recentcalls_api_service_recentcalls", version.ref = "iviPlatform" }
-iviPlatformTelecomApiCommonModel = { module = "com.tomtom.ivi.platform:platform_telecom_api_common_model", version.ref = "iviPlatform" }
-iviPlatformTelecomApiCommonUtils = { module = "com.tomtom.ivi.platform:platform_telecom_api_common_utils", version.ref = "iviPlatform" }
-iviPlatformTelecomApiServiceTelecom = { module = "com.tomtom.ivi.platform:platform_telecom_api_service_telecom", version.ref = "iviPlatform" }
-iviPlatformVpaApiServiceVpaadaptation = { module = "com.tomtom.ivi.platform:platform_vpa_api_service_vpaadaptation", version.ref = "iviPlatform" }
+iviAppsuiteMediaApiCommonFrontend = { module = "com.tomtom.ivi.appsuite:appsuite_media_api_common_frontend", version.ref = "iviPlatform" }

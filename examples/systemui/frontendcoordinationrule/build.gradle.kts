@@ -29,7 +29,10 @@ ivi {
         enabled = true
         iviInstances {
             create(IviInstanceIdentifier.default) {
-                applyGroups { includeDefaultGroups() }
+                applyGroups {
+                    includeDefaultPlatformGroups()
+                    includeDefaultAppsuiteGroups()
+                }
             }
         }
     }
@@ -42,5 +45,6 @@ dependencies {
     implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiLivedata)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
+    implementation(libraries.iviPlatformSystemUiApiServiceDebugpanel)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)
 }

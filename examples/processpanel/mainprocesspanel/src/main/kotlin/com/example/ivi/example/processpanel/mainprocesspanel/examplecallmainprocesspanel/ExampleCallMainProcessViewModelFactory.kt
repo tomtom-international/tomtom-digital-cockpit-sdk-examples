@@ -91,7 +91,7 @@ internal class ExampleCallMainProcessViewModelFactory(
     fun createMetadata() = CompactProcessMetadataViewModel(
         image = ImmutableLiveData(
             ImageDescriptor(
-                ResourceDrawableResolver(R.drawable.ttivi_systemui_debugtab_icon_thumbnail),
+                ResourceDrawableResolver(R.drawable.ttivi_processcreation_icon_thumbnail),
                 ImageType.AVATAR
             )
         ),

@@ -47,7 +47,10 @@ ivi {
         enabled = true
         iviInstances {
             create(IviInstanceIdentifier.default) {
-                applyGroups { includeDefaultGroups() }
+                applyGroups {
+                    includeDefaultPlatformGroups()
+                    includeDefaultAppsuiteGroups()
+                }
                 frontends {
                     add(exampleFrontend)
                 }
