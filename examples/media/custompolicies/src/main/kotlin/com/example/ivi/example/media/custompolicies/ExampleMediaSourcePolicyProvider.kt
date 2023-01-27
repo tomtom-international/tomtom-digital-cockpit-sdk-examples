@@ -22,7 +22,7 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.PolicyProvider
  * provider for this media source, which provides all default policies.
  */
 internal val exampleMediaSourcePolicyProvider = PolicyProvider(
-    isPlaylistItemPolicy = ExampleMediaSourceIsPlaylistItemPolicy(),
+    collectionPolicy = ExampleMediaSourceCollectionPolicy(),
     compareItemsPolicy = ExampleMediaSourceItemComparisonPolicy(),
     itemMappingPolicy = ExampleMediaSourceItemMappingPolicy(),
     sourceAttributionPolicy = ExampleMediaSourceSourceAttributionPolicy(),
