@@ -30,8 +30,10 @@ internal typealias AddPanel = (panel: AnyPanel) -> Unit
 /**
  * The panel at the root of the hierarchy.
  */
-internal class HierarchyRootPanel(frontendContext: FrontendContext, private val addPanel: AddPanel) :
-    TaskPanel(frontendContext) {
+internal class HierarchyRootPanel(
+    frontendContext: FrontendContext,
+    private val addPanel: AddPanel
+) : TaskPanel(frontendContext) {
 
     override val descriptor: LiveData<PanelDescriptor>
         get() = super.descriptor.map {

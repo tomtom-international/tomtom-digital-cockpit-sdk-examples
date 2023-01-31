@@ -20,14 +20,17 @@ class ProcessCreationFrontend(frontendContext: FrontendContext) : Frontend(front
     private var exampleCallMainProcessPanel by createPanelDelegate<ExampleCallMainProcessPanel>()
 
     override fun openTaskPanels() {
-        addPanel(ProcessCreationPanel(frontendContext,
-            addMainProcessPanel = {
-                removePanels<ProcessCreationPanel>()
-                exampleCallMainProcessPanel = ExampleCallMainProcessPanel(frontendContext) {
-                    // dismiss process panel
-                    exampleCallMainProcessPanel = null
+        addPanel(
+            ProcessCreationPanel(
+                frontendContext,
+                addMainProcessPanel = {
+                    removePanels<ProcessCreationPanel>()
+                    exampleCallMainProcessPanel = ExampleCallMainProcessPanel(frontendContext) {
+                        // dismiss process panel
+                        exampleCallMainProcessPanel = null
+                    }
                 }
-            }
-        ))
+            )
+        )
     }
 }

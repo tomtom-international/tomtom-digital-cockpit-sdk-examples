@@ -46,8 +46,8 @@
             auto:ttiviPanelContainerContext="@{panelContainerContext}"
             auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelContainer
-            android:id="@+id/example_systemui_task_panel_container"
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
+            android:id="@+id/example_systemui_task_panel_stack_container"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

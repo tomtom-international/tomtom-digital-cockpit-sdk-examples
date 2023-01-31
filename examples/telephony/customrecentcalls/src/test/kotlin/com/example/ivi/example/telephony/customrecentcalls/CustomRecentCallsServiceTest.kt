@@ -33,6 +33,9 @@ class CustomRecentCallsServiceTest : IviTestCase() {
         assertEquals(2, sut.recentCallsDescending.size)
         assertEquals("John Smith", sut.recentCallsDescending[0].displayName)
         assertEquals("Kelly Goodwin", sut.recentCallsDescending[1].displayName)
-        assertEquals(PhoneBookSynchronizationStatus.SYNCHRONIZATION_IN_PROGRESS, sut.phoneBookSynchronizationStatus)
+        assertEquals(
+            PhoneBookSynchronizationStatus.SYNCHRONIZATION_IN_PROGRESS,
+            sut.phoneBookSynchronizationStatus
+        )
     }
 }

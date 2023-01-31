@@ -24,4 +24,3 @@ class WebAppLaunchHandlerServiceHostBuilder : IviServiceHostBuilder() {
 
     companion object
 }
-

@@ -14,4 +14,3 @@ package com.example.ivi.common
 import com.tomtom.ivi.platform.framework.api.product.defaultactivity.DefaultActivity
 
 class ExampleActivity : DefaultActivity()
-

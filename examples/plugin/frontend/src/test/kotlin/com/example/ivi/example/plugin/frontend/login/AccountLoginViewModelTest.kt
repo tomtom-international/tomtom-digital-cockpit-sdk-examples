@@ -16,8 +16,8 @@ import androidx.paging.ItemSnapshotList
 import com.example.ivi.example.plugin.frontend.AccountTestPagingDataAdapter
 import com.example.ivi.example.plugin.frontend.TestData
 import com.example.ivi.example.plugin.serviceapi.AccountsService
-import com.example.ivi.example.plugin.serviceapi.createApi
 import com.example.ivi.example.plugin.serviceapi.SensitiveString
+import com.example.ivi.example.plugin.serviceapi.createApi
 import com.tomtom.ivi.platform.framework.api.testing.ipc.iviservice.datasource.SimpleTestIviDataSource
 import com.tomtom.ivi.platform.tools.api.testing.unit.IviTestCase
 import com.tomtom.tools.android.testing.assertion.assertLiveDataEquals
@@ -138,7 +138,11 @@ internal class AccountLoginViewModelTest : IviTestCase() {
 
         // THEN
         verify {
-            mockAccountsService.logInAsync(TestData.USERNAME, SensitiveString(TestData.PASSWORD), any())
+            mockAccountsService.logInAsync(
+                TestData.USERNAME,
+                SensitiveString(TestData.PASSWORD),
+                any()
+            )
         }
     }
 }

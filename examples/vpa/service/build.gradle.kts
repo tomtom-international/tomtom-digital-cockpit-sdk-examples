@@ -9,7 +9,6 @@
  * immediately return or destroy it.
  */
 
-import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
 android {

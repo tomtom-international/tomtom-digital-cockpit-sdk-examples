@@ -11,16 +11,24 @@
 
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
+plugins {
+    id("com.tomtom.ivi.product.defaults.core")
+}
+
 android {
-    namespace = "com.example.ivi.example.splashscreen"
+    namespace = "com.example.ivi.splashscreen"
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 ivi {
     application {
-        enabled = false
+        enabled = true
     }
 }
 
 dependencies {
+    implementation(project(":examples_common"))
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
 }

@@ -17,5 +17,4 @@ internal data class Node(val name: String, val children: List<Node> = emptyList(
 
     val buttonStringResolver =
         ResourceStringResolver(R.string.ttivi_hierarchy_buttontext, name)
-
 }

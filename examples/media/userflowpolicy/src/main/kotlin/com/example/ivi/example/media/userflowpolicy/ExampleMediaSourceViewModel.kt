@@ -23,14 +23,14 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendV
  * contents will appear in [contents]. There is also a "back" button, which triggers the [dismiss]
  * function to dismiss the panel.
  */
-internal class ExampleMediaSourceViewModel(panel: ExampleMediaSourcePanel)
-    : FrontendViewModel<ExampleMediaSourcePanel>(panel) {
+internal class ExampleMediaSourceViewModel(panel: ExampleMediaSourcePanel) :
+    FrontendViewModel<ExampleMediaSourcePanel>(panel) {
 
     val isLoading: LiveData<Boolean> = panel.isLoading
 
     val categories: LiveData<List<MediaItemViewModel>> = panel.categories.map { list ->
         list.map { category ->
-            category.asMediaItemViewModel { panel.selectCategory(category)}
+            category.asMediaItemViewModel { panel.selectCategory(category) }
         }
     }
 

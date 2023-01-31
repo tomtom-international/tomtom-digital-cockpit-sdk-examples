@@ -13,11 +13,11 @@ package com.example.ivi.example.telephony.customrecentcalls
 
 import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumber
 import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumberType
-import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
-import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsService
-import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsServiceBase
-import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsService.RecentCall
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
+import com.tomtom.ivi.platform.recentcalls.api.common.model.RecentCall
+import com.tomtom.ivi.platform.recentcalls.api.common.model.RecentCall.RecentCallType
+import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsServiceBase
+import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import java.time.Duration
 import java.time.Instant
 
@@ -29,15 +29,15 @@ internal class CustomRecentCallsService(iviServiceHostContext: IviServiceHostCon
 
     // The source of recent calls.
     private val recentCallsSource = listOf(
-        RecentCallsService.RecentCall(
-            type = RecentCallsService.CallType.INCOMING,
+        RecentCall(
+            type = RecentCallType.INCOMING,
             displayName = "John Smith",
             phoneNumber = PhoneNumber("+281111111", PhoneNumberType.Mobile),
             duration = Duration.ofSeconds(60),
             creationTime = Instant.now()
         ),
-        RecentCallsService.RecentCall(
-            type = RecentCallsService.CallType.OUTGOING,
+        RecentCall(
+            type = RecentCallType.OUTGOING,
             displayName = "Kelly Goodwin",
             phoneNumber = PhoneNumber("+2822222222", PhoneNumberType.Work),
             duration = Duration.ZERO,

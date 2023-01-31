@@ -13,8 +13,8 @@ package com.example.ivi.example.telephony.customcontacts
 
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceElement
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery
-import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
 import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy
+import com.tomtom.ivi.platform.contacts.api.service.contacts.ContactsDataSourceQuery.ContactOrderBy.ContactItemOrder.PRIMARY_SORT_KEY
 import com.tomtom.ivi.platform.framework.api.testing.ipc.iviservice.datasource.assertIviDataSourceEquals
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.ivi.platform.tools.api.testing.unit.IviTestCase

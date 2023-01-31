@@ -22,7 +22,7 @@ import com.tomtom.tools.android.api.uicontrols.button.TtButtonViewModel
 import com.tomtom.tools.android.api.uicontrols.imageview.ImageDescriptor
 
 internal class ExampleNotificationViewModel(panel: ExampleNotificationPanel) :
-    NotificationViewModel<ExampleNotificationPanel>(panel){
+    NotificationViewModel<ExampleNotificationPanel>(panel) {
 
     override val headerViewModel = HeaderViewModel(
         imageDescriptor = ImageDescriptor(
@@ -65,7 +65,9 @@ internal class ExampleNotificationViewModel(panel: ExampleNotificationPanel) :
             OptionViewModel(
                 imageDescriptor = ImmutableLiveData(
                     ImageDescriptor(
-                        ResourceDrawableResolver(R.drawable.ttivi_notificationoption_icon_placeholder)
+                        ResourceDrawableResolver(
+                            R.drawable.ttivi_notificationoption_icon_placeholder
+                        )
                     ),
                 ),
                 description = ImmutableLiveData(

@@ -62,9 +62,11 @@ internal class StockAccountsService(iviServiceHostContext: IviServiceHostContext
     }
 
     override suspend fun logIn(username: String, password: SensitiveString): Boolean {
-        val account = (mutableAccountsDataSource.accounts.values.find { it.username == username }
-            ?: logInOnline(username, password))
-                ?.copy(loggedIn = true, lastLogIn = Instant.now())
+        val account = (
+            mutableAccountsDataSource.accounts.values.find { it.username == username }
+                ?: logInOnline(username, password)
+            )
+            ?.copy(loggedIn = true, lastLogIn = Instant.now())
 
         account?.let {
             mutableAccountsDataSource.addOrUpdateAccount(it)

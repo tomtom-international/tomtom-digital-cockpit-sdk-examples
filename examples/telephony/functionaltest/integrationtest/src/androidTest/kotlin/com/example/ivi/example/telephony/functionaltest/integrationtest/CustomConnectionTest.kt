@@ -25,15 +25,15 @@ import com.tomtom.ivi.platform.tools.api.testing.functional.util.waitForNonUi
 import com.tomtom.tools.android.testing.functional.TtFunctionalTestCase
 import com.tomtom.tools.android.testing.functional.util.withIdleMainThread
 import com.tomtom.tools.android.testing.functional.util.withMainThread
-import kotlinx.coroutines.runBlocking
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
 import java.io.BufferedReader
 import java.io.FileInputStream
 import java.io.InputStreamReader
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
+import kotlinx.coroutines.runBlocking
+import org.junit.After
+import org.junit.Before
+import org.junit.Test
 
 internal class CustomConnectionTest : TtFunctionalTestCase() {
 
@@ -83,7 +83,8 @@ internal class CustomConnectionTest : TtFunctionalTestCase() {
         assertTrue(
             waitForNonUi(CONNECTION_SERVICE_TIMEOUT_MS) {
                 customConnectionFacade.isInCall()
-            })
+            }
+        )
 
         assertTrue(
             withMainThread {

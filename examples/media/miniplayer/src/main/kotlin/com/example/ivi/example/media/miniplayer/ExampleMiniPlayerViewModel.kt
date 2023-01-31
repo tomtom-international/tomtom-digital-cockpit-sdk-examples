@@ -79,5 +79,3 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
     val primaryButtons = buttonsViewModel.primaryButtons
     val secondaryButtons = buttonsViewModel.secondaryButtons
 }
-
-

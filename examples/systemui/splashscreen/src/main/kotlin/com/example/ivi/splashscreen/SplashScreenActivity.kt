@@ -14,7 +14,6 @@ package com.example.ivi.splashscreen
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ivi.example.splashscreen.R
 import com.tomtom.ivi.platform.framework.api.product.defaultactivity.DefaultActivity
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SplashScreenProvider
 

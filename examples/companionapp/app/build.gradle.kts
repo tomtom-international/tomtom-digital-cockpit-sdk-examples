@@ -10,10 +10,8 @@
  */
 
 import com.tomtom.ivi.buildsrc.dependencies.ExampleModuleReference
-import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviInstanceIdentifier
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceInterfaceConfig
-import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.RuntimeDeploymentIdentifier
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
 plugins {
@@ -21,7 +19,7 @@ plugins {
 }
 
 val customCompanionExampleServiceHost = IviServiceHostConfig(
-    serviceHostBuilderName = "CustomCompanionServiceHostBuilder",
+    serviceHostBuilderName = "CustomCompanionExampleServiceHostBuilder",
     implementationModule = ExampleModuleReference("examples_companionapp_service"),
     interfaces = listOf(
         IviServiceInterfaceConfig(

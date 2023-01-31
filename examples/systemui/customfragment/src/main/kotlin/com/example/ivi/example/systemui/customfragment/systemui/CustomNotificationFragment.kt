@@ -25,9 +25,10 @@ import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.stock.Sto
  * different class altogether. The regular view model of the package might even be declared as
  * package-private, then you'll have to create a new view model.
  */
-internal class CustomNotificationFragment : IviFragment<StockNotificationPanel, StockNotificationViewModel>(
-    StockNotificationViewModel::class
-) {
+internal class CustomNotificationFragment :
+    IviFragment<StockNotificationPanel, StockNotificationViewModel>(
+        StockNotificationViewModel::class
+    ) {
     override val viewFactory: ViewFactory<*> =
         ViewFactory(TtiviCustomfragmentNotificationfragmentBinding::inflate)
 }

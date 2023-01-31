@@ -296,8 +296,10 @@ internal class CustomCarControlHandlerService(
         messageContents: String
     ): Boolean =
         when (action) {
-            Action.CarControl.SET_CONTROLLER_VALUE -> handleSetControllerValue(messageContents)
-            Action.CarControl.ADJUST_CONTROLLER_VALUE -> handleAdjustControllerValue(messageContents)
+            Action.CarControl.SET_CONTROLLER_VALUE ->
+                handleSetControllerValue(messageContents)
+            Action.CarControl.ADJUST_CONTROLLER_VALUE ->
+                handleAdjustControllerValue(messageContents)
             // We are only interested in handling `SET_CONTROLLER_VALUE` and
             // `ADJUST_CONTROLLER_VALUE` incoming messages.
             // We return `false` for any other action, so that the message can be forwarded to other
@@ -410,21 +412,21 @@ internal class CustomCarControlHandlerService(
      * setToggleControllerValue message handling: can be triggered by saying:
      * - "Turn on the light sensor"
      */
-    private fun setToggleControllerValue(message: SetToggleControllerValueIncomingMessage): Boolean {
-        return when (message.payload.endpointId.toDeviceName()) {
-            LIGHT_ID -> {
-                val turnOn = message.payload.turnOn
-                val instanceId = message.payload.instanceId
-                tracer.d("Setting toggle value $turnOn for light instance $instanceId.")
-                sendSetControllerValueReply(message.header.id, true)
-                true
-            }
-            // We are only interested in handling `setToggleControllerValue` messages for the
-            // "light" endpoint devices.
-            // We return `false` for any other device, so that the message can be forwarded to other
-            // CarControl message handlers.
-            else -> false
+    private fun setToggleControllerValue(
+        message: SetToggleControllerValueIncomingMessage
+    ): Boolean = when (message.payload.endpointId.toDeviceName()) {
+        LIGHT_ID -> {
+            val turnOn = message.payload.turnOn
+            val instanceId = message.payload.instanceId
+            tracer.d("Setting toggle value $turnOn for light instance $instanceId.")
+            sendSetControllerValueReply(message.header.id, true)
+            true
         }
+        // We are only interested in handling `setToggleControllerValue` messages for the
+        // "light" endpoint devices.
+        // We return `false` for any other device, so that the message can be forwarded to other
+        // CarControl message handlers.
+        else -> false
     }
 
     private fun sendSetControllerValueReply(messageId: String, success: Boolean) {
@@ -448,42 +450,44 @@ internal class CustomCarControlHandlerService(
      * - "Increase the light brightness"
      * - "Decrease the light brightness by 2"
      */
-    private fun adjustRangeControllerValue(message: AdjustRangeControllerValueIncomingMessage): Boolean =
-        when (message.payload.endpointId.toDeviceName()) {
-            LIGHT_ID -> {
-                val deltaValue = message.payload.delta
-                val instanceId = message.payload.instanceId
-                tracer.d("Adjusting light instance $instanceId by delta value $deltaValue.")
-                sendAdjustControllerValueReply(message.header.id, true)
-                true
-            }
-            // We are only interested in handling `AdjustRangeControllerValue` messages for the
-            // "light" endpoint devices.
-            // We return `false` for any other device, so that the message can be forwarded to other
-            // CarControl message handlers.
-            else -> false
+    private fun adjustRangeControllerValue(
+        message: AdjustRangeControllerValueIncomingMessage
+    ): Boolean = when (message.payload.endpointId.toDeviceName()) {
+        LIGHT_ID -> {
+            val deltaValue = message.payload.delta
+            val instanceId = message.payload.instanceId
+            tracer.d("Adjusting light instance $instanceId by delta value $deltaValue.")
+            sendAdjustControllerValueReply(message.header.id, true)
+            true
         }
+        // We are only interested in handling `AdjustRangeControllerValue` messages for the
+        // "light" endpoint devices.
+        // We return `false` for any other device, so that the message can be forwarded to other
+        // CarControl message handlers.
+        else -> false
+    }
 
     /**
      * adjustModeControllerValue message handling: can be triggered by saying
      * - "Increase the light color"
      * Only available if the "ordered" field in the capability configuration is `true`.
      */
-    private fun adjustModeControllerValue(message: AdjustModeControllerValueIncomingMessage): Boolean =
-        when (message.payload.endpointId.toDeviceName()) {
-            LIGHT_ID -> {
-                val deltaValue = message.payload.delta
-                val instanceId = message.payload.instanceId
-                tracer.i("Adjusting light instance $instanceId by delta value $deltaValue.")
-                sendAdjustControllerValueReply(message.header.id, true)
-                true
-            }
-            // We are only interested in handling `AdjustModeControllerValue` messages for the
-            // "light" endpoint devices.
-            // We return `false` for any other device, so that the message can be forwarded to other
-            // CarControl message handlers.
-            else -> false
+    private fun adjustModeControllerValue(
+        message: AdjustModeControllerValueIncomingMessage
+    ): Boolean = when (message.payload.endpointId.toDeviceName()) {
+        LIGHT_ID -> {
+            val deltaValue = message.payload.delta
+            val instanceId = message.payload.instanceId
+            tracer.i("Adjusting light instance $instanceId by delta value $deltaValue.")
+            sendAdjustControllerValueReply(message.header.id, true)
+            true
         }
+        // We are only interested in handling `AdjustModeControllerValue` messages for the
+        // "light" endpoint devices.
+        // We return `false` for any other device, so that the message can be forwarded to other
+        // CarControl message handlers.
+        else -> false
+    }
 
     private fun sendAdjustControllerValueReply(messageId: String, success: Boolean) {
         val messageToSend = AdjustControllerValueOutgoingMessage(

@@ -29,6 +29,4 @@ internal class ExampleTaskFragment :
     IviFragment<ExampleTaskPanel, ExampleTaskViewModel>(ExampleTaskViewModel::class)
 
 internal class ExampleTaskViewModel(panel: ExampleTaskPanel) :
-    FrontendViewModel<ExampleTaskPanel>(panel) {
-
-}
+    FrontendViewModel<ExampleTaskPanel>(panel)

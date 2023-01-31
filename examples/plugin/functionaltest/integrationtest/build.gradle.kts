@@ -16,7 +16,6 @@ import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviPlatfo
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.MenuItemConfig
 import com.tomtom.ivi.platform.gradle.api.defaults.config.testing.activityTestGroup
-
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
 plugins {
@@ -42,7 +41,8 @@ ivi {
         iviInstances {
             create(IviInstanceIdentifier.default) {
                 applyGroups {
-                    includeDefaultGroups()
+                    includeDefaultPlatformGroups()
+                    includeDefaultAppsuiteGroups()
                     @Suppress(EXPERIMENTAL_API_USAGE)
                     include(IviPlatform.activityTestGroup)
                 }

@@ -12,7 +12,6 @@
 import com.tomtom.ivi.buildsrc.dependencies.ExampleModuleReference
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.FrontendConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviInstanceIdentifier
-import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.PanelTypesConfig
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
 plugins {
@@ -48,7 +47,10 @@ ivi {
         enabled = true
         iviInstances {
             create(IviInstanceIdentifier.default) {
-                applyGroups { includeDefaultGroups() }
+                applyGroups {
+                    includeDefaultPlatformGroups()
+                    includeDefaultAppsuiteGroups()
+                }
                 frontends {
                     add(exampleFrontend)
                 }

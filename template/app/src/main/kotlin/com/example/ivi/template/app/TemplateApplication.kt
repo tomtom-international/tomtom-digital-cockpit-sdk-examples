@@ -14,5 +14,4 @@ package com.example.ivi.template.app
 import com.tomtom.ivi.platform.framework.api.product.defaultapplication.DefaultApplication
 
 @Suppress("unused")
-class TemplateApplication : DefaultApplication() {
-}
+class TemplateApplication : DefaultApplication()
