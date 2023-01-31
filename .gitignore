@@ -2,9 +2,8 @@
 **/build/
 *.swp
 /local.properties
-docs/portal/html/
+docs/portal-in-container/drumkit-monorepo/
 IviTest
-.obsidian/
 
 # IntelliJ
 *.iml

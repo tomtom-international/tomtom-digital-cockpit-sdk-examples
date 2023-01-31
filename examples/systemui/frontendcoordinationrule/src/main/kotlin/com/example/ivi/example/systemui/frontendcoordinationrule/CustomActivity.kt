@@ -19,7 +19,7 @@ import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHost
 /**
  * Custom activity that uses [CustomSystemUiHost] as the system UI host.
  */
-class FrontendCoordinationRuleActivity : DefaultActivity() {
+class CustomActivity : DefaultActivity() {
     override fun createSystemUiHost(iviInstanceId: IviInstanceId): SystemUiHost =
         CustomSystemUiHost(getDefaultSystemUiHostContext(iviInstanceId))
 }

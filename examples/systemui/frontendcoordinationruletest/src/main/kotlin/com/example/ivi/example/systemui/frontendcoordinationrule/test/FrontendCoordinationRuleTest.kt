@@ -19,7 +19,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.ivi.common.commonfunctionaltest.E2eTestCase
-import com.example.ivi.example.systemui.frontendcoordinationrule.FrontendCoordinationRuleActivity
+import com.example.ivi.example.systemui.frontendcoordinationrule.CustomActivity
 import com.example.ivi.example.systemui.frontendcoordinationrule.R
 import com.tomtom.ivi.platform.debug.api.testing.tools.openDebugPanel
 import com.tomtom.ivi.platform.locationsimulation.api.service.locationsimulation.LocationSimulationData
@@ -33,7 +33,7 @@ import org.hamcrest.Matcher
 import org.junit.Before
 import org.junit.Test
 
-internal class FrontendCoordinationRuleTest : E2eTestCase(frontendCoordinationRuleActivity) {
+internal class FrontendCoordinationRuleTest : E2eTestCase(customActivity) {
     override val initialLocationSimulationData: LocationSimulationData? = null
 
     @Before
@@ -58,9 +58,9 @@ internal class FrontendCoordinationRuleTest : E2eTestCase(frontendCoordinationRu
     }
 }
 
-private val frontendCoordinationRuleActivity = Intent(
+private val customActivity = Intent(
     InstrumentationRegistry.getInstrumentation().targetContext,
-    FrontendCoordinationRuleActivity::class.java
+    CustomActivity::class.java
 )
 
 private val thatIsDebugPanelTabSpinner: Matcher<View>

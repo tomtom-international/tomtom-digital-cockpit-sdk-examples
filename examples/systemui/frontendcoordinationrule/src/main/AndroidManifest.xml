@@ -17,17 +17,17 @@
             android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity">
             <meta-data
                 android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_MAIN_ACTIVITY_CLASS_NAME"
-                android:value="com.example.ivi.example.systemui.frontendcoordinationrule.FrontendCoordinationRuleActivity"
+                android:value="com.example.ivi.example.systemui.frontendcoordinationrule.CustomActivity"
                 tools:replace="android:value" />
         </activity>
 
         <activity
-            android:name=".FrontendCoordinationRuleActivity"
+            android:name=".CustomActivity"
             android:exported="false">
         </activity>
 
         <!--
-        This activity is from the common example package, it is replaced with FrontendCoordinationRuleActivity
+        This activity is from the common example package, it is replaced with CustomActivity
         in this app. Removing it to avoid potential intent choosers in case of both apps
         being installed on the same device.
          -->

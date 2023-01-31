@@ -12,7 +12,7 @@ following these steps:
 3. Run the `examples_systemui_frontendcoordinationrule` configuration.
 4. Hold volume down hardware button.
 5. See debug menu on the right of the screen.
-6. Tap any main menu item.
+6. Tap a main menu item.
 7. See debug menu being closed.
 
 If you want to learn how this works, start at the `frontendCoordinator` field of the

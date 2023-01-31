@@ -29,8 +29,7 @@ portal page.
 Alexa Preview Mode allows users to get access to a set of Alexa features without requiring a login
 with an Amazon account.
 
-Subdirectory `alexapreviewmode` holds a simple example implementation of the 
-[`AlexaPreviewModeService`](TTIVI_PLATFORM_API).
+Subdirectory `alexapreviewmode` holds a simple example implementation of the `AlexaPreviewModeService`.
 This service is responsible for handling communication with AVS (Alexa Voice Service) to enable or 
 disable Alexa Preview Mode using the `InstantDeviceRegistration` API.
 
