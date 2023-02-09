@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.4890"
+iviPlatform = "1.0.4957"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.
@@ -69,4 +69,5 @@ iviAppsuiteAppstoreApiCommonModel = { module = "com.tomtom.ivi.appsuite:appsuite
 iviAppsuiteAppstoreApiServiceAppsourceprovider = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_service_appsourceprovider", version.ref = "iviPlatform" }
 iviAppsuiteAppstoreApiServiceApplaunchhandler = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_service_applaunchhandler", version.ref = "iviPlatform" }
 iviAppsuiteAppstoreApiServiceApplaunchtrigger = { module = "com.tomtom.ivi.appsuite:appsuite_appstore_api_service_applaunchtrigger", version.ref = "iviPlatform" }
+iviAppsuiteCommunicationsApiCommonFrontend = { module = "com.tomtom.ivi.appsuite:appsuite_communications_api_common_frontend", version.ref = "iviPlatform" }
 iviAppsuiteMediaApiCommonFrontend = { module = "com.tomtom.ivi.appsuite:appsuite_media_api_common_frontend", version.ref = "iviPlatform" }

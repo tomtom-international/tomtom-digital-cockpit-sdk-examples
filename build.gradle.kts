@@ -271,6 +271,7 @@ subprojects {
             pickFirsts.add("META-INF/io.netty.versions.properties")
             resources.excludes.add("META-INF/INDEX.LIST")
             resources.excludes.add("META-INF/LICENSE.md")
+            resources.excludes.add("META-INF/LICENSE-notice.md")
             resources.excludes.add("META-INF/NOTICE.md")
         }
 
