@@ -53,7 +53,9 @@ internal class AccountLoginViewModelTest : IviTestCase() {
     private val sut = AccountLoginViewModel(mockPanel)
 
     @Test
-    fun `lastLogin contains simulated data`() {
+    fun `lastLogin contains simulated data`() = runTest {
+        sut.lastLogin.observeForever {}
+        runCurrent()
         assertLiveDataEquals(TestData.lastLoginAccount, sut.lastLogin)
     }
 
@@ -66,7 +68,7 @@ internal class AccountLoginViewModelTest : IviTestCase() {
         val job = launch {
             sut.allAccountsPagingDataFlow.collectLatest { adapter.submitData(it) }
         }
-        this.runCurrent()
+        runCurrent()
         val snapshot = adapter.snapshot()
         job.cancel()
 
