@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4980-2520
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.4994-2534
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -210,7 +210,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.7.10, 1.8.10 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4 | Apache License 2.0 |
+| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines/core/kotlinx-coroutines-core/) | 1.5.2, 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
@@ -245,7 +245,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [maven-dependency-resolver](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
 | [messaging](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [MihaiValentin/lunr-languages](https://github.com/MihaiValentin/lunr-languages#readme) | 1.1.1 | Mozilla Public License 1.1 |
-| [Mockito](http://mockito.org) | 2.19.0 | MIT License |
+| [Mockito_](http://mockito.org) | 2.19.0 | MIT License |
 | [MockK](http://mockk.io) | 1.13.1, 1.13.3 | Apache License 2.0 |
 | [MockK Agent API](https://mockk.io) | 1.13.1, 1.13.3 | Apache License 2.0 |
 | [MockK Android](http://mockk.io) | 1.13.1, 1.13.3 | Apache License 2.0 |
