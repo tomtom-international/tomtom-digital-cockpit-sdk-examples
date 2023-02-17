@@ -186,11 +186,6 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
         order: ContactItemOrder,
         contacts: List<Contact>
     ): List<Contact> = when (order) {
-        ContactItemOrder.COMPANY_NAME_ASC -> {
-            contacts.sortedBy {
-                it.companyName.ifEmpty { it.displayName }
-            }
-        }
         ContactItemOrder.FAMILY_NAME_ASC -> {
             contacts.sortedBy {
                 it.familyName.ifBlank { it.displayName }

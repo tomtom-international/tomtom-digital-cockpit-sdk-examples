@@ -28,10 +28,15 @@ import io.mockk.coVerify
 import io.mockk.every
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.TestScope
+import kotlinx.coroutines.test.advanceUntilIdle
+import kotlinx.coroutines.test.runCurrent
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.Json
 import org.junit.Test
 
+@OptIn(ExperimentalCoroutinesApi::class)
 internal class StockAccountSettingsServiceTest : IviTestCase() {
     private val mockSettingsManagementService =
         mockkService(SettingsManagementService.Companion::createApi) {
@@ -46,10 +51,14 @@ internal class StockAccountSettingsServiceTest : IviTestCase() {
             coEvery { coPutSetting(any(), any<StringSettingKey>(), any()) } returns true
         }
 
-    private fun createSut() = StockAccountSettingsService(niceMockk()).also { it.onCreate() }
+    private fun TestScope.createSut(): StockAccountSettingsService {
+        val sut = StockAccountSettingsService(niceMockk()).also { it.onCreate() }
+        advanceUntilIdle()
+        return sut
+    }
 
     @Test
-    fun `with no stored active account`() {
+    fun `with no stored active account`() = runTest {
         // GIVEN No stored active account.
 
         // WHEN The account settings service is created.
@@ -60,7 +69,7 @@ internal class StockAccountSettingsServiceTest : IviTestCase() {
     }
 
     @Test
-    fun `with stored active account`() {
+    fun `with stored active account`() = runTest {
         // GIVEN The stored active account.
         val account = Account(username = "username")
 
@@ -75,15 +84,14 @@ internal class StockAccountSettingsServiceTest : IviTestCase() {
     }
 
     @Test
-    fun `on updating active account with a value`() {
+    fun `on updating active account with a value`() = runTest {
         // GIVEN The account settings service has no active account.
         val account = Account(username = "username")
         val sut = createSut()
 
         // WHEN An active account is set.
-        runBlocking {
-            sut.updateActiveAccount(account)
-        }
+        sut.updateActiveAccount(account)
+        runCurrent()
 
         // THEN The active account is stored.
         coVerify {
@@ -96,20 +104,18 @@ internal class StockAccountSettingsServiceTest : IviTestCase() {
     }
 
     @Test
-    fun `on updating active account with null`() {
+    fun `on updating active account with null`() = runTest {
         // GIVEN The account settings service has an active account.
         val account = Account(username = "username")
         val sut = createSut()
 
-        runBlocking {
-            sut.updateActiveAccount(account)
-        }
+        sut.updateActiveAccount(account)
+        runCurrent()
         clearAllMocks(answers = false)
 
         // WHEN An active account is reset.
-        runBlocking {
-            sut.updateActiveAccount(null)
-        }
+        sut.updateActiveAccount(null)
+        runCurrent()
 
         // THEN The active account is reset in storage.
         coVerify {
