@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5020-2552
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5039-2566
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -285,7 +285,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
-| [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final | Apache License 2.0 |
+| [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.16.1.Final, 2.3.1.Final | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [react-native-native-toast-library-kishor](https://www.npmjs.org/package/react-native-native-toast-library-kishor) | 1.0.1 | Unknown License |
 | [react-native-rokt-widget](https://www.npmjs.org/package/react-native-rokt-widget) | 1.0.3 | Unknown License |
@@ -309,7 +309,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [shadowapi](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
 | [SILGraphite: rendering non-roman scripts](http://sourceforge.net/projects/silgraphite) | 1.3.12 | GNU Lesser General Public License v2.1 or later |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36, 2.0.3 | MIT License |
-| [Spring Initializr :: Generator (Spring projects)](https://github.com/spring-io/initializr/initializr-bom/initializr-parent/initializr-generator-spring) | 0.13.0 | Apache License 2.0 |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |

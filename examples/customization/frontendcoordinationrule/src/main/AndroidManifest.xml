@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © 2023 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <activity
+            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity">
+            <meta-data
+                android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_MAIN_ACTIVITY_CLASS_NAME"
+                android:value="com.example.ivi.example.customization.frontendcoordinationrule.CustomActivity"
+                tools:replace="android:value" />
+        </activity>
+
+        <activity
+            android:name=".CustomActivity"
+            android:exported="false">
+        </activity>
+
+        <!--
+        This activity is from the common example package, it is replaced with CustomActivity
+        in this app. Removing it to avoid potential intent choosers in case of both apps
+        being installed on the same device.
+         -->
+        <activity
+            android:name="com.example.ivi.common.ExampleActivity"
+            tools:node="remove" />
+    </application>
+</manifest>
