@@ -52,6 +52,7 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
 
     override val supportedPanelTypes: PanelTypeSet = panelTypeSetOf(
         CustomSystemUiPanel::class,
+        MainMenuPanel::class,
         TaskPanel::class,
         TaskProcessPanel::class,
     )
@@ -62,7 +63,6 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         ExpandedProcessPanel::class,
         GuidancePanel::class,
         HomePanel::class,
-        MainMenuPanel::class,
         MainProcessPanel::class,
         ModalPanel::class,
         NotificationPanel::class,
