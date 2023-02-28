@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5057-2578
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5076-2593
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -20,7 +20,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3, 4.1 | Apache License 2.0 |
 | [Accessibility Test Framework](https://code.google.com/p/eyes-free/) | 3.1 | Apache License 2.0 |
 | [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.2.4, 1.3.1, 1.5.1 | Apache License 2.0 |
-| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.2.3, 1.3.1, 1.5.1 | Apache License 2.0 |
+| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.2.3, 1.5.1 | Apache License 2.0 |
 | [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [Aibo](http://github.com/datasieve/Aibo) | 3.1.1_meet_with_skitter_and_apple | GNU General Public License v2.0 only |
 | [alexa](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
@@ -32,7 +32,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android ConstraintLayout](http://tools.android.com) | 2.1.4 | Apache License 2.0 |
 | [Android ConstraintLayout Core](http://tools.android.com) | 1.0.4 | Apache License 2.0 |
 | [Android Core-Testing](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0 | Apache License 2.0 |
-| [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
+| [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0 | Apache License 2.0 |
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.0.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.0.0 | Apache License 2.0 |
 | [Android KTX Core](https://github.com/android/android-ktx) | 1.7.0, 1.8.0 | Apache License 2.0 |
@@ -63,9 +63,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Preferences KTX](http://developer.android.com/tools/extras/support-library.html) | 1.2.0 | Apache License 2.0 |
 | [Android Resource Inspection - Annotations](https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.0-alpha01) | 1.0.0 | Apache License 2.0 |
 | [Android Resources Library](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.4.2 | Apache License 2.0 |
-| [Android Room Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.3 | Apache License 2.0 |
-| [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.3 | Apache License 2.0 |
-| [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.3 | Apache License 2.0 |
+| [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
+| [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
 | [Android Support AnimatedVectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Support CardView v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Custom Tabs](http://developer.android.com/tools/extras/support-library.html) | 1.3.0 | Apache License 2.0 |
@@ -94,7 +93,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library View Pager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Palette v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support RecyclerView v7](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.2.1 | Apache License 2.0 |
-| [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
+| [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0 | Apache License 2.0 |
 | [Android Support VectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Tracing](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0 | Apache License 2.0 |
 | [Android Transition Support Library](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.4.1 | Apache License 2.0 |
@@ -188,7 +187,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [JavaWriter](http://github.com/square/javawriter/) | 2.1.1 | Apache License 2.0 |
 | [javax.annotation API](http://jcp.org/en/jsr/detail?id=250) | 1.3.2 | (GNU General Public License v2.0 w/Classpath exception OR Common Development and Distribution License 1.1) |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
-| [Jetbrains annotations](http://www.jetbrains.org) | 13.0, 20.1.0 | Apache License 2.0 |
+| [Jetbrains annotations](http://www.jetbrains.org) | 13.0 | Apache License 2.0 |
 | [Jetpack Camera Library Camera2 Implementation/Extensions](https://developer.android.com/jetpack/androidx) | 1.0.0-alpha06 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
 | [jqno/equalsverifier](http://www.jqno.nl/equalsverifier) | 3.7.1 | Apache License 2.0 |
@@ -277,9 +276,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [phonecontrol](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.11, 3.21.9 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.9 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.11, 3.21.9 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.12, 3.21.9 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
@@ -308,6 +307,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [shadowapi](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
 | [SILGraphite: rendering non-roman scripts](http://sourceforge.net/projects/silgraphite) | 1.3.12 | GNU Lesser General Public License v2.1 or later |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36, 2.0.3 | MIT License |
+| [SQLDelight Android Driver](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
+| [SQLDelight Coroutines Extensions](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
+| [SQLDelight Multiplatform Runtime (Experimental)](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
+| [SQLDelight Runtime](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
@@ -315,7 +318,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [The FreeType Project](http://www.freetype.org/) | 2.10.0, 2.11.0 | Freetype Project License |
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.5.0 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0 | Apache License 2.0 |
-| [Timber](http://github.com/JakeWharton/timber/timber/) | 5.0.1 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
