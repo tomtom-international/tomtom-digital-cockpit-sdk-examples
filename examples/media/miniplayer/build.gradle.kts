@@ -57,7 +57,10 @@ android {
 dependencies {
     implementation(project(":examples_common"))
 
+    implementation(iviDependencies.androidxConstraintlayout)
+    implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
+    implementation(iviDependencies.tomtomToolsCoreAnimation)
     implementation(libraries.iviAppsuiteMediaApiCommonFrontend)
     implementation(libraries.iviPlatformFrontendApiCommonFrontend)
 }
