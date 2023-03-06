@@ -62,5 +62,6 @@ android {
 dependencies {
     implementation(project(":examples_common"))
 
+    implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
 }

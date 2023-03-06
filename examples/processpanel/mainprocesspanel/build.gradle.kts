@@ -62,6 +62,7 @@ ivi {
 
 dependencies {
     implementation(project(":examples_common"))
+    implementation(iviDependencies.tomtomToolsApiLivedata)
     implementation(libraries.iviPlatformFrontendApiCommonFrontend)
     implementation(libraries.iviPlatformFrontendApiCommonUicontrols)
     implementation(libraries.iviPlatformThemingApiCommonAttributes)

@@ -13,9 +13,9 @@ customization in action by following these steps:
 2. Open it in Android Studio.
 3. Run the `examples_customization_customanimation` configuration.
 4. Tap any main menu item.
-5. See the content sliding in from the left side of the screen.
+5. See the content scaling and fading out.
 6. Tap another main menu item.
-7. See old content sliding out to the left and new content slide in from the left.
+7. See old content scaling and fading out and new content scales and fades in.
 
 ## Copyright
 

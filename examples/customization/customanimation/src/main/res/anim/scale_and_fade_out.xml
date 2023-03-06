@@ -10,11 +10,20 @@
   ~ immediately return or destroy it.
   -->
 
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <translate
-        android:duration="?attr/tt_animation_duration_medium_ms"
-        android:fillAfter="true"
-        android:fromXDelta="0"
-        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
-        android:toXDelta="-100%" />
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="?attr/tt_animation_duration_medium_ms"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:shareInterpolator="true">
+
+    <scale
+        android:fromXScale="100%"
+        android:fromYScale="100%"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="50%"
+        android:toYScale="50%" />
+
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
 </set>

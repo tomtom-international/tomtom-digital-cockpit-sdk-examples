@@ -64,5 +64,6 @@ dependencies {
     implementation(project(":examples_common"))
     implementation(libraries.iviPlatformFrontendApiCommonFrontend)
     implementation(libraries.iviPlatformFrontendApiTemplateNotificationPanel)
+    implementation(iviDependencies.tomtomToolsApiLivedata)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
 }

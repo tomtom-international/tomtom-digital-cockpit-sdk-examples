@@ -47,8 +47,8 @@
             auto:layout_constraintTop_toTopOf="parent"
             auto:ttiviPanelContainerContext="@{panelContainerContext}"
             auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}"
-            auto:ttiviSubContainerEnterAnimation="@anim/slide_from_left"
-            auto:ttiviSubContainerExitAnimation="@anim/slide_to_left" />
+            auto:ttiviSubContainerEnterAnimation="@anim/scale_and_fade_in"
+            auto:ttiviSubContainerExitAnimation="@anim/scale_and_fade_out" />
 
         <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
             android:id="@+id/example_systemui_menu_container"

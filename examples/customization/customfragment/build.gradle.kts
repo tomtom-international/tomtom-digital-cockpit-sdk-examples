@@ -65,6 +65,8 @@ ivi {
 dependencies {
     implementation(project(":examples_common"))
 
+    implementation(iviDependencies.androidxConstraintlayout)
+    implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformFrontendApiTemplateNotificationPanel)
