@@ -325,5 +325,7 @@ subprojects {
                 }
             }
         }
+
+        apply(plugin = "jacoco")
     }
 }
