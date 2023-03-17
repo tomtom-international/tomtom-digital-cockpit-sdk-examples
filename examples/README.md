@@ -7,11 +7,11 @@ code demonstrating how to implement and integrate specific features into the Tom
 platform.
 
 The
-[TomTom Digital Cockpit Developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/introduction)
+[TomTom Digital Cockpit Developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction)
 explains the purpose of these apps in more detail. The
-[Example Apps](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/introduction)
+[Example Apps](https://developer.tomtom.com/tomtom-digital-cockpit/developers/platform-overview/example-apps)
 section briefly introduces them, and the
-[Tutorials and Examples](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/overview)
+[Tutorials and Examples](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/overview)
 section explains them in more detail.
 
 The sub-directories per application domain hold the example applications.
