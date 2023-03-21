@@ -16,7 +16,7 @@ The primary button of the notification is now located to the right and the secon
 left. In our default notification fragment offering, this is the other way around.
 
 If you want to learn how this works, start at the `fragmentFactory` field of the
-[`CustomSystemUiHost`](https://github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples/blob/main/examples/customization/customfragment/src/main/kotlin/com/example/ivi/example/systemui/customfragment/systemui/CustomSystemUiHost.kt).
+[`CustomSystemUiHost`](https://github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples/blob/main/examples/customization/customfragment/src/main/kotlin/com/example/ivi/example/customization/customfragment/systemui/CustomSystemUiHost.kt#L52).
 The fragment factory has a list of custom fragment rules. The first rule in this list that accepts
 to create the fragment for a given panel creates the fragment. If no rule accepts, the panel creates
 the fragment.

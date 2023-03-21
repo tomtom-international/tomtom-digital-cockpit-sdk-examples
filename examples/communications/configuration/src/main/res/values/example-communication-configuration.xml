@@ -15,4 +15,9 @@
      Do not close the communications panel when making a call.
      -->
     <bool name="keepCommunicationsPanelOpenOnOutgoingCallConfigKey">true</bool>
+
+    <!--
+     Indicates that the task process panel will not be suppressed for an ongoing call.
+     -->
+    <bool name="suppressCallTaskProcessPanelConfigKey">false</bool>
 </resources>

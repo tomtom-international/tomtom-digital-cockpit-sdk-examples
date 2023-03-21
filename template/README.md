@@ -7,9 +7,9 @@ by the TomTom Digital Cockpit platform. It is a fully working infotainment syste
 media center, phone calling, messaging and much more.
 
 A detailed explanation of the template app and the off-the-shelf functionality is provided on
-[this page](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/platform-overview/example-apps)
+[this page](https://developer.tomtom.com/tomtom-digital-cockpit/developers/platform-overview/example-apps)
 of the
-[TomTom Digital Cockpit Developer Portal](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/introduction).
+[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 
 ## Copyright
 

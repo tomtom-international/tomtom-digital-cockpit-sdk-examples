@@ -16,8 +16,9 @@ generic contents for non-manually customized media sources. However, it can be d
 this with a different one.
 
 The example demonstrates concepts also explained in the
-[Customize a media source](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/media/customize-a-media-source)
-guide in the TomTom Digital Cockpit documentation.
+[Customize a media source](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/media/customize-a-media-source)
+guide in the
+[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 
 To be able to try the customizations in this example, other than installing it on a device, it is
 also necessary to compile and install the example module `examples_media_source`, as that contains

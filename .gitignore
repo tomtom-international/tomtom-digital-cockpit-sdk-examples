@@ -1,12 +1,15 @@
 **/.gradle/
 **/build/
 *.swp
+**/__pycache__/
+**/.vscode/
 /local.properties
 docs/portal-in-container/drumkit-monorepo/
 IviTest
 
 # IntelliJ
 *.iml
+**/.idea/
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
@@ -41,6 +44,10 @@ IviTest
 .idea/sonarlint*
 .idea/androidTestResultsUserPreferences.xml
 .idea/deploymentTargetDropDown.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/inspectionProfiles
 
 # MacOS
 .DS_Store

@@ -7,11 +7,11 @@ TomTom Digital Cockpit platform. It also shows how to use TomTom Digital Cockpit
 framework for customizing the behavior of the TomTom Digital Cockpit platform.
 
 For a detailed explanation of this example app, see the following pages on the
-[TomTom Digital Cockpit Developer Portal](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/introduction):
+[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction):
 
-- [Create a Frontend Plugin](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/basics/create-a-frontend-plugin).
-- [Create an IVI Service](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/basics/create-an-ivi-service).
-- [Use the Configuration Framework](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/customization/use-the-configuration-framework).
+- [Create a Frontend Plugin](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/basics/create-a-frontend-plugin).
+- [Create an IVI Service](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/basics/create-an-ivi-service).
+- [Use the Configuration Framework](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/customization/use-the-configuration-framework).
 
 ## Copyright
 

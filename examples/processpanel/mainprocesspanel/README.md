@@ -3,11 +3,13 @@
 ## Introduction
 
 This example app demonstrates how to create and show a main process panel.
+
 For a detailed explanation, see the
-- [Main Process Panels](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/design/system-ui/main-process-panels).
-- [Create a Main Process Panel](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/main-process-panel/create-a-main-process-panel)
+[Main Process Panels](https://developer.tomtom.com/tomtom-digital-cockpit/designers/system-ui/main-process-panels)
+and
+[Create a Main Process Panel](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/main-process-panel/create-a-main-process-panel)
 pages on the
-[TomTom Digital Cockpit Developer Portal](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/introduction).
+[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 
 ## Copyright
 

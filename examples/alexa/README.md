@@ -4,13 +4,13 @@
 
 This example app shows how to use the Alexa feature that comes with the TomTom Digital Cockpit
 Platform. The
-[TomTom Digital Cockpit Developer Portal](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/introduction)
+[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction)
 explains how this app
-[creates a custom Alexa Handler service](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/voice-personal-assistant/create-a-custom-alexa-handler-service#how-to-create-a-custom-alexa-handler-service).
+[creates a custom Alexa Handler service](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/voice-personal-assistant/create-a-custom-alexa-handler-service#how-to-create-a-custom-alexa-handler-service).
 
 By default, this app is excluded from the build, because it requires Alexa libraries that are not
 publicly available. You must
-[set a Gradle property](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/voice-personal-assistant/create-a-custom-alexa-handler-service#example-app)
+[set a Gradle property](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/voice-personal-assistant/create-a-custom-alexa-handler-service#example-app)
 to build this app.
 
 ## Alexa Car Control
@@ -21,7 +21,7 @@ allows users to use Alexa to voice-control vehicle features.
 
 Subdirectory `customcarcontrolhandler` holds example code showing how to define custom Alexa
 CarControl endpoints and assets. For details see the
-[Customize the Alexa Car Control Feature](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/voice-personal-assistant/customize-the-alexa-car-control-feature)
+[Customize the Alexa Car Control Feature](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/voice-personal-assistant/customize-the-alexa-car-control-feature)
 portal page.
 
 ## Alexa Preview Mode

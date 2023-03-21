@@ -6,8 +6,9 @@ This is an example demonstrating how to customize visual representation of a cal
 phone account ID in the TomTom Digital Cockpit stock communications UI.
 
 The example demonstrates concepts explained in the
-[Customize communications frontend](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/tutorials-and-examples/communications/customize-communications-frontend)
-guide in the TomTom Digital Cockpit documentation.
+[Customize communications frontend](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/communications/customize-communications-frontend)
+guide on the
+[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 
 ## Copyright
 

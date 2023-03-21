@@ -9,7 +9,6 @@
  * immediately return or destroy it.
  */
 
-import com.android.builder.core.BuilderConstants
 import com.tomtom.ivi.buildsrc.environment.ProjectAbis
 import com.tomtom.ivi.buildsrc.extensions.android
 import com.tomtom.ivi.buildsrc.extensions.getGradleProperty
@@ -19,10 +18,6 @@ import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 import com.tomtom.ivi.platform.gradle.api.tools.emulators.iviEmulators
 import com.tomtom.ivi.platform.gradle.api.tools.version.iviAndroidVersionCode
 import com.tomtom.ivi.platform.gradle.api.tools.version.iviVersion
-import com.tomtom.navtest.android.android
-import com.tomtom.navtest.android.androidRoot
-import com.tomtom.navtest.extensions.navTest
-import com.tomtom.navtest.extensions.navTestRoot
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
@@ -36,8 +31,6 @@ plugins {
     id("com.tomtom.ivi.platform.framework.config") apply true
     id("com.tomtom.ivi.platform.tools.emulators") apply true
     id("com.tomtom.ivi.platform.tools.version") apply true
-    id("com.tomtom.navtest") apply true
-    id("com.tomtom.navtest.android") apply true
     id("com.tomtom.navapp.emulators-plugin") apply false
     id("com.tomtom.tools.android.extractstringsources") apply false
 }
@@ -93,34 +86,6 @@ tasks.withType<Test> {
         showExceptions = true
         showCauses = true
         showStackTraces = true
-    }
-}
-
-// Set up the NavTest framework.
-navTestRoot {
-    // Specify where the report and artifacts of the tests will be archived
-    outputDir.set(testOutputDirectory)
-
-    androidRoot {
-        deviceUsageReport {
-            enabled.set(true)
-        }
-    }
-
-    timeline {
-        enabled.set(true)
-    }
-
-    suites {
-        create("unit") {
-            includeTags += "unit"
-        }
-        create("integration") {
-            includeTags += "integration"
-        }
-        create("e2e") {
-            includeTags += "e2e"
-        }
     }
 }
 
@@ -207,6 +172,9 @@ subprojects {
                 versionCode = iviAndroidVersionCode
                 versionName = iviVersion
             }
+            // AutomotiveUI has enabled flavorized publication of their modules, because of
+            // this, it is now needed on the integrator side to specify which flavor to use.
+            missingDimensionStrategy("engine", "navkit1")
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
@@ -293,37 +261,5 @@ subprojects {
         }
 
         apply(plugin = "com.tomtom.ivi.platform.tools.signing-config")
-
-        apply(plugin = "com.tomtom.navtest")
-        apply(plugin = "com.tomtom.navtest.android")
-
-        navTest.android {
-            // Applies for functional tests under "androidTest" directory.
-            androidTest {
-                enabled.set(true)
-                // Tags are set by subprojects.
-
-                // Allow specifying the test-class via command-line
-                findProperty("testClass")?.let {
-                    instrumentationArguments.className.set(it as String)
-                }
-            }
-
-            pluginManager.withPlugin("com.tomtom.ivi.platform.framework.config.activity-test") {
-                androidTest {
-                    testTags.add("integration")
-                    timeout.set(10 * 60)
-                }
-            }
-
-            if (!isAndroidTestProject) {
-                // Applies for unit tests under "test" directory.
-                unit {
-                    enabled.set(true)
-                    testTags.add("unit")
-                    variantFilter = { it.buildType == BuilderConstants.DEBUG }
-                }
-            }
-        }
     }
 }
