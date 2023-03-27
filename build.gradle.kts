@@ -172,6 +172,9 @@ subprojects {
                 versionCode = iviAndroidVersionCode
                 versionName = iviVersion
             }
+            // AutomotiveUI has enabled flavorized publication of their modules, because of
+            // this, it is now needed on the integrator side to specify which flavor to use.
+            missingDimensionStrategy("engine", "navkit1")
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
@@ -228,7 +231,7 @@ subprojects {
         }
 
         packagingOptions {
-            // For NavKit 2, pick the first binary found when there are multiple.
+            // For NavKit, pick the first binary found when there are multiple.
             pickFirsts.add("lib/**/*.so")
             // NOTE: Do not strip any binaries: they should already come stripped from the
             // release artifacts; and since we don't use an NDK, they cannot be stripped anyway.

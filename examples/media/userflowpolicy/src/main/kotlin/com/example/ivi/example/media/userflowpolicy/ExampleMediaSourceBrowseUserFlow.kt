@@ -19,7 +19,7 @@ internal class ExampleMediaSourceBrowseUserFlow : BrowseSourceUserFlow {
         mediaFrontendContext: MediaFrontendContext,
         sourceId: SourceId
     ): UserFlowResult {
-        mediaFrontendContext.panels.openMediaTaskPanel(
+        mediaFrontendContext.mediaFrontendNavigation.openMediaTaskPanel(
             ExampleMediaSourcePanel(mediaFrontendContext)
         )
         return UserFlowResult.Success
