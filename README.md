@@ -94,10 +94,15 @@ build (see
 [Flashing the reference hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/flashing-the-reference-hardware))
 for more details on the reference hardware).
 
-### `permissions/`
+### `resources/`
 
-Platform permissions needed on hardware for some of the functionality (related to media) to work.
-This file will work with the template app, if another example app is used, please update the
+Various resources required to build a finished product or system image, like Android permissions
+for the app to run on something other than the reference hardware.
+
+#### `resources/permissions/`
+
+Platform permissions are needed on hardware for some of the functionality (related to media) to
+work. This file will work with the template app. If another example app is used, please update the
 package name at the top of the file. See
 [Installing TomTom Digital Cockpit on Hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/installing-tomtom-digital-cockpit-on-hardware)
 for more information about the permissions.
