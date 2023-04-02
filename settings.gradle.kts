@@ -25,31 +25,14 @@ if (cacheConfig.exists()) {
     apply(from = cacheConfig.path)
 }
 
-val templateAppDir = File(rootProject.projectDir, "template")
-fileTree(templateAppDir)
+val tutorialsAppDir = File(rootProject.projectDir, "tutorials")
+fileTree(tutorialsAppDir)
     .matching { include("**/build.gradle.kts") }
     .forEach { file ->
-        val projectName = ":" + file.toProjectName(templateAppDir.parentFile)
+        val projectName = ":" + file.toProjectName(tutorialsAppDir.parentFile)
         include(projectName)
         project(projectName).projectDir = file.parentFile
     }
-
-val optInToAlexaExamples = (extra.get("optInToAlexaExamples") as String).toBoolean()
-val examplesDir = File(rootProject.projectDir, "examples")
-if (examplesDir.exists()) {
-    fileTree(examplesDir)
-        .matching {
-            include("**/build.gradle.kts")
-            if (!optInToAlexaExamples) {
-                exclude("alexa/**")
-            }
-        }
-        .forEach { file ->
-            val projectName = ":" + file.toProjectName(examplesDir.parentFile)
-            include(projectName)
-            project(projectName).projectDir = file.parentFile
-        }
-}
 
 fun File.toProjectName(dir: File): String = dir.toPath()
     .relativize(parentFile.toPath())
