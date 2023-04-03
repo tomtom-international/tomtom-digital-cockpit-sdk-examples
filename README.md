@@ -87,17 +87,22 @@ application (in the `template/` folder) is needed, see below.
 This is a template application to create your own IVI application, it contains the minimum needed
 to create a TomTom Digital Cockpit application with all the default functionality from the platform.
 
-### `keystore/`
+### `resources/`
+
+Various resources required to build a finished product or system image, like Android permissions
+for the app to run on something other than the reference hardware.
+
+### `resources/keystore/`
 
 The keys needed to sign the application with the same keys as the TomTom Digital Cockpit reference hardware
 build (see
 [Flashing the reference hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/flashing-the-reference-hardware))
 for more details on the reference hardware).
 
-### `permissions/`
+#### `resources/permissions/`
 
-Platform permissions needed on hardware for some of the functionality (related to media) to work.
-This file will work with the template app, if another example app is used, please update the
+Platform permissions are needed on hardware for some of the functionality (related to media) to
+work. This file will work with the template app. If another example app is used, please update the
 package name at the top of the file. See
 [Installing TomTom Digital Cockpit on Hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/installing-tomtom-digital-cockpit-on-hardware)
 for more information about the permissions.

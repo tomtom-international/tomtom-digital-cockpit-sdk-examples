@@ -231,7 +231,7 @@ subprojects {
         }
 
         packagingOptions {
-            // For NavKit 2, pick the first binary found when there are multiple.
+            // For NavKit, pick the first binary found when there are multiple.
             pickFirsts.add("lib/**/*.so")
             // NOTE: Do not strip any binaries: they should already come stripped from the
             // release artifacts; and since we don't use an NDK, they cannot be stripped anyway.
