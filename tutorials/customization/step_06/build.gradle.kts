@@ -26,12 +26,41 @@ import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviAppsui
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviInstanceIdentifier
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.configurators.IviDefaultsGroupsSelectionConfigurator
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
+import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
+import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceInterfaceConfig
+import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviPlatformModuleReference
+import com.tomtom.ivi.platform.gradle.api.common.dependencies.ModuleReference
 
 plugins {
     id("com.tomtom.ivi.product.defaults.core")
 }
 
+private val module = ModuleReference(
+    "com.example.ivi",
+    "tutorials_customization_step_06",
+    "com.example.ivi.custom.app"
+)
+
+val customThemeComponentProviderServiceHost by extra {
+    IviServiceHostConfig(
+        serviceHostBuilderName = "CustomThemeComponentProviderServiceHostBuilder",
+        implementationModule = module,
+        subPackageName = "corethemecomponentprovider",
+        interfaces = listOf(
+            IviServiceInterfaceConfig(
+                serviceId = "com.example.ivi.custom.app.ThemeComponentProviderService",
+                serviceName = "ThemeComponentProviderService",
+                serviceApiModule = IviPlatformModuleReference(
+                    "platform_theming_api_service_themecomponentprovider"
+                )
+            )
+        )
+    )
+}
+
 ivi {
+    // Step 6: Opt in to experimental APIs.
+    optInToExperimentalApis = true
     application {
         enabled = true
         iviInstances {
@@ -45,6 +74,7 @@ ivi {
             applyGroups {
                 selectGroups()
             }
+            addHost(customThemeComponentProviderServiceHost)
         }
     }
 }

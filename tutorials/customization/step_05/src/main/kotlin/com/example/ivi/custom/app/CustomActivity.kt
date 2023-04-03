@@ -16,10 +16,14 @@ package com.example.ivi.custom.app
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ivi.custom.app.systemuihost.CustomSystemUiHost
+import com.tomtom.ivi.platform.framework.api.common.annotations.IviExperimental
+import com.tomtom.ivi.platform.framework.api.common.iviinstance.IviInstanceId
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SplashScreenProvider
 
 // Default imports
 import com.tomtom.ivi.platform.framework.api.product.defaultactivity.DefaultActivity
+import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHost
 
 class CustomActivity : DefaultActivity() {
 
@@ -39,4 +43,8 @@ class CustomActivity : DefaultActivity() {
             }
         }
     }
+
+    @OptIn(IviExperimental::class)
+    override fun createSystemUiHost(iviInstanceId: IviInstanceId): SystemUiHost =
+        CustomSystemUiHost(getDefaultSystemUiHostContext(iviInstanceId))
 }

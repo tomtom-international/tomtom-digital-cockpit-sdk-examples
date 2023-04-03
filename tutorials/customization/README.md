@@ -6,7 +6,10 @@ The track consists of the following steps:
 - Step 0: Start with the template app
 - Step 1: Rename the template app
 - Step 2: Customize the splash screen
-- Step 3: Add a custom UI host
+- Step 3: Add a custom System UI Host
+- Step 4: Move the Control Center
+- Step 5: Create a ViewModel for the custom System UI Host
+- Step 6: Create a custom Theme Component Provider Service
 
 ## Copyright
 

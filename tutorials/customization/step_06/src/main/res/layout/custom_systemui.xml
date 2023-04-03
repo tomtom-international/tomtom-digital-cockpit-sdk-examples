@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2020 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.tomtom.ivi.platform.systemui.api.service.debugsystemui.ProcessPanelPosition" />
+
+        <import type="com.tomtom.ivi.platform.systemui.api.stock.systemuihost.R" />
+
+        <import type="com.tomtom.ivi.platform.systemui.api.common.debug.TopLevelControlsVisibility" />
+
+        <import type="com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ControlCenterPanel" />
+
+        <import type="com.tomtom.tools.android.api.resourceresolution.ContextExtensionsKt" />
+
+        <variable
+            name="mainProcessPanelViewModel"
+            type="com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.MainProcessPanelPositionSystemUiViewModel" />
+
+        <variable
+            name="controlCenterPanelViewModel"
+            type="com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.ControlCenterPanelSystemUiViewModel" />
+
+        <variable
+            name="debugPanelViewModel"
+            type="com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugPanelSystemUiViewModel" />
+
+        <variable
+            name="panelRegistry"
+            type="com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.IviPanelRegistry" />
+
+        <variable
+            name="panelContainerContext"
+            type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
+    </data>
+
+    <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
+        android:id="@+id/ttivi_systemui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="narrow_medium,standard_medium"
+        auto:ttToastMarginReference="@{ttiviHomeContainer}"
+        auto:ttToastMarginReferenceOffset="@{ContextExtensionsKt.getDimensionByAttr(context, R.attr.tt_spacing_10)}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            tools:ignore="ContentDescription">
+
+            <!--
+                This dummy LinearLayout exists solely for obtaining default focus.
+                Android looks for the top left focusable item on the screen to set default focus.
+            -->
+            <LinearLayout
+                android:id="@+id/ttivi_dummy_focusable_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusedByDefault="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toTopOf="parent" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_home_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.homePanel}"
+                auto:ttiviSafeAreaAnimated="true"
+                auto:ttiviSafeAreaPadding="?attr/tt_spacing_10"
+                auto:ttiviSafeAreaView="@{ttiviHomepanelSafearea}" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_guidance_container"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:visibility="@{panelRegistry.guidancePanel != null? View.VISIBLE : View.GONE, default=gone}"
+                auto:enterAnimation="@{@anim/tt_enter_fade_in}"
+                auto:exitAnimation="@{@anim/tt_exit_fade_out}"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_mainprocesspanel_container"
+                auto:layout_constraintLeft_toLeftOf="@id/ttivi_home_container"
+                auto:layout_constraintTop_toTopOf="@id/ttivi_home_container"
+                auto:layout_constraintVertical_bias="0.0"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.guidancePanel}"
+                auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_fade_in"
+                auto:ttiviSubContainerExitAnimation="@anim/tt_exit_fade_out"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_guidance_subcontainer" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_search_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="@{panelRegistry.searchPanel != null &amp;&amp; panelRegistry.guidancePanel == null? View.VISIBLE : View.GONE, default=gone}"
+                auto:enterAnimation="@{@anim/tt_enter_slide_right}"
+                auto:exitAnimation="@{@anim/tt_exit_slide_left}"
+                auto:layout_constrainedHeight="true"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_homepanel_safearea_barrier_bottom"
+                auto:layout_constraintLeft_toLeftOf="@id/ttivi_home_container"
+                auto:layout_constraintTop_toTopOf="@id/ttivi_home_container"
+                auto:layout_constraintVertical_bias="0.0"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.searchPanel}"
+                auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_slide_right"
+                auto:ttiviSubContainerExitAnimation="@anim/tt_exit_slide_left"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_search_subcontainer" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
+                android:id="@+id/ttivi_task_panel_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_taskpanel_subcontainer"
+                auto:ttiviUseStockLandscapeTaskPanelAnimations="@{true}" />
+
+            <!-- A placeholder to properly adjust the safe area when maximized task panel is showing. -->
+            <Space
+                android:id="@+id/ttivi_maximized_task_panel_placeholder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="@{panelRegistry.taskPanelStackData.containsUndismissedPanel() ? View.INVISIBLE : View.GONE}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_mainprocesspanel_container"
+                style="@style/TtiviProcessPanelContainer"
+                android:clickable="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.BOTTOM) != null}"
+                android:clipToPadding="false"
+                auto:enterAnimation="@{@anim/tt_enter_slide_up}"
+                auto:exitAnimation="@{@anim/tt_exit_slide_down}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.BOTTOM)}"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_processpanel_subcontainer"
+                auto:ttiviUseStockMainProcessPanelAnimations="@{true}"
+                auto:visibleIfNot="@{panelRegistry.taskPanelStackData.containsUndismissedPanel()}" />
+
+            <!-- A placeholder to properly adjust the safe area depending on the main process panel
+                 state. -->
+            <Space
+                android:id="@+id/ttivi_processpanel_placeholder"
+                style="@style/TtiviProcessPanelContainer"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:visibleIfNotNull="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.BOTTOM)}" />
+
+            <!-- The right side main process panel container is a debug utility to demonstrate adaptive
+                 behaviour in the main process panel. -->
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_mainprocesspanel_container_right"
+                style="@style/TtiviProcessPanelContainer.Right"
+                android:clickable="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.RIGHT) != null}"
+                android:clipToPadding="false"
+                auto:enterAnimation="@{@anim/ttivi_systemui_processpanel_right_enter}"
+                auto:exitAnimation="@{@anim/ttivi_systemui_processpanel_right_exit}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.RIGHT)}"
+                auto:ttiviSubContainerEnterAnimation="@anim/ttivi_systemui_processpanel_right_enter"
+                auto:ttiviSubContainerExitAnimation="@anim/ttivi_systemui_processpanel_right_exit"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_processpanel_subcontainer_right"
+                auto:visibleIfNot="@{panelRegistry.taskPanelStackData.containsUndismissedPanel()}" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_expandedprocesspanel_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.expandedProcessPanel}"
+                auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_slide_up"
+                auto:ttiviSubContainerExitAnimation="@anim/tt_exit_slide_down"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_expandedprocesspanel_subcontainer" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_main_menu_container"
+                android:layout_width="?attr/ttivi_mainmenu_panel_size"
+                android:layout_height="0dp"
+                android:background="?attr/ttivi_mainmenu_color"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintStart_toStartOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:setLightShadowIfAttrTrue="@{R.attr.ttivi_mainmenu_elevation_enabled}"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.mainMenuPanel}" />
+
+            <RelativeLayout
+                android:id="@+id/ttivi_control_center_container"
+                style="@style/TtiviPanelContainer.ControlCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_controlcenter_elevation}"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintLeft_toLeftOf="parent"
+                auto:layout_constraintTop_toTopOf="parent">
+
+                <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                    android:id="@+id/ttivi_control_center_system_status_driver_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/ttivi_controlcenter_panel_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                    auto:ttiviPanelContainerData="@{controlCenterPanelViewModel.getControlCenterPanel(ControlCenterPanel.Type.SYSTEM_STATUS_DRIVER)}" />
+
+                <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                    android:id="@+id/ttivi_control_center_top_level_controls_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/ttivi_controlcenter_panel_height_large"
+                    android:layout_centerHorizontal="true"
+                    auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                    auto:ttiviPanelContainerData="@{controlCenterPanelViewModel.getControlCenterPanel(ControlCenterPanel.Type.TOP_LEVEL_CONTROLS)}"
+                    auto:visibleIf="@{controlCenterPanelViewModel.topLevelControlsVisibility == TopLevelControlsVisibility.VISIBLE}" />
+
+                <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                    android:id="@+id/ttivi_control_center_system_status_frontpassenger_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/ttivi_controlcenter_panel_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                    auto:ttiviPanelContainerData="@{controlCenterPanelViewModel.getControlCenterPanel(ControlCenterPanel.Type.SYSTEM_STATUS_FRONT_PASSENGER)}" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/ttivi_modal_backdrop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/ttivi_modal_backdrop_color"
+                android:clickable="true"
+                android:onClick="@{() -> panelRegistry.modalPanelStackData.dismiss()}"
+                android:stateListAnimator="?attr/tt_statelistanimator_none"
+                auto:enterAnimation="@{@anim/tt_enter_fade_in}"
+                auto:exitAnimation="@{@anim/tt_exit_fade_out}"
+                auto:layout_constraintBottom_toBottomOf="@id/ttivi_home_container"
+                auto:layout_constraintLeft_toLeftOf="@id/ttivi_home_container"
+                auto:layout_constraintRight_toRightOf="@id/ttivi_home_container"
+                auto:layout_constraintTop_toTopOf="@id/ttivi_home_container"
+                auto:visibleIf="@{panelRegistry.modalPanelStackData.containsUndismissedPanel()}" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.DismissablePanelStackContainer
+                android:id="@+id/ttivi_modal_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="@id/ttivi_home_container"
+                auto:layout_constraintLeft_toLeftOf="@id/ttivi_home_container"
+                auto:layout_constraintRight_toRightOf="@id/ttivi_home_container"
+                auto:layout_constraintTop_toTopOf="@id/ttivi_home_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.modalPanelStackData}"
+                auto:ttiviSubContainerEnterAnimation="@anim/ttivi_systemui_modalpanel_animator_enter"
+                auto:ttiviSubContainerExitAnimation="@anim/ttivi_systemui_modalpanel_animator_exit"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_modalpanel_subcontainer" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_settings_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="@{panelRegistry.settingsPanel != null? View.VISIBLE : View.GONE, default=gone}"
+                auto:enterAnimation="@{@anim/tt_enter_fade_in}"
+                auto:exitAnimation="@{@anim/tt_exit_fade_out}"
+                auto:layout_constraintBottom_toBottomOf="@id/ttivi_home_container"
+                auto:layout_constraintLeft_toLeftOf="@id/ttivi_home_container"
+                auto:layout_constraintRight_toRightOf="@id/ttivi_home_container"
+                auto:layout_constraintTop_toTopOf="@id/ttivi_home_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.settingsPanel}"
+                auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_fade_in"
+                auto:ttiviSubContainerExitAnimation="@anim/tt_exit_fade_out" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="?attr/ttivi_notification_backdrop_alpha"
+                android:background="@drawable/ttivi_systemui_notification_backdrop"
+                android:focusable="false"
+                auto:enterAnimation="@{@anim/tt_enter_fade_in_slow}"
+                auto:exitAnimation="@{@anim/tt_exit_fade_out}"
+                auto:layout_constraintBottom_toBottomOf="@id/ttivi_home_container"
+                auto:layout_constraintLeft_toLeftOf="@id/ttivi_home_container"
+                auto:layout_constraintRight_toRightOf="@id/ttivi_home_container"
+                auto:layout_constraintTop_toTopOf="@id/ttivi_home_container"
+                auto:visibleIf="@{panelRegistry.notificationPanelData.activeNotificationPanels.containsUndismissedPanel()}" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                auto:layout_constrainedHeight="true"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintVertical_bias="0.0">
+
+                <View
+                    android:id="@+id/ttivi_notification_container_margin"
+                    android:layout_width="?attr/tt_spacing_10"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ttivi_notification_container"
+                    android:clickable="@{panelRegistry.notificationPanelData.activeNotificationPanels.isNotEmpty()}"
+                    android:focusable="false" />
+
+                <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.DismissablePanelListContainer
+                    android:id="@+id/ttivi_notification_container"
+                    style="@style/TtiviNotificationPanelContainer"
+                    android:layout_toEndOf="@id/ttivi_notification_container_margin"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    auto:ttiviDismissAllButtonLayoutId="@layout/ttivi_systemui_notificationpanel_dismissall"
+                    auto:ttiviIgnoreTouchEvents="@{panelRegistry.notificationPanelData.activeNotificationPanels.isEmpty()}"
+                    auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                    auto:ttiviPanelContainerData="@{panelRegistry.notificationPanelData.activeNotificationPanels}"
+                    auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationpanel_subcontainer"
+                    auto:ttiviUseStockNotificationPanelAnimations="@{true}" />
+            </RelativeLayout>
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/ttivi_debug_container"
+                style="@style/TtiviDebugContainer"
+                android:clickable="true"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.debugPanel}"
+                auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_fade_in"
+                auto:ttiviSubContainerExitAnimation="@anim/tt_exit_fade_out"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_debug_subcontainer"
+                auto:visibleIf="@{debugPanelViewModel.shouldShowDebugPanel}" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.OverlappingPanelContainer
+                android:id="@+id/ttivi_overlay_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_overlay_elevation}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintEnd_toEndOf="parent"
+                auto:layout_constraintStart_toStartOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.overlayPanels}" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/ttivi_homepanel_safearea_barrier_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:barrierDirection="top"
+                auto:constraint_referenced_ids="ttivi_processpanel_placeholder" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/ttivi_homepanel_safearea_barrier_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:barrierDirection="right"
+                auto:constraint_referenced_ids="ttivi_main_menu_container"
+                tools:ignore="UnknownId" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/ttivi_homepanel_safearea_barrier_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:barrierDirection="bottom"
+                auto:constraint_referenced_ids="ttivi_guidance_container, ttivi_search_container"
+                tools:ignore="UnknownId" />
+
+            <FrameLayout
+                android:id="@+id/ttivi_homepanel_safearea"
+                style="?attr/ttivi_systemui_safearea_style"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_safearea_elevation}"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_homepanel_safearea_barrier_bottom"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_homepanel_safearea_barrier_left"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container" />
+
+            <!-- TODO(IVI-1200): Make system UI corners themeable. -->
+            <!-- The image views below add rounded corners to the system UI. They're specified as
+                 separate image views rather than a single view with rounded corners on all sides to
+                 reduce overdrawing and thus improve rendering performance.
+                 The frame layouts around each view ensure the images are clipped properly. -->
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintLeft_toLeftOf="parent"
+                auto:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_topleft" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_topright" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toLeftOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_bottomleft" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_bottomright" />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
+</layout>
