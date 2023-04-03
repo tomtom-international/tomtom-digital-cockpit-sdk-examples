@@ -14,6 +14,11 @@ pluginManagement {
         // Local artifact cache.
         mavenLocal()
 
+        // External repositories.
+        mavenCentral()
+        google()
+        maven("https://plugins.gradle.org/m2/")
+
         // TomTom Digital Cockpit's Nexus repository.
         maven("https://repo.tomtom.com/repository/ivi") {
             credentials {
@@ -23,11 +28,6 @@ pluginManagement {
                     if (extra.has("nexusPassword")) extra["nexusPassword"].toString() else ""
             }
         }
-
-        // External repositories.
-        mavenCentral()
-        google()
-        maven("https://plugins.gradle.org/m2/")
     }
 }
 
@@ -35,6 +35,11 @@ dependencyResolutionManagement {
     repositories {
         // Local artifact cache.
         mavenLocal()
+
+        // External repositories.
+        mavenCentral()
+        google()
+        maven("https://plugins.gradle.org/m2/")
 
         // TomTom Digital Cockpit's Nexus repository.
         maven("https://repo.tomtom.com/repository/ivi") {
@@ -48,10 +53,5 @@ dependencyResolutionManagement {
 
         // TomTom's Nexus repository for the Connectivity Agent.
         maven("https://maven.tomtom.com:8443/nexus/content/repositories/releases/")
-
-        // External repositories.
-        mavenCentral()
-        google()
-        maven("https://plugins.gradle.org/m2/")
     }
 }
