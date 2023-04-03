@@ -16,6 +16,7 @@
 # This line is being parsed using a regex. And should not be altered carelessly.
 iviPlatform = "1.0.5256"
 tomtomKotlinTools = "1.8.1"
+tomtomAndroidTools = "0.0.643"
 androidxConstraintlayout = "2.1.4"
 
 [libraries]
@@ -28,6 +29,13 @@ gradlePluginApiProductDefaultsCore = { module = "com.tomtom.ivi.product.gradle:a
 gradlePluginApiToolsSigningConfig = { module = "com.tomtom.ivi.platform.gradle:api_tools_signingconfig", version.ref = "iviPlatform" }
 gradlePluginApiToolsEmulators = { module = "com.tomtom.ivi.platform.gradle:api_tools_emulators", version.ref = "iviPlatform" }
 gradlePluginApiToolsVersionIvi = { module = "com.tomtom.ivi.platform.gradle:api_tools_version", version.ref = "iviPlatform" }
+
+# TomTom Tools Android.
+tomtomToolsApiDatabinding = { module = "com.tomtom.tools.android:api_databinding", version.ref = "tomtomAndroidTools" }
+tomtomToolsApiLifecycle = { module = "com.tomtom.tools.android:api_lifecycle", version.ref = "tomtomAndroidTools" }
+tomtomToolsApiLivedata = { module = "com.tomtom.tools.android:api_livedata", version.ref = "tomtomAndroidTools" }
+tomtomToolsApiUicontrols = { module = "com.tomtom.tools.android:api_uicontrols", version.ref = "tomtomAndroidTools" }
+tomtomToolsCoreAnimation = { module = "com.tomtom.tools.android:core_animation", version.ref = "tomtomAndroidTools" }
 
 # TomTom Digital Cockpit platform components.
 iviPlatformAlexaApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_alexa_api_common_util", version.ref = "iviPlatform" }

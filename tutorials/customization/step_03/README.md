@@ -29,6 +29,36 @@
   import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.StockAdaptiveSystemUiHelper
   ```
 
+3. Use a custom layout
+
+Then we'll make our custom system UI use it:
+- Add `tomtomToolsApiDatabinding` to `build-logic/libraries.versions.toml`
+- Add `iviPlatformSystemuiApiCommonDebug` to `build-logic/libraries.versions.toml`
+- Depend on both in `build.gradle.kts`
+- Copy `layout/ttivi_systemui_medium.xml` from the sources archive to the template app in `res/layout/custom_systemui.xml`.
+- Alter the `viewFactory` of `CustomSystemUiHost`:
+```
+    override val viewFactory: ViewFactory = BindingViewFactory(
+        CustomSystemuiBinding::inflate,
+        ::bindSystemUiView
+    )
+```
+- Add `bindSystemUiView`:
+```
+    /**
+     * A function that will be called after view inflation and is used to bind data to the view.
+     * This is done by the system UI host extensions.
+     *
+     * Pending bindings left after this function is called will be immediately executed.
+     */
+    private fun bindSystemUiView(binding: ViewDataBinding) {
+        systemUiHostExtensions.bindSystemUiView(binding)
+    }
+```
+
+__Note:__ For simplicity, this removes the adaptive helper. If you need to support multiple
+screen sizes with different layouts, that will be part of a different tutorial.
+
 ## Copyright
 
 Copyright © 2022 TomTom NV. All rights reserved.
