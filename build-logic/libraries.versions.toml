@@ -86,4 +86,6 @@ iviAppsuiteMediaApiCommonFrontend = { module = "com.tomtom.ivi.appsuite:appsuite
 # Auxiliary libraries
 androidxConstraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidxConstraintlayout" }
 utilKotlinExtensions = { module = "com.tomtom.kotlin:extensions", version.ref = "tomtomKotlinTools" }
+
 iviPlatformSystemuiApiCommonDebug = { module = "com.tomtom.ivi.platform:platform_systemui_api_common_debug", version.ref = "iviPlatform" }
+iviPlatformSystemuiApiServiceDebugSystemUi = { module = "com.tomtom.ivi.platform:platform_systemui_api_service_debugsystemui", version.ref = "iviPlatform" }

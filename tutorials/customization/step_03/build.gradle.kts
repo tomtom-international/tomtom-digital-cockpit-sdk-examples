@@ -111,16 +111,18 @@ dependencies {
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultApplication)
 
-
     implementation(libraries.androidxConstraintlayout)
     implementation(libraries.utilKotlinExtensions)
+
     implementation(libraries.iviPlatformSystemuiApiCommonFrontendcoordinator)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)
-    implementation(libraries.iviPlatformSystemuiApiCommonDebug)
 
+    implementation(libraries.tomtomToolsApiDatabinding)
     implementation(libraries.tomtomToolsApiLifecycle)
     implementation(libraries.tomtomToolsApiLivedata)
     implementation(libraries.tomtomToolsApiUicontrols)
     implementation(libraries.tomtomToolsCoreAnimation)
 
+    implementation(libraries.iviPlatformSystemuiApiCommonDebug)
+    implementation(libraries.iviPlatformSystemuiApiServiceDebugSystemUi)
 }
