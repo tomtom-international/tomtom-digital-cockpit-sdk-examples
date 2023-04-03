@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2021 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+    <path
+        android:fillColor="#0F151C"
+        android:pathData="M0,64C0,38.731 0,26.097 5.912,16.936C8.762,12.52 12.52,8.762 16.936,5.912C26.097,0 38.731,0 64,0V0C89.269,0 101.903,0 111.064,5.912C115.48,8.762 119.238,12.52 122.088,16.936C128,26.097 128,38.731 128,64V64C128,89.269 128,101.903 122.088,111.064C119.238,115.48 115.48,119.238 111.064,122.088C101.903,128 89.269,128 64,128V128C38.731,128 26.097,128 16.936,122.088C12.52,119.238 8.762,115.48 5.912,111.064C0,101.903 0,89.269 0,64V64Z" />
+    <path
+        android:fillAlpha="0.2"
+        android:pathData="M0,64C0,38.731 0,26.097 5.912,16.936C8.762,12.52 12.52,8.762 16.936,5.912C26.097,0 38.731,0 64,0V0C89.269,0 101.903,0 111.064,5.912C115.48,8.762 119.238,12.52 122.088,16.936C128,26.097 128,38.731 128,64V64C128,89.269 128,101.903 122.088,111.064C119.238,115.48 115.48,119.238 111.064,122.088C101.903,128 89.269,128 64,128V128C38.731,128 26.097,128 16.936,122.088C12.52,119.238 8.762,115.48 5.912,111.064C0,101.903 0,89.269 0,64V64Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="64"
+                android:centerY="0"
+                android:gradientRadius="109.5"
+                android:type="radial">
+                <item
+                    android:color="#FF44ABE0"
+                    android:offset="0" />
+                <item
+                    android:color="#0044ABE0"
+                    android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M63.253,91.124C48.308,91.124 36.133,78.933 36.133,63.967C36.133,49.001 48.308,36.81 63.253,36.81C78.198,36.81 90.372,49.001 90.372,63.967C90.308,78.933 78.198,91.124 63.253,91.124ZM63.253,43.26C51.851,43.26 42.511,52.549 42.511,64.032C42.511,75.514 51.787,84.803 63.253,84.803C74.655,84.803 83.995,75.514 83.995,64.032C83.995,52.549 74.655,43.26 63.253,43.26Z" />
+    <path
+        android:fillColor="#44ABE0"
+        android:pathData="M63.896,108.8V102.349C85.025,102.349 102.16,85.19 102.16,64.032C102.16,42.874 85.025,25.715 63.896,25.715V19.2C88.568,19.2 108.602,39.326 108.602,63.967C108.602,88.609 88.568,108.8 63.896,108.8Z" />
+    <path
+        android:fillColor="#44ABE0"
+        android:pathData="M63.896,72.482C68.599,72.482 72.4,68.676 72.4,63.967C72.4,59.258 68.599,55.452 63.896,55.452V72.482V72.482Z" />
+</vector>
