@@ -43,18 +43,6 @@ Then we'll make our custom system UI use it:
         ::bindSystemUiView
     )
 ```
-- Add `bindSystemUiView`:
-```
-    /**
-     * A function that will be called after view inflation and is used to bind data to the view.
-     * This is done by the system UI host extensions.
-     *
-     * Pending bindings left after this function is called will be immediately executed.
-     */
-    private fun bindSystemUiView(binding: ViewDataBinding) {
-        systemUiHostExtensions.bindSystemUiView(binding)
-    }
-```
 
 __Note:__ For simplicity, this removes the adaptive helper. If you need to support multiple
 screen sizes with different layouts, that will be part of a different tutorial.
