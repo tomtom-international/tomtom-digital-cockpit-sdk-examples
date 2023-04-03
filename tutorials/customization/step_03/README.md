@@ -1,10 +1,6 @@
 # Step 3 - Custom System UI Host
 
-In this step we will add the custom System UI host.
-
-In this step we'll copy the layout of the stock system UI, so we can customize it later.
-First we'll download a copy of the existing layout:
-Access the `ttivi_systemui_medium.xml`:
+1. Download the system UI sources package:
 
 - Open `build-logic/libraries.versions.toml`
 - Copy the `iviPlatform` version
@@ -13,12 +9,25 @@ Access the `ttivi_systemui_medium.xml`:
 - Open the folder of the correct TTDC version
 - Download the `.sources.jar` file (`platform_systemui_api_stock_systemuihost-<TTDC version>-sources.jar`)
 - Extract the archive.
-- Copy `layout/ttivi_systemui_medium.xml` to the template app in `res/layout/custom_systemui.xml`.
-Then we'll make our custom system UI use it:
-- Add `tomtomToolsApiDatabinding` to `build-logic/libraries.versions.toml`
-- Add `iviPlatformSystemuiApiCommonDebug` to `build-logic/libraries.versions.toml`
-- Depend on both in `template/app/build.gradle.kts`
-- Alter the `viewFactory` of `CustomSystemUiHost`
+
+2. Copy the StockSystemUiHost.kt file
+
+- Add a dependency in `build.gradle.kts`:
+  ```
+  implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)
+  ```
+- Find the file in the archive: com.tomtom.ivi.platform.systemui.api.stock.systemuihost.StockSystemUiHost
+- Add it in a `systemuihost` package below the activity
+- rename the class to `CustomSystemUiHost`
+- Make the activity use it:
+  ```
+  override fun createSystemUiHost(iviInstanceId: IviInstanceId): SystemUiHost =
+      CustomSystemUiHost(getDefaultSystemUiHostContext(iviInstanceId))
+  ```
+- add missing import
+  ```
+  import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.StockAdaptiveSystemUiHelper
+  ```
 
 ## Copyright
 
