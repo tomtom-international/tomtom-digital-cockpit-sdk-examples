@@ -1,5 +1,6 @@
 # Step 4 - Move the Control Center
 
+
 Time to make a real change: move the control center
 
 The control center is currently at the bottom, lets move it to the top!
@@ -36,6 +37,49 @@ Adjust the `ttivi_homepanel_safearea_barrier_bottom` to
                  auto:constraint_referenced_ids="ttivi_processpanel_placeholder" />
 ```
 The safe area is the area of a panel that is not covered by other panels.
+
+Round the corners of the control center (inside of `custom_systemui.xml`).
+
+```
+            <!-- Step 4: add extra rounded corners: top left. -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_topleft" />
+            </FrameLayout>
+
+            <!-- Step 4: add extra rounded corners: top right. -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_topright" />
+            </FrameLayout>
+            
+            <!-- Step 4: add extra rounded corners: bottom left. -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ttivi_systemui_corner_bottomleft" />
+            </FrameLayout>
+```
 
 ## Copyright
 
