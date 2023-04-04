@@ -83,10 +83,10 @@
                 android:id="@+id/ttivi_home_container"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{panelRegistry.homePanel}"
                 auto:ttiviSafeAreaAnimated="true"
@@ -133,10 +133,10 @@
                 android:id="@+id/ttivi_task_panel_container"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}"
                 auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_taskpanel_subcontainer"
@@ -148,10 +148,10 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:visibility="@{panelRegistry.taskPanelStackData.containsUndismissedPanel() ? View.INVISIBLE : View.GONE}"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container" />
+                auto:layout_constraintTop_toTopOf="parent" />
 
             <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
                 android:id="@+id/ttivi_mainprocesspanel_container"
@@ -160,7 +160,7 @@
                 android:clipToPadding="false"
                 auto:enterAnimation="@{@anim/tt_enter_slide_up}"
                 auto:exitAnimation="@{@anim/tt_exit_slide_down}"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
                 auto:layout_constraintRight_toRightOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
@@ -174,7 +174,7 @@
             <Space
                 android:id="@+id/ttivi_processpanel_placeholder"
                 style="@style/TtiviProcessPanelContainer"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@+id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
                 auto:layout_constraintRight_toRightOf="parent"
                 auto:visibleIfNotNull="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.BOTTOM)}" />
@@ -188,9 +188,9 @@
                 android:clipToPadding="false"
                 auto:enterAnimation="@{@anim/ttivi_systemui_processpanel_right_enter}"
                 auto:exitAnimation="@{@anim/ttivi_systemui_processpanel_right_exit}"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{mainProcessPanelViewModel.getMainProcessPanel(ProcessPanelPosition.RIGHT)}"
                 auto:ttiviSubContainerEnterAnimation="@anim/ttivi_systemui_processpanel_right_enter"
@@ -202,10 +202,10 @@
                 android:id="@+id/ttivi_expandedprocesspanel_container"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{panelRegistry.expandedProcessPanel}"
                 auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_slide_up"
@@ -217,9 +217,9 @@
                 android:layout_width="?attr/ttivi_mainmenu_panel_size"
                 android:layout_height="0dp"
                 android:background="?attr/ttivi_mainmenu_color"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintStart_toStartOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:setLightShadowIfAttrTrue="@{R.attr.ttivi_mainmenu_elevation_enabled}"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{panelRegistry.mainMenuPanel}" />
@@ -230,9 +230,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_controlcenter_elevation}"
-                auto:layout_constraintBottom_toTopOf="@id/ttivi_main_menu_container"
+                auto:layout_constraintBottom_toBottomOf="parent"
                 auto:layout_constraintLeft_toLeftOf="parent"
-                auto:layout_constraintTop_toTopOf="parent">
+                auto:layout_constraintTop_toBottomOf="@id/ttivi_main_menu_container">
 
                 <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
                     android:id="@+id/ttivi_control_center_system_status_driver_container"
@@ -294,6 +294,7 @@
 
             <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
                 android:id="@+id/ttivi_settings_container"
+                android:background="?attr/ttivi_mapdisplay_settings_backdrop_color"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:visibility="@{panelRegistry.settingsPanel != null? View.VISIBLE : View.GONE, default=gone}"
@@ -327,9 +328,9 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 auto:layout_constrainedHeight="true"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_main_menu_container"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:layout_constraintVertical_bias="0.0">
 
                 <View
@@ -358,9 +359,9 @@
                 android:id="@+id/ttivi_debug_container"
                 style="@style/TtiviDebugContainer"
                 android:clickable="true"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{panelRegistry.debugPanel}"
                 auto:ttiviSubContainerEnterAnimation="@anim/tt_enter_fade_in"
@@ -373,10 +374,10 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_overlay_elevation}"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintEnd_toEndOf="parent"
                 auto:layout_constraintStart_toStartOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container"
+                auto:layout_constraintTop_toTopOf="parent"
                 auto:ttiviPanelContainerContext="@{panelContainerContext}"
                 auto:ttiviPanelContainerData="@{panelRegistry.overlayPanels}" />
 
@@ -384,8 +385,9 @@
                 android:id="@+id/ttivi_homepanel_safearea_barrier_bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                auto:barrierAllowsGoneWidgets="false"
                 auto:barrierDirection="top"
-                auto:constraint_referenced_ids="ttivi_processpanel_placeholder" />
+                auto:constraint_referenced_ids="ttivi_control_center_container,ttivi_processpanel_placeholder" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/ttivi_homepanel_safearea_barrier_left"
@@ -412,7 +414,7 @@
                 auto:layout_constraintBottom_toTopOf="@id/ttivi_homepanel_safearea_barrier_bottom"
                 auto:layout_constraintLeft_toRightOf="@id/ttivi_homepanel_safearea_barrier_left"
                 auto:layout_constraintRight_toRightOf="parent"
-                auto:layout_constraintTop_toBottomOf="@id/ttivi_control_center_container" />
+                auto:layout_constraintTop_toTopOf="parent" />
 
             <!-- TODO(IVI-1200): Make system UI corners themeable. -->
             <!-- The image views below add rounded corners to the system UI. They're specified as
@@ -450,7 +452,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintLeft_toLeftOf="parent">
 
                 <ImageView
@@ -463,7 +465,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 auto:elevationWithoutShadow="@{@dimen/ttivi_systemui_corner_elevation}"
-                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintBottom_toTopOf="@id/ttivi_control_center_container"
                 auto:layout_constraintRight_toRightOf="parent">
 
                 <ImageView
