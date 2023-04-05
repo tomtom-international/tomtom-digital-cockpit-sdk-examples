@@ -1,11 +1,6 @@
 **/.gradle/
 **/build/
-*.swp
-**/__pycache__/
-**/.vscode/
-/local.properties
-docs/portal-in-container/drumkit-monorepo/
-IviTest
+local.properties
 
 # IntelliJ
 *.iml

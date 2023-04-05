@@ -22,6 +22,9 @@ pluginManagement {
                 password =
                     if (extra.has("nexusPassword")) extra["nexusPassword"].toString() else ""
             }
+            content {
+                includeGroupByRegex("com\\.tomtom\\..+")
+            }
         }
 
         // External repositories.
@@ -44,10 +47,12 @@ dependencyResolutionManagement {
                 password =
                     if (extra.has("nexusPassword")) extra["nexusPassword"].toString() else ""
             }
+            content {
+                includeGroup("com.tomtom")
+                includeGroupByRegex("com\\.tomtom\\..+")
+                includeGroup("com.amazon.alexa.aace")
+            }
         }
-
-        // TomTom's Nexus repository for the Connectivity Agent.
-        maven("https://maven.tomtom.com:8443/nexus/content/repositories/releases/")
 
         // External repositories.
         mavenCentral()

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2023 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.example.ivi.example.media.customdashboard.CustomMediaDashboardViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.media.customdashboard.CustomMediaDashboardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/ttivi_media_customdashboard_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttivi_media_customdashboard_header"
+            android:textAppearance="?attr/tt_display_text_style_s"
+            auto:layout_constraintBottom_toTopOf="@id/ttivi_media_customdashboard_toastcontainer"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toTopOf="parent" />
+
+        <com.tomtom.tools.android.api.uicontrols.button.TtButton
+            android:id="@+id/ttivi_media_customdashboard_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.onButtonClick()}"
+            android:text="@string/ttivi_media_customdashboard_button"
+            auto:layout_constraintBottom_toTopOf="@+id/ttivi_media_customdashboard_footer"
+            auto:layout_constraintEnd_toStartOf="@id/ttivi_media_customdashboard_toastcontainer"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/ttivi_media_customdashboard_header" />
+
+        <!-- The source picker view can show toasts usually to inform the user about unexpected
+             behavior.
+             Any system UI will already have a toast container that shows the toasts.
+             By wrapping the source picker view in a toast container, we customize the position of
+             the toasts. -->
+
+        <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
+            android:id="@+id/ttivi_media_customdashboard_toastcontainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            auto:layout_constraintBottom_toTopOf="@id/ttivi_media_customdashboard_footer"
+            auto:layout_constraintEnd_toStartOf="@id/ttivi_media_customdashboard_label"
+            auto:layout_constraintStart_toEndOf="@id/ttivi_media_customdashboard_button"
+            auto:layout_constraintTop_toBottomOf="@id/ttivi_media_customdashboard_header">
+
+            <!-- Source picker view is used here to show the media sources and provide login and
+                 browsing experience.   -->
+            <com.tomtom.ivi.appsuite.media.api.common.frontend.SourcePickerView
+                android:id="@+id/ttivi_media_customdashboard_sourcepickerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/ttivi_media_customdashboard_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{viewModel.label}"
+            android:padding="?attr/tt_spacing_4"
+            android:textAppearance="?attr/tt_display_text_style_m"
+            auto:layout_constraintBottom_toTopOf="@id/ttivi_media_customdashboard_footer"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toEndOf="@id/ttivi_media_customdashboard_toastcontainer"
+            auto:layout_constraintTop_toBottomOf="@id/ttivi_media_customdashboard_header" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/ttivi_media_customdashboard_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ttivi_media_customdashboard_footer"
+            android:textAppearance="?attr/tt_display_text_style_s"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/ttivi_media_customdashboard_toastcontainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

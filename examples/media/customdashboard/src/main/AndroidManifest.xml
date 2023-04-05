@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~ Copyright © 2023 TomTom NV. All rights reserved.
   ~
   ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
   ~ used for internal evaluation purposes or commercial use strictly subject to separate
@@ -18,12 +18,12 @@
             android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity">
             <meta-data
                 android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_MAIN_ACTIVITY_CLASS_NAME"
-                android:value="com.example.ivi.example.customization.customfragment.CustomFragmentActivity"
+                android:value="com.example.ivi.example.media.customdashboard.CustomMediaDashboardFragmentActivity"
                 tools:replace="android:value" />
         </activity>
 
         <activity
-            android:name=".CustomFragmentActivity">
+            android:name=".CustomActivity">
         </activity>
 
         <!--
