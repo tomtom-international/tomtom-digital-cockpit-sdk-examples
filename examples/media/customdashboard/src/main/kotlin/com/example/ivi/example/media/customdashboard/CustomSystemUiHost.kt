@@ -104,7 +104,7 @@ internal class CustomSystemUiHost(
             panelRegistryExtension,
             MainProcessPanelPositionSystemUiHostExtension(
                 systemUiHostExtensionContext,
-                panelRegistryExtension.panelRegistry.mainProcessPanel
+                panelRegistryExtension.panelRegistry
             ),
             ControlCenterPanelSystemUiHostExtension(
                 systemUiHostExtensionContext,
