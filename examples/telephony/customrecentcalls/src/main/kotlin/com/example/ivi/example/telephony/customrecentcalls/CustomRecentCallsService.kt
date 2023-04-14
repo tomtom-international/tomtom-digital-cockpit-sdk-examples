@@ -27,8 +27,11 @@ import java.time.Instant
 internal class CustomRecentCallsService(iviServiceHostContext: IviServiceHostContext) :
     RecentCallsServiceBase(iviServiceHostContext) {
 
+    // A mutable recent calls data source that can be updated with the recentCallsSource changes.
+    private val mutableRecentCalls = MutableCustomRecentCallsDataSource(context)
+
     // The source of recent calls.
-    private val recentCallsSource = listOf(
+    internal val recentCallsSource = listOf(
         RecentCall(
             type = RecentCallType.INCOMING,
             displayName = "John Smith",
@@ -43,23 +46,27 @@ internal class CustomRecentCallsService(iviServiceHostContext: IviServiceHostCon
             duration = Duration.ZERO,
             creationTime = Instant.now().minus(Duration.ofHours(1))
         ),
+        RecentCall(
+            type = RecentCallType.OUTGOING,
+            displayName = "Kelly Goodwin",
+            phoneNumber = PhoneNumber("+2822222222", PhoneNumberType.Work),
+            duration = Duration.ofSeconds(30),
+            creationTime = Instant.now().minus(Duration.ofHours(2))
+        )
     )
 
     override fun onCreate() {
         super.onCreate()
         // Initialize the synchronization status.
         phoneBookSynchronizationStatus = PhoneBookSynchronizationStatus.NO_CONNECTED_DEVICES
-        // Initialize the recentCallsDescending property with an empty list.
-        recentCallsDescending = emptyList()
+        // Bind the recentCalls property to an empty mutable recent calls data source.
+        recentCalls = mutableRecentCalls
         // Set the service to ready. Now clients can call the service's APIs.
         serviceReady = true
         // The source of recent calls is ready and synchronization starts.
         phoneBookSynchronizationStatus = PhoneBookSynchronizationStatus.SYNCHRONIZATION_IN_PROGRESS
-        // Update recentCallsDescending with the list of recent calls from the source.
-        // Make sure that the list is in descending chronological order.
-        // If a client (typically a view model) requires the list in a different order,
-        // then it should resort the list before use.
-        recentCallsDescending = recentCallsSource.sortedByDescending(RecentCall::creationTime)
+        // Updating the property holding the recent calls list with calls from the source.
+        mutableRecentCalls.addRecentCalls(recentCallsSource)
     }
 
     override fun onDestroy() {
