@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5329-2779
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5341-2784
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -9,7 +9,6 @@ This offer is valid for a period of three years from the date of distribution of
 | Component | Version | License |
 | :-------- | :------ | :------ |
 | [0 A.D.](http://wildfiregames.com/0ad/) | A21 | (GNU Lesser General Public License v2.1 or later AND MIT License AND GNU General Public License v2.0 or later) |
-| [@rokt/react-native-sdk](https://www.npmjs.org/package/@rokt/react-native-sdk) | 2.0.0-alpha.3 | Unknown License |
 | [aacs-annotation-api](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs-annotation-processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs-extra](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
@@ -96,7 +95,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support VectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Tracing](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0 | Apache License 2.0 |
 | [Android Transition Support Library](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.4.1 | Apache License 2.0 |
-| [Android-Base-Library](https://github.com/marcelosmith77/Android-Base-Library) | 1.00.14 | MIT License |
 | [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [AndroidX Security](https://developer.android.com/jetpack/androidx/releases/security#1.0.0-alpha01) | 1.0.0-alpha02, 1.1.0-alpha02 | Apache License 2.0 |
@@ -109,7 +107,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.12.0 | Apache License 2.0 |
-| [Apereo CAS](https://apereo.github.io/cas/) | v6.6.0-RC4 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
@@ -121,7 +118,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.4 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.7.4, 1.9 | Apache License 2.0 |
-| [BabelJS](https://babeljs.io/) | v6.0.10 | MIT License |
 | [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
 | [Biometric](http://developer.android.com/tools/extras/support-library.html) | 1.2.0-alpha03 | Apache License 2.0 |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
@@ -260,7 +256,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [MockK Java Agent API](http://mockk.io) | 1.13.1, 1.13.3 | Apache License 2.0 |
 | [MockK Java DSL](http://mockk.io) | 1.13.1, 1.13.3 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
-| [nativemessagelist](https://www.npmjs.org/package/nativemessagelist) | 1.0.0 | Unknown License |
 | [nativeruntime](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 3.2, 3.3 | Apache License 2.0 |
@@ -284,11 +279,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
 | [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.13.4.Final, 2.3.1.Final | Apache License 2.0 |
+| [QuestDB Core](https://www.questdb.io/) | 6.1-jdk8 | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
-| [react-native-native-toast-library-kishor](https://www.npmjs.org/package/react-native-native-toast-library-kishor) | 1.0.1 | Unknown License |
-| [react-native-pulsate-sdk-react](https://github.com/Jenovas/PulsateSdkReact#readme) | 1.0.7 | ISC License |
-| [react-native-rokt-widget](https://www.npmjs.org/package/react-native-rokt-widget) | 1.0.3 | Unknown License |
-| [react-native-track-player](https://github.com/Guichaguri/react-native-track-player#readme) | 2.2.0-rc4 | Apache License 2.0 |
 | [reactive-streams](http://www.reactive-streams.org/) | 1.0.3 | Creative Commons Zero v1.0 Universal |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
 | [reflector](http://robolectric.org) | 4.8.2, 4.9.2 | MIT License |
