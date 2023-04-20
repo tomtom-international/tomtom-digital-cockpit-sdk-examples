@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5350-2787
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5373-2800
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -107,6 +107,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.12.0 | Apache License 2.0 |
+| [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 1.1 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
@@ -118,12 +119,14 @@ This offer is valid for a period of three years from the date of distribution of
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.4 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.7.4, 1.9 | Apache License 2.0 |
+| [BabelJS](https://babeljs.io/) | v6.0.10 | MIT License |
 | [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
 | [Biometric](http://developer.android.com/tools/extras/support-library.html) | 1.2.0-alpha03 | Apache License 2.0 |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
 | [Bouncy Castle](http://www.bouncycastle.org) | 1.68, 1.70 | MIT License |
 | [Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs](http://www.bouncycastle.org/java.html) | 1.56 | MIT License |
-| [Byte Buddy](http://bytebuddy.net) | 1.12.10, 1.12.18, 1.12.21 | Apache License 2.0 |
+| [Byte Buddy](http://bytebuddy.net) | 1.12.10, 1.12.18, 1.12.21, 1.14.4 | Apache License 2.0 |
+| [Byte Buddy for Android](http://bytebuddy.net/byte-buddy-android) | 1.14.4 | Apache License 2.0 |
 | [byte-buddy-agent](http://bytebuddy.net/byte-buddy-agent) | 1.12.10, 1.12.18 | Apache License 2.0 |
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
@@ -158,7 +161,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.1.0 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.1 | Apache License 2.0 |
 | [FindBugs jsr305](http://code.google.com/p/jsr-305) | 2.0.1, 3.0.2 | Apache License 2.0 |
-| [firefox-tv](https://blog.mozilla.org/blog/2017/12/20/firefox-is-now-on-amazon-fire-tv-happy-holiday-watching/) | v3.0 | Mozilla Public License 2.0 |
 | [flexbox-layout](https://github.com/google/flexbox-layout) | 2.0.1 | Apache License 2.0 |
 | [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.5.5 | Apache License 2.0 |
 | [Fragment Test Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.5.5 | Apache License 2.0 |
