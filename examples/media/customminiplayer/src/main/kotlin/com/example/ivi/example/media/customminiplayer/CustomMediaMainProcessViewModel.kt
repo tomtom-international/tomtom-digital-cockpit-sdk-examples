@@ -9,12 +9,13 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.media.miniplayer
+package com.example.ivi.example.media.customminiplayer
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
 import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.asMediaControlContext
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
 import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.SourceAttributionFormat
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsConfiguration
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsViewModel
@@ -23,15 +24,11 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.asMediaPlayba
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
 import com.tomtom.tools.android.api.resourceresolution.string.DurationStringResolver
 
-internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
-    FrontendViewModel<ExampleMiniPlayerPanel>(panel) {
-
-    /**
-     * In this small example, only the service availability is used to hide the panel's contents.
-     * In a product the whole panel could be hidden, for example by removing the
-     * [ExampleMiniPlayerPanel] from the [ExampleMiniPlayerFrontend] when needed.
-     */
-    val isAvailable = panel.mediaService.serviceAvailable
+/**
+ * This ViewModel replaces the stock ViewModel of the [MediaMainProcessPanelBase].
+ */
+internal class CustomMediaMainProcessViewModel(panel: MediaMainProcessPanelBase) :
+    FrontendViewModel<MediaMainProcessPanelBase>(panel) {
 
     /**
      * [MediaPlaybackViewModel] provides all information about playing media in a directly usable
@@ -39,8 +36,10 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
      * All information is updated from what is provided by the current media source at the moment.
      */
     private val playbackViewModel = MediaPlaybackViewModel(
-        panel.mediaConfiguration,
-        panel.mediaService.asMediaPlaybackParameters(panel.mediaConfiguration),
+        panel.mediaFrontendContext.mediaConfiguration,
+        panel.mediaFrontendContext.mediaService.asMediaPlaybackParameters(
+            panel.mediaFrontendContext.mediaConfiguration
+        ),
         viewModelScope,
         SourceAttributionFormat(preferSimplified = true)
     )
@@ -55,9 +54,11 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
     val art = playbackViewModel.art
     val progressData = playbackViewModel.progress
 
-    private val activePolicyProvider = panel.mediaService.activeSource.map { source ->
-        panel.mediaConfiguration.getPolicyProvider(source?.id).mediaControlPolicy
-    }
+    private val activePolicyProvider =
+        panel.mediaFrontendContext.mediaService.activeSource.map { source ->
+            panel.mediaFrontendContext.mediaConfiguration
+                .getPolicyProvider(source?.id).mediaControlPolicy
+        }
 
     /**
      * [MediaButtonsViewModel] provides the buttons for playback controls.
@@ -65,7 +66,7 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
      * moment.
      */
     private val buttonsViewModel = MediaButtonsViewModel(
-        panel.mediaService.asMediaControlContext(viewModelScope),
+        panel.mediaFrontendContext.mediaService.asMediaControlContext(viewModelScope),
         activePolicyProvider.map {
             MediaButtonsConfiguration(
                 it.replacedStandardControls,

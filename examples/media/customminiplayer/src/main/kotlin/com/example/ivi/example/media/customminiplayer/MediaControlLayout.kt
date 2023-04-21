@@ -9,7 +9,7 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.media.miniplayer
+package com.example.ivi.example.media.customminiplayer
 
 import android.content.Context
 import android.util.AttributeSet
@@ -20,6 +20,6 @@ internal class MediaControlLayout(context: Context, attrs: AttributeSet) :
     TtListLinearLayout<TtButtonViewModel>(context, attrs) {
 
     init {
-        ttContentLayoutId = R.layout.example_media_miniplayer_mediacontrol_layout
+        ttContentLayoutId = R.layout.custom_media_mainprocess_mediacontrol_layout
     }
 }

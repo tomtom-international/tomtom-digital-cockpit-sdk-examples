@@ -1,17 +1,28 @@
-# Module examples_media_miniplayer
+# Module examples_media_customminiplayer
 
 ## Example custom media mini player
 
 This is an example demonstrating how to control media playback with a customized UI visible when
 not browsing for media in the stock media player UI.
-The stock media player UI uses a main process panel to display what is currently being played, but 
-it can be disabled when necessary: for example when media controls are always present in the UI.
+The stock media player UI uses a main process panel to display what is currently being played. Every
+panel is able to create their own initial fragment. It's possible to adjust the look and
+behavior of a panel by customizing this fragment. A system UI host can create custom fragment rules
+that replace the stock fragment of a panel with a custom fragment.
 
-The example demonstrates concepts explained in the following guides on the
-[TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction):
+This directory contains an example system UI that customizes the fragment of
+`MediaMainProcessPanelBase`. It's possible to see this customization in action by following these
+steps:
+1. Clone this repository.
+2. Open this in Android Studio.
+3. Run the `examples_media_customminiplayer` configuration.
+4. Open the media frontend.
+5. Select and play a music.
+6. Close the media frontend.
 
-- [Configure the Media Plugins](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/media/configure-the-media-plugins)
-- [Customize a media source](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/media/customize-a-media-source)
+The custom media mini player is now shown and its layout differs from the stock one.
+
+The example demonstrates concepts explained in the following guides:
+[Replacing a panels' fragment with a custom fragment](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/customization/custom-fragments)
 
 To be able to try the customizations in this example, other than installing it on a device, it is
 also necessary to compile and install the example module `examples_media_source`, as that contains
@@ -24,7 +35,7 @@ This example only demonstrates how to make a new media playback UI; it does not 
 on how to place this UI in a different part of the screen, or on another display.
 
 To accomplish those kinds of modifications, the
-[System UI guide](https://developer.tomtom.com/tomtom-digital-cockpit/developers/development/system-ui)
+[System UI introduction](https://developer.tomtom.com/tomtom-digital-cockpit/developers/development/system-ui)
 contains more information about customizing the UI and create new panel types to integrate in it.
 
 ## Copyright

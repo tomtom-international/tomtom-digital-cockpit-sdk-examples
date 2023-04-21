@@ -14,7 +14,7 @@ package com.example.ivi.example.media.customdashboard
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.map
-import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaDashboardPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaDashboardPanelBase
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
 import com.tomtom.tools.android.api.resourceresolution.string.StaticStringResolver
 import com.tomtom.tools.android.api.resourceresolution.string.StringResolver

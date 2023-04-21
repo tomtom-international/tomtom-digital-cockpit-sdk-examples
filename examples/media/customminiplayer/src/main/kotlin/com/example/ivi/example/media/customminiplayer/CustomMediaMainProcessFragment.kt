@@ -9,17 +9,22 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.media.miniplayer
+package com.example.ivi.example.media.customminiplayer
 
-import com.example.ivi.example.media.miniplayer.databinding.ExampleMediaMiniplayerLayoutBinding
+import com.example.ivi.example.media.customminiplayer.databinding.CustomMediaMainprocessLayoutBinding
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 
-internal class ExampleMiniPlayerFragment :
-    IviFragment<ExampleMiniPlayerPanel, ExampleMiniPlayerViewModel>(
-        ExampleMiniPlayerViewModel::class
+/**
+ * This fragment replaces the stock fragment of the [MediaMainProcessPanelBase]. This replacement is
+ * done by the [CustomMediaMainProcessFragmentRule].
+ */
+internal class CustomMediaMainProcessFragment :
+    IviFragment<MediaMainProcessPanelBase, CustomMediaMainProcessViewModel>(
+        CustomMediaMainProcessViewModel::class
     ) {
 
-    override val viewFactory = ViewFactory(ExampleMediaMiniplayerLayoutBinding::inflate) {
+    override val viewFactory = ViewFactory(CustomMediaMainprocessLayoutBinding::inflate) {
         it.viewModel = viewModel
     }
 }
