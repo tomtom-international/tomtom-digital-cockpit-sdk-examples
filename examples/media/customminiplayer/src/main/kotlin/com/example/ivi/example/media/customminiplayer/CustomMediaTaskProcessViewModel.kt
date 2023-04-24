@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022 TomTom NV. All rights reserved.
+ * Copyright © 2023 TomTom NV. All rights reserved.
  *
  * This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
  * used for internal evaluation purposes or commercial use strictly subject to separate
@@ -12,17 +12,17 @@
 package com.example.ivi.example.media.customminiplayer
 
 import androidx.lifecycle.viewModelScope
-import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaTaskProcessPanelBase
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
 
 /**
- * This ViewModel replaces the stock ViewModel of the [MediaMainProcessPanelBase].
+ * This ViewModel replaces the stock ViewModel of the [MediaTaskProcessPanelBase].
  */
-internal class CustomMediaMainProcessViewModel(panel: MediaMainProcessPanelBase) :
-    FrontendViewModel<MediaMainProcessPanelBase>(panel) {
+internal class CustomMediaTaskProcessViewModel(panel: MediaTaskProcessPanelBase) :
+    FrontendViewModel<MediaTaskProcessPanelBase>(panel) {
 
     internal val customMediaCommonProcessViewModel = CustomMediaCommonProcessViewModel(
         panel.mediaFrontendContext,
-        viewModelScope,
+        viewModelScope
     )
 }

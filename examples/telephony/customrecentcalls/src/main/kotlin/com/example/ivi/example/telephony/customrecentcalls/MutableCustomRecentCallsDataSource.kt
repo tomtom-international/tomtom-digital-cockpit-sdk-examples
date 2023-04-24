@@ -12,7 +12,6 @@
 package com.example.ivi.example.telephony.customrecentcalls
 
 import android.content.Context
-import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumber
 import com.tomtom.ivi.platform.contacts.api.common.util.comparePhoneNumbers
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.IviPagingSource
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviDataSource
@@ -25,6 +24,7 @@ import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsDa
 import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsDataSourceQuery.RecentCallFilter
 import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsDataSourceQuery.RecentCallOrderBy.RecentCallItemOrder
 import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsDataSourceQuery.RecentCallQueryFlags
+import com.tomtom.ivi.platform.telecom.api.common.model.PhoneNumber
 import java.text.Collator
 import java.util.Locale
 

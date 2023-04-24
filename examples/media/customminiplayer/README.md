@@ -2,16 +2,18 @@
 
 ## Example custom media mini player
 
-This is an example demonstrating how to control media playback with a customized UI visible when
-not browsing for media in the stock media player UI.
-The stock media player UI uses a main process panel to display what is currently being played. Every
-panel is able to create their own initial fragment. It's possible to adjust the look and
-behavior of a panel by customizing this fragment. A system UI host can create custom fragment rules
-that replace the stock fragment of a panel with a custom fragment.
+This is an example demonstrating how to control media playback with a customized UI visible.
+The stock media player UI uses a main process panel and a task process panel to display what is 
+currently being played. Every panel is able to create their own initial fragment. It's possible to 
+adjust the look and behavior of a panel by customizing this fragment. A system UI host can create 
+custom fragment rules that replace the stock fragment of a panel with a custom fragment.
+
+You can find more details on the different panels used in the
+[System UI overview](https://developer.tomtom.com/tomtom-digital-cockpit/designers/system-ui/overview).
 
 This directory contains an example system UI that customizes the fragment of
-`MediaMainProcessPanelBase`. It's possible to see this customization in action by following these
-steps:
+`MediaMainProcessPanelBase` and `MediaTaskProcessPanelBase`. It's possible to see this customization
+in action by following these steps:
 1. Clone this repository.
 2. Open this in Android Studio.
 3. Run the `examples_media_customminiplayer` configuration.

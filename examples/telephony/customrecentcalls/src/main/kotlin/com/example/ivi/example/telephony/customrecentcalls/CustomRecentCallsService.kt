@@ -11,13 +11,13 @@
 
 package com.example.ivi.example.telephony.customrecentcalls
 
-import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumber
-import com.tomtom.ivi.platform.contacts.api.common.model.PhoneNumberType
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
 import com.tomtom.ivi.platform.recentcalls.api.common.model.RecentCall
 import com.tomtom.ivi.platform.recentcalls.api.common.model.RecentCall.RecentCallType
 import com.tomtom.ivi.platform.recentcalls.api.service.recentcalls.RecentCallsServiceBase
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
+import com.tomtom.ivi.platform.telecom.api.common.model.PhoneNumber
+import com.tomtom.ivi.platform.telecom.api.common.model.PhoneNumberType
 import java.time.Duration
 import java.time.Instant
 

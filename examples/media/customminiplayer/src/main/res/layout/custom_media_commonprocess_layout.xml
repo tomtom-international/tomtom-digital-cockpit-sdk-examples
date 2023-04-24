@@ -18,7 +18,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.ivi.example.media.customminiplayer.CustomMediaMainProcessViewModel" />
+            type="com.example.ivi.example.media.customminiplayer.CustomMediaCommonProcessViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,6 +30,7 @@
             android:id="@+id/custom_media_miniplayer_art"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:onClick="@{() -> viewModel.openExpandedProcessPanel()}"
             android:paddingStart="?attr/tt_spacing_6"
             android:paddingEnd="0dp"
             android:src="@{viewModel.art}"
@@ -80,7 +81,7 @@
             auto:ttContents="@{viewModel.secondaryButtons}" />
 
         <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
-            android:id="@+id/example_media_miniplayer_elapsed_time"
+            android:id="@+id/custom_media_miniplayer_elapsed_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.elapsedTime}"

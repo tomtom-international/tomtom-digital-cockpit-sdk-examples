@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022 TomTom NV. All rights reserved.
+ * Copyright © 2023 TomTom NV. All rights reserved.
  *
  * This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
  * used for internal evaluation purposes or commercial use strictly subject to separate
@@ -17,12 +17,12 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaTaskProcess
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 
 /**
- * This fragment replaces the stock fragment of the [MediaMainProcessPanelBase]. This replacement is
+ * This fragment replaces the stock fragment of the [MediaTaskProcessPanelBase]. This replacement is
  * done by the [CustomMediaMainProcessFragmentRule].
  */
-internal class CustomMediaMainProcessFragment :
-    IviFragment<MediaMainProcessPanelBase, CustomMediaMainProcessViewModel>(
-        CustomMediaMainProcessViewModel::class
+internal class CustomMediaTaskProcessFragment :
+    IviFragment<MediaTaskProcessPanelBase, CustomMediaTaskProcessViewModel>(
+        CustomMediaTaskProcessViewModel::class
     ) {
 
     /**
