@@ -9,9 +9,6 @@
  * immediately return or destroy it.
  */
 
-import com.tomtom.ivi.appsuite.gradle.media.api.appsuitedefaults.media.defaultMediaPolicyFrontendExtensions
-import com.tomtom.ivi.buildsrc.dependencies.ExampleModuleReference
-import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.FrontendConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviInstanceIdentifier
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
@@ -19,18 +16,18 @@ plugins {
     id("com.tomtom.ivi.product.defaults.core")
 }
 
-val miniPlayerFrontend = FrontendConfig(
-    frontendBuilderName = "ExampleMiniPlayerFrontendBuilder",
-    implementationModule = ExampleModuleReference("examples_media_miniplayer"),
-    extensions = defaultMediaPolicyFrontendExtensions
-)
+android {
+    namespace = "com.example.ivi.example.media.customminiplayer"
+    buildFeatures {
+        dataBinding = true
+    }
+}
 
 /**
  * IVI configuration for this example application.
  */
 ivi {
     optInToExperimentalApis = true
-
     application {
         enabled = true
         iviInstances {
@@ -39,18 +36,8 @@ ivi {
                     includeDefaultPlatformGroups()
                     includeDefaultAppsuiteGroups()
                 }
-                frontends {
-                    add(miniPlayerFrontend)
-                }
             }
         }
-    }
-}
-
-android {
-    namespace = "com.example.ivi.example.media.miniplayer"
-    buildFeatures {
-        dataBinding = true
     }
 }
 
@@ -61,6 +48,7 @@ dependencies {
     implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
     implementation(iviDependencies.tomtomToolsCoreAnimation)
+    implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
+    implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)
     implementation(libraries.iviAppsuiteMediaApiCommonFrontend)
-    implementation(libraries.iviPlatformFrontendApiCommonFrontend)
 }

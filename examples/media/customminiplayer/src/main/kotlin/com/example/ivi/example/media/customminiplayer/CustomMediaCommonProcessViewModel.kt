@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022 TomTom NV. All rights reserved.
+ * Copyright © 2023 TomTom NV. All rights reserved.
  *
  * This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
  * used for internal evaluation purposes or commercial use strictly subject to separate
@@ -9,29 +9,30 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.media.miniplayer
+package com.example.ivi.example.media.customminiplayer
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
-import androidx.lifecycle.viewModelScope
+import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaFrontendContext
 import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.asMediaControlContext
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaTaskProcessPanelBase
 import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.SourceAttributionFormat
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsConfiguration
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsViewModel
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaPlaybackViewModel
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.asMediaPlaybackParameters
-import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
 import com.tomtom.tools.android.api.resourceresolution.string.DurationStringResolver
+import kotlinx.coroutines.CoroutineScope
 
-internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
-    FrontendViewModel<ExampleMiniPlayerPanel>(panel) {
-
-    /**
-     * In this small example, only the service availability is used to hide the panel's contents.
-     * In a product the whole panel could be hidden, for example by removing the
-     * [ExampleMiniPlayerPanel] from the [ExampleMiniPlayerFrontend] when needed.
-     */
-    val isAvailable = panel.mediaService.serviceAvailable
+/**
+ * This common ViewModel replaces the stock ViewModel of the [MediaMainProcessPanelBase] and
+ * [MediaTaskProcessPanelBase].
+ */
+internal class CustomMediaCommonProcessViewModel(
+    private val mediaFrontendContext: MediaFrontendContext,
+    viewModelScope: CoroutineScope
+) {
 
     /**
      * [MediaPlaybackViewModel] provides all information about playing media in a directly usable
@@ -39,8 +40,10 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
      * All information is updated from what is provided by the current media source at the moment.
      */
     private val playbackViewModel = MediaPlaybackViewModel(
-        panel.mediaConfiguration,
-        panel.mediaService.asMediaPlaybackParameters(panel.mediaConfiguration),
+        mediaFrontendContext.mediaConfiguration,
+        mediaFrontendContext.mediaService.asMediaPlaybackParameters(
+            mediaFrontendContext.mediaConfiguration
+        ),
         viewModelScope,
         SourceAttributionFormat(preferSimplified = true)
     )
@@ -55,9 +58,11 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
     val art = playbackViewModel.art
     val progressData = playbackViewModel.progress
 
-    private val activePolicyProvider = panel.mediaService.activeSource.map { source ->
-        panel.mediaConfiguration.getPolicyProvider(source?.id).mediaControlPolicy
-    }
+    private val activePolicyProvider =
+        mediaFrontendContext.mediaService.activeSource.map { source ->
+            mediaFrontendContext.mediaConfiguration
+                .getPolicyProvider(source?.id).mediaControlPolicy
+        }
 
     /**
      * [MediaButtonsViewModel] provides the buttons for playback controls.
@@ -65,7 +70,7 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
      * moment.
      */
     private val buttonsViewModel = MediaButtonsViewModel(
-        panel.mediaService.asMediaControlContext(viewModelScope),
+        mediaFrontendContext.mediaService.asMediaControlContext(viewModelScope),
         activePolicyProvider.map {
             MediaButtonsConfiguration(
                 it.replacedStandardControls,
@@ -78,4 +83,11 @@ internal class ExampleMiniPlayerViewModel(panel: ExampleMiniPlayerPanel) :
 
     val primaryButtons = buttonsViewModel.primaryButtons
     val secondaryButtons = buttonsViewModel.secondaryButtons
+
+    /**
+     * This open the expanded process panel via both [MediaMainProcessPanelBase] and
+     * [MediaTaskProcessPanelBase].
+     */
+    fun openExpandedProcessPanel() =
+        mediaFrontendContext.mediaFrontendNavigation.openExpandedNowPlayingPanel()
 }

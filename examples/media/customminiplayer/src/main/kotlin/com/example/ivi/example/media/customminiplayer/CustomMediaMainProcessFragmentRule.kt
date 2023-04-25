@@ -9,24 +9,24 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.media.customdashboard
+package com.example.ivi.example.media.customminiplayer
 
-import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaDashboardPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.CustomFragmentRule
 
 /**
- * The rule that replaces the stock fragment of a [MediaDashboardPanelBase] with a
- * [CustomMediaDashboardFragment].
+ * The rule that replaces the stock fragment of a [MediaMainProcessPanelBase] with a
+ * [CustomMediaMainProcessFragment].
  *
  * This rule is applied in [CustomSystemUiHost.fragmentFactory].
  */
-internal class CustomMediaDashboardFragmentRule : CustomFragmentRule<MediaDashboardPanelBase> {
+internal class CustomMediaMainProcessFragmentRule : CustomFragmentRule<MediaMainProcessPanelBase> {
 
-    /** Accept any [MediaDashboardPanelBase]. */
-    override fun accepts(panel: MediaDashboardPanelBase) = true
+    /** Accept any [MediaMainProcessPanelBase]. */
+    override fun accepts(panel: MediaMainProcessPanelBase) = true
 
-    /** Create a [CustomMediaDashboardFragment] to display [panel]. */
-    override fun createInitialFragmentInitializer(panel: MediaDashboardPanelBase) =
-        IviFragment.Initializer(CustomMediaDashboardFragment(), panel)
+    /** Create a [CustomMediaMainProcessFragment] to display [panel]. */
+    override fun createInitialFragmentInitializer(panel: MediaMainProcessPanelBase) =
+        IviFragment.Initializer(CustomMediaMainProcessFragment(), panel)
 }

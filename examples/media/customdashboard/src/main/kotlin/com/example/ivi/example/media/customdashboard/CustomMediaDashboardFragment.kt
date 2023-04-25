@@ -12,7 +12,7 @@
 package com.example.ivi.example.media.customdashboard
 
 import com.example.ivi.example.media.customdashboard.databinding.TtiviCustomdashboardFragmentBinding
-import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaDashboardPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaDashboardPanelBase
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 
 /**

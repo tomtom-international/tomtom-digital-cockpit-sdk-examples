@@ -11,5 +11,5 @@
   -->
 
 <resources>
-    <string name="example_media_miniplayer_title">IVI Example: Mini Player</string>
+    <string name="custom_media_miniplayer_title">IVI Example: Custom media mini player</string>
 </resources>

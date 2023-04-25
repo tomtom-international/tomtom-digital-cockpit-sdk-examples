@@ -9,11 +9,12 @@
  * immediately return or destroy it.
  */
 
-package com.example.ivi.example.media.customdashboard
+package com.example.ivi.example.media.customminiplayer
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LiveData
-import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaDashboardPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
+import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaTaskProcessPanelBase
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ControlCenterPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.DebugPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ExpandedProcessPanel
@@ -47,8 +48,10 @@ import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.MainPr
 /**
  * This is a custom implementation of a [SystemUiHost], mostly based on [StockSystemUiHost].
  *
- * We used custom system UI host here to add [CustomMediaDashboardFragmentRule] to replace the stock
- * fragment of the [MediaDashboardPanelBase]. This is done by overriding the [fragmentFactory].
+ * We used custom system UI host here to add [CustomMediaMainProcessFragmentRule] and
+ * [CustomMediaTaskProcessFragmentRule] to replace respectively the stock fragment of the
+ * [MediaMainProcessPanelBase] and [MediaTaskProcessPanelBase]. This is done by overriding the
+ * [fragmentFactory].
  *
  * See the
  * [system UI guide](https://developer.tomtom.com/tomtom-digital-cockpit/documentation/development/system-ui)
@@ -76,12 +79,13 @@ internal class CustomSystemUiHost(
     )
 
     /**
-     * Here we apply our [CustomMediaDashboardFragmentRule] to replace the stock media dashboard
-     * fragment.
+     * Here we apply our [CustomMediaMainProcessFragmentRule], [CustomMediaTaskProcessFragmentRule]
+     * to replace the stock media main process fragment.
      */
     override val fragmentFactory: IviFragmentFactory =
         IviFragmentFactory.create {
-            addRule(CustomMediaDashboardFragmentRule())
+            addRule(CustomMediaMainProcessFragmentRule())
+            addRule(CustomMediaTaskProcessFragmentRule())
         }
 
     private lateinit var panelRegistryExtension: IviPanelRegistrySystemUiHostExtension

@@ -18,19 +18,19 @@
 
         <variable
             name="viewModel"
-            type="com.example.ivi.example.media.miniplayer.ExampleMiniPlayerViewModel" />
+            type="com.example.ivi.example.media.customminiplayer.CustomMediaCommonProcessViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="?attr/tt_spacing_5"
-        auto:visibleIf="@{viewModel.isAvailable}">
+        android:layout_margin="?attr/tt_spacing_5">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/example_media_miniplayer_art"
+            android:id="@+id/custom_media_miniplayer_art"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:onClick="@{() -> viewModel.openExpandedProcessPanel()}"
             android:paddingStart="?attr/tt_spacing_6"
             android:paddingEnd="0dp"
             android:src="@{viewModel.art}"
@@ -41,7 +41,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
-            android:id="@+id/example_media_miniplayer_primary_text"
+            android:id="@+id/custom_media_miniplayer_primary_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="?attr/tt_spacing_8"
@@ -50,57 +50,57 @@
             android:text="@{viewModel.primaryText}"
             android:textAppearance="?attr/tt_headline_text_style_s"
             android:textColor="?attr/tt_surface_content_color_emphasis_high"
-            auto:layout_constraintEnd_toStartOf="@id/example_media_miniplayer_secondary_text"
+            auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_secondary_text"
             auto:layout_constraintTop_toTopOf="parent" />
 
         <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
-            android:id="@+id/example_media_miniplayer_secondary_text"
+            android:id="@+id/custom_media_miniplayer_secondary_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="@{viewModel.secondaryText}"
             android:textAppearance="?attr/tt_headline_text_style_s"
             android:textColor="?attr/tt_surface_content_color_emphasis_medium"
-            auto:layout_constraintEnd_toStartOf="@id/example_media_miniplayer_art"
+            auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_art"
             auto:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.ivi.example.media.miniplayer.MediaControlLayout
-            android:id="@+id/example_media_miniplayer_controls_primary"
+        <com.example.ivi.example.media.customminiplayer.MediaControlLayout
+            android:id="@+id/custom_media_miniplayer_controls_primary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             auto:layout_constraintStart_toStartOf="parent"
             auto:layout_constraintTop_toTopOf="parent"
             auto:ttContents="@{viewModel.primaryButtons}" />
 
-        <com.example.ivi.example.media.miniplayer.MediaControlLayout
-            android:id="@+id/example_media_miniplayer_controls_secondary"
+        <com.example.ivi.example.media.customminiplayer.MediaControlLayout
+            android:id="@+id/custom_media_miniplayer_controls_secondary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            auto:layout_constraintStart_toEndOf="@id/example_media_miniplayer_controls_primary"
+            auto:layout_constraintStart_toEndOf="@id/custom_media_miniplayer_controls_primary"
             auto:layout_constraintTop_toTopOf="parent"
             auto:ttContents="@{viewModel.secondaryButtons}" />
 
         <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
-            android:id="@+id/example_media_miniplayer_elapsed_time"
+            android:id="@+id/custom_media_miniplayer_elapsed_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.elapsedTime}"
             android:textAppearance="?attr/tt_label_text_style_m"
             android:textColor="?attr/tt_surface_content_color_emphasis_medium"
-            auto:layout_constraintBottom_toTopOf="@id/example_media_miniplayer_progress_bar"
-            auto:layout_constraintEnd_toStartOf="@id/example_media_miniplayer_art"
+            auto:layout_constraintBottom_toTopOf="@id/custom_media_miniplayer_progress_bar"
+            auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_art"
             auto:layout_constraintStart_toStartOf="parent" />
 
 
         <com.tomtom.tools.android.api.uicontrols.progressbar.TtSmoothProgressBar
-            android:id="@+id/example_media_miniplayer_progress_bar"
+            android:id="@+id/custom_media_miniplayer_progress_bar"
             style="?attr/tt_smoothprogressbar_style"
             android:layout_width="0dp"
             android:layout_height="?attr/ttivi_processpanel_progressbar_height"
             android:layout_marginTop="?attr/tt_spacing_5"
             android:max="100000"
             auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintEnd_toStartOf="@id/example_media_miniplayer_art"
+            auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_art"
             auto:layout_constraintStart_toStartOf="parent"
             auto:ttProgress="@{viewModel.progressData}"
             auto:ttSecondaryProgressIndeterminate="@{viewModel.isBuffering}" />

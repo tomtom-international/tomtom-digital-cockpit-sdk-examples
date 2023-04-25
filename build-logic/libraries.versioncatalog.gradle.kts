@@ -9,8 +9,6 @@
  * immediately return or destroy it.
  */
 
-enableFeaturePreview("VERSION_CATALOGS")
-
 dependencyResolutionManagement {
     @Suppress("UnstableApiUsage")
     versionCatalogs {
