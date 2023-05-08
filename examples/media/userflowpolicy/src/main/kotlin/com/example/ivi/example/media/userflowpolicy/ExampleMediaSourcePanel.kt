@@ -11,7 +11,6 @@
 
 package com.example.ivi.example.media.userflowpolicy
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import com.tomtom.ivi.appsuite.media.api.common.core.IviMediaItem
 import com.tomtom.ivi.appsuite.media.api.common.core.RootSourceClient
@@ -42,7 +41,10 @@ internal class ExampleMediaSourcePanel(mediaContext: MediaFrontendContext) :
      * The [RootSourceClient] is used to retrieve the available [categories] and browse the
      * [contents] of the example media source. Other [SourceClient]s are available.
      */
-    private val sourceClient = RootSourceClient(ExampleMediaSourceId)
+    private val sourceClient = RootSourceClient(
+        mediaContext.frontendContext.applicationContext,
+        ExampleMediaSourceId
+    )
 
     /**
      * The [mediaService] lets the user play a song.
@@ -65,7 +67,15 @@ internal class ExampleMediaSourcePanel(mediaContext: MediaFrontendContext) :
     override fun createInitialFragmentInitializer() =
         IviFragment.Initializer(ExampleMediaSourceFragment(), this)
 
-    fun setContext(context: Context?): Unit = sourceClient.setContext(context)
+    override fun onAddedToFrontend() {
+        super.onAddedToFrontend()
+        sourceClient.connect()
+    }
+
+    override fun onRemovedFromFrontend() {
+        sourceClient.disconnect()
+        super.onRemovedFromFrontend()
+    }
 
     fun selectCategory(category: IviMediaItem) = sourceClient.browseTo(category)
 
