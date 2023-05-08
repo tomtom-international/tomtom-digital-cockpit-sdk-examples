@@ -11,10 +11,8 @@
 
 package com.example.ivi.example.media.userflowpolicy
 
-import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ivi.example.media.userflowpolicy.databinding.ExamplesMediaUserflowpolicyPanelBinding
-import com.tomtom.ivi.appsuite.media.api.common.core.SourceClient
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 
 /**
@@ -48,16 +46,4 @@ internal class ExampleMediaSourceFragment :
                 contentAdapter.submitList(it)
             }
         }
-
-    /** Set the context on the panel, since its [SourceClient] needs it to connect. */
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        panel.setContext(context)
-    }
-
-    /** Reset the context on the panel, to disconnect its [SourceClient]. */
-    override fun onDetach() {
-        panel.setContext(null)
-        super.onDetach()
-    }
 }

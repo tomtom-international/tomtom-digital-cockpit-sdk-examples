@@ -9,8 +9,6 @@
  * immediately return or destroy it.
  */
 
-enableFeaturePreview("VERSION_CATALOGS")
-
 val versionLibraryFile = "libraries.versions.toml"
 
 /**
