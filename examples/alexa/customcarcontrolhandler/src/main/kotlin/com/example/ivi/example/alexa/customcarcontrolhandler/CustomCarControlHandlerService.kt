@@ -14,10 +14,9 @@ package com.example.ivi.example.alexa.customcarcontrolhandler
 import android.content.Context
 import com.amazon.aacsconstants.Action
 import com.amazon.aacsconstants.Topic
+import com.tomtom.ivi.platform.alexa.api.common.util.AacsMessage
 import com.tomtom.ivi.platform.alexa.api.common.util.AacsSenderWrapper
-import com.tomtom.ivi.platform.alexa.api.common.util.Header
-import com.tomtom.ivi.platform.alexa.api.common.util.createAasbReplyHeader
-import com.tomtom.ivi.platform.alexa.api.common.util.parseAasbMessage
+import com.tomtom.ivi.platform.alexa.api.common.util.parseJsonMessage
 import com.tomtom.ivi.platform.alexa.api.service.alexahandler.AlexaHandlerService
 import com.tomtom.ivi.platform.alexa.api.service.alexahandler.AlexaHandlerServiceBase
 import com.tomtom.ivi.platform.framework.api.common.iviinstance.createTracer
@@ -31,8 +30,6 @@ import java.io.FileOutputStream
 import java.io.IOException
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonContentPolymorphicSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
@@ -44,13 +41,6 @@ internal class CustomCarControlHandlerService(
 ) : AlexaHandlerServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     private val tracer = iviServiceHostContext.createTracer<CustomCarControlHandlerEvents> { this }
-
-    // Instantiate a JSON object which will be used to parse and encode the AASB JSON messages.
-    private val jsonParser = Json {
-        ignoreUnknownKeys = true
-        isLenient = true
-        encodeDefaults = true
-    }
 
     private val aacsSender = AacsSenderWrapper(iviServiceHostContext)
 
@@ -64,25 +54,21 @@ internal class CustomCarControlHandlerService(
      *
      * The `payload.capabilityType` field can be used to differentiate among them.
      */
-    object SetControllerValueMessageSerializer :
-        JsonContentPolymorphicSerializer<SetControllerValueIncomingMessageBase>(
-            SetControllerValueIncomingMessageBase::class
+    object SetControllerValueMessagePayloadSerializer :
+        JsonContentPolymorphicSerializer<SetControllerValueIncomingMessagePayloadBase>(
+            SetControllerValueIncomingMessagePayloadBase::class
         ) {
         override fun selectDeserializer(element: JsonElement):
-            DeserializationStrategy<out SetControllerValueIncomingMessageBase> =
-            when (
-                element.jsonObject[JSON_KEY_PAYLOAD]?.jsonObject?.get(
-                    JSON_KEY_CAPABILITY_TYPE
-                )?.jsonPrimitive?.content
-            ) {
+            DeserializationStrategy<SetControllerValueIncomingMessagePayloadBase> =
+            when (element.jsonObject[JSON_KEY_CAPABILITY_TYPE]?.jsonPrimitive?.content) {
                 JSON_VALUE_CONTROLLER_MODE ->
-                    SetModeControllerValueIncomingMessage.serializer()
+                    SetModeControllerValueIncomingMessagePayload.serializer()
                 JSON_VALUE_CONTROLLER_POWER ->
-                    SetPowerControllerValueIncomingMessage.serializer()
+                    SetPowerControllerValueIncomingMessagePayload.serializer()
                 JSON_VALUE_CONTROLLER_TOGGLE ->
-                    SetToggleControllerValueIncomingMessage.serializer()
+                    SetToggleControllerValueIncomingMessagePayload.serializer()
                 JSON_VALUE_CONTROLLER_RANGE ->
-                    SetRangeControllerValueIncomingMessage.serializer()
+                    SetRangeControllerValueIncomingMessagePayload.serializer()
                 else -> throw IllegalArgumentException("Unknown controller type: $element")
             }
     }
@@ -93,16 +79,8 @@ internal class CustomCarControlHandlerService(
      * AASB messages.
      */
 
-    @Serializable(with = SetControllerValueMessageSerializer::class)
-    sealed class SetControllerValueIncomingMessageBase {
-        abstract val header: Header
-    }
-
-    @Serializable
-    data class SetModeControllerValueIncomingMessage(
-        override val header: Header,
-        val payload: SetModeControllerValueIncomingMessagePayload
-    ) : SetControllerValueIncomingMessageBase()
+    @Serializable(with = SetControllerValueMessagePayloadSerializer::class)
+    sealed class SetControllerValueIncomingMessagePayloadBase
 
     @Serializable
     data class SetModeControllerValueIncomingMessagePayload(
@@ -110,26 +88,14 @@ internal class CustomCarControlHandlerService(
         val endpointId: String,
         val instanceId: String,
         val value: String
-    )
-
-    @Serializable
-    data class SetPowerControllerValueIncomingMessage(
-        override val header: Header,
-        val payload: SetPowerControllerValueIncomingMessagePayload
-    ) : SetControllerValueIncomingMessageBase()
+    ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class SetPowerControllerValueIncomingMessagePayload(
         val capabilityType: String,
         val endpointId: String,
         val turnOn: Boolean
-    )
-
-    @Serializable
-    data class SetRangeControllerValueIncomingMessage(
-        override val header: Header,
-        val payload: SetRangeControllerValueIncomingMessagePayload
-    ) : SetControllerValueIncomingMessageBase()
+    ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class SetRangeControllerValueIncomingMessagePayload(
@@ -137,13 +103,7 @@ internal class CustomCarControlHandlerService(
         val endpointId: String,
         val instanceId: String,
         val value: Double
-    )
-
-    @Serializable
-    data class SetToggleControllerValueIncomingMessage(
-        override val header: Header,
-        val payload: SetToggleControllerValueIncomingMessagePayload
-    ) : SetControllerValueIncomingMessageBase()
+    ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class SetToggleControllerValueIncomingMessagePayload(
@@ -151,13 +111,7 @@ internal class CustomCarControlHandlerService(
         val endpointId: String,
         val instanceId: String,
         val turnOn: Boolean
-    )
-
-    @Serializable
-    data class SetControllerValueOutgoingMessage(
-        val header: Header,
-        val payload: SetControllerValueOutgoingMessagePayload
-    )
+    ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class SetControllerValueOutgoingMessagePayload(
@@ -165,34 +119,22 @@ internal class CustomCarControlHandlerService(
     )
 
     object AdjustControllerValueMessageSerializer :
-        JsonContentPolymorphicSerializer<AdjustControllerValueIncomingMessageBase>(
-            AdjustControllerValueIncomingMessageBase::class
+        JsonContentPolymorphicSerializer<AdjustControllerValueIncomingMessagePayloadBase>(
+            AdjustControllerValueIncomingMessagePayloadBase::class
         ) {
         override fun selectDeserializer(element: JsonElement):
-            DeserializationStrategy<out AdjustControllerValueIncomingMessageBase> =
-            when (
-                element.jsonObject[JSON_KEY_PAYLOAD]?.jsonObject?.get(
-                    JSON_KEY_CAPABILITY_TYPE
-                )?.jsonPrimitive?.content
-            ) {
+            DeserializationStrategy<AdjustControllerValueIncomingMessagePayloadBase> =
+            when (element.jsonObject[JSON_KEY_CAPABILITY_TYPE]?.jsonPrimitive?.content) {
                 JSON_VALUE_CONTROLLER_MODE ->
-                    AdjustModeControllerValueIncomingMessage.serializer()
+                    AdjustModeControllerValueIncomingMessagePayload.serializer()
                 JSON_VALUE_CONTROLLER_RANGE ->
-                    AdjustRangeControllerValueIncomingMessage.serializer()
+                    AdjustRangeControllerValueIncomingMessagePayload.serializer()
                 else -> throw IllegalArgumentException("Unknown controller type: $element")
             }
     }
 
     @Serializable(with = AdjustControllerValueMessageSerializer::class)
-    sealed class AdjustControllerValueIncomingMessageBase {
-        abstract val header: Header
-    }
-
-    @Serializable
-    data class AdjustModeControllerValueIncomingMessage(
-        override val header: Header,
-        val payload: AdjustModeControllerValueIncomingMessagePayload
-    ) : AdjustControllerValueIncomingMessageBase()
+    sealed class AdjustControllerValueIncomingMessagePayloadBase
 
     @Serializable
     data class AdjustModeControllerValueIncomingMessagePayload(
@@ -200,13 +142,7 @@ internal class CustomCarControlHandlerService(
         val endpointId: String,
         val instanceId: String,
         val delta: Int
-    )
-
-    @Serializable
-    data class AdjustRangeControllerValueIncomingMessage(
-        override val header: Header,
-        val payload: AdjustRangeControllerValueIncomingMessagePayload
-    ) : AdjustControllerValueIncomingMessageBase()
+    ) : AdjustControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class AdjustRangeControllerValueIncomingMessagePayload(
@@ -214,13 +150,7 @@ internal class CustomCarControlHandlerService(
         val endpointId: String,
         val instanceId: String,
         val delta: Double
-    )
-
-    @Serializable
-    data class AdjustControllerValueOutgoingMessage(
-        val header: Header,
-        val payload: AdjustControllerValueOutgoingMessagePayload
-    )
+    ) : AdjustControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class AdjustControllerValueOutgoingMessagePayload(
@@ -291,15 +221,12 @@ internal class CustomCarControlHandlerService(
             null
         }
 
-    override suspend fun onMessageReceived(
-        action: String,
-        messageContents: String
-    ): Boolean =
-        when (action) {
+    override suspend fun onMessageReceived(message: AacsMessage): Boolean =
+        when (message.action) {
             Action.CarControl.SET_CONTROLLER_VALUE ->
-                handleSetControllerValue(messageContents)
+                handleSetControllerValue(message.id, message.payload)
             Action.CarControl.ADJUST_CONTROLLER_VALUE ->
-                handleAdjustControllerValue(messageContents)
+                handleAdjustControllerValue(message.id, message.payload)
             // We are only interested in handling `SET_CONTROLLER_VALUE` and
             // `ADJUST_CONTROLLER_VALUE` incoming messages.
             // We return `false` for any other action, so that the message can be forwarded to other
@@ -307,40 +234,35 @@ internal class CustomCarControlHandlerService(
             else -> false
         }
 
-    private fun handleSetControllerValue(message: String): Boolean {
-        parseAasbMessage<SetControllerValueIncomingMessageBase>(
-            jsonParser,
-            message
-        )?.let { setMessage ->
+    private fun handleSetControllerValue(messageId: String, message: String): Boolean {
+        parseJsonMessage<SetControllerValueIncomingMessagePayloadBase>(message)?.let { setMessage ->
             tracer.setControllerValueMessageReceived(setMessage)
             return when (setMessage) {
-                is SetPowerControllerValueIncomingMessage ->
-                    setPowerControllerValue(setMessage)
-                is SetRangeControllerValueIncomingMessage ->
-                    setRangeControllerValue(setMessage)
-                is SetModeControllerValueIncomingMessage ->
-                    setModeControllerValue(setMessage)
-                is SetToggleControllerValueIncomingMessage ->
-                    setToggleControllerValue(setMessage)
+                is SetPowerControllerValueIncomingMessagePayload ->
+                    setPowerControllerValue(messageId, setMessage)
+                is SetRangeControllerValueIncomingMessagePayload ->
+                    setRangeControllerValue(messageId, setMessage)
+                is SetModeControllerValueIncomingMessagePayload ->
+                    setModeControllerValue(messageId, setMessage)
+                is SetToggleControllerValueIncomingMessagePayload ->
+                    setToggleControllerValue(messageId, setMessage)
             }
         }
         return false
     }
 
-    private fun handleAdjustControllerValue(message: String): Boolean {
-        parseAasbMessage<AdjustControllerValueIncomingMessageBase>(
-            jsonParser,
-            message
-        )?.let { adjustMessage ->
-            tracer.adjustControllerValueMessageReceived(adjustMessage)
+    private fun handleAdjustControllerValue(messageId: String, message: String): Boolean {
+        parseJsonMessage<AdjustControllerValueIncomingMessagePayloadBase>(message)
+            ?.let { adjustMessage ->
+                tracer.adjustControllerValueMessageReceived(adjustMessage)
 
-            return when (adjustMessage) {
-                is AdjustRangeControllerValueIncomingMessage ->
-                    adjustRangeControllerValue(adjustMessage)
-                is AdjustModeControllerValueIncomingMessage ->
-                    adjustModeControllerValue(adjustMessage)
+                return when (adjustMessage) {
+                    is AdjustRangeControllerValueIncomingMessagePayload ->
+                        adjustRangeControllerValue(messageId, adjustMessage)
+                    is AdjustModeControllerValueIncomingMessagePayload ->
+                        adjustModeControllerValue(messageId, adjustMessage)
+                }
             }
-        }
         return false
     }
 
@@ -349,13 +271,16 @@ internal class CustomCarControlHandlerService(
      * - "Turn on the light"
      * - "Turn off the custom device"
      */
-    private fun setPowerControllerValue(message: SetPowerControllerValueIncomingMessage): Boolean =
-        when (message.payload.endpointId.toDeviceName()) {
+    private fun setPowerControllerValue(
+        messageId: String,
+        message: SetPowerControllerValueIncomingMessagePayload
+    ): Boolean =
+        when (message.endpointId.toDeviceName()) {
             LIGHT_ID,
             CUSTOM_DEVICE_ID -> {
-                val turnOn = message.payload.turnOn
-                tracer.d("Setting power value $turnOn for endpoint ${message.payload.endpointId}.")
-                sendSetControllerValueReply(message.header.id, true)
+                val turnOn = message.turnOn
+                tracer.d("Setting power value $turnOn for endpoint ${message.endpointId}.")
+                sendSetControllerValueReply(messageId, true)
                 true
             }
             // We are only interested in handling `SetPowerControllerValue` messages for the "light"
@@ -370,13 +295,16 @@ internal class CustomCarControlHandlerService(
      * - "Set the light brightness to 5"
      * - "Change the brightness of the light to maximum"
      */
-    private fun setRangeControllerValue(message: SetRangeControllerValueIncomingMessage): Boolean =
-        when (message.payload.endpointId.toDeviceName()) {
+    private fun setRangeControllerValue(
+        messageId: String,
+        message: SetRangeControllerValueIncomingMessagePayload
+    ): Boolean =
+        when (message.endpointId.toDeviceName()) {
             LIGHT_ID -> {
-                val rangeValue = message.payload.value
-                val instanceId = message.payload.instanceId
+                val rangeValue = message.value
+                val instanceId = message.instanceId
                 tracer.d("Setting range value $rangeValue for light instance $instanceId.")
-                sendSetControllerValueReply(message.header.id, true)
+                sendSetControllerValueReply(messageId, true)
                 true
             }
             // We are only interested in handling `SetRangeControllerValue` messages for the "light"
@@ -391,13 +319,16 @@ internal class CustomCarControlHandlerService(
      * - "Set the light color to blue"
      * - "Change the color of the light to red"
      */
-    private fun setModeControllerValue(message: SetModeControllerValueIncomingMessage): Boolean {
-        return when (message.payload.endpointId.toDeviceName()) {
+    private fun setModeControllerValue(
+        messageId: String,
+        message: SetModeControllerValueIncomingMessagePayload
+    ): Boolean {
+        return when (message.endpointId.toDeviceName()) {
             LIGHT_ID -> {
-                val modeValue = message.payload.value
-                val instanceId = message.payload.instanceId
+                val modeValue = message.value
+                val instanceId = message.instanceId
                 tracer.d("Setting mode value $modeValue for light instance $instanceId.")
-                sendSetControllerValueReply(message.header.id, true)
+                sendSetControllerValueReply(messageId, true)
                 true
             }
             // We are only interested in handling `SetModeControllerValue` messages for the "light"
@@ -413,13 +344,14 @@ internal class CustomCarControlHandlerService(
      * - "Turn on the light sensor"
      */
     private fun setToggleControllerValue(
-        message: SetToggleControllerValueIncomingMessage
-    ): Boolean = when (message.payload.endpointId.toDeviceName()) {
+        messageId: String,
+        message: SetToggleControllerValueIncomingMessagePayload
+    ): Boolean = when (message.endpointId.toDeviceName()) {
         LIGHT_ID -> {
-            val turnOn = message.payload.turnOn
-            val instanceId = message.payload.instanceId
+            val turnOn = message.turnOn
+            val instanceId = message.instanceId
             tracer.d("Setting toggle value $turnOn for light instance $instanceId.")
-            sendSetControllerValueReply(message.header.id, true)
+            sendSetControllerValueReply(messageId, true)
             true
         }
         // We are only interested in handling `setToggleControllerValue` messages for the
@@ -430,18 +362,11 @@ internal class CustomCarControlHandlerService(
     }
 
     private fun sendSetControllerValueReply(messageId: String, success: Boolean) {
-        val messageToSend = SetControllerValueOutgoingMessage(
-            createAasbReplyHeader(
-                messageId,
-                Topic.CAR_CONTROL,
-                Action.CarControl.SET_CONTROLLER_VALUE
-            ),
-            SetControllerValueOutgoingMessagePayload(success)
-        )
-        aacsSender.sendMessage(
-            jsonParser.encodeToString(messageToSend),
+        aacsSender.sendReplyMessage(
+            messageId,
             Topic.CAR_CONTROL,
-            Action.CarControl.SET_CONTROLLER_VALUE
+            Action.CarControl.SET_CONTROLLER_VALUE,
+            SetControllerValueOutgoingMessagePayload(success)
         )
     }
 
@@ -451,13 +376,14 @@ internal class CustomCarControlHandlerService(
      * - "Decrease the light brightness by 2"
      */
     private fun adjustRangeControllerValue(
-        message: AdjustRangeControllerValueIncomingMessage
-    ): Boolean = when (message.payload.endpointId.toDeviceName()) {
+        messageId: String,
+        message: AdjustRangeControllerValueIncomingMessagePayload
+    ): Boolean = when (message.endpointId.toDeviceName()) {
         LIGHT_ID -> {
-            val deltaValue = message.payload.delta
-            val instanceId = message.payload.instanceId
+            val deltaValue = message.delta
+            val instanceId = message.instanceId
             tracer.d("Adjusting light instance $instanceId by delta value $deltaValue.")
-            sendAdjustControllerValueReply(message.header.id, true)
+            sendAdjustControllerValueReply(messageId, true)
             true
         }
         // We are only interested in handling `AdjustRangeControllerValue` messages for the
@@ -473,13 +399,14 @@ internal class CustomCarControlHandlerService(
      * Only available if the "ordered" field in the capability configuration is `true`.
      */
     private fun adjustModeControllerValue(
-        message: AdjustModeControllerValueIncomingMessage
-    ): Boolean = when (message.payload.endpointId.toDeviceName()) {
+        messageId: String,
+        message: AdjustModeControllerValueIncomingMessagePayload
+    ): Boolean = when (message.endpointId.toDeviceName()) {
         LIGHT_ID -> {
-            val deltaValue = message.payload.delta
-            val instanceId = message.payload.instanceId
+            val deltaValue = message.delta
+            val instanceId = message.instanceId
             tracer.i("Adjusting light instance $instanceId by delta value $deltaValue.")
-            sendAdjustControllerValueReply(message.header.id, true)
+            sendAdjustControllerValueReply(messageId, true)
             true
         }
         // We are only interested in handling `AdjustModeControllerValue` messages for the
@@ -490,18 +417,11 @@ internal class CustomCarControlHandlerService(
     }
 
     private fun sendAdjustControllerValueReply(messageId: String, success: Boolean) {
-        val messageToSend = AdjustControllerValueOutgoingMessage(
-            createAasbReplyHeader(
-                messageId,
-                Topic.CAR_CONTROL,
-                Action.CarControl.ADJUST_CONTROLLER_VALUE
-            ),
-            AdjustControllerValueOutgoingMessagePayload(success)
-        )
-        aacsSender.sendMessage(
-            jsonParser.encodeToString(messageToSend),
+        aacsSender.sendReplyMessage(
+            messageId,
             Topic.CAR_CONTROL,
-            Action.CarControl.ADJUST_CONTROLLER_VALUE
+            Action.CarControl.ADJUST_CONTROLLER_VALUE,
+            AdjustControllerValueOutgoingMessagePayload(success)
         )
     }
 
@@ -531,13 +451,12 @@ internal class CustomCarControlHandlerService(
     interface CustomCarControlHandlerEvents : TraceEventListener {
 
         @TraceLogLevel(TraceLog.LogLevel.DEBUG)
-        fun aacsMessageReceived(msg: String)
+        fun setControllerValueMessageReceived(payload: SetControllerValueIncomingMessagePayloadBase)
 
         @TraceLogLevel(TraceLog.LogLevel.DEBUG)
-        fun setControllerValueMessageReceived(payload: SetControllerValueIncomingMessageBase)
-
-        @TraceLogLevel(TraceLog.LogLevel.DEBUG)
-        fun adjustControllerValueMessageReceived(payload: AdjustControllerValueIncomingMessageBase)
+        fun adjustControllerValueMessageReceived(
+            payload: AdjustControllerValueIncomingMessagePayloadBase
+        )
     }
 
     private companion object {
@@ -549,7 +468,6 @@ internal class CustomCarControlHandlerService(
         const val JSON_VALUE_CONTROLLER_TOGGLE = "TOGGLE"
         const val JSON_VALUE_CONTROLLER_RANGE = "RANGE"
         const val JSON_KEY_CAPABILITY_TYPE = "capabilityType"
-        const val JSON_KEY_PAYLOAD = "payload"
 
         const val LIGHT_ID = "light"
         const val CUSTOM_DEVICE_ID = "custom_device"

@@ -17,5 +17,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 internal class HierarchyLeafFragment :
     IviFragment<HierarchyLeafPanel, HierarchyLeafViewModel>(HierarchyLeafViewModel::class) {
 
-    override val viewFactory = ViewFactory(TtiviHierarchyLeaffragmentBinding::inflate)
+    override val viewFactory = ViewFactory(TtiviHierarchyLeaffragmentBinding::inflate) {
+        it.ttNavigationbar.lifecycleOwner = viewLifecycleOwner
+    }
 }

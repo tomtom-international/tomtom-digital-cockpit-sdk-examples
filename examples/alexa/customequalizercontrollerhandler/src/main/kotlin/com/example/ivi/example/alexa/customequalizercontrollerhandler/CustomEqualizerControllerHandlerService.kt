@@ -13,11 +13,9 @@ package com.example.ivi.example.alexa.customequalizercontrollerhandler
 
 import com.amazon.aacsconstants.Action
 import com.amazon.aacsconstants.Topic
+import com.tomtom.ivi.platform.alexa.api.common.util.AacsMessage
 import com.tomtom.ivi.platform.alexa.api.common.util.AacsSenderWrapper
-import com.tomtom.ivi.platform.alexa.api.common.util.AasbMessageNoPayload
-import com.tomtom.ivi.platform.alexa.api.common.util.Header
-import com.tomtom.ivi.platform.alexa.api.common.util.createAasbReplyHeader
-import com.tomtom.ivi.platform.alexa.api.common.util.parseAasbMessage
+import com.tomtom.ivi.platform.alexa.api.common.util.parseJsonMessage
 import com.tomtom.ivi.platform.alexa.api.service.alexahandler.AlexaHandlerService
 import com.tomtom.ivi.platform.alexa.api.service.alexahandler.AlexaHandlerServiceBase
 import com.tomtom.ivi.platform.framework.api.common.iviinstance.createTracer
@@ -27,8 +25,6 @@ import com.tomtom.kotlin.traceevents.TraceEventListener
 import com.tomtom.kotlin.traceevents.TraceLog
 import com.tomtom.kotlin.traceevents.TraceLogLevel
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 internal class CustomEqualizerControllerHandlerService(
     iviServiceHostContext: IviServiceHostContext,
@@ -37,13 +33,6 @@ internal class CustomEqualizerControllerHandlerService(
 
     private val tracer =
         iviServiceHostContext.createTracer<CustomEqualizerControllerHandlerEvents> { this }
-
-    // Instantiate a JSON object which will be used to parse and encode the AASB JSON messages.
-    private val jsonParser = Json {
-        ignoreUnknownKeys = true
-        isLenient = true
-        encodeDefaults = true
-    }
 
     private val aacsSender = AacsSenderWrapper(iviServiceHostContext)
 
@@ -66,20 +55,8 @@ internal class CustomEqualizerControllerHandlerService(
     }
 
     @Serializable
-    data class SetBandLevelsIncomingMessage(
-        val header: Header,
-        val payload: SetBandLevelsIncomingMessagePayload
-    )
-
-    @Serializable
     data class SetBandLevelsIncomingMessagePayload(
         val bandLevels: List<EqualizerBandLevel>
-    )
-
-    @Serializable
-    data class GetBandLevelsOutgoingMessage(
-        val header: Header,
-        val payload: GetBandLevelsOutgoingMessagePayload
     )
 
     @Serializable
@@ -108,13 +85,10 @@ internal class CustomEqualizerControllerHandlerService(
         serviceReady = true
     }
 
-    override suspend fun onMessageReceived(
-        action: String,
-        messageContents: String
-    ): Boolean =
-        when (action) {
-            Action.EqualizerController.GET_BAND_LEVELS -> handleGetBandLevels(messageContents)
-            Action.EqualizerController.SET_BAND_LEVELS -> handleSetBandLevels(messageContents)
+    override suspend fun onMessageReceived(message: AacsMessage): Boolean =
+        when (message.action) {
+            Action.EqualizerController.GET_BAND_LEVELS -> handleGetBandLevels(message.id)
+            Action.EqualizerController.SET_BAND_LEVELS -> handleSetBandLevels(message.payload)
             // We are only interested in handling `GET_BAND_LEVELS` and `SET_BAND_LEVELS` incoming
             // messages. We return `false` for any other action, so that the message can be
             // forwarded to other EqualizerController message handlers.
@@ -122,36 +96,24 @@ internal class CustomEqualizerControllerHandlerService(
         }
 
     private fun handleSetBandLevels(message: String): Boolean {
-        parseAasbMessage<SetBandLevelsIncomingMessage>(
-            jsonParser,
-            message
-        )?.let { setMessage ->
+        parseJsonMessage<SetBandLevelsIncomingMessagePayload>(message)?.let { setMessage ->
             tracer.setBandLevelsMessageReceived(setMessage)
-            bandLevels = setMessage.payload.bandLevels
+            bandLevels = setMessage.bandLevels
             return true
         }
         return false
     }
 
-    private fun handleGetBandLevels(message: String): Boolean {
-        parseAasbMessage<AasbMessageNoPayload>(jsonParser, message)?.let {
-            val messageToSend = GetBandLevelsOutgoingMessage(
-                createAasbReplyHeader(
-                    it.header.id,
-                    Topic.EQUALIZER_CONTROLLER,
-                    Action.EqualizerController.GET_BAND_LEVELS
-                ),
-                GetBandLevelsOutgoingMessagePayload(bandLevels)
-            )
-            aacsSender.sendMessage(
-                jsonParser.encodeToString(messageToSend),
-                Topic.EQUALIZER_CONTROLLER,
-                Action.EqualizerController.GET_BAND_LEVELS
-            )
-            tracer.sendingGetBandLevelsOutgoingMessage(messageToSend)
-            return true
-        }
-        return false
+    private fun handleGetBandLevels(messageId: String): Boolean {
+        val messageToSend = GetBandLevelsOutgoingMessagePayload(bandLevels)
+        aacsSender.sendReplyMessage(
+            messageId,
+            Topic.EQUALIZER_CONTROLLER,
+            Action.EqualizerController.GET_BAND_LEVELS,
+            messageToSend
+        )
+        tracer.sendingGetBandLevelsOutgoingMessage(messageToSend)
+        return true
     }
 
     /**
@@ -168,12 +130,9 @@ internal class CustomEqualizerControllerHandlerService(
 
     interface CustomEqualizerControllerHandlerEvents : TraceEventListener {
         @TraceLogLevel(TraceLog.LogLevel.DEBUG)
-        fun aacsMessageReceived(msg: String)
+        fun setBandLevelsMessageReceived(message: SetBandLevelsIncomingMessagePayload)
 
         @TraceLogLevel(TraceLog.LogLevel.DEBUG)
-        fun setBandLevelsMessageReceived(message: SetBandLevelsIncomingMessage)
-
-        @TraceLogLevel(TraceLog.LogLevel.DEBUG)
-        fun sendingGetBandLevelsOutgoingMessage(message: GetBandLevelsOutgoingMessage)
+        fun sendingGetBandLevelsOutgoingMessage(message: GetBandLevelsOutgoingMessagePayload)
     }
 }

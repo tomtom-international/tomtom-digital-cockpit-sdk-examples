@@ -38,7 +38,7 @@ import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHostExte
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.bindSystemUiView
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.StockAdaptiveSystemUiHelper
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.StockSystemUiHost
-import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.BackPressConsumersSystemUiHostExtension
+import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.BackPressCallbacksSystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.ControlCenterPanelSystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugPanelSystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugSystemUiLayoutTagSystemUiHostExtension
@@ -114,7 +114,7 @@ internal class CustomSystemUiHost(
                 systemUiHostExtensionContext,
                 panelRegistryExtension.panelRegistry.controlCenterPanels
             ),
-            BackPressConsumersSystemUiHostExtension(systemUiHostExtensionContext),
+            BackPressCallbacksSystemUiHostExtension(systemUiHostExtensionContext),
             DebugPanelSystemUiHostExtension(systemUiHostExtensionContext),
             DebugSystemUiLayoutTagSystemUiHostExtension(systemUiHostExtensionContext),
         )

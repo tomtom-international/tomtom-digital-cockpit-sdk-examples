@@ -78,6 +78,6 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
 
     private fun bindSystemUiView(binding: TtiviCustomanimationCustomsystemuiBinding) {
         panelRegistryExtension.bindSystemUiView(binding)
-        registerOnBackPressedConsumer(binding.exampleSystemuiTaskPanelStackContainer)
+        setIviOnBackPressedCallbacks(listOf(binding.exampleSystemuiTaskPanelStackContainer))
     }
 }
