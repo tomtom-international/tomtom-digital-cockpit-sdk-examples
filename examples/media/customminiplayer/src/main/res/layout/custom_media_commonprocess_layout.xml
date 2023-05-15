@@ -16,20 +16,46 @@
 
     <data>
 
+        <import type="android.graphics.drawable.Drawable" />
+
+        <import type="com.example.ivi.example.media.customminiplayer.R" />
+
+        <import type="com.tomtom.tools.android.api.resourceresolution.ContextExtensionsKt" />
+
         <variable
             name="viewModel"
             type="com.example.ivi.example.media.customminiplayer.CustomMediaCommonProcessViewModel" />
+
+        <variable
+            name="backgroundArt"
+            type="androidx.lifecycle.LiveData&lt;Drawable&gt;" />
+
+        <variable
+            name="dominantColor"
+            type="androidx.lifecycle.LiveData&lt;Integer&gt;" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="?attr/tt_spacing_5">
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/custom_media_miniplayer_blurredbackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="?attr/ttivi_media_nowplayingview_background_alpha"
+            android:src="@{backgroundArt}"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintDimensionRatio="1:1"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:ttCrossFadingDurationMs="@{ContextExtensionsKt.getIntegerByAttr(context, R.attr.tt_animation_duration_medium_ms)}" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/custom_media_miniplayer_art"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginEnd="?attr/tt_spacing_5"
             android:onClick="@{() -> viewModel.openExpandedProcessPanel()}"
             android:paddingStart="?attr/tt_spacing_6"
             android:paddingEnd="0dp"
@@ -68,6 +94,7 @@
             android:id="@+id/custom_media_miniplayer_controls_primary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/tt_spacing_5"
             auto:layout_constraintStart_toStartOf="parent"
             auto:layout_constraintTop_toTopOf="parent"
             auto:ttContents="@{viewModel.primaryButtons}" />
@@ -97,8 +124,10 @@
             style="?attr/tt_smoothprogressbar_style"
             android:layout_width="0dp"
             android:layout_height="?attr/ttivi_processpanel_progressbar_height"
-            android:layout_marginTop="?attr/tt_spacing_5"
+            android:layout_marginVertical="?attr/tt_spacing_5"
+            android:layout_marginStart="?attr/tt_spacing_5"
             android:max="100000"
+            android:progressTint="@{(int) dominantColor}"
             auto:layout_constraintBottom_toBottomOf="parent"
             auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_art"
             auto:layout_constraintStart_toStartOf="parent"

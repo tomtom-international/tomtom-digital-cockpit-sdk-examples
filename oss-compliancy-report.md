@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5493-2869
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5528-2892
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -97,20 +97,19 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [AndroidX Security](https://developer.android.com/jetpack/androidx/releases/security#1.0.0-alpha01) | 1.0.0-alpha02, 1.1.0-alpha02 | Apache License 2.0 |
-| [AndroidX Test Library](https://developer.android.com/testing) | 1.1.3, 1.4.0, 2.2.0, 3.4.0 | Apache License 2.0 |
 | [AndroidX Test Library - annotation](https://developer.android.com/testing) | 1.0.1 | Apache License 2.0 |
 | [AndroidX Test Library - core](https://developer.android.com/testing) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-contrib](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
-| [AndroidX Test Library - espresso-core](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
+| [AndroidX Test Library - espresso-core](https://developer.android.com/testing) | 3.4.0, 3.5.1 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.4.0, 3.5.1 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-intents](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
-| [AndroidX Test Library - junit](https://developer.android.com/testing) | 1.1.5 | Apache License 2.0 |
-| [AndroidX Test Library - junit-ktx](https://developer.android.com/testing) | 1.1.5 | Apache License 2.0 |
+| [AndroidX Test Library - junit](https://developer.android.com/testing) | 1.1.3, 1.1.5 | Apache License 2.0 |
+| [AndroidX Test Library - junit-ktx](https://developer.android.com/testing) | 1.1.3, 1.1.5 | Apache License 2.0 |
 | [AndroidX Test Library - monitor](https://developer.android.com/testing) | 1.4.0, 1.6.0, 1.6.1 | Apache License 2.0 |
-| [AndroidX Test Library - rules](https://developer.android.com/testing) | 1.5.0 | Apache License 2.0 |
+| [AndroidX Test Library - rules](https://developer.android.com/testing) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [AndroidX Test Library - runner](https://developer.android.com/testing) | 1.4.0, 1.5.2 | Apache License 2.0 |
-| [AndroidX Test Library - storage](https://developer.android.com/testing) | 1.4.2 | Apache License 2.0 |
-| [AndroidX Test Library - uiautomator](https://developer.android.com/testing) | 2.3.0-alpha02 | Apache License 2.0 |
+| [AndroidX Test Library - storage](https://developer.android.com/testing) | 1.4.0, 1.4.2 | Apache License 2.0 |
+| [AndroidX Test Library - uiautomator](https://developer.android.com/testing) | 2.2.0, 2.3.0-alpha02 | Apache License 2.0 |
 | [AndroidX Widget ViewPager2](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.17 | MIT License |
@@ -178,6 +177,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.5.5 | Apache License 2.0 |
 | [Fragment Test Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.5.5 | Apache License 2.0 |
 | [framework](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
+| [funsee-logger](https://github.com/TheSecondLab/FunSeeLogger#readme) | 1.0.8 | ISC License |
 | [Glide](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |

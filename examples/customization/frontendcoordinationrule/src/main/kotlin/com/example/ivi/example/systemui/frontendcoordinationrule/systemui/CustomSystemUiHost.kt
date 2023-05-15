@@ -93,6 +93,6 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         binding.viewModel = viewModel
         binding.panelRegistry = viewModel.panelRegistry
 
-        registerOnBackPressedConsumer(binding.exampleCustomizationTaskPanelStackContainer)
+        setIviOnBackPressedCallbacks(listOf(binding.exampleCustomizationTaskPanelStackContainer))
     }
 }
