@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5560-2910
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5575-2917
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -129,7 +129,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.1, 1.7.4 | Apache License 2.0 |
-| [BabelJS](https://babeljs.io/) | v6.0.10 | MIT License |
 | [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
 | [Biometric](http://developer.android.com/tools/extras/support-library.html) | 1.2.0-alpha03 | Apache License 2.0 |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
@@ -338,6 +337,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.4, 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1 | Apache License 2.0 |
+| [TypeScript](http://www.typescriptlang.org/) | 0.8.2 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |
