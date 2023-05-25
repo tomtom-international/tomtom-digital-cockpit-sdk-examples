@@ -30,6 +30,11 @@ dependencies {
     implementation(iviDependencies.tomtomToolsApiLivedata)
     implementation(libraries.iviPlatformFrameworkApiCommonUid)
 
+    testImplementation(iviDependencies.kotlinxCoroutinesTest)
+    testImplementation(iviDependencies.kotlinTest)
+    testImplementation(iviDependencies.testingJunit)
+    testImplementation(iviDependencies.testingMockk)
+    testImplementation(iviDependencies.testingRobolectric)
+    testImplementation(iviDependencies.tomtomToolsTestingMock)
     testImplementation(libraries.iviPlatformFrameworkApiTestingIpc)
-    testImplementation(libraries.iviPlatformToolsApiTestingUnit)
 }

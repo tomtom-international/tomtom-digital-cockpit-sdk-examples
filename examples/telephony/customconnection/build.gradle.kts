@@ -24,5 +24,9 @@ dependencies {
     implementation(libraries.iviPlatformTelecomApiCommonUtils)
     implementation(libraries.iviPlatformTelecomApiServiceTelecom)
 
-    testImplementation(libraries.iviPlatformToolsApiTestingUnit)
+    testImplementation(iviDependencies.kotlinTest)
+    testImplementation(iviDependencies.testingJunit)
+    testImplementation(iviDependencies.testingAndroidxTestCore)
+    testImplementation(iviDependencies.testingMockk)
+    testImplementation(iviDependencies.testingRobolectric)
 }
