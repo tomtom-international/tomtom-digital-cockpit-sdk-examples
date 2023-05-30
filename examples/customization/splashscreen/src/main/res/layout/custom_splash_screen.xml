@@ -13,6 +13,21 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F00"
-    android:orientation="vertical" />
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/splash_screen_background_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_screen_glow" />
+
+    <ImageView
+        android:layout_width="@dimen/splash_screen_width"
+        android:layout_height="@dimen/splash_screen_height"
+        android:layout_gravity="center"
+        android:src="@drawable/splash_screen_logo" />
+</FrameLayout>
