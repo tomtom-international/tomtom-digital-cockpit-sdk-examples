@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5594-2927
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5610-2939
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -129,7 +129,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.1, 1.7.4 | Apache License 2.0 |
-| [BabelJS](https://babeljs.io/) | v6.0.10 | MIT License |
 | [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
 | [Biometric](http://developer.android.com/tools/extras/support-library.html) | 1.2.0-alpha03 | Apache License 2.0 |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
@@ -160,7 +159,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 7.1.0, 7.4.2 | Apache License 2.0 |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1 | Apache License 2.0 |
 | [Doxygen](http://www.doxygen.nl/) | 1.8.13 | GNU General Public License v2.0 or later |
-| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.15.0, 2.18.0, 2.3.4, 2.9.0 | Apache License 2.0 |
+| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.15.0, 2.18.0, 2.9.0 | Apache License 2.0 |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
 | [exoplayer-common](https://plugins.gradle.org/m2/com/google/android/exoplayer/exoplayer-common/) | 2.13.3, 2.15.1 | Apache License 2.0 |
@@ -274,7 +273,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
-| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1, 4.10.0, 4.11.0, 4.3.1 | Apache License 2.0 |
+| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1, 4.10.0, 4.11.0, 4.3.1, 4.9.3 | Apache License 2.0 |
+| [OkHttp Logging Interceptor](https://github.com/square/okhttp/logging-interceptor) | 4.9.3 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.0.0, 3.2.0 | Apache License 2.0 |
 | [opentrack](https://github.com/opentrack/opentrack) | opentrack-2.3-rc99p11 | ISC License |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
@@ -291,9 +291,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [phonecontrol](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.22.3 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.12 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.22.3 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
@@ -305,6 +305,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [reflector](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [resources](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [restinio](https://github.com/Stiffstream/restinio) | 0.6.6 | (zlib License AND MIT License AND BSD 3-clause "New" or "Revised" License AND Boost Software License 1.0) |
+| [Retrofit 2 Kotlin Serialization Converter](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter/) | 0.8.0 | Apache License 2.0 |
 | [robolectric](http://pivotal.github.com/robolectric) | 4.10, 4.8.2 | MIT License |
 | [Robolectric Junit](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [Robolectric nativeruntime distribution compat](https://robolectric.org) | 1.0.0 | Apache License 2.0 |
@@ -330,6 +331,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [SQLDelight Multiplatform Runtime (Experimental)](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
 | [SQLDelight Runtime](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
+| [square-retrofit](http://square.github.io/retrofit/) | 2.6.4 | Apache License 2.0 |
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [text-to-speech-provider](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
@@ -338,6 +340,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.4, 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1 | Apache License 2.0 |
+| [TypeScript](http://www.typescriptlang.org/) | 0.8.2 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |
