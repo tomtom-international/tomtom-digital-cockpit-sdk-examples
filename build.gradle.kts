@@ -15,7 +15,6 @@ import com.tomtom.ivi.buildsrc.extensions.getGradleProperty
 import com.tomtom.ivi.buildsrc.extensions.kotlinOptions
 import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviDependencySource
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
-import com.tomtom.ivi.platform.gradle.api.tools.emulators.iviEmulators
 import com.tomtom.ivi.platform.gradle.api.tools.version.iviAndroidVersionCode
 import com.tomtom.ivi.platform.gradle.api.tools.version.iviVersion
 import java.time.LocalDateTime
@@ -29,52 +28,22 @@ plugins {
     id("com.android.test") apply false
     id("com.google.devtools.ksp") apply false
     id("com.tomtom.ivi.platform.framework.config") apply true
-    id("com.tomtom.ivi.platform.tools.emulators") apply true
     id("com.tomtom.ivi.platform.tools.version") apply true
-    id("com.tomtom.navapp.emulators-plugin") apply false
     id("com.tomtom.tools.android.extractstringsources") apply false
 }
-
-val isRunningOnCi: Boolean by extra(
-    (System.getenv("TF_BUILD") ?: System.getenv("BUILD_BUILDNUMBER"))
-        .orEmpty()
-        .isNotEmpty()
-)
 
 val jvmVersion = JavaVersion.toVersion(iviDependencies.versions.jvm.get())
 
 // Make a single directory where to store all test results.
 val testOutputDirectory: File by extra {
     val testRootDir: File by extra(File(rootProject.projectDir, "IviTest"))
-    if (isRunningOnCi) {
-        testRootDir
-    } else {
-        val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss")
-        testRootDir.resolve(LocalDateTime.now().format(formatter))
-    }
+    val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss")
+    testRootDir.resolve(LocalDateTime.now().format(formatter))
 }
 
 ivi {
     dependencySource =
         IviDependencySource.ArtifactRepository(libraries.versions.iviPlatform.get())
-}
-
-iviEmulators {
-    findProperty("emulatorsDirectory")?.toString()?.let {
-        emulatorsDirectory = File(it)
-    }
-    findProperty("multiDisplay")?.toString()?.toBoolean()?.let {
-        enableMultiDisplay = it
-    }
-    findProperty("numberOfEmulators")?.toString()?.toInt()?.let {
-        numberOfInstances = it
-    }
-    findProperty("emulatorImage")?.let {
-        emulatorImage = it.toString()
-    }
-    minApiLevel = iviDependencies.versions.minSdk.get().toInt()
-    outputDirectory = testOutputDirectory
-    targetApiLevel = iviDependencies.versions.compileSdk.get().toInt()
 }
 
 // Set up global test options
@@ -89,29 +58,14 @@ tasks.withType<Test> {
     }
 }
 
-tasks.register<DefaultTask>("showAllDependencies") { }
-
-allprojects {
-    val project = this
-    rootProject.tasks.named("showAllDependencies") {
-        if (project.name == rootProject.name) {
-            dependsOn("dependencies")
-        } else {
-            dependsOn(":${project.name}:dependencies")
-        }
-    }
-}
-
 subprojects {
     val isApplicationProject by extra(getGradleProperty("isApplicationProject", false))
-    val isAndroidTestProject by extra(getGradleProperty("isAndroidTestProject", false))
 
     val iviDependencies = rootProject.iviDependencies
     val versions = rootProject.iviDependencies.versions
 
     when {
         isApplicationProject -> apply(plugin = "com.android.application")
-        isAndroidTestProject -> apply(plugin = "com.android.test")
         else -> apply(plugin = "com.android.library")
     }
 

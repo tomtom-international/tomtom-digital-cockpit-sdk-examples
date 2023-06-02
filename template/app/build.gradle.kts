@@ -15,10 +15,34 @@ import com.tomtom.ivi.appsuite.gradle.systemstatus.api.appsuitedefaults.systemst
 import com.tomtom.ivi.appsuite.gradle.userprofiles.api.appsuitedefaults.userprofiles.userProfilesGroup
 import com.tomtom.ivi.appsuite.gradle.vehiclesettings.api.appsuitedefaults.vehiclesettings.vehicleSettingsGroup
 import com.tomtom.ivi.buildsrc.environment.ProjectAbis
+import com.tomtom.ivi.platform.gradle.api.common.annotations.EXPERIMENTAL_API_USAGE
+import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviPlatformModuleReference
+import com.tomtom.ivi.platform.gradle.api.common.dependencies.ModuleReference
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviAppsuite
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviInstanceIdentifier
+import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
+import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceInterfaceConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.configurators.IviDefaultsGroupsSelectionConfigurator
+import com.tomtom.ivi.platform.gradle.api.defaults.config.privacySettingsServiceHost
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
+
+public val configurePrivacySettingsServiceHost: IviServiceHostConfig =
+    IviServiceHostConfig(
+        serviceHostBuilderName = "ConfigureConsentPrivacySettingsServiceHostBuilder",
+        ModuleReference(
+            groupName = "com.example.ivi",
+            moduleName = "template_app",
+            packageName = "com.example.ivi.template.app.privacysettings"
+        ),
+        interfaces = listOf(
+            IviServiceInterfaceConfig(
+                serviceName = "PrivacySettingsService",
+                serviceApiModule = IviPlatformModuleReference(
+                    "platform_navigation_api_service_privacysettings"
+                )
+            )
+        )
+    )
 
 plugins {
     id("com.tomtom.ivi.product.defaults.core")
@@ -38,6 +62,9 @@ ivi {
             applyGroups {
                 selectGroups()
             }
+            @Suppress(EXPERIMENTAL_API_USAGE)
+            removeHost(privacySettingsServiceHost)
+            addHost(configurePrivacySettingsServiceHost)
         }
     }
 }

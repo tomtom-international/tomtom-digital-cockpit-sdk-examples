@@ -17,15 +17,14 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaExpandedPro
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ControlCenterPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.DebugPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ExpandedProcessPanel
-import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.GuidancePanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.HomePanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainMenuPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ModalPanel
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.NavigationPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.NotificationPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.OverlayPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.PanelTypeSet
-import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SearchPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.SettingsPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskPanel
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.TaskProcessPanel
@@ -63,15 +62,14 @@ internal class CustomSystemUiHost(
         ControlCenterPanel::class,
         DebugPanel::class,
         ExpandedProcessPanel::class,
-        GuidancePanel::class,
         SettingsPanel::class,
         HomePanel::class,
         MainMenuPanel::class,
         MainProcessPanel::class,
         ModalPanel::class,
+        NavigationPanel::class,
         NotificationPanel::class,
         OverlayPanel::class,
-        SearchPanel::class,
         TaskPanel::class,
         TaskProcessPanel::class,
     )
