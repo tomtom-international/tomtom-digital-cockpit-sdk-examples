@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5621-2945
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5630-2947
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -242,13 +242,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [LeakCanary Android Utils](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [LeakCanary extension for Android instrumentation tests.](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [LeakCanary Object Watcher](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android - Core](https://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.5.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.5.1 | Apache License 2.0 |
@@ -270,7 +263,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [MockK Java Agent API](http://mockk.io) | 1.13.3 | Apache License 2.0 |
 | [MockK Java DSL](http://mockk.io) | 1.13.3 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
-| [nativemessagelist](https://www.npmjs.org/package/nativemessagelist) | 1.0.0 | Unknown License |
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
@@ -299,12 +291,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
-| [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final, 3.0.0.Alpha5 | Apache License 2.0 |
-| [QuestDB Core](https://www.questdb.io/) | 6.1-jdk8 | Apache License 2.0 |
+| [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final, 3.0.0.Alpha5, 3.0.3.Final | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
-| [react-native-rokt-widget](https://www.npmjs.org/package/react-native-rokt-widget) | 1.0.3 | Unknown License |
 | [reactive-streams](http://www.reactive-streams.org/) | 1.0.3 | Creative Commons Zero v1.0 Universal |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
+| [Redcar](http://redcareditor.com) | 0.3.2dev | GNU General Public License v2.0 or later |
 | [reflector](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [resources](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [restinio](https://github.com/Stiffstream/restinio) | 0.6.6 | (zlib License AND MIT License AND BSD 3-clause "New" or "Revised" License AND Boost Software License 1.0) |
@@ -322,11 +313,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.17.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.17.0 | MIT License |
 | [shadowapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [Shark](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [Shark for Android heaps](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [Shark Graph](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [Shark Hprof](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
-| [Shark Log](http://github.com/square/leakcanary/) | 2.10 | Apache License 2.0 |
 | [SILGraphite: rendering non-roman scripts](http://sourceforge.net/projects/silgraphite) | 1.3.12 | GNU Lesser General Public License v2.1 or later |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36, 2.0.3 | MIT License |
 | [SQLDelight Android Driver](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
@@ -343,6 +329,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.4, 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1 | Apache License 2.0 |
+| [ulogin-Bitrix](http://ulogin.ru) | 20161128-snapshot-f5e04637 | GNU General Public License v2.0 or later |
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |
