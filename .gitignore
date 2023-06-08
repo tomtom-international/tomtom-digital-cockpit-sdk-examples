@@ -20,7 +20,6 @@ local.properties
 .idea/shelf/
 .idea/.name
 .idea/compiler.xml
-.idea/encodings.xml
 .idea/kotlinScripting.xml
 .idea/kotlinCodeInsightSettings.xml
 .idea/markdown-navigator.xml
