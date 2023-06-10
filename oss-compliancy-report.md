@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5672-2969
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5688-2974
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -148,6 +148,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [coil-base](https://github.com/coil-kt/coil) | 1.2.1 | Apache License 2.0 |
 | [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 3.8.0, 4.1.0 | Apache License 2.0 |
+| [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [connectivity](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2.1 | Apache License 2.0 |
 | [core](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [Curtains](https://github.com/square/curtains/) | 1.2.4 | Apache License 2.0 |
@@ -181,7 +182,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
-| [google-gson](https://github.com/google/gson) | 2.10, 2.10.1 | Apache License 2.0 |
+| [google-gson](https://github.com/google/gson) | 2.10, 2.10.1, 2.9.0 | Apache License 2.0 |
 | [google-guava](https://github.com/google/guava) | 31.1-android, 31.1-jre, v27.0.1, v27.1, v28.2 | Apache License 2.0 |
 | [google/gnd-android](https://github.com/google/ground-android) | 20180718-snapshot-a254a296, 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
@@ -193,7 +194,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ICU4J](http://icu-project.org) | 70.1, 72.1 | ICU License |
-| [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.1.5 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.1, 1.3 | Apache License 2.0 |
 | [JavaWriter](http://github.com/square/javawriter/) | 2.1.1 | Apache License 2.0 |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
