@@ -96,7 +96,7 @@ for the app to run on something other than the reference hardware.
 
 The keys needed to sign the application with the same keys as the TomTom Digital Cockpit reference hardware
 build (see
-[Flashing the reference hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/flashing-the-reference-hardware))
+[Flashing the reference hardware](https://developer.tomtom.com/tomtom-digital-cockpit/integration/flashing-the-reference-hardware))
 for more details on the reference hardware).
 
 #### `resources/permissions/`
@@ -104,7 +104,7 @@ for more details on the reference hardware).
 Platform permissions are needed on hardware for some of the functionality (related to media) to
 work. This file will work with the template app. If another example app is used, please update the
 package name at the top of the file. See
-[Installing TomTom Digital Cockpit on Hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/installing-tomtom-digital-cockpit-on-hardware)
+[Installing TomTom Digital Cockpit on Hardware](https://developer.tomtom.com/tomtom-digital-cockpit/integration/installing-tomtom-digital-cockpit-on-hardware)
 for more information about the permissions.
 
 ## Copyright
