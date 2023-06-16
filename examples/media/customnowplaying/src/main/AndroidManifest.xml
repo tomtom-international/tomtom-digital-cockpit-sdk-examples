@@ -28,6 +28,9 @@
 
         <activity
             android:name=".CustomActivity">
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
         </activity>
 
         <!--

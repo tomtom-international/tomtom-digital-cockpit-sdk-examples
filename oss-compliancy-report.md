@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5715-2999
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5727-3005
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -199,7 +199,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0 | Apache License 2.0 |
 | [Jetpack Camera Library Camera2 Implementation/Extensions](https://developer.android.com/jetpack/androidx) | 1.0.0-alpha06 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
-| [jqno/equalsverifier](http://www.jqno.nl/equalsverifier) | 3.7.1 | Apache License 2.0 |
+| [jqno/equalsverifier](http://www.jqno.nl/equalsverifier) | 3.14.2, 3.7.1 | Apache License 2.0 |
 | [jQuery](http://jquery.com/) | 1.7.1 | MIT License |
 | [JSON-java](https://github.com/stleary/JSON-java) | 20200518 | JSON License |
 | [jsoup](http://jsoup.org) | 1.12.2 | MIT License |
@@ -226,22 +226,35 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.4.0, 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.8.0 | Apache License 2.0 |
+| [ktor-client-android](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-auth](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
 | [ktor-client-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-client-core](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-content-negotiation](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-core](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-client-json](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-json-jvm](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-logging](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-logging-jvm](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-mock](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-client-mock-jvm](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
 | [ktor-client-okhttp](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-events](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-http](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-resources](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-events](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-http](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
 | [ktor-http-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-io](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-io](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
 | [ktor-network](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-network-tls](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-resources](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-serialization-kotlinx](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-serialization-kotlinx-json](https://github.com/ktorio/ktor) | 2.3.1 | Apache License 2.0 |
+| [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.5.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.5.1 | Apache License 2.0 |
@@ -266,8 +279,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
-| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1, 4.10.0, 4.11.0, 4.3.1, 4.9.3 | Apache License 2.0 |
-| [OkHttp Logging Interceptor](https://github.com/square/okhttp/logging-interceptor) | 4.9.3 | Apache License 2.0 |
+| [OkHttp](https://github.com/square/okhttp) | 3.12.13, 4.0.1, 4.10.0, 4.11.0, 4.3.1 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.0.0, 3.2.0 | Apache License 2.0 |
 | [opentrack](https://github.com/opentrack/opentrack) | opentrack-2.3-rc99p11 | ISC License |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
@@ -298,7 +310,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [reflector](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [resources](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [restinio](https://github.com/Stiffstream/restinio) | 0.6.6 | (zlib License AND MIT License AND BSD 3-clause "New" or "Revised" License AND Boost Software License 1.0) |
-| [Retrofit 2 Kotlin Serialization Converter](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter/) | 0.8.0 | Apache License 2.0 |
 | [robolectric](http://pivotal.github.com/robolectric) | 4.10, 4.8.2 | MIT License |
 | [Robolectric Junit](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [Robolectric nativeruntime distribution compat](https://robolectric.org) | 1.0.0 | Apache License 2.0 |
@@ -319,7 +330,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [SQLDelight Multiplatform Runtime (Experimental)](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
 | [SQLDelight Runtime](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
-| [square-retrofit](http://square.github.io/retrofit/) | 2.6.4 | Apache License 2.0 |
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [text-to-speech-provider](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
