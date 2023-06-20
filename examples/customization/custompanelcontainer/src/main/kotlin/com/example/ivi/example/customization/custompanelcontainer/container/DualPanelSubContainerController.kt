@@ -65,7 +65,6 @@ internal class DualPanelSubContainerController(
         DualPanelSubContainerViewModel,
         DualPanelContainerData
         > {
-
         val subContainerHolder = inflateSubContainerAndBindViewModel(
             panelContainer,
             subContainerLayoutId,

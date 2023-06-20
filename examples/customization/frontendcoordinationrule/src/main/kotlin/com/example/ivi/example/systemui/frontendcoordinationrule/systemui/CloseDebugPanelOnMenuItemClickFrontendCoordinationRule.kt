@@ -38,7 +38,6 @@ internal class CloseDebugPanelOnMenuItemClickFrontendCoordinationRule(
         iviServiceProvider: IviInstanceBoundIviServiceProvider,
         frontends: LiveData<out Collection<Frontend>>
     ) {
-
         SystemUiMenuItemsService.createApi(lifecycleOwner, iviServiceProvider)
             .addMenuItemEventListener(
                 lifecycleOwner,

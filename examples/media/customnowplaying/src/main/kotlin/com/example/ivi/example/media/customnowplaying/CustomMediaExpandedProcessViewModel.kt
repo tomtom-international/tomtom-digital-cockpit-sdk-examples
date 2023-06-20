@@ -216,10 +216,17 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
                 }
             ),
             tailText = if (!isActiveItem) DurationStringResolver(this.duration) else null,
-            tailIcon = if (isActiveItem) ResourceDrawableResolver(
-                if (isPlaying) R.drawable.ttivi_media_mediastate_icon_playing else
-                    R.drawable.ttivi_media_mediastate_icon_paused
-            ) else null,
+            tailIcon = if (isActiveItem) {
+                ResourceDrawableResolver(
+                    if (isPlaying) {
+                        R.drawable.ttivi_media_mediastate_icon_playing
+                    } else {
+                        R.drawable.ttivi_media_mediastate_icon_paused
+                    }
+                )
+            } else {
+                null
+            },
             onClick = { onClickItem(this) }
         )
 

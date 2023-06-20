@@ -18,12 +18,12 @@ internal class ConfigureConsentPrivacySettingsService(
     override fun onCreate() {
         super.onCreate()
         /*
-         * Consent related to navigation online services. 
-         * Online navigation features using user private data other than his current location are 
-         * permitted. Using current location requires [PrivacySettingsService.ConsentType.LOCATION] 
+         * Consent related to navigation online services.
+         * Online navigation features using user private data other than his current location are
+         * permitted. Using current location requires [PrivacySettingsService.ConsentType.LOCATION]
          * consent.
-         * 
-         * NOTE: In this template application, the consent is not given by end-user but 
+         *
+         * NOTE: In this template application, the consent is not given by end-user but
          * hard-coded for demonstration of online navigation functionality.
          */
         consentTypes = setOf(

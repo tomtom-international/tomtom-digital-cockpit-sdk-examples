@@ -47,7 +47,10 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
             favorite = true,
             image = BitmapDrawableResolver(
                 Bitmap.createBitmap(
-                    IntArray(50 * 50) { Color.BLACK }, 50, 50, Bitmap.Config.ARGB_8888
+                    IntArray(50 * 50) { Color.BLACK },
+                    50,
+                    50,
+                    Bitmap.Config.ARGB_8888
                 )
             ),
             primarySortKey = "John Smith",
