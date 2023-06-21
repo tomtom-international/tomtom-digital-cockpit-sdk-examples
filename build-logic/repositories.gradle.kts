@@ -9,51 +9,64 @@
  * immediately return or destroy it.
  */
 
-pluginManagement {
-    repositories {
-        // Local artifact cache.
-        mavenLocal()
+val artifactoryRepo: String? by settings
 
-        // TomTom Digital Cockpit's Nexus repository.
+fun RepositoryHandler.tomtomArtifactory() {
+    val repoName = artifactoryRepo ?: "ivi"
+    maven("https://repository.tomtom.com/artifactory/$repoName") {
+        credentials {
+            username = extra["artifactoryEdgeUser"].toString()
+            password = extra["artifactoryEdgeToken"].toString()
+        }
+        content {
+            includeGroupByRegex("com\\.tomtom\\..+")
+        }
+    }
+}
+
+pluginManagement.repositories {
+    // Local artifact cache.
+    mavenLocal()
+    
+    if (extra.has("artifactoryEdgeUser") && extra.has("artifactoryEdgeToken")) {
+        tomtomArtifactory()
+    } else if (extra.has("nexusUsername") && extra.has("nexusPassword")) {
         maven("https://repo.tomtom.com/repository/ivi") {
             credentials {
-                username =
-                    if (extra.has("nexusUsername")) extra["nexusUsername"].toString() else ""
-                password =
-                    if (extra.has("nexusPassword")) extra["nexusPassword"].toString() else ""
+                username = extra["nexusUsername"].toString()
+                password = extra["nexusPassword"].toString()
             }
             content {
                 includeGroupByRegex("com\\.tomtom\\..+")
             }
         }
-
-        // External repositories.
-        mavenCentral()
-        google()
-        maven("https://plugins.gradle.org/m2/")
     }
+    // External repositories.
+    mavenCentral()
+    google()
+    maven("https://plugins.gradle.org/m2/")
 }
 
 dependencyResolutionManagement {
     repositories {
         // Local artifact cache.
         mavenLocal()
-
-        // TomTom Digital Cockpit's Nexus repository.
-        maven("https://repo.tomtom.com/repository/ivi") {
-            credentials {
-                username =
-                    if (extra.has("nexusUsername")) extra["nexusUsername"].toString() else ""
-                password =
-                    if (extra.has("nexusPassword")) extra["nexusPassword"].toString() else ""
-            }
-            content {
-                includeGroup("com.tomtom")
-                includeGroupByRegex("com\\.tomtom\\..+")
-                includeGroup("com.amazon.alexa.aace")
+        
+        if (extra.has("artifactoryEdgeUser") && extra.has("artifactoryEdgeToken")) {
+            tomtomArtifactory()
+        } else if (extra.has("nexusUsername") && extra.has("nexusPassword")) {
+            maven("https://repo.tomtom.com/repository/ivi") {
+                credentials {
+                    username = extra["nexusUsername"].toString()
+                    password = extra["nexusPassword"].toString()
+                }
+                content {
+                    includeGroupByRegex("com\\.tomtom\\..+")
+                    includeGroup("com.tomtom")
+                    includeGroup("com.amazon.alexa.aace")
+                }
             }
         }
-
         // External repositories.
         mavenCentral()
         google()

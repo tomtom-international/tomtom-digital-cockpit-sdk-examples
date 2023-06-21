@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2023 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of you r license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <import type="android.graphics.drawable.Drawable" />
+
+        <import type="com.example.ivi.example.media.customminiplayer.R" />
+
+        <import type="com.tomtom.tools.android.api.resourceresolution.ContextExtensionsKt" />
+
+        <variable
+            name="viewModel"
+            type="com.example.ivi.example.media.customminiplayer.CustomMediaCommonProcessViewModel" />
+
+        <variable
+            name="backgroundArt"
+            type="androidx.lifecycle.LiveData&lt;Drawable&gt;" />
+
+        <variable
+            name="dominantColor"
+            type="androidx.lifecycle.LiveData&lt;Integer&gt;" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/custom_media_miniplayer_blurredbackground"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:alpha="?attr/ttivi_media_nowplayingview_background_alpha"
+            android:src="@{backgroundArt}"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintDimensionRatio="W, 1:1"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toTopOf="parent"
+            auto:ttCrossFadingDurationMs="@{ContextExtensionsKt.getIntegerByAttr(context, R.attr.tt_animation_duration_medium_ms)}" />
+
+        <com.tomtom.tools.android.api.uicontrols.imageview.TtRoundedImageCardView
+            android:id="@+id/custom_media_miniplayer_art"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="?attr/tt_spacing_8"
+            android:onClick="@{() -> viewModel.openExpandedProcessPanel()}"
+            auto:layout_constraintBottom_toTopOf="@id/custom_media_miniplayer_primary_text"
+            auto:layout_constraintDimensionRatio="1:1"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toTopOf="parent"
+            auto:layout_constraintVertical_chainStyle="packed"
+            auto:ttSourceImage="@{viewModel.art}" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/custom_media_miniplayer_primary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="?attr/tt_spacing_8"
+            android:layout_marginTop="?attr/tt_spacing_5"
+            android:maxLines="1"
+            android:text="@{viewModel.primaryText}"
+            android:textAppearance="?attr/tt_title_text_style_m"
+            android:textColor="?attr/tt_surface_content_color_emphasis_high"
+            auto:layout_constrainedWidth="true"
+            auto:layout_constraintBottom_toTopOf="@id/custom_media_miniplayer_secondary_text"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/custom_media_miniplayer_art"
+            auto:layout_constraintVertical_chainStyle="packed" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/custom_media_miniplayer_secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/tt_spacing_8"
+            android:maxLines="1"
+            android:text="@{viewModel.secondaryText}"
+            android:textAppearance="?attr/tt_body_text_style_s"
+            android:textColor="?attr/tt_surface_content_color_emphasis_medium"
+            auto:layout_constraintBottom_toTopOf="@id/custom_media_miniplayer_progress_bar"
+            auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_elapsed_time_divider"
+            auto:layout_constraintHorizontal_chainStyle="packed"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/custom_media_miniplayer_primary_text" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/custom_media_miniplayer_elapsed_time_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/tt_spacing_4"
+            android:maxLines="1"
+            android:text="@string/ttivi_media_subtitle_duration_divider"
+            android:textAppearance="?attr/tt_body_text_style_s"
+            android:textColor="?attr/tt_surface_content_color_emphasis_medium"
+            auto:layout_constrainedWidth="true"
+            auto:layout_constraintBottom_toBottomOf="@id/custom_media_miniplayer_secondary_text"
+            auto:layout_constraintEnd_toStartOf="@id/custom_media_miniplayer_elapsed_time"
+            auto:layout_constraintHorizontal_bias="0"
+            auto:layout_constraintStart_toEndOf="@id/custom_media_miniplayer_secondary_text"
+            auto:layout_constraintTop_toTopOf="@id/custom_media_miniplayer_secondary_text"
+            auto:visibleIfNotNull="@{viewModel.elapsedTime}" />
+
+        <com.tomtom.tools.android.api.uicontrols.textview.TtTextView
+            android:id="@+id/custom_media_miniplayer_elapsed_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/tt_spacing_4"
+            android:layout_marginEnd="?attr/tt_spacing_8"
+            android:maxLines="1"
+            android:text="@{viewModel.elapsedTime}"
+            android:textAppearance="?attr/tt_body_text_style_s"
+            android:textColor="?attr/tt_surface_content_color_emphasis_medium"
+            auto:layout_constrainedWidth="true"
+            auto:layout_constraintBottom_toBottomOf="@id/custom_media_miniplayer_secondary_text"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintHorizontal_bias="0"
+            auto:layout_constraintStart_toEndOf="@id/custom_media_miniplayer_elapsed_time_divider"
+            auto:layout_constraintTop_toTopOf="@id/custom_media_miniplayer_secondary_text" />
+
+        <View
+            android:id="@+id/custom_media_miniplayer_expand_hitarea"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="@{() -> viewModel.openExpandedProcessPanel()}"
+            auto:layout_constraintBottom_toBottomOf="@id/custom_media_miniplayer_secondary_text"
+            auto:layout_constraintEnd_toEndOf="@id/custom_media_miniplayer_art"
+            auto:layout_constraintStart_toStartOf="@id/custom_media_miniplayer_art"
+            auto:layout_constraintTop_toTopOf="@id/custom_media_miniplayer_art" />
+
+        <com.example.ivi.example.media.customminiplayer.MediaControlLayout
+            android:id="@+id/custom_media_miniplayer_custom_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/tt_spacing_8"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/custom_media_miniplayer_standard_controls"
+            auto:ttContents="@{viewModel.customControls}" />
+
+        <com.example.ivi.example.media.customminiplayer.MediaControlLayout
+            android:id="@+id/custom_media_miniplayer_standard_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/tt_spacing_8"
+            auto:layout_constraintBottom_toTopOf="@id/custom_media_miniplayer_custom_controls"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/custom_media_miniplayer_progress_bar"
+            auto:ttContents="@{viewModel.standardControls}" />
+
+        <com.tomtom.tools.android.api.uicontrols.progressbar.TtSmoothProgressBar
+            android:id="@+id/custom_media_miniplayer_progress_bar"
+            style="?attr/tt_smoothprogressbar_style"
+            android:layout_width="0dp"
+            android:layout_height="?attr/ttivi_processpanel_progressbar_height"
+            android:layout_marginVertical="?attr/tt_spacing_5"
+            android:layout_marginStart="?attr/tt_spacing_8"
+            android:max="100000"
+            android:progressTint="@{(int) dominantColor}"
+            auto:layout_constraintBottom_toTopOf="@id/custom_media_miniplayer_standard_controls"
+            auto:layout_constraintEnd_toEndOf="parent"
+            auto:layout_constraintStart_toStartOf="parent"
+            auto:layout_constraintTop_toBottomOf="@id/custom_media_miniplayer_secondary_text"
+            auto:ttProgress="@{viewModel.progressData}"
+            auto:ttSecondaryProgressIndeterminate="@{viewModel.isBuffering}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

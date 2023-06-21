@@ -42,11 +42,12 @@ internal class ExampleDataSource {
     private fun getItem(mediaId: String, indexShift: Int): MediaBrowserCompat.MediaItem? =
         catalog.values.firstNotNullOfOrNull { items ->
             val index = items.indexOfFirst { it.mediaId == mediaId }
-            if (index != -1)
+            if (index != -1) {
                 items.elementAtOrNull(index + indexShift)
                     ?.takeIf { !it.isBrowsable }
-            else
+            } else {
                 null
+            }
         }
 
     private companion object {

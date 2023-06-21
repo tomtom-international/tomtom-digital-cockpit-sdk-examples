@@ -10,7 +10,7 @@ be changed.
 # Setup
 
 Please follow the guide
-[Installing TomTom Digital Cockpit on Hardware](https://developer.tomtom.com/tomtom-digital-cockpit/developers/integrating/installing-tomtom-digital-cockpit-on-hardware)
+[Installing TomTom Digital Cockpit on Hardware](https://developer.tomtom.com/tomtom-digital-cockpit/integration/hardware/installing-tomtom-digital-cockpit-on-hardware)
 before installing this app.
 
 # Setting this example app to be the system dialer

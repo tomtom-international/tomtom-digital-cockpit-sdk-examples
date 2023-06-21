@@ -449,11 +449,16 @@ ij_xml_line_comment_at_first_column=true
 ij_xml_use_custom_settings=true
 
 [*.{kt,kts}]
-# `disabled_rules`: Custom ktlint property. Disables a comma-separated list of rules, as follows:
+# `ktlint_disabled_rules`: Custom ktlint property. Disables a comma-separated list of rules, as follows:
 # - `parameter-list-wrapping`: This rule conflicts with the "indent" rule, causing the ktlint
-#                              `check` and `format` tasks to fail validation of many files,
-#                              regardless of the actual indentation in use.
-disabled_rules=parameter-list-wrapping
+#   `check` and `format` tasks to fail validation of many files, regardless of the actual
+#   indentation in use.
+# - `trailing-comma-on-call-site`: When enabled, all call sites will have trailing commas or none
+#   at all.
+# - `trailing-comma-on-declaration-site`: See rational of `trailing-comma-on-call-site`.
+# - `ktlint-custom-rules:no-android-log`: we allow use of android log in tools-testing-* module.
+#   Logging in tests is encouraged.
+ktlint_disabled_rules=parameter-list-wrapping,trailing-comma-on-call-site,trailing-comma-on-declaration-site,ktlint-custom-rules:no-android-log
 ij_continuation_indent_size=4
 ij_kotlin_align_in_columns_case_branch=false
 ij_kotlin_align_multiline_binary_operation=false

@@ -14,13 +14,23 @@ package com.example.ivi.example.media.customnowplaying
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import com.tomtom.ivi.appsuite.media.api.common.core.IviMediaItem
 import com.tomtom.ivi.appsuite.media.api.common.core.IviPlaybackState
 import com.tomtom.ivi.appsuite.media.api.common.core.actions.standard.PauseAction
 import com.tomtom.ivi.appsuite.media.api.common.core.actions.standard.PlayAction
 import com.tomtom.ivi.appsuite.media.api.common.core.actions.standard.SkipToQueueItemAction
+import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaFrontendContext
 import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.asMediaControlContext
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.REPEAT
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.SEEK_BACKWARD
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.SEEK_FORWARD
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.SHUFFLE
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.SKIP_BACKWARD
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.SKIP_FORWARD
+import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.TOGGLE_PLAY
 import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaExpandedProcessPanelBase
 import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.PolicyProvider
 import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.SourceAttributionFormat
@@ -32,8 +42,10 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendV
 import com.tomtom.tools.android.api.graphics.drawable.RemoteDrawableResolver
 import com.tomtom.tools.android.api.livedata.combine
 import com.tomtom.tools.android.api.livedata.valueUpToDate
+import com.tomtom.tools.android.api.resourceresolution.drawable.ResourceDrawableResolver
 import com.tomtom.tools.android.api.resourceresolution.string.DurationStringResolver
 import com.tomtom.tools.android.api.resourceresolution.string.StaticStringResolver
+import com.tomtom.tools.android.api.uicontrols.button.TtButtonViewModel
 import com.tomtom.tools.android.api.uicontrols.imageview.ImageDescriptor
 import com.tomtom.tools.android.api.uicontrols.imageview.ImageType
 import com.tomtom.tools.android.api.uicontrols.recyclerview.ListItemContentViewModel
@@ -45,6 +57,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
     FrontendViewModel<MediaExpandedProcessPanelBase>(panel) {
 
     private val mediaService = panel.mediaFrontendContext.mediaService
+    private val mediaFrontendContext: MediaFrontendContext = panel.mediaFrontendContext
 
     private val mediaPlaybackParameters = mediaService
         .asMediaPlaybackParameters(panel.mediaFrontendContext.mediaConfiguration)
@@ -69,35 +82,90 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
         playbackViewModel.elapsedTime.map { elapsedTime ->
             elapsedTime?.let { DurationStringResolver(it) }
         }
+    val remainingTime: LiveData<DurationStringResolver?> =
+        playbackViewModel.remainingTime.map { elapsedTime ->
+            elapsedTime?.let { DurationStringResolver(it) }
+        }
     val isBuffering = playbackViewModel.isBuffering
     val art = playbackViewModel.art
     val progressData = playbackViewModel.progress
+    val touchTrackViewModel = playbackViewModel.touchTrackViewModel
 
     private val activePolicyProvider =
         mediaService.activeSource.map { source ->
             panel.mediaFrontendContext.mediaConfiguration
                 .getPolicyProvider(source?.id)
         }
+    private val activeMediaControlPolicy = activePolicyProvider.map {
+        it.mediaControlPolicy
+    }
 
     /**
-     * [MediaButtonsViewModel] provides the buttons for playback controls.
-     * Buttons change depending on what actions are provided by the current media source at the
-     * moment.
+     * The media button configuration depends on the current [activeMediaControlPolicy].
      */
-    private val buttonsViewModel = MediaButtonsViewModel(
-        mediaService.asMediaControlContext(viewModelScope),
-        activePolicyProvider.map {
+    private val mediaButtonsConfiguration: LiveData<MediaButtonsConfiguration> =
+        activeMediaControlPolicy.map {
             MediaButtonsConfiguration(
-                it.mediaControlPolicy.replacedStandardControls,
-                it.mediaControlPolicy.customControls,
-                it.mediaControlPolicy.mediaControlsDisplayLimit.primaryControlsSmallLimit,
-                it.mediaControlPolicy.mediaControlsDisplayLimit.secondaryControlsSmallLimit
+                it.replacedStandardControls,
+                it.customControls,
+                it.mediaControlsDisplayLimit.primaryControlsSmallLimit,
+                it.mediaControlsDisplayLimit.secondaryControlsSmallLimit
             )
         }
-    )
 
-    val primaryButtons = buttonsViewModel.primaryButtons
-    val secondaryButtons = buttonsViewModel.secondaryButtons
+    private val mediaControlContext =
+        mediaFrontendContext.mediaService.asMediaControlContext(viewModelScope)
+
+    /**
+     * The [StandardMediaControls] contained in [mediaButtonsConfiguration].
+     *
+     * [mediaButtonsConfiguration] provides the buttons for playback controls.
+     * Buttons change depending on what actions are provided by the current media source at the
+     * moment.
+     *
+     * __Note__: Here we are not reusing the [MediaButtonsViewModel.primaryButtons] and
+     * [MediaButtonsViewModel.secondaryButtons], because the split of primary and secondary buttons
+     * does not match our custom layout.
+     */
+    val standardControls: LiveData<List<TtButtonViewModel>> =
+        mediaButtonsConfiguration.switchMap { buttonConfiguration ->
+            listOf(
+                buttonConfiguration.getReplacedMediaControlFactoryFor(SHUFFLE),
+                buttonConfiguration.getReplacedMediaControlFactoryFor(SEEK_BACKWARD),
+                buttonConfiguration.getReplacedMediaControlFactoryFor(SKIP_BACKWARD),
+                buttonConfiguration.getReplacedMediaControlFactoryFor(TOGGLE_PLAY),
+                buttonConfiguration.getReplacedMediaControlFactoryFor(SKIP_FORWARD),
+                buttonConfiguration.getReplacedMediaControlFactoryFor(SEEK_FORWARD),
+                buttonConfiguration.getReplacedMediaControlFactoryFor(REPEAT)
+            ).map { mediaControlFactory ->
+                mediaControlFactory.createControlFor(mediaControlContext)
+            }.map { mediaControl ->
+                mediaControl.asIconTtButtonViewModel()
+            } // Combine the list of LiveData<TtButtonViewModel> to a list of TtButtonViewModel
+                .combine { buttons ->
+                    buttons
+                }
+        }
+
+    /**
+     * The custom controls contained in [mediaButtonsConfiguration].
+     *
+     * [mediaButtonsConfiguration] provides the buttons for playback controls.
+     * Buttons change depending on what actions are provided by the current media source at the
+     * moment.
+     *
+     * __Note__: Here we are not reusing the [MediaButtonsViewModel.primaryButtons] and
+     * [MediaButtonsViewModel.secondaryButtons], because the split of primary and secondary buttons
+     * does not match our custom layout.
+     */
+    val customControls: LiveData<List<TtButtonViewModel>> = mediaButtonsConfiguration.switchMap {
+        it.customControls.map { mediaControlFactory ->
+            mediaControlFactory.createControlFor(mediaControlContext)
+        }.map { mediaControl ->
+            mediaControl.asIconTtButtonViewModel()
+        } // Combine the list of LiveData<TtButtonViewModel> to a list of TtButtonViewModel
+            .combine { it }
+    }
 
     /**
      * The now playing queue shown in the panel. This uses a combine to ensure that the list is
@@ -110,9 +178,13 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
         mediaService.activeMediaItem,
         mediaService.playbackState,
         activePolicyProvider
-    ) { activeQueue, _, _, policyProvider ->
+    ) { activeQueue, activeItem, playbackState, policyProvider ->
         activeQueue.map { iviMediaItem ->
+            val isActiveItem = policyProvider.compareItemsPolicy(iviMediaItem, activeItem)
+            val isPlaying = isActiveItem && playbackState == IviPlaybackState.PLAYING
             iviMediaItem.toListItemContentViewModel(
+                isActiveItem = isActiveItem,
+                isPlaying = isPlaying,
                 onClickItem = createOnQueueItemClickCallback(
                     policyProvider = policyProvider,
                 )
@@ -125,7 +197,11 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
     /**
      * Converts an [IviMediaItem] to a [ListItemContentViewModel].
      */
-    private fun IviMediaItem.toListItemContentViewModel(onClickItem: (IviMediaItem) -> Unit) =
+    private fun IviMediaItem.toListItemContentViewModel(
+        isActiveItem: Boolean,
+        isPlaying: Boolean,
+        onClickItem: (IviMediaItem) -> Unit
+    ) =
         ListItemContentViewModel(
             itemId = id,
             headImage = ImageDescriptor(
@@ -139,6 +215,18 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
                     )
                 }
             ),
+            tailText = if (!isActiveItem) DurationStringResolver(this.duration) else null,
+            tailIcon = if (isActiveItem) {
+                ResourceDrawableResolver(
+                    if (isPlaying) {
+                        R.drawable.ttivi_media_mediastate_icon_playing
+                    } else {
+                        R.drawable.ttivi_media_mediastate_icon_paused
+                    }
+                )
+            } else {
+                null
+            },
             onClick = { onClickItem(this) }
         )
 

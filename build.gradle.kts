@@ -15,8 +15,6 @@ import com.tomtom.ivi.buildsrc.extensions.getGradleProperty
 import com.tomtom.ivi.buildsrc.extensions.kotlinOptions
 import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviDependencySource
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
-import com.tomtom.ivi.platform.gradle.api.tools.version.iviAndroidVersionCode
-import com.tomtom.ivi.platform.gradle.api.tools.version.iviVersion
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
@@ -28,7 +26,6 @@ plugins {
     id("com.android.test") apply false
     id("com.google.devtools.ksp") apply false
     id("com.tomtom.ivi.platform.framework.config") apply true
-    id("com.tomtom.ivi.platform.tools.version") apply true
     id("com.tomtom.tools.android.extractstringsources") apply false
 }
 
@@ -95,6 +92,7 @@ subprojects {
                 when (requested.group) {
                     "org.jetbrains.kotlin" ->
                         useVersion(versions.kotlin.get())
+
                     "org.jetbrains.kotlinx" -> {
                         when (requested.name) {
                             "kotlinx-coroutines-core",
@@ -102,6 +100,7 @@ subprojects {
                             "kotlinx-coroutines-android",
                             "kotlinx-coroutines-test" ->
                                 useVersion(versions.kotlinxCoroutines.get())
+
                             "kotlinx-serialization-json" ->
                                 useVersion(versions.kotlinxSerialization.get())
                         }
@@ -123,8 +122,12 @@ subprojects {
             minSdk = versions.minSdk.get().toInt()
             targetSdk = versions.targetSdk.get().toInt()
             if (isApplicationProject) {
-                versionCode = iviAndroidVersionCode
-                versionName = iviVersion
+                // Use hardcoded product versions, or pass them from CI, or adopt a solution for
+                // dynamic version codes. See the recommendations from Android Gradle Plugin docs:
+                //  - https://developer.android.com/studio/publish/versioning
+                //  - https://developer.android.com/build/gradle-tips#configure-dynamic-version-codes
+                versionCode = 1
+                versionName = "1.0"
             }
             // AutomotiveUI has enabled flavorized publication of their modules, because of
             // this, it is now needed on the integrator side to specify which flavor to use.

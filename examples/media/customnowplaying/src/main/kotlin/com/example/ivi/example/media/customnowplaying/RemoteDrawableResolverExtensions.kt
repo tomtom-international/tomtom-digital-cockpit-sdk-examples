@@ -37,7 +37,6 @@ internal fun LiveData<RemoteDrawableResolver>.toBlurredDrawable(context: Context
     return switchMap { it.get(image).liveData }
         .switchMap {
             liveData {
-
                 // Calculates the blur radius and takes into account that the blur radius will be
                 // applied after the image is scaled with the sampling multiplier. We need to apply
                 // the radius fraction to the image scaled width. See blur API for more details.

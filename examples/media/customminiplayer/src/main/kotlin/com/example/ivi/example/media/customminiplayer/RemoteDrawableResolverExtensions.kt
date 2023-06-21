@@ -28,7 +28,6 @@ import com.tomtom.tools.android.api.resourceresolution.getFloatByAttr
  */
 internal fun LiveData<RemoteDrawableResolver>.toBlurredDrawable(context: Context, image: ImageView):
     LiveData<Drawable> {
-
     val blurRadiusFraction =
         context.getFloatByAttr(
             R.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction
