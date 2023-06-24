@@ -34,5 +34,4 @@ dependencies {
     implementation(libraries.gradlePluginApiFrameworksFrontend)
     implementation(libraries.gradlePluginApiToolsSigningConfig)
     implementation(libraries.gradlePluginApiToolsEmulators)
-    implementation(libraries.gradlePluginApiToolsVersionIvi)
 }

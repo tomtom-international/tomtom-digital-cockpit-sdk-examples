@@ -26,5 +26,5 @@
         android:layout_height="match_parent"
         android:background="@android:color/black"
         auto:pendingIntent="@{viewModel.pendingIntent}"
-        auto:ttHideContentOnDismissalStarted="true" />
+        auto:ttHideContentOnExitAnimationStarted="true" />
 </layout>

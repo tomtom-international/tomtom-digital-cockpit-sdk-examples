@@ -29,6 +29,7 @@ import android.telecom.ConnectionService
 import android.telecom.DisconnectCause
 import android.telecom.PhoneAccountHandle
 import android.telecom.TelecomManager
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleService
 import androidx.lifecycle.ServiceLifecycleDispatcher
@@ -170,7 +171,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
         }
     }
 
-    override fun getLifecycle() = dispatcher.lifecycle
+    override val lifecycle: Lifecycle = dispatcher.lifecycle
 
     inner class OutgoingCustomConnection(
         request: ConnectionRequest?
