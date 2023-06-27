@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5774-3039
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5789-3052
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -18,8 +18,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [aacstts](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
 | [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3, 4.1 | Apache License 2.0 |
 | [Accessibility Test Framework](https://code.google.com/p/eyes-free/) | 3.1.2 | Apache License 2.0 |
-| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.6.0, 1.7.2 | Apache License 2.0 |
-| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.6.0, 1.7.2 | Apache License 2.0 |
+| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.2 | Apache License 2.0 |
+| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.2 | Apache License 2.0 |
 | [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [Aibo](http://github.com/datasieve/Aibo) | 3.1.1_meet_with_skitter_and_apple | GNU General Public License v2.0 only |
 | [alexa](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
@@ -112,7 +112,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Widget ViewPager2](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.2.1 | Apache License 2.0 |
-| [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.17 | MIT License |
 | [annotations](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
@@ -142,7 +141,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
 | [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
 | [CBOR for Java](https://github.com/c-rack/cbor-java) | 0.8 | Apache License 2.0 |
-| [Checker Qual](https://checkerframework.org) | 2.5.2, 3.12.0, 3.33.0 | MIT License |
+| [Checker Qual](https://checkerframework.org) | 3.12.0, 3.33.0 | MIT License |
 | [ChickenHook/RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) | 2.2 | Apache License 2.0 |
 | [ClickHouse](https://clickhouse.com/) | v21.7.1.6948-testing | Apache License 2.0 |
 | [coil](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
@@ -163,7 +162,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 7.1.0, 7.4.2 | Apache License 2.0 |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1 | Apache License 2.0 |
 | [Doxygen](http://www.doxygen.nl/) | 1.8.13 | GNU General Public License v2.0 or later |
-| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.15.0, 2.18.0, 2.9.0 | Apache License 2.0 |
+| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.11.0, 2.15.0, 2.18.0 | Apache License 2.0 |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
 | [exoplayer-common](https://plugins.gradle.org/m2/com/google/android/exoplayer/exoplayer-common/) | 2.13.3, 2.15.1 | Apache License 2.0 |
@@ -185,7 +184,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [google-gson](https://github.com/google/gson) | 2.10, 2.10.1, 2.9.0 | Apache License 2.0 |
-| [google-guava](https://github.com/google/guava) | 31.1-android, 32.0.1-android, v27.0.1 | Apache License 2.0 |
+| [google-guava](https://github.com/google/guava) | 31.1-android, 32.0.1-android | Apache License 2.0 |
 | [google/gnd-android](https://github.com/google/ground-android) | 20180718-snapshot-a254a296, 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
@@ -197,7 +196,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ICU4J](http://icu-project.org) | 70.1, 72.1 | ICU License |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
-| [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.1, 1.3, 2.8 | Apache License 2.0 |
+| [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.3, 2.8 | Apache License 2.0 |
 | [JavaWriter](http://github.com/square/javawriter/) | 2.1.1 | Apache License 2.0 |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0 | Apache License 2.0 |
