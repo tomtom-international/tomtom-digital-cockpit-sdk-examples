@@ -20,6 +20,8 @@ fun RepositoryHandler.tomtomArtifactory() {
         }
         content {
             includeGroupByRegex("com\\.tomtom\\..+")
+            includeGroup("com.tomtom")
+            includeGroup("com.amazon.alexa.aace")
         }
     }
 }

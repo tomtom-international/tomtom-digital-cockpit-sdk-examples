@@ -135,14 +135,6 @@ subprojects {
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
-        // TODO(IVI-8723): Force `androidx.core` to TomTom Digital Cockpit platform version:
-        // TODO(IVI-8723): the latest sets compileSdk=33.
-        configurations.all {
-            resolutionStrategy.force("androidx.core:core:1.8.0")
-            resolutionStrategy.force("androidx.core:core-ktx:1.8.0")
-            resolutionStrategy.force("com.google.android.material:material:1.6.1")
-        }
-
         compileOptions {
             sourceCompatibility = jvmVersion
             targetCompatibility = jvmVersion
