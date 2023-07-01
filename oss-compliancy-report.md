@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5789-3052
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5805-3067
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -8,21 +8,20 @@ This offer is valid for a period of three years from the date of distribution of
 
 | Component | Version | License |
 | :-------- | :------ | :------ |
-| [0 A.D.](http://wildfiregames.com/0ad/) | A21 | (GNU Lesser General Public License v2.1 or later AND MIT License AND GNU General Public License v2.0 or later) |
-| [aacs-annotation-api](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
-| [aacs-annotation-processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs-extra](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
+| [aacs_annotation_api](https://github.com/alexa/alexa-auto-sdk) | 4.2 | Apache License 2.0 |
+| [aacs_annotation_processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacscommonutils](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacsconstants](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacsipc](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacstts](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
-| [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3, 4.1 | Apache License 2.0 |
+| [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2 | Apache License 2.0 |
 | [Accessibility Test Framework](https://code.google.com/p/eyes-free/) | 3.1.2 | Apache License 2.0 |
 | [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.2 | Apache License 2.0 |
 | [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.2 | Apache License 2.0 |
-| [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
+| [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3, 4.0, 4.1 | Apache License 2.0 |
 | [Aibo](http://github.com/datasieve/Aibo) | 3.1.1_meet_with_skitter_and_apple | GNU General Public License v2.0 only |
-| [alexa](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
+| [alexa](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3, 4.1, 4.2 | Apache License 2.0 |
 | [alexa/avs-device-sdk](https://developer.amazon.com/avs/sdk) | v0.2, v0.3, v0.5, v0.6, v1.0, v1.0.3, v1.1.0, v1.10, v1.11, v1.15, v1.17.0, v1.18.0, v1.19.0, v1.19.1, v1.20.0, v1.21.0, v1.22.0, v1.23.0, v1.24.0, v1.25.0, v1.3, v1.5, v1.6, v1.7, v1.7.1, v1.8 | Apache License 2.0 |
 | [Android App Startup Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.1 | Apache License 2.0 |
 | [Android AppCompat Library](http://developer.android.com/tools/extras/support-library.html) | 1.6.1 | Apache License 2.0 |
@@ -117,7 +116,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Antox](https://github.com/Antox/Antox) | v0.8.1-alpha | GNU General Public License v3.0 only |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
 | [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
-| [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 1.1 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [apt - Advanced Package Tool](https://wiki.debian.org/Apt) | 1.1~exp8 | GNU General Public License v2.0 or later |
@@ -139,11 +137,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Byte Buddy for Android](http://bytebuddy.net/byte-buddy-android) | 1.14.4 | Apache License 2.0 |
 | [byte-buddy-agent](http://bytebuddy.net/byte-buddy-agent) | 1.12.18 | Apache License 2.0 |
 | [car-control](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
-| [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2 | Apache License 2.0 |
+| [cbl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3 | Apache License 2.0 |
 | [CBOR for Java](https://github.com/c-rack/cbor-java) | 0.8 | Apache License 2.0 |
 | [Checker Qual](https://checkerframework.org) | 3.12.0, 3.33.0 | MIT License |
 | [ChickenHook/RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) | 2.2 | Apache License 2.0 |
-| [ClickHouse](https://clickhouse.com/) | v21.7.1.6948-testing | Apache License 2.0 |
 | [coil](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [coil-base](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [coil-test](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
@@ -151,7 +148,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 3.8.0, 4.1.0 | Apache License 2.0 |
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [connectivity](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2.1 | Apache License 2.0 |
-| [core](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3 | Apache License 2.0 |
+| [core](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3, 4.0 | Apache License 2.0 |
 | [Curtains](https://github.com/square/curtains/) | 1.2.4 | Apache License 2.0 |
 | [Dagger 2](http://google.github.io/dagger) | 2.45, dagger-2.22, dagger-2.33 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.45 | Apache License 2.0 |
@@ -190,7 +187,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2, v7.6.0 | Apache License 2.0 |
-| [gradle-wrapper](http://test) | 4.4-rc-6 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
@@ -263,9 +259,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [logback-android](https://github.com/tony19/logback-android) | 2.0.1 | Apache License 2.0 |
 | [maccandroid](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
-| [mapbox/mapbox-navigation-android](https://www.mapbox.com/android-docs/navigation/overview/) | qa_release_core_1.0.0-qa.8 | MIT License |
+| [mapbox/mapbox-navigation-android](https://www.mapbox.com/android-docs/navigation/overview/) | v0.42.0 | MIT License |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.8.0 | Apache License 2.0 |
-| [Material for MkDocs](http://squidfunk.github.io/mkdocs-material/) | 5.0.0-preview | MIT License |
+| [Material for MkDocs](http://squidfunk.github.io/mkdocs-material/) | 0.9.2, 8.2.15 | MIT License |
 | [maven-dependency-resolver](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [messaging](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [MihaiValentin/lunr-languages](https://github.com/MihaiValentin/lunr-languages#readme) | 1.1.1 | Mozilla Public License 1.1 |
@@ -279,6 +275,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [MockK Java Agent API](http://mockk.io) | 1.13.3 | Apache License 2.0 |
 | [MockK Java DSL](http://mockk.io) | 1.13.3 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
+| [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/) | 73.0+build1 | Mozilla Public License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
@@ -296,7 +293,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [org.junit.platform:junit-platform-engine](http://junit.org/junit5/) | 1.8.2 | Eclipse Public License 2.0 |
 | [org.opentest4j:opentest4j](https://github.com/ota4j-team/opentest4j) | 1.2.0 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.10 | Apache License 2.0 |
-| [phonecontrol](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.23.2 | BSD 3-clause "New" or "Revised" License |
@@ -336,7 +332,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [texlive-bin](https://www.tug.org/texlive/) | 2019.20190311.50335 | (LaTeX Project Public License v1.3c OR GNU General Public License v2.0 or later) |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [text-to-speech-provider](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
-| [The FreeType Project](http://www.freetype.org/) | 2.10.0, 2.11.0 | Freetype Project License |
+| [The FreeType Project](http://www.freetype.org/) | 2.10.0, 2.11.0 | (Freetype Project License OR GNU General Public License v2.0 only) |
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.5.0, 1.6.5, 1.6.8 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.4, 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
@@ -344,5 +340,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |
+| [Warzone 2100](http://wz2100.net/) | 3.4.0 | GNU General Public License v2.0 or later |
 | [XZ Utils](http://tukaani.org/xz/) | 5.2.2 | (GNU Lesser General Public License v2.1 or later AND Public Domain AND GNU General Public License v2.0 or later AND GNU General Public License v3.0 or later) |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |
