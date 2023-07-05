@@ -6,7 +6,7 @@ This is an example demonstrating how to customize the browsing experience for a 
 source in the TomTom Digital Cockpit stock media player UI.
 
 The example demonstrates concepts explained in the
-[Create a new media user interface](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/media/create-a-new-media-user-interface)
+[Create a new media user interface](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/domains/media/create-a-new-media-user-interface)
 guide in the
 [TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 

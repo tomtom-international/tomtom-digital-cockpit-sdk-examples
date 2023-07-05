@@ -26,14 +26,20 @@ import com.tomtom.ivi.platform.gradle.api.common.iviapplication.configurators.Iv
 import com.tomtom.ivi.platform.gradle.api.defaults.config.privacySettingsServiceHost
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
+plugins {
+    id("com.tomtom.ivi.product.defaults.core")
+}
+
+private val templateAppModule = ModuleReference(
+    "com.example.ivi",
+    "template_app",
+    "com.example.ivi.template.app"
+)
+
 public val configurePrivacySettingsServiceHost: IviServiceHostConfig =
     IviServiceHostConfig(
         serviceHostBuilderName = "ConfigureConsentPrivacySettingsServiceHostBuilder",
-        ModuleReference(
-            groupName = "com.example.ivi",
-            moduleName = "template_app",
-            packageName = "com.example.ivi.template.app.privacysettings"
-        ),
+        implementationModule = templateAppModule,
         interfaces = listOf(
             IviServiceInterfaceConfig(
                 serviceName = "PrivacySettingsService",
@@ -41,12 +47,9 @@ public val configurePrivacySettingsServiceHost: IviServiceHostConfig =
                     "platform_navigation_api_service_privacysettings"
                 )
             )
-        )
+        ),
+        subPackageName = "privacysettings"
     )
-
-plugins {
-    id("com.tomtom.ivi.product.defaults.core")
-}
 
 ivi {
     application {

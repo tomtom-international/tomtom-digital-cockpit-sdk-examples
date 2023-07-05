@@ -11,7 +11,7 @@ The
 explains the purpose of these apps in more detail. The
 [Example Apps](https://developer.tomtom.com/tomtom-digital-cockpit/developers/platform-overview/example-apps)
 section briefly introduces them, and the
-[Tutorials and Examples](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/overview)
+[Tutorials](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/overview)
 section explains them in more detail.
 
 The sub-directories per application domain hold the example applications.

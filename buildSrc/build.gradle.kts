@@ -25,7 +25,6 @@ dependencies {
     implementation(iviDependencies.gradlePluginSonarqube)
     implementation(iviDependencies.gradlePluginNavtestAndroid)
     implementation(iviDependencies.gradlePluginNavtestCore)
-    implementation(iviDependencies.gradlePluginNavappEmulators)
     implementation(iviDependencies.gradlePluginTomtomTools)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsAlexa)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsUserprofiles)
@@ -33,5 +32,4 @@ dependencies {
     implementation(libraries.gradlePluginApiFrameworksConfig)
     implementation(libraries.gradlePluginApiFrameworksFrontend)
     implementation(libraries.gradlePluginApiToolsSigningConfig)
-    implementation(libraries.gradlePluginApiToolsEmulators)
 }

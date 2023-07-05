@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5805-3067
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5824-3080
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -254,6 +254,13 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
 | [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4, 2.3.1 | Apache License 2.0 |
+| [LeakCanary Android Utils](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [LeakCanary extension for Android instrumentation tests.](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [LeakCanary Object Watcher](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android - Core](https://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
@@ -322,6 +329,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.17.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.17.0 | MIT License |
 | [shadowapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
+| [Shark](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [Shark for Android heaps](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [Shark Graph](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [Shark Hprof](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
+| [Shark Log](http://github.com/square/leakcanary/) | 2.11 | Apache License 2.0 |
 | [SILGraphite: rendering non-roman scripts](https://sourceforge.net/projects/silgraphite) | 1.3.12 | GNU Lesser General Public License v2.1 or later |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36, 2.0.3 | MIT License |
 | [SQLDelight Android Driver](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |

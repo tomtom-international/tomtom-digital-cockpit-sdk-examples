@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.5805"
+iviPlatform = "1.0.5824"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.
@@ -24,7 +24,6 @@ gradlePluginApiFrameworksConfig = { module = "com.tomtom.ivi.platform.gradle:api
 gradlePluginApiFrameworksFrontend = { module = "com.tomtom.ivi.platform.gradle:api_framework_frontend", version.ref = "iviPlatform" }
 gradlePluginApiProductDefaultsCore = { module = "com.tomtom.ivi.product.gradle:api_productdefaults_core", version.ref = "iviPlatform" }
 gradlePluginApiToolsSigningConfig = { module = "com.tomtom.ivi.platform.gradle:api_tools_signingconfig", version.ref = "iviPlatform" }
-gradlePluginApiToolsEmulators = { module = "com.tomtom.ivi.platform.gradle:api_tools_emulators", version.ref = "iviPlatform" }
 
 # TomTom Digital Cockpit platform components.
 iviPlatformAlexaApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_alexa_api_common_util", version.ref = "iviPlatform" }

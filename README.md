@@ -31,7 +31,7 @@ specific features into the TomTom Digital Cockpit platform.
 The example applications are explained on the
 [Example apps](https://developer.tomtom.com/tomtom-digital-cockpit/developers/platform-overview/example-apps#example-apps)
 page of the developer portal. Each example is explained in more detail in the
-[Tutorials and Examples](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/overview)
+[Tutorials](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/overview)
 section of the developer portal.
 
 Each subdirectory of the `examples/` directory holds one or more example applications. Each
