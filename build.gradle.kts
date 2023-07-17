@@ -11,6 +11,7 @@
 
 import com.tomtom.ivi.buildsrc.environment.ProjectAbis
 import com.tomtom.ivi.buildsrc.extensions.android
+import com.tomtom.ivi.buildsrc.extensions.androidApplication
 import com.tomtom.ivi.buildsrc.extensions.getGradleProperty
 import com.tomtom.ivi.buildsrc.extensions.kotlinOptions
 import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviDependencySource
@@ -115,24 +116,27 @@ subprojects {
     }
 
     android {
-        compileSdkVersion(versions.compileSdk.get().toInt())
+        compileSdk = versions.compileSdk.get().toInt()
         buildToolsVersion = versions.buildTools.get()
 
         defaultConfig {
             minSdk = versions.minSdk.get().toInt()
-            targetSdk = versions.targetSdk.get().toInt()
-            if (isApplicationProject) {
-                // Use hardcoded product versions, or pass them from CI, or adopt a solution for
-                // dynamic version codes. See the recommendations from Android Gradle Plugin docs:
-                //  - https://developer.android.com/studio/publish/versioning
-                //  - https://developer.android.com/build/gradle-tips#configure-dynamic-version-codes
-                versionCode = 1
-                versionName = "1.0"
-            }
             // AutomotiveUI has enabled flavorized publication of their modules, because of
             // this, it is now needed on the integrator side to specify which flavor to use.
             missingDimensionStrategy("engine", "navkit1")
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+        if (isApplicationProject) {
+            androidApplication {
+                defaultConfig.targetSdk = versions.targetSdk.get().toInt()
+                // Use hardcoded product versions, or pass them from CI, or adopt a solution for
+                // dynamic version codes. See the recommendations from Android Gradle Plugin docs:
+                //  - https://developer.android.com/studio/publish/versioning
+                //  - https://developer.android.com/build/gradle-tips#configure-dynamic-version-codes
+                defaultConfig.versionCode = 1
+                defaultConfig.versionName = "1.0"
+            }
         }
 
         compileOptions {
@@ -145,51 +149,31 @@ subprojects {
             jvmTarget = versions.jvm.get()
         }
 
-        lintOptions {
-            // lintConfig = File("lint.xml")
-            isAbortOnError = false
-            isCheckAllWarnings = true
-            isCheckDependencies = false
-            isWarningsAsErrors = true
-            xmlOutput = File(buildDir, "reports/lint/report.xml")
-            htmlOutput = File(buildDir, "reports/lint/report.html")
-
-            disable(
-                // New dependency version checking is done during development.
-                "GradleDependency",
-                "NewerVersionAvailable",
-                // Use of synthetic accessors is accepted, assuming we'll be using multidexing.
-                "SyntheticAccessor",
-                // The product does require protected system permissions.
-                "ProtectedPermissions",
-                // Accessibility text is not useful in this product.
-                "ContentDescription",
-                // We don't need to be indexable by Google Search.
-                "GoogleAppIndexingApiWarning",
-                // 'supportsRtl' is defined in the product manifest.
-                "RtlEnabled",
-                // Ignore duplicate strings, which are most likely due to using the same
-                // string in different contexts.
-                "DuplicateStrings",
-                // Do not check for style-related properties, as they're defined as attributes
-                // and used in the styles, and thus depend on dependencies to be verified.
-                // The main product module does enable these checks.
-                "RequiredSize",
-                "UnusedResources"
-            )
+        lint {
+            abortOnError = false
+            checkReleaseBuilds = false
         }
 
         packagingOptions {
-            // For NavKit, pick the first binary found when there are multiple.
-            pickFirsts.add("lib/**/*.so")
-            // NOTE: Do not strip any binaries: they should already come stripped from the
-            // release artifacts; and since we don't use an NDK, they cannot be stripped anyway.
-            jniLibs.keepDebugSymbols.add("*.so")
-            pickFirsts.add("META-INF/io.netty.versions.properties")
-            resources.excludes.add("META-INF/INDEX.LIST")
-            resources.excludes.add("META-INF/LICENSE.md")
-            resources.excludes.add("META-INF/LICENSE-notice.md")
-            resources.excludes.add("META-INF/NOTICE.md")
+            jniLibs {
+                // For NavKit, pick the first binary found when there are multiple.
+                pickFirsts += "lib/**/*.so"
+                // NOTE: Do not strip any binaries: they should already come stripped from the
+                // release artifacts; and since we don't use an NDK, they cannot be stripped
+                // anyway.
+                keepDebugSymbols.add("**/*.so")
+            }
+            resources {
+                excludes.addAll(
+                    listOf(
+                        "META-INF/INDEX.LIST",
+                        "META-INF/LICENSE.md",
+                        "META-INF/LICENSE-notice.md",
+                        "META-INF/NOTICE.md",
+                    )
+                )
+                pickFirsts += "META-INF/io.netty.versions.properties"
+            }
         }
 
         // Split the output into multiple APKs based on their ABI.

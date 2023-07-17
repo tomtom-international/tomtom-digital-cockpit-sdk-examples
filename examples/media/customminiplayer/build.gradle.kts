@@ -49,6 +49,7 @@ dependencies {
     implementation(iviDependencies.tomtomToolsApiLivedata)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
     implementation(iviDependencies.tomtomToolsCoreAnimation)
+    implementation(libraries.iviPlatformFrameworkApiProductDebugPermissions)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformFrontendApiCommonAdaptiveness)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)

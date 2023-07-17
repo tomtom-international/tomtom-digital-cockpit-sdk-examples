@@ -11,6 +11,6 @@
   ~ immediately return or destroy it.
   -->
 
-<resources>
-    <string name="app_name">IVI Example: Localize Strings</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">IVI Example: Localize Strings</string>
 </resources>

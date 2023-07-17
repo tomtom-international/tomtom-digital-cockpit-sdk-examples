@@ -51,13 +51,27 @@
 
         <activity
             android:name=".TemplateActivity"
-            android:exported="false"
+            android:exported="true"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan">
 
             <intent-filter>
                 <action android:name="com.example.ivi.template.app.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- The next 2 Intent Filters are needed to be able to consume Navigation Intents. -->
+
+            <intent-filter>
+                <action android:name="com.tomtom.navapp.NAVIGATION_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="geo" />
             </intent-filter>
 
             <intent-filter>

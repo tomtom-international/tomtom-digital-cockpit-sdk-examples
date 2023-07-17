@@ -54,6 +54,7 @@ class WebAppLaunchTriggerService(
             "com.example.ivi.example.applauncher.WEB_APP_LAUNCH_ACTION"
 
         const val WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION =
-            "com.example.ivi.example.applauncher.APP_LAUNCH_BROADCAST_PERMISSION"
+            "com.example.ivi.example.applauncher.services.webapplaunchtrigger.permission." +
+                "APP_LAUNCH_BROADCAST_PERMISSION"
     }
 }
