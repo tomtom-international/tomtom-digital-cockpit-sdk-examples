@@ -13,7 +13,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <application>
+    <application
+        tools:ignore="MissingApplicationIcon">
         <activity
             android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity">
             <meta-data

@@ -7,7 +7,7 @@ you to provide support for your own custom app types, or modify how the App Laun
 launching of Android apps.
 
 For more information see the
-[app launcher](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/app-launcher/create-a-custom-app-launcher-service)
+[app launcher](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/system-features/app-launcher/create-a-custom-app-launcher-service)
 pages on the
 [TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 

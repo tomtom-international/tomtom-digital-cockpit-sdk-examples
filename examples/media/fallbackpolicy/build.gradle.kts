@@ -12,6 +12,7 @@
 import com.tomtom.ivi.appsuite.gradle.media.api.appsuitedefaults.media.fallbackMediaPolicyFrontendExtension
 import com.tomtom.ivi.appsuite.gradle.media.api.appsuitedefaults.media.mediaFrontend
 import com.tomtom.ivi.buildsrc.dependencies.ExampleModuleReference
+import com.tomtom.ivi.platform.gradle.api.common.annotations.EXPERIMENTAL_API_USAGE
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.FrontendExtensionConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviInstanceIdentifier
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
@@ -48,6 +49,7 @@ ivi {
                 }
                 frontends {
                     configure(mediaFrontend) {
+                        @Suppress(EXPERIMENTAL_API_USAGE)
                         replaceExtension(
                             fallbackMediaPolicyFrontendExtension,
                             exampleFallbackPolicyFrontendExtension

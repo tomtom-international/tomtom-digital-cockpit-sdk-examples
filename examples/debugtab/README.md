@@ -3,7 +3,7 @@
 ## Introduction
 
 This example app shows how to create an additional tab in the Debug menu, as explained on the
-[Configure Debug Tabs](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/basics/configure-debug-tabs)
+[Configure Debug Tabs](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/basics/configure-debug-tabs)
 page of the
 [TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 

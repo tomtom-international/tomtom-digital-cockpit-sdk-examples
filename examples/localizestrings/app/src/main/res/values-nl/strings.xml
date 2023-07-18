@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<resources xmlns:tomtom="http://www.tomtom.com/metadata">
-    <string name="ttivi_media_menuitem_label" tomtom:description="Menu item text to open the media application." tomtom:reviewed="no" tomtom:translate="yes" tomtom:use="MenuIcon">Media Nederlands</string>
+<resources xmlns:tomtom="http://www.tomtom.com/metadata" xmlns:tools="http://schemas.android.com/tools">
+    <string
+        name="ttivi_media_menuitem_label"
+        tomtom:description="Menu item text to open the media application."
+        tomtom:reviewed="no"
+        tomtom:translate="yes"
+        tomtom:use="MenuIcon"
+        tools:ignore="ExtraTranslation">
+        Media Nederlands
+    </string>
 </resources>

@@ -23,6 +23,7 @@
     <!-- Declaration of the custom connection service which can be bound with the TelecomManager. -->
     <service
         android:name=".CustomConnectionService"
+        android:exported="true"
         android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
         <intent-filter>
             <action android:name="android.telecom.ConnectionService" />

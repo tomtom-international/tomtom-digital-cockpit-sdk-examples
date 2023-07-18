@@ -4,7 +4,7 @@
 
 This example app demonstrates how to extend the TomTom Digital Cockpit platform with your own translations
 for additional locales. For a detailed explanation, see the
-[Localize Strings](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/localization/localize-strings)
+[Localize Strings](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/system-features/localization/localize-strings)
 page on the
 [TomTom Digital Cockpit developer portal](https://developer.tomtom.com/tomtom-digital-cockpit/developers/introduction).
 

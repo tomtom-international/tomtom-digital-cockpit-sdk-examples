@@ -24,7 +24,7 @@ in action by following these steps:
 The custom media mini player is now shown and its layout differs from the stock one.
 
 The example demonstrates concepts explained in the following guides:
-[Replacing a panels' fragment with a custom fragment](https://developer.tomtom.com/tomtom-digital-cockpit/developers/tutorials-and-examples/customization/custom-fragments)
+[Replacing a panels' fragment with a custom fragment](https://developer.tomtom.com/tomtom-digital-cockpit/tutorials/core/customization/custom-fragments)
 
 To be able to try the customizations in this example, other than installing it on a device, it is
 also necessary to compile and install the example module `examples_media_source`, as that contains

@@ -11,7 +11,8 @@
 
 package com.tomtom.ivi.buildsrc.extensions
 
-import com.android.build.gradle.BaseExtension
+import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.api.dsl.CommonExtension
 import com.android.build.gradle.TestExtension
 import org.gradle.api.Action
 import org.gradle.api.GradleException
@@ -20,10 +21,13 @@ import org.gradle.api.plugins.ExtensionAware
 import org.gradle.api.plugins.ExtraPropertiesExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
-val Project.android: BaseExtension
-    get() = extensions.getByType(BaseExtension::class.java)
+val Project.android: CommonExtension<*, *, *, *>
+    get() = extensions.getByType(CommonExtension::class.java)
 
-fun Project.android(action: Action<BaseExtension>) =
+/**
+ * Executes [action] on any Android project.
+ */
+fun Project.android(action: Action<CommonExtension<*, *, *, *>>) =
     action.execute(android)
 
 val Project.androidTest: TestExtension
@@ -32,7 +36,10 @@ val Project.androidTest: TestExtension
 fun Project.androidTest(action: Action<TestExtension>) =
     action.execute(androidTest)
 
-fun BaseExtension.kotlinOptions(action: Action<KotlinJvmOptions>) =
+fun Project.androidApplication(action: Action<ApplicationExtension>) =
+    action.execute(extensions.getByType(ApplicationExtension::class.java))
+
+fun CommonExtension<*, *, *, *>.kotlinOptions(action: Action<KotlinJvmOptions>) =
     action.execute((this as ExtensionAware).extensions.getByType(KotlinJvmOptions::class.java))
 
 /**

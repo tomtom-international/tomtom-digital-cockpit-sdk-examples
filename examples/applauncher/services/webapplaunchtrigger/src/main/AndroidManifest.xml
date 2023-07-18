@@ -12,5 +12,5 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <permission android:name="com.example.ivi.example.applauncher.APP_LAUNCH_BROADCAST_PERMISSION" />
+    <permission android:name="com.example.ivi.example.applauncher.services.webapplaunchtrigger.permission.APP_LAUNCH_BROADCAST_PERMISSION" />
 </manifest>
