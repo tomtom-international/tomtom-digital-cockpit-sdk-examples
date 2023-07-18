@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5864-3119
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5876-3125
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -212,10 +212,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.10, 1.8.22 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.6.21, 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
 | [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.10, 1.8.22 | Apache License 2.0 |
-| [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4 | Apache License 2.0 |
+| [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines/core/kotlinx-coroutines-core/) | 1.5.2, 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.6.4 | Apache License 2.0 |
+| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines/core/kotlinx-coroutines-core/) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
+| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
 | [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1, 0.4.0 | Apache License 2.0 |
@@ -224,8 +224,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.8.0 | Apache License 2.0 |
 | [ktor-client-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-client-core](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-core](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-logging](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-okhttp](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-events](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-http](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
@@ -235,10 +236,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-network](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-network-tls](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-serialization-kotlinx-json](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
@@ -318,7 +321,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1, 1.8.3 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [vanniktech/gradle-maven-publish-plugin](https://github.com/vanniktech/gradle-maven-publish-plugin) | 0.25.3 | Apache License 2.0 |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |
