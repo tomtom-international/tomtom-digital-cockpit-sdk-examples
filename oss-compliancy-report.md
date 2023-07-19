@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5869-3122
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5884-3133
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -226,6 +226,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-client-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-client-core](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-logging](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-okhttp](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-events](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-http](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
@@ -235,10 +236,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-network](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-network-tls](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-serialization-kotlinx-json](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
@@ -318,7 +321,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1, 1.8.3 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [vanniktech/gradle-maven-publish-plugin](https://github.com/vanniktech/gradle-maven-publish-plugin) | 0.25.3 | Apache License 2.0 |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |

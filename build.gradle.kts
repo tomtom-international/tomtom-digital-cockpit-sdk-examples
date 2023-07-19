@@ -124,6 +124,9 @@ subprojects {
             // AutomotiveUI has enabled flavorized publication of their modules, because of
             // this, it is now needed on the integrator side to specify which flavor to use.
             missingDimensionStrategy("engine", "navkit1")
+            // TTDC uses flavorized publication of modules, because of
+            // this, it is now needed on the integrator side to specify which flavor to use.
+            missingDimensionStrategy("navigationEngine", "navkit1")
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
