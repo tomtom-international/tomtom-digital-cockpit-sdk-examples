@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5891-3140
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5904-3145
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -167,7 +167,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [exoplayer-hls](https://repo.gradle.org/ui/native/jcenter/com/google/android/exoplayer/exoplayer-hls) | 2.13.3, 2.15.1 | Apache License 2.0 |
 | [exoplayer-smoothstreaming](https://repo.gradle.org/ui/native/jcenter/com/google/android/exoplayer/exoplayer-smoothstreaming) | 2.13.3, 2.15.1 | Apache License 2.0 |
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.1.0, 1.3.0 | Apache License 2.0 |
-| [Extensions](http://tomtom.com/extensions) | 1.8.1, 1.8.3 | Apache License 2.0 |
+| [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
 | [FindBugs jsr305](http://code.google.com/p/jsr-305) | 2.0.1, 2.0.2, 3.0.2 | Apache License 2.0 |
 | [flexbox-layout](https://github.com/google/flexbox-layout) | 2.0.1 | Apache License 2.0 |
 | [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.5.5, 1.5.7 | Apache License 2.0 |
@@ -179,7 +179,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [gocd/gocd-ldap-authentication-plugin](https://github.com/gocd/gocd-ldap-authentication-plugin.git) | v2.2.1-232-exp | Apache License 2.0 |
-| [google-gson](https://github.com/google/gson) | 2.10, 2.10.1, 2.8.9, 2.9.0 | Apache License 2.0 |
+| [google-gson](https://github.com/google/gson) | 2.10, 2.10.1, 2.8.2, 2.8.9, 2.9.0 | Apache License 2.0 |
 | [google-guava](https://github.com/google/guava) | 31.1-android, 32.0.1-android | Apache License 2.0 |
 | [google/gnd-android](https://github.com/google/ground-android) | 20180718-snapshot-a254a296, 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
@@ -204,20 +204,21 @@ This offer is valid for a period of three years from the date of distribution of
 | [JUnit 5 (Bill of Materials)](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [JUnit Jupiter (Aggregator)](https://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [JWT-Decode](https://github.com/auth0/JWTDecode.Android) | 2.0.1 | MIT License |
+| [koom-fast-dump](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
+| [koom-monitor-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
 | [Kotlin](http://kotlin.jetbrains.org) | 1.6.10, 1.6.21, 1.8.10, 1.8.22 | Apache License 2.0 |
 | [Kotlin Libraries bill-of-materials](http://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
-| [Kotlin Test Junit](https://kotlinlang.org/) | 1.8.10, 1.8.22 | Apache License 2.0 |
-| [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.8.10, 1.8.22 | Apache License 2.0 |
+| [Kotlin Test Junit](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
+| [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.8.22 | Apache License 2.0 |
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23, 3.0.4 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.10, 1.8.22 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.6.21, 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
-| [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.10, 1.8.22 | Apache License 2.0 |
+| [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.22 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines/core/kotlinx-coroutines-core/) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
+| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1, 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-bom](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.4.0, 1.5.0, 1.5.1 | Apache License 2.0 |
@@ -228,21 +229,26 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-client-logging](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-okhttp](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-resources](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-events](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-http](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-http](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-http-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-io](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-network](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-network-tls](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-serialization-kotlinx](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-serialization-kotlinx-json](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [kwai-android-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
 | [LeakCanary Android Utils](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android - Core](https://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
@@ -278,7 +284,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [org.junit.platform:junit-platform-commons](http://junit.org/junit5/) | 1.8.2 | Eclipse Public License 2.0 |
 | [org.junit.platform:junit-platform-engine](http://junit.org/junit5/) | 1.8.2 | Eclipse Public License 2.0 |
 | [org.opentest4j:opentest4j](https://github.com/ota4j-team/opentest4j) | 1.2.0 | Apache License 2.0 |
-| [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.10, 1.8.22 | Apache License 2.0 |
+| [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.22 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.23.2 | BSD 3-clause "New" or "Revised" License |
@@ -320,7 +326,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.5.0, 1.6.5, 1.6.8 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.4, 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
-| [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.1, 1.8.3 | Apache License 2.0 |
+| [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.3 | Apache License 2.0 |
+| [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 7.4.2 | Apache License 2.0 |

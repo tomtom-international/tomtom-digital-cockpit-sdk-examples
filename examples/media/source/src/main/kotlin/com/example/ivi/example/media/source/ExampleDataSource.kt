@@ -54,7 +54,11 @@ internal class ExampleDataSource {
         private const val NAME_ROOT = "i am root"
         private const val NAME_CATEGORY_HOME = "Home"
         private const val NAME_CATEGORY_LIKED = "Liked"
-        private const val NAME_PLAYLIST = "Playlist"
+        private const val NAME_PLAYLIST_1 = "Playlist 1"
+        private const val NAME_PLAYLIST_2 = "Playlist 2"
+        private const val SONG_GROUP = "Songs"
+        private const val ALTERNATIVE_GROUP = "Alternatives"
+        private const val PLAYLIST_GROUP = "Playlists"
     }
 
     private val catalog: Map<String, List<MediaBrowserCompat.MediaItem>> = mapOf(
@@ -63,15 +67,27 @@ internal class ExampleDataSource {
             makeItem(NAME_CATEGORY_LIKED, browsable = true),
         ),
         NAME_CATEGORY_HOME to listOf(
-            makeItem("Song 1", playable = true, duration = 60_000L),
-            makeItem("Song 2", playable = true, duration = 120_000L),
-            makeItem(NAME_PLAYLIST, browsable = true, playable = true),
+            makeItem("Song 1", playable = true, duration = 60_000L, group = SONG_GROUP),
+            makeItem("Song 2", playable = true, duration = 120_000L, group = SONG_GROUP),
+            makeItem(NAME_PLAYLIST_1, browsable = true, playable = true, group = PLAYLIST_GROUP),
+            makeItem(NAME_PLAYLIST_2, browsable = true, playable = true, group = PLAYLIST_GROUP),
+            makeItem("Song 3", playable = true, duration = 90_000L, group = ALTERNATIVE_GROUP),
+            makeItem("Song 4", playable = true, duration = 80_000L, group = ALTERNATIVE_GROUP),
+            makeItem("Song 5", playable = true, duration = 70_000L, group = ALTERNATIVE_GROUP),
+            makeItem("Song 6", playable = true, duration = 50_000L, group = ALTERNATIVE_GROUP),
         ),
         NAME_CATEGORY_LIKED to listOf(),
-        NAME_PLAYLIST to listOf(
-            makeItem("Playlist song 1", playable = true, duration = 30_000L),
-            makeItem("Playlist song 2", playable = true, duration = 45_000L),
-            makeItem("Playlist song 3", playable = true, duration = 90_000L),
+        NAME_PLAYLIST_1 to listOf(
+            makeItem("Playlist 1 song 1", playable = true, duration = 30_000L),
+            makeItem("Playlist 1 song 2", playable = true, duration = 45_000L),
+            makeItem("Playlist 1 song 3", playable = true, duration = 90_000L),
+            makeItem("Playlist 1 song 4", playable = true, duration = 80_000L),
+        ),
+        NAME_PLAYLIST_2 to listOf(
+            makeItem("Playlist 2 song 1", playable = true, duration = 30_000L),
+            makeItem("Playlist 2 song 2", playable = true, duration = 45_000L),
+            makeItem("Playlist 2 song 3", playable = true, duration = 90_000L),
+            makeItem("Playlist 2 song 4", playable = true, duration = 80_000L),
         )
     )
 }

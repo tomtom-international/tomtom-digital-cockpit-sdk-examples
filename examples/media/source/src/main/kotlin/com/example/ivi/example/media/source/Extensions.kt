@@ -15,6 +15,7 @@ import android.os.Bundle
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaDescriptionCompat
 import android.support.v4.media.MediaMetadataCompat
+import androidx.media.utils.MediaConstants.DESCRIPTION_EXTRAS_KEY_CONTENT_STYLE_GROUP_TITLE
 
 internal inline val MediaMetadataCompat.id: String?
     get() = getString(MediaMetadataCompat.METADATA_KEY_MEDIA_ID)
@@ -44,10 +45,12 @@ internal fun makeItem(
     browsable: Boolean = false,
     playable: Boolean = false,
     subtitle: String? = null,
-    duration: Long? = null
+    duration: Long? = null,
+    group: String? = null
 ): MediaBrowserCompat.MediaItem {
     val extras = Bundle()
     duration?.let { extras.putLong(MediaMetadataCompat.METADATA_KEY_DURATION, it) }
+    group?.let { extras.putString(DESCRIPTION_EXTRAS_KEY_CONTENT_STYLE_GROUP_TITLE, it) }
 
     val description = MediaDescriptionCompat.Builder()
     description.setMediaId(title)
