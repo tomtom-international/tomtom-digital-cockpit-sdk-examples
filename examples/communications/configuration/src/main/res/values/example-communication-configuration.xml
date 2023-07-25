@@ -12,6 +12,11 @@
 
 <resources>
     <!--
+     Indicates that pairing with a Bluetooth device is restricted when the safety lock is active.
+     -->
+    <bool name="isBluetoothDevicePairingRestrictedBySafetyLockConfigKey">false</bool>
+
+    <!--
      Do not close the communications panel when making a call.
      -->
     <bool name="keepCommunicationsPanelOpenOnOutgoingCallConfigKey">true</bool>

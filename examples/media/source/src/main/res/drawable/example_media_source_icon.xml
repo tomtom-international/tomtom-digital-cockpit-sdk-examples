@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2023 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="88"
+    android:viewportHeight="88">
+  <group>
+    <clip-path
+        android:pathData="M0,0h88v88h-88z"/>
+    <path
+        android:pathData="M44,44m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M12.887,75.113C-4.296,57.93 -4.296,30.07 12.887,12.887C30.07,-4.296 57.93,-4.296 75.113,12.887C92.296,30.07 92.296,57.93 75.113,75.113C57.93,92.296 30.07,92.296 12.887,75.113ZM34.666,20.666C33.807,19.806 32.414,19.806 31.555,20.666L20.666,31.555C19.806,32.414 19.806,33.807 20.666,34.666L23.777,37.778C24.636,38.637 26.029,38.637 26.888,37.778L37.778,26.888C38.637,26.029 38.637,24.636 37.778,23.777L34.666,20.666ZM64.223,17.554C63.364,16.695 61.971,16.695 61.112,17.554L17.554,61.112C16.695,61.971 16.695,63.364 17.554,64.223L20.666,67.335C21.525,68.194 22.918,68.194 23.777,67.335L67.335,23.777C68.194,22.918 68.194,21.525 67.335,20.666L64.223,17.554ZM51,57.223C50.141,56.364 48.748,56.364 47.889,57.223L37,68.112C36.14,68.971 36.14,70.365 37,71.224L40.111,74.335C40.97,75.194 42.363,75.194 43.222,74.335L54.112,63.445C54.971,62.586 54.971,61.193 54.112,60.334L51,57.223ZM71.224,37C70.365,36.14 68.971,36.14 68.112,37L57.223,47.889C56.364,48.748 56.364,50.141 57.223,51L60.334,54.112C61.193,54.971 62.586,54.971 63.445,54.112L74.335,43.222C75.194,42.363 75.194,40.97 74.335,40.111L71.224,37Z"
+        android:fillColor="#EF0035"
+        android:fillType="evenOdd"
+        tools:ignore="VectorPath" />
+  </group>
+</vector>
