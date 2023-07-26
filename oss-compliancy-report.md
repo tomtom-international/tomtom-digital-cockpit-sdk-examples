@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5911-3150
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5919-3161
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -218,35 +218,45 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.6.4, 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
+| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2 | Apache License 2.0 |
+| [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.2 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1, 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-bom](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.4.0, 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.8.0 | Apache License 2.0 |
+| [ktor-client-android](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-auth](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-client-content-negotiation](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-core](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
-| [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
+| [ktor-client-json](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
+| [ktor-client-json-jvm](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-logging](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
+| [ktor-client-logging-jvm](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
+| [ktor-client-mock](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
+| [ktor-client-mock-jvm](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-client-okhttp](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-client-resources](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
-| [ktor-events](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-events](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-http](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-http-cio](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-io](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
+| [ktor-io](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-network](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
 | [ktor-network-tls](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
-| [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-resources](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
+| [ktor-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-serialization-kotlinx](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-serialization-kotlinx-json](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
-| [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-utils](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
-| [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4 | Apache License 2.0 |
+| [ktor-websockets](https://github.com/ktorio/ktor) | 2.2.4, 2.3.2 | Apache License 2.0 |
 | [kwai-android-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
+| [LeakCanary](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [leakcanary](https://github.com/square/leakcanary) | 2.12 | Apache License 2.0 |
 | [LeakCanary Android Utils](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [LeakCanary extension for Android instrumentation tests.](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
