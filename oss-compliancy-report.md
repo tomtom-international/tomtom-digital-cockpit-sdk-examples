@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5958-3199
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5963-3204
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -8,6 +8,7 @@ This offer is valid for a period of three years from the date of distribution of
 
 | Component | Version | License |
 | :-------- | :------ | :------ |
+| [@react-native/gradle-plugin](https://github.com/facebook/react-native/tree/HEAD/packages/react-native-gradle-plugin) | 0.73.0-nightly-20230711-f396067cc | MIT License |
 | [aacs-extra](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs_annotation_api](https://github.com/alexa/alexa-auto-sdk) | 4.2 | Apache License 2.0 |
 | [aacs_annotation_processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
@@ -287,7 +288,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
-| [nebula-plugins/gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin) | v11.4.0 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.0.1, 4.10.0, 4.11.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.0.0, 3.2.0, 3.3.0 | Apache License 2.0 |
