@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5971-3213
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.5992-3223
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -113,18 +113,18 @@ This offer is valid for a period of three years from the date of distribution of
 | [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.2.1 | Apache License 2.0 |
 | [annotations](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [antlr](http://antlr.org) | 4.10.1 | BSD 3-Clause "New" or "Revised" License |
+| [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
 | [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
-| [ASM](http://asm.ow2.org/) | 9.2, 9.5 | BSD 3-Clause "New" or "Revised" License |
-| [ASM Commons](http://asm.objectweb.org/asm-commons/) | 9.2, 9.5 | BSD 3-Clause "New" or "Revised" License |
-| [ASM Tree](http://asm.objectweb.org/asm-tree/) | 9.2, 9.5 | BSD 3-Clause "New" or "Revised" License |
-| [ASM Util](http://asm.objectweb.org/asm-util/) | 9.2, 9.5 | BSD 3-Clause "New" or "Revised" License |
-| [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.5 | BSD 3-Clause "New" or "Revised" License |
+| [ASM](http://asm.ow2.org/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Commons](http://asm.objectweb.org/asm-commons/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Tree](http://asm.objectweb.org/asm-tree/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Util](http://asm.objectweb.org/asm-util/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.1, 1.7.4 | Apache License 2.0 |
 | [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
@@ -189,7 +189,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2, v7.6.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-Clause "New" or "Revised" License |
+| [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
 | [ICU4J](http://icu-project.org) | 70.1, 72.1 | ICU License |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 1.3, 2.8 | Apache License 2.0 |
@@ -304,9 +304,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.22 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.23.2 | BSD 3-Clause "New" or "Revised" License |
-| [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.12 | BSD 3-Clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.23.2 | BSD 3-Clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.23.2 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffer Java Util Package](https://developers.google.com/protocol-buffers/protobuf-java-util/) | 3.21.12 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.23.2 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
@@ -345,7 +345,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [sqlite4java](http://code.google.com/p/sqlite4java/) | 1.0.392 | Apache License 2.0 |
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [text-to-speech-provider](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
-| [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.5.0, 1.6.5, 1.6.8 | BSD 3-Clause "New" or "Revised" License |
+| [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.5.0, 1.6.5, 1.6.8 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.4, 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.3 | Apache License 2.0 |
