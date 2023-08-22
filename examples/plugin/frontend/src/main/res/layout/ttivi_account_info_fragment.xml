@@ -37,7 +37,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="?attr/ttivi_userprofile_info_avatar_height"
+                android:layout_height="?attr/tt_size_33"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
@@ -63,7 +63,7 @@
 
             <com.tomtom.tools.android.api.uicontrols.button.TtButton
                 style="?attr/tt_button_style"
-                android:layout_width="?attr/ttivi_userprofile_button_width"
+                android:layout_width="?attr/tt_size_33"
                 android:layout_gravity="center"
                 android:onClick="@{() -> viewModel.onLogoutClick()}"
                 android:text="@string/ttivi_account_info_logoutbutton"

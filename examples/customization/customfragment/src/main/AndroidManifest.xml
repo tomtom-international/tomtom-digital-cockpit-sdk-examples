@@ -16,9 +16,9 @@
         tools:ignore="MissingApplicationIcon">
 
         <activity
-            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity">
+            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupProxyActivity">
             <meta-data
-                android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_MAIN_ACTIVITY_CLASS_NAME"
+                android:name="com.tomtom.ivi.platform.product.activity.META_DATA_KEY_TARGET_ACTIVITY_CLASS_NAME"
                 android:value="com.example.ivi.example.customization.customfragment.CustomFragmentActivity"
                 tools:replace="android:value" />
         </activity>

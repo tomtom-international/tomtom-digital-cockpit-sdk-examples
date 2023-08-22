@@ -34,7 +34,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="?attr/ttivi_userprofile_login_icon_height"
+                android:layout_height="?attr/tt_size_14"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
@@ -76,7 +76,7 @@
 
             <com.tomtom.tools.android.api.uicontrols.textinputfield.TtTextInputField
                 android:id="@+id/frontend_account_login_screen_login_username_edit"
-                android:layout_width="?attr/ttivi_userprofile_login_textbox_width"
+                android:layout_width="?attr/tt_size_65"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:autofillHints="textPersonName"
@@ -95,7 +95,7 @@
             <!-- TODO(IVI-7440): TtTextInputField doesnt show asterisks chars for passwords type inputs -->
             <com.tomtom.tools.android.api.uicontrols.textinputfield.TtTextInputField
                 android:id="@+id/frontend_account_login_screen_login_login_textbox_width"
-                android:layout_width="?attr/ttivi_userprofile_login_textbox_width"
+                android:layout_width="?attr/tt_size_65"
                 android:layout_height="?attr/tt_button_height"
                 android:layout_gravity="center"
                 android:autofillHints="textPassword"
@@ -113,7 +113,7 @@
 
             <com.tomtom.tools.android.api.uicontrols.button.TtButton
                 style="?attr/tt_button_style"
-                android:layout_width="?attr/ttivi_userprofile_button_width"
+                android:layout_width="?attr/tt_size_33"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:enabled="@{viewModel.isLoginEnabled}"

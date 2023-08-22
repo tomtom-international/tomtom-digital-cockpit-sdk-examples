@@ -17,7 +17,7 @@
         android:theme="@style/TtiviApplicationTheme">
 
         <activity
-            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupActivity"
+            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupProxyActivity"
             android:clearTaskOnLaunch="true"
             android:exported="true"
             android:launchMode="singleTask"
@@ -26,7 +26,7 @@
                 android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_APPLICATION_NAME_RES_ID"
                 android:resource="@string/app_name" />
             <meta-data
-                android:name="com.tomtom.ivi.platform.debugpermissions.META_DATA_KEY_MAIN_ACTIVITY_CLASS_NAME"
+                android:name="com.tomtom.ivi.platform.product.activity.META_DATA_KEY_TARGET_ACTIVITY_CLASS_NAME"
                 android:value="com.example.ivi.common.ExampleActivity" />
 
             <intent-filter>
