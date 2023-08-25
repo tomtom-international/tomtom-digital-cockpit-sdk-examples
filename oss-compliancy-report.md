@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6043-3268
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6044-3270
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -79,7 +79,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Custom View - androidx.swiperefreshlayout:swiperefreshlayout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Document File](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Drawer Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.1 | Apache License 2.0 |
-| [Android Support Library fragment](http://developer.android.com/tools/extras/support-library.html) | 1.3.6, 1.4.1, 1.5.5, 1.5.7 | Apache License 2.0 |
+| [Android Support Library fragment](http://developer.android.com/tools/extras/support-library.html) | 1.3.6, 1.5.5, 1.5.7 | Apache License 2.0 |
 | [Android Support Library Interpolators](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library loader](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Local Broadcast Manager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -173,7 +173,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
 | [FindBugs jsr305](http://code.google.com/p/jsr-305) | 2.0.1, 2.0.2, 3.0.2 | Apache License 2.0 |
 | [flexbox-layout](https://github.com/google/flexbox-layout) | 2.0.1 | Apache License 2.0 |
-| [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.1, 1.5.5, 1.5.7 | Apache License 2.0 |
+| [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.5, 1.5.7 | Apache License 2.0 |
 | [Fragment Test Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.5, 1.5.7 | Apache License 2.0 |
 | [framework](http://robolectric.org) | 4.8.2 | MIT License |
 | [funsee-logger](https://github.com/TheSecondLab/FunSeeLogger#readme) | 1.0.8 | ISC License |
