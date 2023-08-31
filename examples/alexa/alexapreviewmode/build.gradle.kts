@@ -19,6 +19,10 @@ ivi {
     optInToExperimentalApis = true
 }
 
+android {
+    namespace = "com.example.ivi.example.alexa.alexapreviewmode"
+}
+
 dependencies {
     implementation(libraries.iviPlatformAlexaApiServiceAlexapreviewmode)
 }

@@ -106,6 +106,15 @@ subprojects {
                                 useVersion(versions.kotlinxSerialization.get())
                         }
                     }
+                    "com.google.guava" -> {
+                        if (requested.name == "guava") {
+                            useVersion(versions.guava.get())
+                            because(
+                                "Guava versions before 32.0.1 have CVE-2023-2976 " +
+                                    "and broken functionality"
+                            )
+                        }
+                    }
                 }
             }
             dependencySubstitution {
@@ -157,7 +166,7 @@ subprojects {
             checkReleaseBuilds = false
         }
 
-        packagingOptions {
+        packaging {
             jniLibs {
                 // For NavKit, pick the first binary found when there are multiple.
                 pickFirsts += "lib/**/*.so"
