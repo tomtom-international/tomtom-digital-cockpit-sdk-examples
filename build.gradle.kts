@@ -166,7 +166,7 @@ subprojects {
             checkReleaseBuilds = false
         }
 
-        packagingOptions {
+        packaging {
             jniLibs {
                 // For NavKit, pick the first binary found when there are multiple.
                 pickFirsts += "lib/**/*.so"
