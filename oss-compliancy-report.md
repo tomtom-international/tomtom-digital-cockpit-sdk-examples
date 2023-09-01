@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6072-3279
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6087-3288
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -8,7 +8,6 @@ This offer is valid for a period of three years from the date of distribution of
 
 | Component | Version | License |
 | :-------- | :------ | :------ |
-| [@react-native/gradle-plugin](https://github.com/facebook/react-native/tree/HEAD/packages/react-native-gradle-plugin) | 0.73.0-nightly-20230807-2bf59c764 | MIT License |
 | [aacs-extra](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs_annotation_api](https://github.com/alexa/alexa-auto-sdk) | 4.2 | Apache License 2.0 |
 | [aacs_annotation_processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
@@ -123,8 +122,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
 | [ASM](http://asm.ow2.org/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [ASM Commons](http://asm.ow2.io/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
-| [ASM Tree](http://asm.objectweb.org/asm-tree/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
-| [ASM Util](http://asm.objectweb.org/asm-util/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Tree](http://asm.ow2.io/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Util](http://asm.ow2.io/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.1, 1.7.4 | Apache License 2.0 |
@@ -291,6 +290,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.0.1, 4.10.0, 4.11.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.0.0, 3.2.0, 3.3.0 | Apache License 2.0 |
+| [opentest4j](https://github.com/ota4j-team/opentest4j) | 1.3.0 | Apache License 2.0 |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | Eclipse Distribution License - v 1.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
