@@ -19,6 +19,7 @@ This is the central point of the example: the custom layout that is used by defa
 
     <!-- Custom border -->
     <FrameLayout
+        android:tag="custom border"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#80FF">
@@ -29,6 +30,7 @@ This is the central point of the example: the custom layout that is used by defa
           to learn how it is used.
         -->
         <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/ttivi_systemui_taskpanel_subcontainer_taskpanels_stub_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
