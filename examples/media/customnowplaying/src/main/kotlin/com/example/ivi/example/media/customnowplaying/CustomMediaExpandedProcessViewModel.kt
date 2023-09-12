@@ -22,6 +22,7 @@ import com.tomtom.ivi.appsuite.media.api.common.core.actions.standard.PauseActio
 import com.tomtom.ivi.appsuite.media.api.common.core.actions.standard.PlayAction
 import com.tomtom.ivi.appsuite.media.api.common.core.actions.standard.SkipToQueueItemAction
 import com.tomtom.ivi.appsuite.media.api.common.frontend.MediaFrontendContext
+import com.tomtom.ivi.appsuite.media.api.common.frontend.R as MediaCommonFrontendR
 import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.asMediaControlContext
 import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls
 import com.tomtom.ivi.appsuite.media.api.common.frontend.controls.standard.StandardMediaControls.REPEAT
@@ -219,9 +220,9 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
             tailIcon = if (isActiveItem) {
                 ResourceDrawableResolver(
                     if (isPlaying) {
-                        R.drawable.ttivi_media_mediastate_icon_playing
+                        MediaCommonFrontendR.drawable.ttivi_media_mediastate_icon_playing
                     } else {
-                        R.drawable.ttivi_media_mediastate_icon_paused
+                        MediaCommonFrontendR.drawable.ttivi_media_mediastate_icon_paused
                     }
                 )
             } else {

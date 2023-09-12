@@ -17,7 +17,7 @@ import androidx.annotation.ColorInt
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.switchMap
-import com.tomtom.ivi.appsuite.media.plugin.frontend.media.R
+import com.tomtom.ivi.appsuite.media.api.common.attributes.R as MediaAttributesR
 import com.tomtom.tools.android.api.graphics.drawable.RemoteDrawableResolver
 import com.tomtom.tools.android.api.graphics.drawable.blur
 import com.tomtom.tools.android.api.graphics.drawable.getBrightnessAdjustedDominantColor
@@ -30,7 +30,7 @@ internal fun LiveData<RemoteDrawableResolver>.toBlurredDrawable(context: Context
     LiveData<Drawable> {
     val blurRadiusFraction =
         context.getFloatByAttr(
-            R.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction
+            MediaAttributesR.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction
         )
 
     return switchMap { it.get(image).liveData }
