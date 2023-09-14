@@ -15,6 +15,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="com.tomtom.ivi.platform.frontend.api.common.frontend.panels.NotificationPanel.Priority" />
 
         <variable
@@ -25,17 +26,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:showDividers="middle"
         android:dividerPadding="?attr/tt_spacing_8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:showDividers="middle">
 
         <com.tomtom.tools.android.api.uicontrols.button.TtButton
+            android:id="@+id/add_notification"
             style="?attr/tt_button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="?attr/tt_spacing_8"
             android:onClick="@{() -> viewModel.panel.addNotificationPanel.invoke()}"
             android:text="@string/ttivi_customization_customfragment_frontend_addnotification"
-            auto:ttActionType="primary"/>
+            auto:ttActionType="primary" />
     </LinearLayout>
 </layout>

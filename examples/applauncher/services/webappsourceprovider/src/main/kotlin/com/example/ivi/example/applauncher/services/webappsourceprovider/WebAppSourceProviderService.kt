@@ -13,6 +13,7 @@ package com.example.ivi.example.applauncher.services.webappsourceprovider
 
 import com.example.ivi.example.applauncher.common.webapp.WebApp
 import com.tomtom.ivi.appsuite.appstore.api.common.model.ParcelableAppClass
+import com.tomtom.ivi.appsuite.appstore.api.common.model.R as AppStoreModelR
 import com.tomtom.ivi.appsuite.appstore.api.service.appsourceprovider.AppSourceProviderServiceBase
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviDiscoverableServiceIdProvider
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
@@ -38,7 +39,9 @@ class WebAppSourceProviderService(
                 url = "https://www.tomtom.com/",
                 displayName = StaticStringResolver("TomTom"),
                 summary = StaticStringResolver("TomTom Web"),
-                icon = ResourceDrawableResolver(R.drawable.ttivi_appstore_icon_invalidpackage)
+                icon = ResourceDrawableResolver(
+                    AppStoreModelR.drawable.ttivi_appstore_icon_invalidpackage
+                )
             )
         )
     }

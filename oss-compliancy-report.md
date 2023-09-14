@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6081-3283
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6166-3321
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -8,7 +8,6 @@ This offer is valid for a period of three years from the date of distribution of
 
 | Component | Version | License |
 | :-------- | :------ | :------ |
-| [@react-native/gradle-plugin](https://github.com/facebook/react-native/tree/HEAD/packages/react-native-gradle-plugin) | 0.73.0-nightly-20230807-2bf59c764 | MIT License |
 | [aacs-extra](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [aacs_annotation_api](https://github.com/alexa/alexa-auto-sdk) | 4.2 | Apache License 2.0 |
 | [aacs_annotation_processor](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
@@ -77,7 +76,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Cursor Adapter](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Custom View - androidx.customview:customview](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [Android Support Library Custom View - androidx.swiperefreshlayout:swiperefreshlayout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support Library Document File](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
+| [Android Support Library Document File](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.0.1 | Apache License 2.0 |
 | [Android Support Library Drawer Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.1 | Apache License 2.0 |
 | [Android Support Library fragment](http://developer.android.com/tools/extras/support-library.html) | 1.3.6, 1.5.5, 1.5.7 | Apache License 2.0 |
 | [Android Support Library Interpolators](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -116,15 +115,15 @@ This offer is valid for a period of three years from the date of distribution of
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
 | [Apache Commons Collections](http://commons.apache.org/proper/commons-collections/) | 3.2.2 | Apache License 2.0 |
-| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11, 3.13.0 | Apache License 2.0 |
+| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.13.0 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
 | [ASM](http://asm.ow2.org/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [ASM Commons](http://asm.ow2.io/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
-| [ASM Tree](http://asm.objectweb.org/asm-tree/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
-| [ASM Util](http://asm.objectweb.org/asm-util/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Tree](http://asm.ow2.io/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
+| [ASM Util](http://asm.ow2.io/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.2, 9.5 | BSD 3-clause "New" or "Revised" License |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.1, 1.7.4 | Apache License 2.0 |
@@ -288,7 +287,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
-| [objenesis](http://code.google.com/p/objenesis) | 2.6, 3.3 | Apache License 2.0 |
+| [objenesis](http://code.google.com/p/objenesis) | 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.0.1, 4.10.0, 4.11.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.0.0, 3.2.0, 3.3.0 | Apache License 2.0 |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
@@ -304,13 +303,13 @@ This offer is valid for a period of three years from the date of distribution of
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.22 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.24.1 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.24.1 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.19.4, 3.20.1, 3.21.12, 3.21.9, 3.24.3 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.24.3 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [python-wxversion](http://www.wxpython.org/) | 3.0.2 | (zlib License OR Independent JPEG Group License OR GNU Library General Public License v2 or later OR MIT License OR Xmlproc License OR wxWindows Library License OR libpng License) |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
-| [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final | Apache License 2.0 |
+| [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.3.1.Final, 3.3.2 | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [reactive-streams](http://www.reactive-streams.org/) | 1.0.3 | Creative Commons Zero v1.0 Universal |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |

@@ -15,10 +15,10 @@ import com.example.ivi.example.media.customminiplayer.databinding.CustomMediaCom
 import com.example.ivi.example.media.customminiplayer.databinding.CustomMediaCommonprocessVerticalLayoutBinding
 import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaMainProcessPanelBase
 import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaTaskProcessPanelBase
-import com.tomtom.ivi.appsuite.media.plugin.frontend.media.R
 import com.tomtom.ivi.platform.frontend.api.common.adaptiveness.AdaptiveFragmentHelper
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 import com.tomtom.tools.android.api.resourceresolution.getColorByAttr
+import com.tomtom.tools.android.core.theme.R as CoreThemeR
 
 /**
  * This fragment replaces the stock fragment of the [MediaMainProcessPanelBase]. This replacement is
@@ -69,7 +69,7 @@ internal class CustomMediaMainProcessFragment :
                                 viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
                                     context,
                                     context.getColorByAttr(
-                                        R.attr.tt_surface_content_color_emphasis_high
+                                        CoreThemeR.attr.tt_surface_content_color_emphasis_high
                                     )
                                 )
                         }
@@ -89,7 +89,7 @@ internal class CustomMediaMainProcessFragment :
                                 viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
                                     context,
                                     context.getColorByAttr(
-                                        R.attr.tt_surface_content_color_emphasis_high
+                                        CoreThemeR.attr.tt_surface_content_color_emphasis_high
                                     )
                                 )
                         }

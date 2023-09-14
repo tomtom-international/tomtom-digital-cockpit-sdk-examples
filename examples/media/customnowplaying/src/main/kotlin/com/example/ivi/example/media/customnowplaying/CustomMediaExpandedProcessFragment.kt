@@ -13,9 +13,9 @@ package com.example.ivi.example.media.customnowplaying
 
 import com.example.ivi.example.media.customnowplaying.databinding.CustomMediaExpandedprocessLayoutBinding
 import com.tomtom.ivi.appsuite.media.api.common.frontend.panels.MediaExpandedProcessPanelBase
-import com.tomtom.ivi.appsuite.media.plugin.frontend.media.R
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 import com.tomtom.tools.android.api.resourceresolution.getColorByAttr
+import com.tomtom.tools.android.core.theme.R as CoreThemeR
 
 /**
  * This fragment replaces the stock fragment of the [MediaExpandedProcessPanelBase]. This
@@ -38,7 +38,7 @@ internal class CustomMediaExpandedProcessFragment :
                 )
             it.dominantColor = viewModel.art.toDominantColor(
                 context,
-                context.getColorByAttr(R.attr.tt_surface_content_color_emphasis_high)
+                context.getColorByAttr(CoreThemeR.attr.tt_surface_content_color_emphasis_high)
             )
         }
     }

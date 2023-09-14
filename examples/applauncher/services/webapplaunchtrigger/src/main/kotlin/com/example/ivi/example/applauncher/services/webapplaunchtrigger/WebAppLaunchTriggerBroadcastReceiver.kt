@@ -17,6 +17,7 @@ import android.content.Intent
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.ivi.example.applauncher.common.webapp.WebApp
+import com.tomtom.ivi.appsuite.appstore.api.common.model.R as AppStoreModelR
 import com.tomtom.tools.android.api.resourceresolution.drawable.ResourceDrawableResolver
 import com.tomtom.tools.android.api.resourceresolution.string.StaticStringResolver
 
@@ -33,7 +34,9 @@ class WebAppLaunchTriggerBroadcastReceiver : BroadcastReceiver() {
                 url = getStringExtra("url") ?: "",
                 displayName = StaticStringResolver("Dummy display name"),
                 summary = StaticStringResolver("Dummy summary"),
-                icon = ResourceDrawableResolver(R.drawable.ttivi_appstore_icon_invalidpackage)
+                icon = ResourceDrawableResolver(
+                    AppStoreModelR.drawable.ttivi_appstore_icon_invalidpackage
+                )
             )
         }
     }
