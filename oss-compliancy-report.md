@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6154-3320
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6197-3341
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -64,7 +64,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support CardView v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Custom Tabs](http://developer.android.com/tools/extras/support-library.html) | 1.3.0 | Apache License 2.0 |
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.3.6 | Apache License 2.0 |
+| [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.6 | Apache License 2.0 |
 | [Android Support Grid Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.6.0 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -183,7 +183,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [google-guava](https://github.com/google/guava) | v32.0.1 | Apache License 2.0 |
 | [google/gnd-android](https://github.com/google/ground-android) | 20180718-snapshot-a254a296, 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/ksp](https://github.com/google/ksp) | 1.4.30-M2-104-multiple-round-preview-20201223 | Apache License 2.0 |
-| [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | v8.12.3 | Apache License 2.0 |
+| [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | 8.12.3 | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.2.0, 7.3.3, 7.4.2, v7.6.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
@@ -206,13 +206,13 @@ This offer is valid for a period of three years from the date of distribution of
 | [JWT-Decode](https://github.com/auth0/JWTDecode.Android) | 2.0.1 | MIT License |
 | [koom-fast-dump](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
 | [koom-monitor-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
-| [Kotlin](http://kotlin.jetbrains.org) | 1.6.10, 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
+| [Kotlin](http://kotlin.jetbrains.org) | 1.6.10, 1.8.20, 1.8.22 | Apache License 2.0 |
 | [Kotlin Libraries bill-of-materials](http://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [Kotlin Test Junit](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.8.22 | Apache License 2.0 |
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23, 3.0.4 | Apache License 2.0 |
-| [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.10, 1.8.22 | Apache License 2.0 |
-| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
+| [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.22 | Apache License 2.0 |
+| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.8.20, 1.8.22 | Apache License 2.0 |
 | [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.22 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.6.4, 1.7.2 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2 | Apache License 2.0 |
@@ -288,13 +288,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [nativeruntime](http://robolectric.org) | 4.10, 4.8.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 3.3 | Apache License 2.0 |
-| [OkHttp](https://github.com/square/okhttp) | 4.0.1, 4.10.0, 4.11.0 | Apache License 2.0 |
+| [OkHttp](https://github.com/square/okhttp) | 4.10.0, 4.11.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.0.0, 3.2.0, 3.3.0 | Apache License 2.0 |
-| [opentest4j](https://github.com/ota4j-team/opentest4j) | 1.3.0 | Apache License 2.0 |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | Eclipse Distribution License - v 1.0 |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.6.10, 1.8.10, 1.8.20, 1.8.22 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.6.10, 1.8.20, 1.8.22 | Apache License 2.0 |
 | [org.junit.jupiter:junit-jupiter-api](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [org.junit.jupiter:junit-jupiter-engine](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [org.junit.jupiter:junit-jupiter-params](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |

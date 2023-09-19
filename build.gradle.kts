@@ -30,6 +30,11 @@ plugins {
     id("com.tomtom.tools.android.extractstringsources") apply false
 }
 
+val applicationVersionCode: Int by extra(1)
+val applicationVersionName: String by extra(
+    findProperty("iviVersion") as? String ?: "1.0"
+)
+
 val jvmVersion = JavaVersion.toVersion(iviDependencies.versions.jvm.get())
 
 // Make a single directory where to store all test results.
@@ -146,8 +151,8 @@ subprojects {
                 // dynamic version codes. See the recommendations from Android Gradle Plugin docs:
                 //  - https://developer.android.com/studio/publish/versioning
                 //  - https://developer.android.com/build/gradle-tips#configure-dynamic-version-codes
-                defaultConfig.versionCode = 1
-                defaultConfig.versionName = "1.0"
+                defaultConfig.versionCode = applicationVersionCode
+                defaultConfig.versionName = applicationVersionName
             }
         }
 
