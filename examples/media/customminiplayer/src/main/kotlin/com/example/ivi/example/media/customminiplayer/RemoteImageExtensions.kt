@@ -18,22 +18,23 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.switchMap
 import com.tomtom.ivi.appsuite.media.api.common.attributes.R as MediaAttributesR
-import com.tomtom.tools.android.api.graphics.drawable.RemoteDrawableResolver
 import com.tomtom.tools.android.api.graphics.drawable.blur
 import com.tomtom.tools.android.api.graphics.drawable.getBrightnessAdjustedDominantColor
+import com.tomtom.tools.android.api.graphics.imageloader.RemoteImage
+import com.tomtom.tools.android.api.graphics.imageloader.TtImageLoader
 import com.tomtom.tools.android.api.resourceresolution.getFloatByAttr
 
 /**
- * Transforms the [RemoteDrawableResolver] into a blurred [Drawable] using [blur] function.
+ * Transforms the [RemoteImage] into a blurred [Drawable] using [blur] function.
  */
-internal fun LiveData<RemoteDrawableResolver>.toBlurredDrawable(context: Context, image: ImageView):
+internal fun LiveData<RemoteImage>.toBlurredDrawable(context: Context, image: ImageView):
     LiveData<Drawable> {
     val blurRadiusFraction =
         context.getFloatByAttr(
             MediaAttributesR.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction
         )
 
-    return switchMap { it.get(image).liveData }
+    return switchMap { TtImageLoader.download(context, it) }
         .switchMap {
             liveData {
                 // Calculates the blur radius and takes into account that the blur radius will be
@@ -48,17 +49,17 @@ internal fun LiveData<RemoteDrawableResolver>.toBlurredDrawable(context: Context
 }
 
 /**
- * Transforms the [RemoteDrawableResolver] into its dominant color. If there is no dominant color,
+ * Transforms the [RemoteImage] into its dominant color. If there is no dominant color,
  * the [defaultColor] is used.
  */
-internal fun LiveData<RemoteDrawableResolver>.toDominantColor(
+internal fun LiveData<RemoteImage>.toDominantColor(
     context: Context,
     @ColorInt defaultColor: Int
 ): LiveData<Int> {
     return switchMap {
         // It is important to use the context to get the drawable independently of the image view
         // size and get always the same color for a given drawable.
-        it.get(context).liveData
+        TtImageLoader.download(context, it)
     }.switchMap {
         liveData {
             emit(it.getBrightnessAdjustedDominantColor(defaultColor))

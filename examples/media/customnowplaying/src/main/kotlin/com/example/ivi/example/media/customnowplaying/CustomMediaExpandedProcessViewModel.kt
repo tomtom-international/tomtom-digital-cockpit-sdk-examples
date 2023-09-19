@@ -40,7 +40,6 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsV
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaPlaybackViewModel
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.asMediaPlaybackParameters
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
-import com.tomtom.tools.android.api.graphics.drawable.RemoteDrawableResolver
 import com.tomtom.tools.android.api.livedata.combine
 import com.tomtom.tools.android.api.livedata.valueUpToDate
 import com.tomtom.tools.android.api.resourceresolution.drawable.ResourceDrawableResolver
@@ -206,7 +205,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
         ListItemContentViewModel(
             itemId = id,
             headImage = ImageDescriptor(
-                RemoteDrawableResolver(artUri ?: Uri.EMPTY),
+                artUri ?: Uri.EMPTY,
                 ImageType.ARTWORK
             ),
             primaryTextArea = ListItemContentViewModel.TextAreaViewModel(

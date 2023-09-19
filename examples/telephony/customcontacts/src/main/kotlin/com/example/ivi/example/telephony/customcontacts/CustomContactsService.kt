@@ -21,6 +21,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneBookSynchronizationStatus
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneNumber
 import com.tomtom.ivi.platform.telecom.api.common.model.PhoneNumberType
+import com.tomtom.tools.android.api.graphics.imageloader.LocalImageSource
 import com.tomtom.tools.android.api.resourceresolution.drawable.BitmapDrawableResolver
 
 /**
@@ -45,12 +46,14 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
             addresses = listOf(Address("45 Some Street, SomeCity, SC 10000", AddressType.Home)),
             defaultAddressIndex = 0,
             favorite = true,
-            image = BitmapDrawableResolver(
-                Bitmap.createBitmap(
-                    IntArray(50 * 50) { Color.BLACK },
-                    50,
-                    50,
-                    Bitmap.Config.ARGB_8888
+            image = LocalImageSource(
+                BitmapDrawableResolver(
+                    Bitmap.createBitmap(
+                        IntArray(50 * 50) { Color.BLACK },
+                        50,
+                        50,
+                        Bitmap.Config.ARGB_8888
+                    )
                 )
             ),
             primarySortKey = "John Smith",
