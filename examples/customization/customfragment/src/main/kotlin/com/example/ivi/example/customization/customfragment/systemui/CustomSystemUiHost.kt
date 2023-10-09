@@ -95,6 +95,10 @@ internal class CustomSystemUiHost(
         )[CustomSystemUiViewModel::class.java]
     }
 
+    override fun onSystemUiPresented() {
+        viewModel.frontendCoordinator.onSystemUiPresented()
+    }
+
     private fun bindSystemUiView(binding: TtiviCustomfragmentCustomsystemuiBinding) {
         binding.viewModel = viewModel
         binding.panelRegistry = viewModel.panelRegistry

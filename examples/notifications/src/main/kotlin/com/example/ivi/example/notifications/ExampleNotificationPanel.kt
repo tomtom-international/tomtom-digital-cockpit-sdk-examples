@@ -13,8 +13,10 @@ package com.example.ivi.example.notifications
 
 import com.tomtom.ivi.platform.frontend.api.common.frontend.FrontendContext
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
+import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.DismissalState
 import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.NotificationPanel
 import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.NotificationFragment
+import com.tomtom.tools.android.api.livedata.valueUpToDate
 
 internal class ExampleNotificationPanel(
     frontendContext: FrontendContext
@@ -26,13 +28,14 @@ internal class ExampleNotificationPanel(
             this
         )
 
-    override fun onDismissed() {
-        super.onDismissed()
-
-        onDismissedAction()
+    override fun onRemovedFromFrontend() {
+        if (dismissalState.valueUpToDate == DismissalState.DISMISSED) {
+            onDismissedAction()
+        }
+        super.onRemovedFromFrontend()
     }
 
     private fun onDismissedAction() {
-        // Things to do when the panel is dismissed.
+        // Things to do when the panel is dismissed by the user.
     }
 }

@@ -39,7 +39,7 @@ internal class CustomSystemUiViewModel(
     val shouldShowDebugPanel = debugPanelService?.shouldShowDebugPanel
         ?: ImmutableLiveData(false)
 
-    private val frontendCoordinator = FrontendCoordinator.createDefault(
+    val frontendCoordinator = FrontendCoordinator.createDefault(
         lifecycleOwner = this,
         iviServiceProvider = coreViewModel.iviServiceProvider,
         frontendMetadata = coreViewModel.frontendMetadata,

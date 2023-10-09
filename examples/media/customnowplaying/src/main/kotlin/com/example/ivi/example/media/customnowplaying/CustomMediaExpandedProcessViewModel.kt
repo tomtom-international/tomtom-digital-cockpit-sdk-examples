@@ -158,14 +158,17 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
      * [MediaButtonsViewModel.secondaryButtons], because the split of primary and secondary buttons
      * does not match our custom layout.
      */
-    val customControls: LiveData<List<TtButtonViewModel>> = mediaButtonsConfiguration.switchMap {
-        it.customControls.map { mediaControlFactory ->
-            mediaControlFactory.createControlFor(mediaControlContext)
-        }.map { mediaControl ->
-            mediaControl.asIconTtButtonViewModel()
-        } // Combine the list of LiveData<TtButtonViewModel> to a list of TtButtonViewModel
-            .combine { it }
-    }
+    val customControls: LiveData<List<TtButtonViewModel>> =
+        combine(mediaButtonsConfiguration, mediaControlContext.actions) { config, actions ->
+            config.getCustomMediaControlFactoriesFor(actions)
+        }.switchMap {
+            it.map { mediaControlFactory ->
+                mediaControlFactory.createControlFor(mediaControlContext)
+            }.map { mediaControl ->
+                mediaControl.asIconTtButtonViewModel()
+            } // Combine the list of LiveData<TtButtonViewModel> to a list of TtButtonViewModel
+                .combine { it }
+        }
 
     /**
      * The now playing queue shown in the panel. This uses a combine to ensure that the list is

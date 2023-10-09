@@ -74,6 +74,10 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
             IviPanelRegistrySystemUiHostExtension(systemUiHostExtensionContext)
     }
 
+    override fun onSystemUiPresented() {
+        panelRegistryExtension.onSystemUiPresented()
+    }
+
     private fun bindSystemUiView(binding: TtiviCustomanimationCustomsystemuiBinding) {
         panelRegistryExtension.bindSystemUiView(binding)
         setIviOnBackPressedCallbacks(listOf(binding.exampleSystemuiTaskPanelStackContainer))
