@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6303-3400
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6336-3423
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -64,7 +64,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.6 | Apache License 2.0 |
 | [Android Support Grid Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.6.0 | Apache License 2.0 |
+| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.6.0, 1.7.0 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.2.0 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.10.1, 1.7.0 | Apache License 2.0 |
