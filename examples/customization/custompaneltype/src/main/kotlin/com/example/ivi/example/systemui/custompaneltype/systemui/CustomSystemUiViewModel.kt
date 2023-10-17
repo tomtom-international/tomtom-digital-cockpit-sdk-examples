@@ -24,7 +24,7 @@ internal class CustomSystemUiViewModel(
     coreViewModel: CoreSystemUiViewModel
 ) : LifecycleViewModel() {
 
-    private val frontendCoordinator = FrontendCoordinator(
+    val frontendCoordinator = FrontendCoordinator(
         lifecycleOwner = this,
         coreViewModel.iviServiceProvider,
         coreViewModel.frontendMetadata,

@@ -11,7 +11,9 @@
 
 package com.example.ivi.example.applauncher.services.webapplaunchtrigger
 
+import android.content.Context.RECEIVER_EXPORTED
 import android.content.IntentFilter
+import android.os.Build
 import com.tomtom.ivi.appsuite.appstore.api.service.applaunchtrigger.AppLaunchTriggerServiceBase
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviDiscoverableServiceIdProvider
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContext
@@ -33,12 +35,23 @@ class WebAppLaunchTriggerService(
         // Register the receiver with a permission to prevent it being triggered insecurely.
         // Contact the 3rd-party app store provider to add the defined permission when sending the
         // intent.
-        context.registerReceiver(
-            webAppLaunchTriggerBroadcastReceiver,
-            filter,
-            WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION,
-            null
-        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(
+                webAppLaunchTriggerBroadcastReceiver,
+                filter,
+                WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION,
+                null,
+                RECEIVER_EXPORTED
+            )
+        } else {
+            @Suppress("UnspecifiedRegisterReceiverFlag")
+            context.registerReceiver(
+                webAppLaunchTriggerBroadcastReceiver,
+                filter,
+                WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION,
+                null
+            )
+        }
 
         // To receive the triggered web apps from the previously registered broadcast, we need to
         // observe [webAppLaunchTriggerBroadcastReceiver.triggeredWebApp].

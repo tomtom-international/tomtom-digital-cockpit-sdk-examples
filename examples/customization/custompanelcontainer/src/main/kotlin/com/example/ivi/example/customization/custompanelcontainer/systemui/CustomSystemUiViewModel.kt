@@ -24,7 +24,7 @@ import com.tomtom.tools.android.api.lifecycle.LifecycleViewModel
 internal class CustomSystemUiViewModel(coreViewModel: CoreSystemUiViewModel) :
     LifecycleViewModel() {
 
-    private val frontendCoordinator = FrontendCoordinator(
+    val frontendCoordinator = FrontendCoordinator(
         lifecycleOwner = this,
         iviServiceProvider = coreViewModel.iviServiceProvider,
         frontendMetadata = coreViewModel.frontendMetadata,

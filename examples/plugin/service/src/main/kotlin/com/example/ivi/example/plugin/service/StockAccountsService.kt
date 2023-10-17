@@ -87,8 +87,7 @@ internal class StockAccountsService(iviServiceHostContext: IviServiceHostContext
 
     private fun logInOnline(username: String, password: SensitiveString): Account? =
         takeIf { isValidUsername(username) && isValidPassword(password.value) }?.run {
-            // Simulate making an online request.
-            onlineAccountEndpoint
+            println("Pretend making an online request to '$onlineAccountEndpoint'.")
             Account(username = username)
         }
 

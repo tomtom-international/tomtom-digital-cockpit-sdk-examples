@@ -115,6 +115,10 @@ internal class CustomSystemUiHost(
         )
     }
 
+    override fun onSystemUiPresented() {
+        panelRegistryExtension.onSystemUiPresented()
+    }
+
     private fun bindSystemUiView(binding: ViewDataBinding) {
         systemUiHostExtensions.bindSystemUiView(binding)
     }

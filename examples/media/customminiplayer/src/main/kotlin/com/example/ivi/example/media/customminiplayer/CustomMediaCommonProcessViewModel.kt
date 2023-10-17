@@ -137,14 +137,17 @@ internal class CustomMediaCommonProcessViewModel(
      * [MediaButtonsViewModel.secondaryButtons], because the split of primary and secondary buttons
      * does not match our custom layout.
      */
-    val customControls: LiveData<List<TtButtonViewModel>> = mediaButtonsConfiguration.switchMap {
-        it.customControls.map { mediaControlFactory ->
-            mediaControlFactory.createControlFor(mediaControlContext)
-        }.map { mediaControl ->
-            mediaControl.asIconTtButtonViewModel()
-        } // Combine the list of LiveData<TtButtonViewModel> to a list of TtButtonViewModel
-            .combine { it }
-    }
+    val customControls: LiveData<List<TtButtonViewModel>> =
+        combine(mediaButtonsConfiguration, mediaControlContext.actions) { config, actions ->
+            config.getCustomMediaControlFactoriesFor(actions)
+        }.switchMap {
+            it.map { mediaControlFactory ->
+                mediaControlFactory.createControlFor(mediaControlContext)
+            }.map { mediaControl ->
+                mediaControl.asIconTtButtonViewModel()
+            } // Combine the list of LiveData<TtButtonViewModel> to a list of TtButtonViewModel
+                .combine { it }
+        }
 
     /**
      * This opens the expanded process panel via both [MediaMainProcessPanelBase] and
