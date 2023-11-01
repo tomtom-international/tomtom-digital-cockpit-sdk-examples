@@ -22,6 +22,12 @@
     <bool name="keepCommunicationsPanelOpenOnOutgoingCallConfigKey">true</bool>
 
     <!--
+     The timeout in milliseconds, which is started after the last received phone book
+     synchronization batch update, indicating phone book synchronization has finished.
+     -->
+    <string name="phoneBookSynchronizationTimeoutMillisecondConfigKey">15000</string>
+
+    <!--
      Indicates that the task process panel will not be suppressed for an ongoing call.
      -->
     <bool name="suppressCallTaskProcessPanelConfigKey">false</bool>
