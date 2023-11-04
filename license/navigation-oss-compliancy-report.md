@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6456-3457
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6463-3462
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -100,11 +100,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.8.20, 1.8.22 | Apache License 2.0 |
-| [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.6.4 | Apache License 2.0 |
-| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4 | Apache License 2.0 |
+| [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2, 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2, 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-bom](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
@@ -137,19 +137,19 @@ This offer is valid for a period of three years from the date of distribution of
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.24.4 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.24.4 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.0 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.0 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
 | [semver](https://github.com/swiftzer/semver) | 1.1.1 | MIT License |
-| [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.17.0 | MIT License |
-| [sentry-android-core](https://sentry.io) | 6.17.0 | MIT License |
-| [sentry-android-ndk](https://sentry.io) | 6.17.0 | MIT License |
-| [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.17.0 | MIT License |
-| [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.17.0 | MIT License |
+| [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.32.0 | MIT License |
+| [sentry-android-core](https://sentry.io) | 6.32.0 | MIT License |
+| [sentry-android-ndk](https://sentry.io) | 6.32.0 | MIT License |
+| [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.32.0 | MIT License |
+| [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.32.0 | MIT License |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.32, 1.7.36 | MIT License |
 | [SQLDelight Android Driver](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
 | [SQLDelight Coroutines Extensions](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
