@@ -19,8 +19,8 @@
         <import type="android.graphics.drawable.Drawable" />
 
         <import
-            alias="CoreAnimationR"
-            type="com.tomtom.tools.android.core.animation.R" />
+            alias="CoreThemeR"
+            type="com.tomtom.tools.android.core.theme.R" />
 
         <import type="com.tomtom.tools.android.api.resourceresolution.ContextExtensionsKt" />
 
@@ -48,7 +48,7 @@
             android:alpha="?attr/ttivi_media_nowplayingview_background_alpha"
             android:scaleType="centerCrop"
             android:src="@{backgroundArt}"
-            auto:ttCrossFadingDurationMs="@{ContextExtensionsKt.getIntegerByAttr(context, CoreAnimationR.attr.tt_animation_duration_medium_ms)}" />
+            auto:ttCrossFadingDurationMs="@{ContextExtensionsKt.getIntegerByAttr(context, CoreThemeR.attr.tt_animation_duration_medium_ms)}" />
 
         <!-- Dismiss button -->
         <LinearLayout
