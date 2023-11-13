@@ -16,11 +16,10 @@ import androidx.annotation.LayoutRes
 import androidx.fragment.app.FragmentContainerView
 import com.example.ivi.example.customization.custompanelcontainer.R
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.PanelContainerViewModel
-import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.findPanelFragmentContainerAndSetId
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.inflateSubContainerAndBindViewModel
-import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.panelfragmentadapter.PanelFragmentAdapterBuilder
-import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.panelfragmentadapter.SinglePanelAttachment
+import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.panelfragmentadapter.SinglePanelAttachmentProvider
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.subcontainercontroller.StateDrivenSubContainerController
+import com.tomtom.ivi.platform.systemui.api.common.systemuihost.containercontrollers.subcontainercontroller.SubContainerCreation
 
 internal typealias DualPanelContainerViewModel =
     PanelContainerViewModel<
@@ -61,41 +60,22 @@ internal class DualPanelSubContainerController(
         panelContainer: ViewGroup,
         subContainerViewModel: DualPanelSubContainerViewModel,
         panelContainerViewModel: DualPanelContainerViewModel
-    ): StateDrivenSubContainerController.SubContainerCreationResult<
-        DualPanelSubContainerViewModel,
-        DualPanelContainerData
-        > {
-        val subContainerHolder = inflateSubContainerAndBindViewModel(
+    ): SubContainerCreation<DualPanelSubContainerViewModel, DualPanelContainerData> =
+        inflateSubContainerAndBindViewModel(
             panelContainer,
             subContainerLayoutId,
             subContainerViewModel
         )
-
-        val panelFragment1Holder = subContainerHolder.findPanelFragmentContainerAndSetId(
-            subContainerViewModel.panelFragmentContainer1Id,
-            R.id.ttivi_custompanelcontainer_panel_1
-        )
-
-        val panelFragment2Holder = subContainerHolder.findPanelFragmentContainerAndSetId(
-            subContainerViewModel.panelFragmentContainer2Id,
-            R.id.ttivi_custompanelcontainer_panel_2
-        )
-
-        val panelFragmentAdapterBuilder: PanelFragmentAdapterBuilder.() -> Unit = {
-            createSingleFragmentPanelAdapter(panelFragment1Holder) {
-                SinglePanelAttachment(subContainerViewModel.subContainerData.panel1) { it }
-            }
-
-            createSingleFragmentPanelAdapter(panelFragment2Holder) {
-                SinglePanelAttachment(subContainerViewModel.subContainerData.panel2) { it }
-            }
-        }
-
-        return StateDrivenSubContainerController.SubContainerCreationResult(
-            subContainerHolder,
-            panelFragmentAdapterBuilder
-        )
-    }
+            .bindFragmentContainer(
+                R.id.ttivi_custompanelcontainer_panel_1,
+                subContainerViewModel.panelFragmentContainer1Id,
+                SinglePanelAttachmentProvider { subContainerViewModel.subContainerData.panel1 }
+            )
+            .bindFragmentContainer(
+                R.id.ttivi_custompanelcontainer_panel_2,
+                subContainerViewModel.panelFragmentContainer2Id,
+                SinglePanelAttachmentProvider { subContainerViewModel.subContainerData.panel2 }
+            )
 
     override fun getSubContainerDataUpdates(
         panelContainerViewModel: DualPanelContainerViewModel
