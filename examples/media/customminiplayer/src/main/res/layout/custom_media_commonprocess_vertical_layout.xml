@@ -18,8 +18,8 @@
         <import type="android.graphics.drawable.Drawable" />
 
         <import
-            alias="CoreAnimationR"
-            type="com.tomtom.tools.android.core.animation.R" />
+            alias="CoreThemeR"
+            type="com.tomtom.tools.android.core.theme.R" />
 
         <import type="com.tomtom.tools.android.api.resourceresolution.ContextExtensionsKt" />
 
@@ -51,7 +51,7 @@
             auto:layout_constraintEnd_toEndOf="parent"
             auto:layout_constraintStart_toStartOf="parent"
             auto:layout_constraintTop_toTopOf="parent"
-            auto:ttCrossFadingDurationMs="@{ContextExtensionsKt.getIntegerByAttr(context, CoreAnimationR.attr.tt_animation_duration_medium_ms)}" />
+            auto:ttCrossFadingDurationMs="@{ContextExtensionsKt.getIntegerByAttr(context, CoreThemeR.attr.tt_animation_duration_medium_ms)}" />
 
         <com.tomtom.tools.android.api.uicontrols.imageview.TtRoundedImageCardView
             android:id="@+id/custom_media_miniplayer_art"
