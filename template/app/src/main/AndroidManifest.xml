@@ -13,10 +13,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Prevent non-system-overlay windows from being drawn on top of it -->
-    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS" />
-
+    
     <application
         android:name=".TemplateApplication"
         android:icon="@drawable/ttivi_product_icon_main"
