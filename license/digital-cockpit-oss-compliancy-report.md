@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6543-3515
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6546-3516
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -182,6 +182,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [ICU4J](http://icu-project.org) | 70.1, 72.1 | ICU License |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 2.8 | Apache License 2.0 |
+| [java-vault-driver](https://github.com/BetterCloud/vault-java-driver) | 5.1.0 | MIT License |
 | [JavaWriter](http://github.com/square/javawriter/) | 2.1.1 | Apache License 2.0 |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0, 23.0.0 | Apache License 2.0 |
@@ -249,11 +250,13 @@ This offer is valid for a period of three years from the date of distribution of
 | [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
+| [libplexus-utils](http://codehaus-plexus.github.io/plexus-utils/) | 3.5.1 | Apache License 2.0 |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.6.1 | Apache License 2.0 |
 | [maccandroid](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.8.0 | Apache License 2.0 |
 | [Material for MkDocs](http://squidfunk.github.io/mkdocs-material/) | 0.9.2, 8.2.15 | MIT License |
+| [Maven Repository Metadata Model](http://maven.apache.org/ref/3.1.1/maven-repository-metadata) | 3.9.5 | Apache License 2.0 |
 | [maven-dependency-resolver](http://robolectric.org) | 4.10, 4.9.2 | MIT License |
 | [messaging](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [MockK](http://mockk.io) | 1.13.3 | Apache License 2.0 |
