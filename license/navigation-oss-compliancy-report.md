@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6546-3516
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6581-3524
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -156,8 +156,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [perfmark:perfmark-api](https://github.com/perfmark/perfmark) | 0.26.0 | Apache License 2.0 |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.0 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.0 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.1 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.1 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
