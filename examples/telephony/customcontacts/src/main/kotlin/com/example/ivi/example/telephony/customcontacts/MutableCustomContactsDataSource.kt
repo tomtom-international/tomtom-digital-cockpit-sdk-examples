@@ -128,7 +128,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
             }
             is PhoneNumber -> {
                 allContacts.filter { contact ->
-                    filter.phoneNumber?.let {
+                    filter.phoneNumbers?.any {
                         contact.phoneNumbers.any { phoneNumber ->
                             comparePhoneNumbers(it, phoneNumber.number)
                         }
