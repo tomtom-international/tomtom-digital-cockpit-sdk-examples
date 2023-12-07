@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6605-3534
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6614-3541
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -65,12 +65,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.2.0 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.4.0 | Apache License 2.0 |
-| [AndroidX Widget ViewPager2](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
 | [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.23 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
-| [Apache Commons Collections](http://commons.apache.org/proper/commons-collections/) | 4.4 | Apache License 2.0 |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.13.0 | Apache License 2.0 |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
@@ -109,7 +107,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 2.8 | Apache License 2.0 |
-| [javax.annotation API](http://jcp.org/en/jsr/detail?id=250) | 1.3.2 | (GNU General Public License v2.0 w/Classpath exception OR Common Development and Distribution License 1.1) |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 23.0.0 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
