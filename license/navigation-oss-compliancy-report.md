@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6640-3564
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6641-3563
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -96,15 +96,15 @@ This offer is valid for a period of three years from the date of distribution of
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
-| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
-| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
+| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
+| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
+| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
-| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
-| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
-| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.59.0 | Apache License 2.0 |
+| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
+| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
+| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.60.0 | Apache License 2.0 |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 2.8 | Apache License 2.0 |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
