@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6672-3587
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6684-3595
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -274,6 +274,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.11.1, 4.9.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
+| [nebula-plugins/gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin) | v11.6.0 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.10.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.3.0 | Apache License 2.0 |
@@ -334,7 +335,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Turbine](https://github.com/cashapp/turbine/) | 1.0.0 | Apache License 2.0 |
 | [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.11.1, 4.9.2 | MIT License |
-| [vaadin/platform](https://vaadin.com) | 24.3.0.rc1 | Apache License 2.0 |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 8.0.2 | Apache License 2.0 |
