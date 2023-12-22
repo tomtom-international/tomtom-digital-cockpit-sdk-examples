@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6677-3590
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6696-3602
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -95,7 +95,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android WorkManager Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.8.1 | Apache License 2.0 |
 | [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
-| [AndroidX Security](https://developer.android.com/jetpack/androidx/releases/security#1.0.0-alpha01) | 1.0.0-alpha02, 1.1.0-alpha02 | Apache License 2.0 |
+| [AndroidX Security](https://developer.android.com/jetpack/androidx/releases/security#1.0.0-alpha01) | 1.0.0-alpha02, 1.1.0-alpha06 | Apache License 2.0 |
 | [AndroidX Test Library - annotation](https://developer.android.com/testing) | 1.0.1 | Apache License 2.0 |
 | [AndroidX Test Library - core](https://developer.android.com/testing) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-contrib](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
@@ -108,7 +108,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Test Library - rules](https://developer.android.com/testing) | 1.4.0, 1.5.0 | Apache License 2.0 |
 | [AndroidX Test Library - runner](https://developer.android.com/testing) | 1.4.0, 1.5.2 | Apache License 2.0 |
 | [AndroidX Test Library - storage](https://developer.android.com/testing) | 1.4.0, 1.4.2 | Apache License 2.0 |
-| [AndroidX Test Library - uiautomator](https://developer.android.com/testing) | 2.2.0, 2.3.0-alpha02 | Apache License 2.0 |
+| [AndroidX Test Library - uiautomator](https://developer.android.com/testing) | 2.2.0, 2.3.0-alpha03 | Apache License 2.0 |
 | [AndroidX Widget ViewPager2](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.2.1 | Apache License 2.0 |
@@ -208,12 +208,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
 | [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.22, 1.9.21 | Apache License 2.0 |
-| [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.2 | Apache License 2.0 |
-| [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.2 | Apache License 2.0 |
+| [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.7.2, 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.2, 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.7.2, 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.2, 1.7.3 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.2.1, 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-bom](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.5.1 | Apache License 2.0 |
@@ -274,6 +274,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.9.3 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.11.1, 4.9.2 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
+| [nebula-plugins/gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin) | v11.6.0 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.10.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 1.16.0, 2.10.0, 2.2.2, 3.3.0 | Apache License 2.0 |
@@ -329,12 +330,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [text-to-speech](https://github.com/alexa/alexa-auto-sdk) | 3.1 | Apache License 2.0 |
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.5.0, 1.6.8 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.3.0, 1.4.6 | Apache License 2.0 |
-| [Tink Cryptography API for Android](http://github.com/google/tink) | 1.4.0 | Apache License 2.0 |
+| [Tink Cryptography API for Android](http://github.com/google/tink) | 1.8.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.3 | Apache License 2.0 |
 | [Turbine](https://github.com/cashapp/turbine/) | 1.0.0 | Apache License 2.0 |
 | [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.11.1, 4.9.2 | MIT License |
-| [vaadin/platform](https://vaadin.com) | 24.3.0.rc1 | Apache License 2.0 |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 8.0.2 | Apache License 2.0 |
