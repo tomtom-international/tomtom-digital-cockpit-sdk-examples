@@ -33,13 +33,13 @@ internal class CustomSystemUiViewModel(coreViewModel: CoreSystemUiViewModel) :
             CustomPanelRegistry.create(
                 frontendRegistry,
                 this,
-                coreViewModel.iviServiceProvider
+                coreViewModel.iviServiceProvider,
             )
         },
         frontendCoordinationRulesFactory = { frontendRegistry, panelRegistry ->
             DefaultFrontendCoordinationRules
                 .create(frontendRegistry, panelRegistry.iviPanelRegistry)
-        }
+        },
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry

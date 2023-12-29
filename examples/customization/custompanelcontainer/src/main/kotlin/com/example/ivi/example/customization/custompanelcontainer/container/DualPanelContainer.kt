@@ -30,15 +30,15 @@ import com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.S
 internal class DualPanelContainer @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
 ) :
     StateDrivenPanelContainer<
         DualPanelContainerData?,
         DualPanelSubContainerViewModel,
-        DualPanelContainerData>(
+        DualPanelContainerData,>(
         context,
         attrs,
-        defStyleAttr
+        defStyleAttr,
     ) {
     override fun createSubContainerController() =
         DualPanelSubContainerController(ttiviSubContainerLayoutId)
@@ -52,5 +52,5 @@ internal class DualPanelContainer @JvmOverloads constructor(
  */
 internal data class DualPanelContainerData(
     val panel1: Panel,
-    val panel2: Panel
+    val panel2: Panel,
 )

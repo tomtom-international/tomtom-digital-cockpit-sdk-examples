@@ -43,7 +43,7 @@ internal class StockAccountSettingsService(iviServiceHostContext: IviServiceHost
     override val onlineLoginValidPeriodInDaysSettingKey: LongSettingKey =
         onlineLoginValidPeriodInDaysConfigurationKey.toSettingKey(
             SettingScope.APPLICATION,
-            settingKeyPrefix
+            settingKeyPrefix,
         )
 
     override suspend fun initActiveAccount(storedSettingsVersion: Int) {
@@ -54,13 +54,13 @@ internal class StockAccountSettingsService(iviServiceHostContext: IviServiceHost
             when (storedSettingsVersion) {
                 settingsVersion -> SettingUpdateStrategy.NEVER_UPDATE
                 else -> SettingUpdateStrategy.ALWAYS_UPDATE
-            }
+            },
         )
 
         activeAccount = loadSettingIfAvailable(
             storedSettingsVersion,
             { readActiveAccountFromStorage() },
-            { null }
+            { null },
         )
     }
 
@@ -84,7 +84,7 @@ internal class StockAccountSettingsService(iviServiceHostContext: IviServiceHost
             coPutSetting(
                 sessionToken,
                 LOGIN_TIMESTAMP_SETTING_KEY,
-                timestamp
+                timestamp,
             )
         }
 
@@ -96,13 +96,13 @@ internal class StockAccountSettingsService(iviServiceHostContext: IviServiceHost
             serviceId,
             loginTimestampSettingKey,
             0L,
-            SettingUpdateStrategy.ALWAYS_UPDATE
+            SettingUpdateStrategy.ALWAYS_UPDATE,
         )
 
         loginTimestamp = loadSettingIfAvailable(
             storedSettingsVersion,
             { readLoginTimestampFromStorage() },
-            { 0L }
+            { 0L },
         )
     }
 

@@ -72,7 +72,7 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
     override fun onCreate() {
         viewModel = ViewModelProvider(
             viewModelStoreOwner,
-            FixedConstructorFactory(coreViewModel)
+            FixedConstructorFactory(coreViewModel),
         )[CustomSystemUiViewModel::class.java]
     }
 

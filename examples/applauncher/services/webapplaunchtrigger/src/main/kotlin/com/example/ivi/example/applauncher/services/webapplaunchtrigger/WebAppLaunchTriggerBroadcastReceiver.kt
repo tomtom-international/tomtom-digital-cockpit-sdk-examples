@@ -35,8 +35,8 @@ class WebAppLaunchTriggerBroadcastReceiver : BroadcastReceiver() {
                 displayName = StaticStringResolver("Dummy display name"),
                 summary = StaticStringResolver("Dummy summary"),
                 icon = ResourceDrawableResolver(
-                    AppStoreModelR.drawable.ttivi_appstore_icon_invalidpackage
-                )
+                    AppStoreModelR.drawable.ttivi_appstore_icon_invalidpackage,
+                ),
             )
         }
     }

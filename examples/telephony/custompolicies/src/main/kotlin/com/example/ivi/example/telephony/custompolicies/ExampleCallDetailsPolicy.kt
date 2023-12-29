@@ -40,7 +40,7 @@ internal class ExampleCallDetailsPolicy : CallDetailsPolicy {
         description = getDescription(contact),
         image = getImage(),
         isDtmfSupported = true,
-        shouldOpenFrontendOnContactTap = contact?.favorite ?: false
+        shouldOpenFrontendOnContactTap = contact?.favorite ?: false,
     )
 
     private fun getTitle(call: Call?): StringResolver =

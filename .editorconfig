@@ -453,12 +453,9 @@ ij_xml_use_custom_settings=true
 # - `parameter-list-wrapping`: This rule conflicts with the "indent" rule, causing the ktlint
 #   `check` and `format` tasks to fail validation of many files, regardless of the actual
 #   indentation in use.
-# - `trailing-comma-on-call-site`: When enabled, all call sites will have trailing commas or none
-#   at all.
-# - `trailing-comma-on-declaration-site`: See rational of `trailing-comma-on-call-site`.
 # - `ktlint-custom-rules:no-android-log`: we allow use of android log in tools-testing-* module.
 #   Logging in tests is encouraged.
-ktlint_disabled_rules=parameter-list-wrapping,trailing-comma-on-call-site,trailing-comma-on-declaration-site,ktlint-custom-rules:no-android-log
+ktlint_disabled_rules=parameter-list-wrapping,ktlint-custom-rules:no-android-log
 ij_continuation_indent_size=4
 ij_kotlin_align_in_columns_case_branch=false
 ij_kotlin_align_multiline_binary_operation=false
@@ -466,6 +463,8 @@ ij_kotlin_align_multiline_extends_list=false
 ij_kotlin_align_multiline_method_parentheses=false
 ij_kotlin_align_multiline_parameters=false
 ij_kotlin_align_multiline_parameters_in_calls=false
+ij_kotlin_allow_trailing_comma=true
+ij_kotlin_allow_trailing_comma_on_call_site=true
 ij_kotlin_assignment_wrap=normal
 ij_kotlin_blank_lines_after_class_header=0
 ij_kotlin_blank_lines_around_block_when_branches=0

@@ -25,7 +25,7 @@ internal class ExampleCallMainProcessViewModel(panel: ExampleCallMainProcessPane
         ExampleCallMainProcessViewModelFactory(
             title = ResourceStringResolver(R.string.ttivi_processcreation_mainprocesspanel_title),
             doDismissCall = ::closePanel,
-            doEndCall = ::closePanel
+            doEndCall = ::closePanel,
         )
     override val primaryControlsViewModel = factory.createPrimaryControls()
     override val metadataViewModel = factory.createMetadata()

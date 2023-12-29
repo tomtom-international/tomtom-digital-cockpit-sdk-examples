@@ -33,7 +33,7 @@ internal class ModalActivityFragment :
                     context,
                     0,
                     ANDROID_INTENT,
-                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
                 )
 
             with(binding.modalActivityFragmentActivityView) {

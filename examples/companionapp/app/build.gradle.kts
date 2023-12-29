@@ -24,9 +24,9 @@ val customCompanionExampleServiceHost = IviServiceHostConfig(
     interfaces = listOf(
         IviServiceInterfaceConfig(
             serviceName = "CompanionExampleService",
-            serviceApiModule = ExampleModuleReference("examples_companionapp_serviceapi")
-        )
-    )
+            serviceApiModule = ExampleModuleReference("examples_companionapp_serviceapi"),
+        ),
+    ),
 )
 
 /**

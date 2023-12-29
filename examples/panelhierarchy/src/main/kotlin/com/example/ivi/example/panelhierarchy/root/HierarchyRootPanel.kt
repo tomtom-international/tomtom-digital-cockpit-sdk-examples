@@ -32,14 +32,14 @@ internal typealias AddPanel = (panel: AnyPanel) -> Unit
  */
 internal class HierarchyRootPanel(
     frontendContext: FrontendContext,
-    private val addPanel: AddPanel
+    private val addPanel: AddPanel,
 ) : TaskPanel(frontendContext) {
 
     override val descriptor: LiveData<PanelDescriptor>
         get() = super.descriptor.map {
             it.copy(
                 label = ResourceStringResolver(R.string.ttivi_hierarchy_rootpanel),
-                icon = ResourceDrawableResolver(R.drawable.ttivi_hierarchy_rootpanel_icon)
+                icon = ResourceDrawableResolver(R.drawable.ttivi_hierarchy_rootpanel_icon),
             )
         }
 

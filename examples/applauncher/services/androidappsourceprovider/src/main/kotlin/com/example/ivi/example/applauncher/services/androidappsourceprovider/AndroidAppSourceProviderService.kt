@@ -20,7 +20,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
 
 class AndroidAppSourceProviderService(
     iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : AppSourceProviderServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     override fun onCreate() {
@@ -37,8 +37,8 @@ class AndroidAppSourceProviderService(
         // launcher.
         installedApps = listOf(
             LaunchableAndroidApp(
-                launchablePackageName = "com.android.example"
-            )
+                launchablePackageName = "com.android.example",
+            ),
         )
         serviceReady = true
     }

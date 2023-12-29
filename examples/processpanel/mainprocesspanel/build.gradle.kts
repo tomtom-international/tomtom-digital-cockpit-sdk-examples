@@ -29,7 +29,7 @@ android {
 val processCreationFrontend = FrontendConfig(
     frontendBuilderName = "ProcessCreationFrontendBuilder",
     implementationModule = ExampleModuleReference("examples_processpanel_mainprocesspanel"),
-    creationPolicy = FrontendCreationPolicy.CREATE_ON_DEMAND
+    creationPolicy = FrontendCreationPolicy.CREATE_ON_DEMAND,
 )
 
 val processCreationMenuItem =

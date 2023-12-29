@@ -43,7 +43,7 @@ internal class AccountLoginViewModel(panel: AccountLoginPanel) :
     val isLoginEnabled = allTrue(
         accountsServiceApi.serviceAvailable,
         username.map { it.isNotBlank() },
-        password.map { it.isNotBlank() }
+        password.map { it.isNotBlank() },
     )
 
     /**
@@ -93,17 +93,17 @@ internal class AccountLoginViewModel(panel: AccountLoginPanel) :
         @VisibleForTesting
         internal val lastLoginQuery = AccountsDataSourceQuery(
             selection = AccountsDataSourceQuery.Selection.LOGGED_IN_AT_LEAST_ONCE,
-            orderBy = AccountsDataSourceQuery.Order.LAST_LOG_IN_TIME_DESCENDING
+            orderBy = AccountsDataSourceQuery.Order.LAST_LOG_IN_TIME_DESCENDING,
         )
 
         @VisibleForTesting
         internal val allAccountsQuery = AccountsDataSourceQuery(
             selection = AccountsDataSourceQuery.Selection.ALL,
-            orderBy = AccountsDataSourceQuery.Order.USERNAME
+            orderBy = AccountsDataSourceQuery.Order.USERNAME,
         )
 
         private val pagingConfig = PagingConfig(
-            pageSize = 10
+            pageSize = 10,
         )
     }
 }

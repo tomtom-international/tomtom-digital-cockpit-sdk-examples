@@ -20,14 +20,14 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
  */
 internal class CustomEqualizerControllerHandlerServiceHost(
     iviServiceHostContext: IviServiceHostContext,
-    iviDiscoverableServiceIdProvider: IviDiscoverableServiceIdProvider
+    iviDiscoverableServiceIdProvider: IviDiscoverableServiceIdProvider,
 ) :
     IviServiceHostBase(iviServiceHostContext) {
 
     override val iviServices = setOf(
         CustomEqualizerControllerHandlerService(
             iviServiceHostContext,
-            iviDiscoverableServiceIdProvider
-        )
+            iviDiscoverableServiceIdProvider,
+        ),
     )
 }

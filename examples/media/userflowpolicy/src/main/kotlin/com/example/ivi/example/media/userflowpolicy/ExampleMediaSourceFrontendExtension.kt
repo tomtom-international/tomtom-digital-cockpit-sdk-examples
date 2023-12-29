@@ -32,5 +32,5 @@ internal val exampleMediaSourceFrontendExtension: FrontendExtension =
         // MediaBrowserServiceCompat service. If you want to apply the policy to all
         // MediaBrowserServiceCompat services in the package, leave this field as default or null.
         sourceClassName = ExampleMediaSourceId.className,
-        policyProvider = exampleMediaSourcePolicyProvider
+        policyProvider = exampleMediaSourcePolicyProvider,
     )

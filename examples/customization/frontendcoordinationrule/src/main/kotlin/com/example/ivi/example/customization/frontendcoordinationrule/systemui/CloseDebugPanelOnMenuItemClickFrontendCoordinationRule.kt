@@ -31,12 +31,12 @@ import com.tomtom.ivi.platform.systemui.api.service.systemuimenuitems.createApi
  * @see [FrontendCoordinationRule] for more information.
  */
 internal class CloseDebugPanelOnMenuItemClickFrontendCoordinationRule(
-    private val debugPanelService: DebugPanelServiceApi?
+    private val debugPanelService: DebugPanelServiceApi?,
 ) : FrontendCoordinationRule {
     override fun activate(
         lifecycleOwner: LifecycleOwner,
         iviServiceProvider: IviInstanceBoundIviServiceProvider,
-        frontends: LiveData<out Collection<Frontend>>
+        frontends: LiveData<out Collection<Frontend>>,
     ) {
         SystemUiMenuItemsService.createApi(lifecycleOwner, iviServiceProvider)
             .addMenuItemEventListener(
@@ -45,7 +45,7 @@ internal class CloseDebugPanelOnMenuItemClickFrontendCoordinationRule(
                     override fun onMenuItemClicked(id: MenuItem.Id) {
                         debugPanelService?.showDebugPanelAsync(false)
                     }
-                }
+                },
             )
     }
 }

@@ -43,7 +43,7 @@ internal class ExampleMediaSourcePanel(mediaContext: MediaFrontendContext) :
      */
     private val sourceClient = RootSourceClient(
         mediaContext.frontendContext.applicationContext,
-        ExampleMediaSourceId
+        ExampleMediaSourceId,
     )
 
     /**

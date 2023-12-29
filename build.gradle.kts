@@ -32,7 +32,7 @@ plugins {
 
 val applicationVersionCode: Int by extra(1)
 val applicationVersionName: String by extra(
-    findProperty("iviVersion") as? String ?: "1.0"
+    findProperty("iviVersion") as? String ?: "1.0",
 )
 
 val jvmVersion = JavaVersion.toVersion(iviDependencies.versions.jvm.get())
@@ -104,7 +104,8 @@ subprojects {
                             "kotlinx-coroutines-core",
                             "kotlinx-coroutines-core-jvm",
                             "kotlinx-coroutines-android",
-                            "kotlinx-coroutines-test" ->
+                            "kotlinx-coroutines-test",
+                            ->
                                 useVersion(versions.kotlinxCoroutines.get())
 
                             "kotlinx-serialization-json" ->
@@ -116,7 +117,7 @@ subprojects {
                             useVersion(versions.guava.get())
                             because(
                                 "Guava versions before 32.0.1 have CVE-2023-2976 " +
-                                    "and broken functionality"
+                                    "and broken functionality",
                             )
                         }
                     }
@@ -187,7 +188,7 @@ subprojects {
                         "META-INF/LICENSE.md",
                         "META-INF/LICENSE-notice.md",
                         "META-INF/NOTICE.md",
-                    )
+                    ),
                 )
                 pickFirsts += "META-INF/io.netty.versions.properties"
             }

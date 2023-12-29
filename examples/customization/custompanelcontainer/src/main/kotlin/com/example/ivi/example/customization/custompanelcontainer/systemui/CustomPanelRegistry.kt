@@ -30,21 +30,21 @@ import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.PanelRegi
  */
 internal class CustomPanelRegistry(
     val dualPanels: LiveData<DualPanelContainerData?>,
-    val iviPanelRegistry: IviPanelRegistry
+    val iviPanelRegistry: IviPanelRegistry,
 ) : PanelRegistry {
 
     companion object {
         fun create(
             frontendRegistry: FrontendRegistry,
             lifecycleOwner: LifecycleOwner,
-            iviServiceProvider: IviInstanceBoundIviServiceProvider
+            iviServiceProvider: IviInstanceBoundIviServiceProvider,
         ) = CustomPanelRegistry(
             dualPanels = frontendRegistry.frontends.extractPanels().toDualPanelContainerData(),
             iviPanelRegistry = IviPanelRegistry.build(
                 frontendRegistry.extractPanels(),
                 lifecycleOwner,
-                iviServiceProvider
-            )
+                iviServiceProvider,
+            ),
         )
     }
 }

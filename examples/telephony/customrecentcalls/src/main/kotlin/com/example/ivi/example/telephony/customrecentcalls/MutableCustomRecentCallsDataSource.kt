@@ -33,7 +33,7 @@ import java.util.Locale
  */
 internal class MutableCustomRecentCallsDataSource(private val context: Context) :
     MutableIviDataSource<RecentCallsDataSourceElement, RecentCallsDataSourceQuery>(
-        jumpingSupported = true
+        jumpingSupported = true,
     ) {
 
     private val mutableRecentCalls = mutableListOf<RecentCall>()
@@ -82,7 +82,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
         val recentCallItems: List<RecentCallItem> =
             query.queryFlags?.let { recentCallQueryFlags ->
                 if (recentCallQueryFlags.contains(
-                        RecentCallQueryFlags.MERGE_CONSECUTIVE_RECENT_CALLS
+                        RecentCallQueryFlags.MERGE_CONSECUTIVE_RECENT_CALLS,
                     )
                 ) {
                     orderedSelection.removeConsecutiveElements()
@@ -96,7 +96,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
 
     private fun applyRecentCallsFilter(
         filter: RecentCallFilter,
-        allRecentCalls: List<RecentCall>
+        allRecentCalls: List<RecentCall>,
     ): List<RecentCall> {
         ensureCollatorLocale()
         collator.strength = Collator.PRIMARY
@@ -125,7 +125,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
 
     private fun orderRecentCallsElements(
         orderBy: RecentCallsDataSourceQuery.RecentCallOrderBy,
-        recentCalls: List<RecentCall>
+        recentCalls: List<RecentCall>,
     ): List<RecentCall> = when (orderBy.order) {
         RecentCallItemOrder.CREATION_TIME_DESC -> {
             recentCalls.sortedByDescending {
@@ -145,7 +145,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
             }.map { recentCall ->
                 RecentCallItem(
                     recentCall = recentCall,
-                    RecentCallMetaData(callsCount.getOrDefault(recentCall, 1))
+                    RecentCallMetaData(callsCount.getOrDefault(recentCall, 1)),
                 )
             }
         return distinctRecentCalls
@@ -153,7 +153,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
 
     private fun <E> List<E>.withoutDistinctConsecutiveElements(
         compare: (E, E) -> Boolean,
-        onConsecutiveElementFound: ((E, E) -> Unit)
+        onConsecutiveElementFound: ((E, E) -> Unit),
     ): List<E> {
         val newList = mutableListOf<E>()
         if (size <= 1) return newList.also { it.addAll(this) }
@@ -189,7 +189,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
     companion object {
         internal data class ComparableRecentCall(
             private val phoneNumber: PhoneNumber,
-            private val callType: RecentCall.RecentCallType
+            private val callType: RecentCall.RecentCallType,
         ) {
             constructor(recentCall: RecentCall) : this(recentCall.phoneNumber, recentCall.type)
 
@@ -201,21 +201,22 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
     }
 
     internal class MutableRecentCallsPagingSource(
-        private val data: List<RecentCallsDataSourceElement>
+        private val data: List<RecentCallsDataSourceElement>,
     ) : MutableIviPagingSource<RecentCallsDataSourceElement>() {
         override val loadSizeLimit = RECENT_CALLS_MAX_PAGE_SIZE
 
         override suspend fun loadWithLoadSizeLimited(
-            loadParams: IviPagingSource.LoadParams
+            loadParams: IviPagingSource.LoadParams,
         ): IviPagingSource.LoadResult<RecentCallsDataSourceElement> {
             return when (loadParams) {
                 is IviPagingSource.LoadParams.Refresh,
-                is IviPagingSource.LoadParams.Append -> {
+                is IviPagingSource.LoadParams.Append,
+                -> {
                     val dataIndex = minOf(loadParams.dataIndex, data.size)
                     createPage(
                         dataIndex = dataIndex,
                         pageSize = minOf(loadParams.loadSize, data.size - dataIndex),
-                        placeholdersEnabled = loadParams.placeholdersEnabled
+                        placeholdersEnabled = loadParams.placeholdersEnabled,
                     )
                 }
                 is IviPagingSource.LoadParams.Prepend -> {
@@ -224,7 +225,7 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
                     createPage(
                         dataIndex = dataIndex,
                         pageSize = size,
-                        placeholdersEnabled = loadParams.placeholdersEnabled
+                        placeholdersEnabled = loadParams.placeholdersEnabled,
                     )
                 }
             }
@@ -233,13 +234,13 @@ internal class MutableCustomRecentCallsDataSource(private val context: Context) 
         private fun createPage(
             dataIndex: Int,
             pageSize: Int,
-            placeholdersEnabled: Boolean
+            placeholdersEnabled: Boolean,
         ): IviPagingSource.LoadResult.Page<RecentCallsDataSourceElement> {
             return IviPagingSource.LoadResult.Page(
                 dataIndex = dataIndex,
                 data = data.subList(dataIndex, dataIndex + pageSize),
                 itemsBefore = dataIndex.takeIf { placeholdersEnabled },
-                itemsAfter = (data.size - dataIndex - pageSize).takeIf { placeholdersEnabled }
+                itemsAfter = (data.size - dataIndex - pageSize).takeIf { placeholdersEnabled },
             )
         }
 

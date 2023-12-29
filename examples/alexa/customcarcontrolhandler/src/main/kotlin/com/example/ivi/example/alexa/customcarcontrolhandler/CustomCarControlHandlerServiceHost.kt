@@ -20,11 +20,11 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
  */
 internal class CustomCarControlHandlerServiceHost(
     iviServiceHostContext: IviServiceHostContext,
-    iviDiscoverableServiceIdProvider: IviDiscoverableServiceIdProvider
+    iviDiscoverableServiceIdProvider: IviDiscoverableServiceIdProvider,
 ) :
     IviServiceHostBase(iviServiceHostContext) {
 
     override val iviServices = setOf(
-        CustomCarControlHandlerService(iviServiceHostContext, iviDiscoverableServiceIdProvider)
+        CustomCarControlHandlerService(iviServiceHostContext, iviDiscoverableServiceIdProvider),
     )
 }

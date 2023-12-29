@@ -23,6 +23,6 @@ internal class CustomMediaTaskProcessViewModel(panel: MediaTaskProcessPanelBase)
 
     internal val customMediaCommonProcessViewModel = CustomMediaCommonProcessViewModel(
         panel.mediaFrontendContext,
-        viewModelScope
+        viewModelScope,
     )
 }

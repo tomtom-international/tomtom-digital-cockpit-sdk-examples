@@ -22,14 +22,14 @@ import com.tomtom.tools.android.api.lifecycle.LifecycleViewModel
  * It is unrelated to fragment customization.
  */
 internal class CustomSystemUiViewModel(
-    coreViewModel: CoreSystemUiViewModel
+    coreViewModel: CoreSystemUiViewModel,
 ) : LifecycleViewModel() {
 
     val frontendCoordinator = FrontendCoordinator.createDefault(
         lifecycleOwner = this,
         coreViewModel.iviServiceProvider,
         coreViewModel.frontendMetadata,
-        coreViewModel.defaultFrontendContextFactory
+        coreViewModel.defaultFrontendContextFactory,
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry

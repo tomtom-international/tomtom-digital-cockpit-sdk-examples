@@ -43,23 +43,23 @@ internal class ExampleFrontend(frontendContext: FrontendContext) : Frontend(fron
 
             setBodyText(
                 ResourceStringResolver(
-                    R.string.ttivi_customization_customfragment_frontend_notificationbody
-                )
+                    R.string.ttivi_customization_customfragment_frontend_notificationbody,
+                ),
             )
             setPrimaryActionButtonViewModel(
                 TtButtonViewModel(
                     text = ResourceStringResolver(
-                        R.string.ttivi_customization_customfragment_frontend_notificationprimary
-                    )
-                )
+                        R.string.ttivi_customization_customfragment_frontend_notificationprimary,
+                    ),
+                ),
             )
             setSecondaryActionButtonViewModel(
                 TtButtonViewModel(
                     text = ResourceStringResolver(
-                        R.string.ttivi_customization_customfragment_frontend_notificationsecondary
+                        R.string.ttivi_customization_customfragment_frontend_notificationsecondary,
                     ),
-                    actionType = TtButton.ActionType.SECONDARY
-                )
+                    actionType = TtButton.ActionType.SECONDARY,
+                ),
             )
         }
 }

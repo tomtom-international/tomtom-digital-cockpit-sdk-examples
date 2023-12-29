@@ -37,22 +37,22 @@ internal class CustomRecentCallsService(iviServiceHostContext: IviServiceHostCon
             displayName = "John Smith",
             phoneNumber = PhoneNumber("+281111111", PhoneNumberType.Mobile),
             duration = Duration.ofSeconds(60),
-            creationTime = Instant.now()
+            creationTime = Instant.now(),
         ),
         RecentCall(
             type = RecentCallType.OUTGOING,
             displayName = "Kelly Goodwin",
             phoneNumber = PhoneNumber("+2822222222", PhoneNumberType.Work),
             duration = Duration.ZERO,
-            creationTime = Instant.now().minus(Duration.ofHours(1))
+            creationTime = Instant.now().minus(Duration.ofHours(1)),
         ),
         RecentCall(
             type = RecentCallType.OUTGOING,
             displayName = "Kelly Goodwin",
             phoneNumber = PhoneNumber("+2822222222", PhoneNumberType.Work),
             duration = Duration.ofSeconds(30),
-            creationTime = Instant.now().minus(Duration.ofHours(2))
-        )
+            creationTime = Instant.now().minus(Duration.ofHours(2)),
+        ),
     )
 
     override fun onCreate() {

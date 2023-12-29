@@ -30,5 +30,5 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.FrontendExtension
 internal val exampleFallbackPolicyFrontendExtension: FrontendExtension =
     MediaPolicyFrontendExtension(
         sourcePackageName = null /* Match non configured media sources. */,
-        policyProvider = exampleFallbackPolicyProvider
+        policyProvider = exampleFallbackPolicyProvider,
     )

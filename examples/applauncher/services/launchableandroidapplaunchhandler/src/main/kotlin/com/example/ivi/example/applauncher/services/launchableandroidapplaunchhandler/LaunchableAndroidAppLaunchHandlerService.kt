@@ -20,7 +20,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
 
 class LaunchableAndroidAppLaunchHandlerService(
     private val iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : AppLaunchHandlerServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     override fun onCreate() {

@@ -19,5 +19,5 @@ val exampleMenuItem =
     MenuItem(
         ExampleFrontend::class.qualifiedName!!,
         R.drawable.ttivi_example_menuitem,
-        R.string.ttivi_customization_customfragment_frontend_menuitem_name
+        R.string.ttivi_customization_customfragment_frontend_menuitem_name,
     )

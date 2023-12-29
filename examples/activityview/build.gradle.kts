@@ -27,7 +27,7 @@ plugins {
 val activityViewFrontend = FrontendConfig(
     frontendBuilderName = "ActivityViewFrontendBuilder",
     implementationModule = ExampleModuleReference("examples_activityview"),
-    creationPolicy = FrontendCreationPolicy.CREATE_ON_DEMAND
+    creationPolicy = FrontendCreationPolicy.CREATE_ON_DEMAND,
 )
 
 val activityViewMenuItem = activityViewFrontend.toMenuItem("activityViewMenuItem")

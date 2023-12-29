@@ -17,7 +17,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviserviceannotations.IviSettin
 import com.tomtom.ivi.platform.framework.api.ipc.iviserviceannotations.IviSettingAccessMode
 
 @IviService(
-    serviceId = "com.example.ivi.example.plugin.settingsservice"
+    serviceId = "com.example.ivi.example.plugin.settingsservice",
 )
 interface AccountSettingsService {
     @IviSetting(accessMode = IviSettingAccessMode.READ_WRITE)

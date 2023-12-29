@@ -17,5 +17,5 @@ val accountMenuItem =
     MenuItem(
         AccountFrontend::class.qualifiedName!!,
         R.drawable.ttivi_account_menuitem,
-        R.string.ttivi_account_menuitem_name
+        R.string.ttivi_account_menuitem_name,
     )

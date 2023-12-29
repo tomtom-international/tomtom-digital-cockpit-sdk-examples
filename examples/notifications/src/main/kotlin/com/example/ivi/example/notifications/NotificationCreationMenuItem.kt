@@ -16,5 +16,5 @@ import com.tomtom.ivi.platform.mainmenu.api.common.menu.MenuItem
 val notificationCreationMenuItem = MenuItem(
     NotificationCreationFrontend::class.qualifiedName!!,
     R.drawable.ttivi_notificationcreation_menuitem,
-    R.string.notification_creation_taskpanel_button
+    R.string.notification_creation_taskpanel_button,
 )

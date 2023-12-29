@@ -27,7 +27,7 @@ class SplashScreenActivity : DefaultActivity() {
                     .inflate(
                         R.layout.custom_splash_screen,
                         splashScreenContainer,
-                        false
+                        false,
                     )
             }
         }

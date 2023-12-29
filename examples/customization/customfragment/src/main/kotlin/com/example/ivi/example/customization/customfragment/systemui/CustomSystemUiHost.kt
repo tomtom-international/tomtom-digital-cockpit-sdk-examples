@@ -49,7 +49,7 @@ import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHostCont
  * for more information on creating custom system UI's.
  */
 internal class CustomSystemUiHost(
-    systemUiHostContext: SystemUiHostContext
+    systemUiHostContext: SystemUiHostContext,
 ) : SystemUiHost(systemUiHostContext) {
 
     /**
@@ -91,7 +91,7 @@ internal class CustomSystemUiHost(
     override fun onCreate() {
         viewModel = ViewModelProvider(
             viewModelStoreOwner,
-            FixedConstructorFactory(coreViewModel)
+            FixedConstructorFactory(coreViewModel),
         )[CustomSystemUiViewModel::class.java]
     }
 

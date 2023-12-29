@@ -30,7 +30,7 @@ import com.tomtom.tools.android.core.theme.R as CoreThemeR
  */
 internal class CustomMediaMainProcessFragment :
     IviFragment<MediaMainProcessPanelBase, CustomMediaMainProcessViewModel>(
-        CustomMediaMainProcessViewModel::class
+        CustomMediaMainProcessViewModel::class,
     ) {
 
     /**
@@ -56,46 +56,46 @@ internal class CustomMediaMainProcessFragment :
                      * look and behavior.
                      */
                     ViewVariant.HORIZONTAL -> ViewFactory(
-                        CustomMediaCommonprocessHorizontalLayoutBinding::inflate
+                        CustomMediaCommonprocessHorizontalLayoutBinding::inflate,
                     ) {
                         it.viewModel = viewModel.customMediaCommonProcessViewModel
                         requireContext().let { context ->
                             it.backgroundArt =
                                 viewModel.customMediaCommonProcessViewModel.art.toBlurredDrawable(
                                     context,
-                                    it.customMediaMiniplayerBlurredbackground
+                                    it.customMediaMiniplayerBlurredbackground,
                                 )
                             it.dominantColor =
                                 viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
                                     context,
                                     context.getColorByAttr(
-                                        CoreThemeR.attr.tt_surface_content_color_emphasis_high
-                                    )
+                                        CoreThemeR.attr.tt_surface_content_color_emphasis_high,
+                                    ),
                                 )
                         }
                     }
                     // Returns a ViewFactory using the vertical layout.
                     else -> ViewFactory(
-                        CustomMediaCommonprocessVerticalLayoutBinding::inflate
+                        CustomMediaCommonprocessVerticalLayoutBinding::inflate,
                     ) {
                         it.viewModel = viewModel.customMediaCommonProcessViewModel
                         requireContext().let { context ->
                             it.backgroundArt =
                                 viewModel.customMediaCommonProcessViewModel.art.toBlurredDrawable(
                                     context,
-                                    it.customMediaMiniplayerBlurredbackground
+                                    it.customMediaMiniplayerBlurredbackground,
                                 )
                             it.dominantColor =
                                 viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
                                     context,
                                     context.getColorByAttr(
-                                        CoreThemeR.attr.tt_surface_content_color_emphasis_high
-                                    )
+                                        CoreThemeR.attr.tt_surface_content_color_emphasis_high,
+                                    ),
                                 )
                         }
                     }
                 }
-            }
+            },
         )
     }
 

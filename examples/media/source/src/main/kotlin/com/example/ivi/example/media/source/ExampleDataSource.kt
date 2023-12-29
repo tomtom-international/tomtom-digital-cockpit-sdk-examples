@@ -88,6 +88,6 @@ internal class ExampleDataSource {
             makeItem("Playlist 2 song 2", playable = true, duration = 45_000L),
             makeItem("Playlist 2 song 3", playable = true, duration = 90_000L),
             makeItem("Playlist 2 song 4", playable = true, duration = 80_000L),
-        )
+        ),
     )
 }

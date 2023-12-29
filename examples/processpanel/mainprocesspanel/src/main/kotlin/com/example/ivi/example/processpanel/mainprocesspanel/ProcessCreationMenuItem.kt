@@ -16,5 +16,5 @@ import com.tomtom.ivi.platform.mainmenu.api.common.menu.MenuItem
 val processCreationMenuItem = MenuItem(
     ProcessCreationFrontend::class.qualifiedName!!,
     R.drawable.ttivi_processcreation_menuitem,
-    R.string.ttivi_processcreation_taskpanel_button
+    R.string.ttivi_processcreation_taskpanel_button,
 )

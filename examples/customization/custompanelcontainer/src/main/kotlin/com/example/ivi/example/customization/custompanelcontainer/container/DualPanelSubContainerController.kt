@@ -25,13 +25,13 @@ internal typealias DualPanelContainerViewModel =
     PanelContainerViewModel<
         DualPanelContainerData?,
         DualPanelSubContainerViewModel,
-        DualPanelContainerData
+        DualPanelContainerData,
         >
 
 internal typealias DualPanelSubContainerDataUpdate =
     StateDrivenSubContainerController.SubContainerDataUpdate<
         DualPanelSubContainerViewModel,
-        DualPanelContainerData
+        DualPanelContainerData,
         >
 
 /**
@@ -41,44 +41,44 @@ internal typealias DualPanelSubContainerDataUpdate =
  * `ttivi_custompanelcontainer_panel_2`.
  */
 internal class DualPanelSubContainerController(
-    @LayoutRes private val subContainerLayoutId: Int? = null
+    @LayoutRes private val subContainerLayoutId: Int? = null,
 ) :
     StateDrivenSubContainerController<
         DualPanelContainerData?,
         DualPanelSubContainerViewModel,
-        DualPanelContainerData> {
+        DualPanelContainerData,> {
 
     override fun getNewSubContainerData(
-        panelContainerViewModel: DualPanelContainerViewModel
+        panelContainerViewModel: DualPanelContainerViewModel,
     ) = listOfNotNull(
         panelContainerViewModel
             .panelContainerData
-            ?.takeUnless { panelContainerViewModel.hasSubContainerViewModelWithData(it) }
+            ?.takeUnless { panelContainerViewModel.hasSubContainerViewModelWithData(it) },
     )
 
     override fun createSubContainer(
         panelContainer: ViewGroup,
         subContainerViewModel: DualPanelSubContainerViewModel,
-        panelContainerViewModel: DualPanelContainerViewModel
+        panelContainerViewModel: DualPanelContainerViewModel,
     ): SubContainerCreation<DualPanelSubContainerViewModel, DualPanelContainerData> =
         inflateSubContainerAndBindViewModel(
             panelContainer,
             subContainerLayoutId,
-            subContainerViewModel
+            subContainerViewModel,
         )
             .bindFragmentContainer(
                 R.id.ttivi_custompanelcontainer_panel_1,
                 subContainerViewModel.panelFragmentContainer1Id,
-                SinglePanelAttachmentProvider { subContainerViewModel.subContainerData.panel1 }
+                SinglePanelAttachmentProvider { subContainerViewModel.subContainerData.panel1 },
             )
             .bindFragmentContainer(
                 R.id.ttivi_custompanelcontainer_panel_2,
                 subContainerViewModel.panelFragmentContainer2Id,
-                SinglePanelAttachmentProvider { subContainerViewModel.subContainerData.panel2 }
+                SinglePanelAttachmentProvider { subContainerViewModel.subContainerData.panel2 },
             )
 
     override fun getSubContainerDataUpdates(
-        panelContainerViewModel: DualPanelContainerViewModel
+        panelContainerViewModel: DualPanelContainerViewModel,
     ): Collection<DualPanelSubContainerDataUpdate> {
         val data = panelContainerViewModel.panelContainerData ?: return emptyList()
         val subContainerViewModel = panelContainerViewModel
@@ -87,7 +87,7 @@ internal class DualPanelSubContainerController(
 
         val update = StateDrivenSubContainerController.SubContainerDataUpdate(
             subContainerViewModel,
-            data
+            data,
         )
 
         return listOf(update)

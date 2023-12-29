@@ -19,5 +19,5 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.PolicyProvider
  * the frontend uses a default one.
  */
 internal val exampleFallbackPolicyProvider = PolicyProvider(
-    sourceAttributionPolicy = ExampleFallbackSourceAttributionPolicy()
+    sourceAttributionPolicy = ExampleFallbackSourceAttributionPolicy(),
 )

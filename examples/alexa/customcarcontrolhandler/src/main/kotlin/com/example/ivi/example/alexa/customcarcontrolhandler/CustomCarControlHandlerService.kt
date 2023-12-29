@@ -37,7 +37,7 @@ import kotlinx.serialization.json.jsonPrimitive
 
 internal class CustomCarControlHandlerService(
     iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : AlexaHandlerServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     private val tracer = iviServiceHostContext.createTracer<CustomCarControlHandlerEvents> { this }
@@ -56,7 +56,7 @@ internal class CustomCarControlHandlerService(
      */
     object SetControllerValueMessagePayloadSerializer :
         JsonContentPolymorphicSerializer<SetControllerValueIncomingMessagePayloadBase>(
-            SetControllerValueIncomingMessagePayloadBase::class
+            SetControllerValueIncomingMessagePayloadBase::class,
         ) {
         override fun selectDeserializer(element: JsonElement):
             DeserializationStrategy<SetControllerValueIncomingMessagePayloadBase> =
@@ -87,14 +87,14 @@ internal class CustomCarControlHandlerService(
         val capabilityType: String,
         val endpointId: String,
         val instanceId: String,
-        val value: String
+        val value: String,
     ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class SetPowerControllerValueIncomingMessagePayload(
         val capabilityType: String,
         val endpointId: String,
-        val turnOn: Boolean
+        val turnOn: Boolean,
     ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
@@ -102,7 +102,7 @@ internal class CustomCarControlHandlerService(
         val capabilityType: String,
         val endpointId: String,
         val instanceId: String,
-        val value: Double
+        val value: Double,
     ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
@@ -110,17 +110,17 @@ internal class CustomCarControlHandlerService(
         val capabilityType: String,
         val endpointId: String,
         val instanceId: String,
-        val turnOn: Boolean
+        val turnOn: Boolean,
     ) : SetControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class SetControllerValueOutgoingMessagePayload(
-        val success: Boolean
+        val success: Boolean,
     )
 
     object AdjustControllerValueMessageSerializer :
         JsonContentPolymorphicSerializer<AdjustControllerValueIncomingMessagePayloadBase>(
-            AdjustControllerValueIncomingMessagePayloadBase::class
+            AdjustControllerValueIncomingMessagePayloadBase::class,
         ) {
         override fun selectDeserializer(element: JsonElement):
             DeserializationStrategy<AdjustControllerValueIncomingMessagePayloadBase> =
@@ -141,7 +141,7 @@ internal class CustomCarControlHandlerService(
         val capabilityType: String,
         val endpointId: String,
         val instanceId: String,
-        val delta: Int
+        val delta: Int,
     ) : AdjustControllerValueIncomingMessagePayloadBase()
 
     @Serializable
@@ -149,12 +149,12 @@ internal class CustomCarControlHandlerService(
         val capabilityType: String,
         val endpointId: String,
         val instanceId: String,
-        val delta: Double
+        val delta: Double,
     ) : AdjustControllerValueIncomingMessagePayloadBase()
 
     @Serializable
     data class AdjustControllerValueOutgoingMessagePayload(
-        val success: Boolean
+        val success: Boolean,
     )
 
     override fun onCreate() {
@@ -273,11 +273,12 @@ internal class CustomCarControlHandlerService(
      */
     private fun setPowerControllerValue(
         messageId: String,
-        message: SetPowerControllerValueIncomingMessagePayload
+        message: SetPowerControllerValueIncomingMessagePayload,
     ): Boolean =
         when (message.endpointId.toDeviceName()) {
             LIGHT_ID,
-            CUSTOM_DEVICE_ID -> {
+            CUSTOM_DEVICE_ID,
+            -> {
                 val turnOn = message.turnOn
                 tracer.d("Setting power value $turnOn for endpoint ${message.endpointId}.")
                 sendSetControllerValueReply(messageId, true)
@@ -297,7 +298,7 @@ internal class CustomCarControlHandlerService(
      */
     private fun setRangeControllerValue(
         messageId: String,
-        message: SetRangeControllerValueIncomingMessagePayload
+        message: SetRangeControllerValueIncomingMessagePayload,
     ): Boolean =
         when (message.endpointId.toDeviceName()) {
             LIGHT_ID -> {
@@ -321,7 +322,7 @@ internal class CustomCarControlHandlerService(
      */
     private fun setModeControllerValue(
         messageId: String,
-        message: SetModeControllerValueIncomingMessagePayload
+        message: SetModeControllerValueIncomingMessagePayload,
     ): Boolean {
         return when (message.endpointId.toDeviceName()) {
             LIGHT_ID -> {
@@ -345,7 +346,7 @@ internal class CustomCarControlHandlerService(
      */
     private fun setToggleControllerValue(
         messageId: String,
-        message: SetToggleControllerValueIncomingMessagePayload
+        message: SetToggleControllerValueIncomingMessagePayload,
     ): Boolean = when (message.endpointId.toDeviceName()) {
         LIGHT_ID -> {
             val turnOn = message.turnOn
@@ -366,7 +367,7 @@ internal class CustomCarControlHandlerService(
             messageId,
             Topic.CAR_CONTROL,
             Action.CarControl.SET_CONTROLLER_VALUE,
-            SetControllerValueOutgoingMessagePayload(success)
+            SetControllerValueOutgoingMessagePayload(success),
         )
     }
 
@@ -377,7 +378,7 @@ internal class CustomCarControlHandlerService(
      */
     private fun adjustRangeControllerValue(
         messageId: String,
-        message: AdjustRangeControllerValueIncomingMessagePayload
+        message: AdjustRangeControllerValueIncomingMessagePayload,
     ): Boolean = when (message.endpointId.toDeviceName()) {
         LIGHT_ID -> {
             val deltaValue = message.delta
@@ -400,7 +401,7 @@ internal class CustomCarControlHandlerService(
      */
     private fun adjustModeControllerValue(
         messageId: String,
-        message: AdjustModeControllerValueIncomingMessagePayload
+        message: AdjustModeControllerValueIncomingMessagePayload,
     ): Boolean = when (message.endpointId.toDeviceName()) {
         LIGHT_ID -> {
             val deltaValue = message.delta
@@ -421,7 +422,7 @@ internal class CustomCarControlHandlerService(
             messageId,
             Topic.CAR_CONTROL,
             Action.CarControl.ADJUST_CONTROLLER_VALUE,
-            AdjustControllerValueOutgoingMessagePayload(success)
+            AdjustControllerValueOutgoingMessagePayload(success),
         )
     }
 
@@ -455,7 +456,7 @@ internal class CustomCarControlHandlerService(
 
         @TraceLogLevel(TraceLog.LogLevel.DEBUG)
         fun adjustControllerValueMessageReceived(
-            payload: AdjustControllerValueIncomingMessagePayloadBase
+            payload: AdjustControllerValueIncomingMessagePayloadBase,
         )
     }
 

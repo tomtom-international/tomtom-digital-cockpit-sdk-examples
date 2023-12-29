@@ -36,7 +36,7 @@ val exampleFrontend =
     FrontendConfig(
         frontendBuilderName = "ExampleFrontendBuilder",
         implementationModule = module,
-        subPackageName = "frontend"
+        subPackageName = "frontend",
     )
 
 val exampleMenuItem = exampleFrontend.toMenuItem("exampleMenuItem")

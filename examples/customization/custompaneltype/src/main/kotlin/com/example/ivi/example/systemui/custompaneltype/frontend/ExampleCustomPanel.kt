@@ -23,7 +23,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendV
  */
 internal class ExampleCustomPanel(
     frontendContext: FrontendContext,
-    val isTaskPanelOpened: LiveData<Boolean>
+    val isTaskPanelOpened: LiveData<Boolean>,
 ) : CustomSystemUiPanel(frontendContext) {
     override fun createInitialFragmentInitializer(): IviFragment.Initializer<*, *> =
         IviFragment.Initializer(ExampleCustomFragment(), this)

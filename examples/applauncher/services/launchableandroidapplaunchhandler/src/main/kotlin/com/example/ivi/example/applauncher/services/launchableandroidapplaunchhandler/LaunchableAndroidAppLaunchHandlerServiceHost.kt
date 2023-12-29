@@ -17,13 +17,13 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
 
 class LaunchableAndroidAppLaunchHandlerServiceHost(
     iviServiceHostContext: IviServiceHostContext,
-    iviDiscoverableServiceIdProvider: IviDiscoverableServiceIdProvider
+    iviDiscoverableServiceIdProvider: IviDiscoverableServiceIdProvider,
 ) : IviServiceHostBase(iviServiceHostContext) {
 
     override val iviServices = setOf(
         LaunchableAndroidAppLaunchHandlerService(
             iviServiceHostContext,
-            iviDiscoverableServiceIdProvider
-        )
+            iviDiscoverableServiceIdProvider,
+        ),
     )
 }

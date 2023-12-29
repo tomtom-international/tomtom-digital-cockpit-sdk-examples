@@ -40,7 +40,7 @@ ivi {
                     includeDefaultPlatformGroups()
                     includeDefaultAppsuiteGroups()
                     include(
-                        IviAppsuite.alexaGroup
+                        IviAppsuite.alexaGroup,
                     )
                 }
             }
@@ -50,7 +50,7 @@ ivi {
                 includeDefaultPlatformGroups()
                 includeDefaultAppsuiteGroups()
                 include(
-                    IviAppsuite.alexaGroup
+                    IviAppsuite.alexaGroup,
                 )
             }
             addHost(customCarControlHandlerServiceHost)
