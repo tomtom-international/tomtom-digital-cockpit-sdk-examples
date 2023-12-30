@@ -42,7 +42,7 @@ internal class ExampleMediaSourceService : MediaBrowserServiceCompat() {
             applicationContext,
             dataSource,
             ::onMediaSessionStart,
-            ::onMediaSessionStop
+            ::onMediaSessionStop,
         ).apply {
             setSessionToken(sessionToken)
         }
@@ -58,7 +58,7 @@ internal class ExampleMediaSourceService : MediaBrowserServiceCompat() {
     override fun onGetRoot(
         clientPackageName: String,
         clientUid: Int,
-        rootHints: Bundle?
+        rootHints: Bundle?,
     ): BrowserRoot {
         val root = dataSource.getRoot()
         tracer.onGetRoot(clientPackageName, clientUid, root)

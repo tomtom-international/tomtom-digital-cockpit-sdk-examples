@@ -21,7 +21,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.SimpleIviServiceHost
 class CustomCompanionExampleServiceHostBuilder : SimpleIviServiceHostBuilder() {
 
     override fun createIviServices(
-        iviServiceHostContext: IviServiceHostContext
+        iviServiceHostContext: IviServiceHostContext,
     ): Collection<AnyIviServiceBase> =
         listOf(CustomCompanionExampleService(iviServiceHostContext))
 

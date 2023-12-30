@@ -25,6 +25,6 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.policies.UserFlowPolicy
  */
 internal val exampleMediaSourcePolicyProvider = PolicyProvider(
     userFlowPolicy = UserFlowPolicy(
-        browseSourceUserFlow = ExampleMediaSourceBrowseUserFlow()
-    )
+        browseSourceUserFlow = ExampleMediaSourceBrowseUserFlow(),
+    ),
 )

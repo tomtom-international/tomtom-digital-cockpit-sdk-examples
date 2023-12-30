@@ -42,7 +42,7 @@ import kotlinx.coroutines.CoroutineScope
  */
 internal class CustomMediaCommonProcessViewModel(
     private val mediaFrontendContext: MediaFrontendContext,
-    viewModelScope: CoroutineScope
+    viewModelScope: CoroutineScope,
 ) {
 
     /**
@@ -53,10 +53,10 @@ internal class CustomMediaCommonProcessViewModel(
     private val playbackViewModel = MediaPlaybackViewModel(
         mediaFrontendContext.mediaConfiguration,
         mediaFrontendContext.mediaService.asMediaPlaybackParameters(
-            mediaFrontendContext.mediaConfiguration
+            mediaFrontendContext.mediaConfiguration,
         ),
         viewModelScope,
-        SourceAttributionFormat(preferSimplified = true)
+        SourceAttributionFormat(preferSimplified = true),
     )
 
     val primaryText = playbackViewModel.primaryText
@@ -88,7 +88,7 @@ internal class CustomMediaCommonProcessViewModel(
                 it.replacedStandardControls,
                 it.customControls,
                 it.mediaControlsDisplayLimit.primaryControlsSmallLimit,
-                it.mediaControlsDisplayLimit.secondaryControlsSmallLimit
+                it.mediaControlsDisplayLimit.secondaryControlsSmallLimit,
             )
         }
 
@@ -115,7 +115,7 @@ internal class CustomMediaCommonProcessViewModel(
                 buttonConfiguration.getReplacedMediaControlFactoryFor(TOGGLE_PLAY),
                 buttonConfiguration.getReplacedMediaControlFactoryFor(SKIP_FORWARD),
                 buttonConfiguration.getReplacedMediaControlFactoryFor(SEEK_FORWARD),
-                buttonConfiguration.getReplacedMediaControlFactoryFor(REPEAT)
+                buttonConfiguration.getReplacedMediaControlFactoryFor(REPEAT),
             ).map { mediaControlFactory ->
                 mediaControlFactory.createControlFor(mediaControlContext)
             }.map { mediaControl ->

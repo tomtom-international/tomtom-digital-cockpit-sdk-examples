@@ -16,7 +16,7 @@ import androidx.lifecycle.MutableLiveData
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
 
 internal class ModalActivityViewModel(
-    panel: ModalActivityPanel
+    panel: ModalActivityPanel,
 ) : FrontendViewModel<ModalActivityPanel>(panel) {
 
     val pendingIntent: MutableLiveData<PendingIntent> = MutableLiveData()

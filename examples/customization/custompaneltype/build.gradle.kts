@@ -34,7 +34,7 @@ val module = ExampleModuleReference("examples_customization_custompaneltype")
 val customPanelTypes = PanelTypesConfig(
     "CUSTOM_SYSTEM_UI_PANEL_TYPES",
     module,
-    "common"
+    "common",
 )
 
 /**
@@ -47,7 +47,7 @@ val exampleFrontend =
         frontendBuilderName = "ExampleFrontendBuilder",
         implementationModule = module,
         subPackageName = "frontend",
-        availablePanelTypes = customPanelTypes
+        availablePanelTypes = customPanelTypes,
     )
 
 val exampleMenuItem = exampleFrontend.toMenuItem("exampleMenuItem")

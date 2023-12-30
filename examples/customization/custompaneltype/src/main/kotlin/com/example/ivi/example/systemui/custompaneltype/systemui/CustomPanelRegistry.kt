@@ -31,7 +31,7 @@ import com.tomtom.tools.android.api.livedata.flatMap
  */
 internal class CustomPanelRegistry(
     val customPanel: LiveData<CustomSystemUiPanel?>,
-    val iviPanelRegistry: IviPanelRegistry
+    val iviPanelRegistry: IviPanelRegistry,
 ) : PanelRegistry {
 
     companion object {
@@ -44,14 +44,14 @@ internal class CustomPanelRegistry(
         fun create(
             frontendRegistry: FrontendRegistry,
             lifecycleOwner: LifecycleOwner,
-            iviServiceProvider: IviInstanceBoundIviServiceProvider
+            iviServiceProvider: IviInstanceBoundIviServiceProvider,
         ) = CustomPanelRegistry(
             customPanel = frontendRegistry.frontends.flatMap { it.panels }.mapToSingle(),
             iviPanelRegistry = IviPanelRegistry.build(
                 frontendRegistry.extractPanels(),
                 lifecycleOwner,
-                iviServiceProvider
-            )
+                iviServiceProvider,
+            ),
         )
     }
 }

@@ -23,7 +23,7 @@ import com.tomtom.tools.android.api.resourceresolution.string.StringResolver
  * This ViewModel replaces the stock ViewModel of the [MediaDashboardPanelBase].
  */
 internal class CustomMediaDashboardViewModel(
-    panel: MediaDashboardPanelBase
+    panel: MediaDashboardPanelBase,
 ) : FrontendViewModel<MediaDashboardPanelBase>(panel) {
 
     private val counter = MutableLiveData(0)

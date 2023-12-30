@@ -48,14 +48,14 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
     override val viewFactory: ViewFactory =
         BindingViewFactory(
             TtiviFrontendcoordinationruleCustomsystemuiBinding::inflate,
-            ::bindSystemUiView
+            ::bindSystemUiView,
         )
 
     override val supportedPanelTypes: PanelTypeSet = panelTypeSetOf(
         DebugPanel::class,
         MainMenuPanel::class,
         TaskPanel::class,
-        TaskProcessPanel::class
+        TaskProcessPanel::class,
     )
 
     override val unsupportedPanelTypes: PanelTypeSet = panelTypeSetOf(
@@ -75,14 +75,14 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
     override fun onCreate() {
         viewModel = ViewModelProvider(
             viewModelStoreOwner,
-            FixedConstructorFactory(coreViewModel)
+            FixedConstructorFactory(coreViewModel),
         )[CustomSystemUiViewModel::class.java]
 
         // To open a debug menu by holding volume down button.
         viewModel.debugPanelService?.let {
             ViewCompat.addOnUnhandledKeyEventListener(
                 rootView,
-                ToggleDebugPanelContainerKeyEventListener(it)
+                ToggleDebugPanelContainerKeyEventListener(it),
             )
         }
     }

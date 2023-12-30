@@ -17,10 +17,10 @@ internal class ExampleMediaSourceBrowseUserFlow : BrowseSourceUserFlow {
      */
     override suspend fun perform(
         mediaFrontendContext: MediaFrontendContext,
-        sourceId: SourceId
+        sourceId: SourceId,
     ): UserFlowResult {
         mediaFrontendContext.mediaFrontendNavigation.openMediaTaskPanel(
-            ExampleMediaSourcePanel(mediaFrontendContext)
+            ExampleMediaSourcePanel(mediaFrontendContext),
         )
         return UserFlowResult.Success
     }

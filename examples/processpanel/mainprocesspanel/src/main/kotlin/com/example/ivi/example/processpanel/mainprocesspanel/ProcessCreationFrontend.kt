@@ -29,8 +29,8 @@ class ProcessCreationFrontend(frontendContext: FrontendContext) : Frontend(front
                         // dismiss process panel
                         exampleCallMainProcessPanel = null
                     }
-                }
-            )
+                },
+            ),
         )
     }
 }

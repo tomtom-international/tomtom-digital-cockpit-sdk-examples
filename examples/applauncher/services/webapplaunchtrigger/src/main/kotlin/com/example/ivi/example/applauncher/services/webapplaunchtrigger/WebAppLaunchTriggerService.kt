@@ -20,7 +20,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.IviServiceHostContex
 
 class WebAppLaunchTriggerService(
     iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : AppLaunchTriggerServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     override fun onCreate() {
@@ -41,7 +41,7 @@ class WebAppLaunchTriggerService(
                 filter,
                 WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION,
                 null,
-                RECEIVER_EXPORTED
+                RECEIVER_EXPORTED,
             )
         } else {
             @Suppress("UnspecifiedRegisterReceiverFlag")
@@ -49,7 +49,7 @@ class WebAppLaunchTriggerService(
                 webAppLaunchTriggerBroadcastReceiver,
                 filter,
                 WEB_APP_BROADCAST_LAUNCH_TRIGGER_PERMISSION,
-                null
+                null,
             )
         }
 

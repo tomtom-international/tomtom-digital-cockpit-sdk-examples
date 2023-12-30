@@ -17,7 +17,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.MainProcessPa
 
 internal class ExampleCallMainProcessPanel(
     frontendContext: FrontendContext,
-    val dismiss: () -> Unit
+    val dismiss: () -> Unit,
 ) : MainProcessPanel(frontendContext, Priority.HIGH) {
 
     override fun createInitialFragmentInitializer() =

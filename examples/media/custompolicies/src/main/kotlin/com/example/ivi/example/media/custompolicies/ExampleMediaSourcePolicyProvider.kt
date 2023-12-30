@@ -26,5 +26,5 @@ internal val exampleMediaSourcePolicyProvider = PolicyProvider(
     compareItemsPolicy = ExampleMediaSourceItemComparisonPolicy(),
     itemMappingPolicy = ExampleMediaSourceItemMappingPolicy(),
     sourceAttributionPolicy = ExampleMediaSourceSourceAttributionPolicy(),
-    mediaControlPolicy = ExampleMediaSourceMediaControlPolicy()
+    mediaControlPolicy = ExampleMediaSourceMediaControlPolicy(),
 )

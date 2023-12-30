@@ -28,7 +28,7 @@ plugins {
  */
 val debugTabFrontendExtension = FrontendExtensionConfig(
     frontendExtensionName = "debugTabFrontendExtension",
-    implementationModule = ExampleModuleReference("examples_debugtab")
+    implementationModule = ExampleModuleReference("examples_debugtab"),
 )
 
 /**

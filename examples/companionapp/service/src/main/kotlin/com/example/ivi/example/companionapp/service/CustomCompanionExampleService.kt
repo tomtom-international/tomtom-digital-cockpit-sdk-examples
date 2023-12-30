@@ -44,7 +44,7 @@ internal class CustomCompanionExampleService(iviServiceHostContext: IviServiceHo
     private val communicationsClientContext = CommunicationsClientContext(
         iviServiceHostContext.context,
         this,
-        ExampleService.ClientFactory()
+        ExampleService.ClientFactory(),
     )
 
     private val communicationsServiceClientListener = object : CommunicationsClientListener {
@@ -54,7 +54,7 @@ internal class CustomCompanionExampleService(iviServiceHostContext: IviServiceHo
          */
         override fun onServiceConnected(
             serviceProviderId: ServiceProviderId,
-            client: CommunicationsServiceBase
+            client: CommunicationsServiceBase,
         ) {
             companionAppProxies[serviceProviderId] = client as ExampleService
             client.testLiveDataProperty.observe(this@CustomCompanionExampleService) {
@@ -80,7 +80,7 @@ internal class CustomCompanionExampleService(iviServiceHostContext: IviServiceHo
      */
     val communicationsClient = CommunicationsClient(
         communicationsClientContext,
-        communicationsServiceClientListener
+        communicationsServiceClientListener,
     )
 
     init {
@@ -96,7 +96,7 @@ internal class CustomCompanionExampleService(iviServiceHostContext: IviServiceHo
             ExampleMessageRequest.newBuilder()
                 .setBar(bar)
                 .setId(ExampleId.getDefaultInstance())
-                .build()
+                .build(),
         )?.stuff
     }
 }

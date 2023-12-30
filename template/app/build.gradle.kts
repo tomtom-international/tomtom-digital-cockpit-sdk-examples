@@ -28,7 +28,7 @@ plugins {
 private val templateAppModule = ModuleReference(
     "com.example.ivi",
     "template_app",
-    "com.example.ivi.template.app"
+    "com.example.ivi.template.app",
 )
 
 ivi {
@@ -69,7 +69,7 @@ fun IviDefaultsGroupsSelectionConfigurator.selectGroups() {
         IviAppsuite.navigationGroup,
         IviAppsuite.systemStatusGroup,
         IviAppsuite.userProfilesGroup,
-        IviAppsuite.vehicleSettingsGroup
+        IviAppsuite.vehicleSettingsGroup,
     )
 }
 

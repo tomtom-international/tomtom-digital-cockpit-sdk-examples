@@ -46,7 +46,7 @@ internal fun makeItem(
     playable: Boolean = false,
     subtitle: String? = null,
     duration: Long? = null,
-    group: String? = null
+    group: String? = null,
 ): MediaBrowserCompat.MediaItem {
     val extras = Bundle()
     duration?.let { extras.putLong(MediaMetadataCompat.METADATA_KEY_DURATION, it) }

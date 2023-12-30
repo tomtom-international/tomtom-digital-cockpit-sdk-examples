@@ -29,14 +29,14 @@ internal class ExampleFallbackSourceAttributionPolicy : MediaSourceAttributionPo
     override fun getName(
         sourceInfo: SourceInfo?,
         mediaItem: IviMediaItem?,
-        sourceAttributionFormat: SourceAttributionFormat
+        sourceAttributionFormat: SourceAttributionFormat,
     ): StringResolver? =
         sourceInfo?.displayName?.let { name -> StaticStringResolver("$name [unofficial]") }
 
     override fun getLogo(
         sourceInfo: SourceInfo?,
         mediaItem: IviMediaItem?,
-        sourceAttributionFormat: SourceAttributionFormat
+        sourceAttributionFormat: SourceAttributionFormat,
     ): DrawableResolver? =
         sourceInfo?.icon?.let { IconDrawableResolver(it) }
 }

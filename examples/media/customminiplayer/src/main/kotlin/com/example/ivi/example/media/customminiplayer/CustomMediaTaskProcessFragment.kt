@@ -24,7 +24,7 @@ import com.tomtom.tools.android.core.theme.R as CoreThemeR
  */
 internal class CustomMediaTaskProcessFragment :
     IviFragment<MediaTaskProcessPanelBase, CustomMediaTaskProcessViewModel>(
-        CustomMediaTaskProcessViewModel::class
+        CustomMediaTaskProcessViewModel::class,
     ) {
 
     /**
@@ -32,18 +32,18 @@ internal class CustomMediaTaskProcessFragment :
      * [MediaMainProcessPanelBase] to get the same look and behavior.
      */
     override val viewFactory = ViewFactory(
-        CustomMediaCommonprocessHorizontalLayoutBinding::inflate
+        CustomMediaCommonprocessHorizontalLayoutBinding::inflate,
     ) {
         it.viewModel = viewModel.customMediaCommonProcessViewModel
         requireContext().let { context ->
             it.backgroundArt =
                 viewModel.customMediaCommonProcessViewModel.art.toBlurredDrawable(
                     context,
-                    it.customMediaMiniplayerBlurredbackground
+                    it.customMediaMiniplayerBlurredbackground,
                 )
             it.dominantColor = viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
                 context,
-                context.getColorByAttr(CoreThemeR.attr.tt_surface_content_color_emphasis_high)
+                context.getColorByAttr(CoreThemeR.attr.tt_surface_content_color_emphasis_high),
             )
         }
     }

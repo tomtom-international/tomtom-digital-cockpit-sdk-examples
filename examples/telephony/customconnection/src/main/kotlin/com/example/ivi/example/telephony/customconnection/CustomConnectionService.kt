@@ -67,7 +67,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
 
     override fun onCreateOutgoingConnection(
         connectionManagerPhoneAccount: PhoneAccountHandle?,
-        request: ConnectionRequest?
+        request: ConnectionRequest?,
     ): Connection? {
         if (uriAlreadyHasAConnection(request?.address)) {
             tracer.uriConnectionAlreadyCreated(request?.address)
@@ -84,7 +84,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
 
     override fun onCreateOutgoingConnectionFailed(
         connectionManagerPhoneAccount: PhoneAccountHandle?,
-        request: ConnectionRequest?
+        request: ConnectionRequest?,
     ) {
         super.onCreateOutgoingConnectionFailed(connectionManagerPhoneAccount, request)
         tracer.onCreatedOutgoingConnectionFailed(connectionManagerPhoneAccount, request)
@@ -92,7 +92,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
 
     override fun onCreateIncomingConnection(
         connectionManagerPhoneAccount: PhoneAccountHandle?,
-        request: ConnectionRequest?
+        request: ConnectionRequest?,
 
     ): Connection? {
         if (uriAlreadyHasAConnection(request?.address)) {
@@ -109,7 +109,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
 
     override fun onCreateIncomingConnectionFailed(
         connectionManagerPhoneAccount: PhoneAccountHandle?,
-        request: ConnectionRequest?
+        request: ConnectionRequest?,
     ) {
         super.onCreateIncomingConnectionFailed(connectionManagerPhoneAccount, request)
         tracer.onCreatedIncomingConnectionFailed(connectionManagerPhoneAccount, request)
@@ -125,13 +125,14 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
     internal fun changeConnectionState(
         phoneNumber: String,
         callState: CallState,
-        disconnectCause: DisconnectCause?
+        disconnectCause: DisconnectCause?,
     ) {
         val uri = phoneNumber.toPhoneUri().uri
         allConnections.filter { it.address == uri }.forEach {
             when (callState) {
                 CallState.ANSWERING,
-                CallState.ACTIVE -> it.setActive()
+                CallState.ACTIVE,
+                -> it.setActive()
                 CallState.CONNECTING -> it.setInitializing()
                 CallState.DIALING -> it.setDialing()
                 CallState.DISCONNECTED -> {
@@ -152,7 +153,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
      * @return The state of the connection or `null` if no connection found for this [phoneNumber].
      */
     internal fun getConnectionState(
-        phoneNumber: String
+        phoneNumber: String,
     ): CallState? {
         val uri = phoneNumber.toPhoneUri().uri
         return allConnections.firstOrNull { it.address == uri }?.let {
@@ -174,20 +175,20 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
     override val lifecycle: Lifecycle = dispatcher.lifecycle
 
     inner class OutgoingCustomConnection(
-        request: ConnectionRequest?
+        request: ConnectionRequest?,
     ) : CustomConnection(request) {
         override fun getCallLogType() = CallLog.Calls.OUTGOING_TYPE
     }
 
     inner class IncomingCustomConnection(
-        request: ConnectionRequest?
+        request: ConnectionRequest?,
     ) : CustomConnection(request) {
         override fun getCallLogType() =
             if (activated) CallLog.Calls.INCOMING_TYPE else CallLog.Calls.MISSED_TYPE
     }
 
     abstract inner class CustomConnection(
-        private val request: ConnectionRequest?
+        private val request: ConnectionRequest?,
     ) : Connection() {
 
         protected var activated = false
@@ -212,7 +213,8 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
                 STATE_RINGING,
                 STATE_DIALING,
                 STATE_HOLDING,
-                STATE_PULLING_CALL -> Unit
+                STATE_PULLING_CALL,
+                -> Unit
                 else -> Unit
             }
         }
@@ -298,7 +300,7 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
                 STATE_DISCONNECTED -> CallState.DISCONNECTED
                 STATE_PULLING_CALL -> CallState.CONNECTING
                 else -> throw IllegalArgumentException(
-                    "Native call state not supported, nativeCallState='$nativeCallState'"
+                    "Native call state not supported, nativeCallState='$nativeCallState'",
                 )
             }
     }
@@ -309,12 +311,12 @@ internal class CustomConnectionService : ConnectionService(), LifecycleOwner {
 
         fun onCreatedOutgoingConnectionFailed(
             connectionManagerPhoneAccount: PhoneAccountHandle?,
-            request: ConnectionRequest?
+            request: ConnectionRequest?,
         )
 
         fun onCreatedIncomingConnectionFailed(
             connectionManagerPhoneAccount: PhoneAccountHandle?,
-            request: ConnectionRequest?
+            request: ConnectionRequest?,
         )
 
         fun clearingAllConnections()

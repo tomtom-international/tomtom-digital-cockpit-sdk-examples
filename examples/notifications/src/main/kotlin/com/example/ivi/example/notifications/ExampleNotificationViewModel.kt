@@ -26,10 +26,10 @@ internal class ExampleNotificationViewModel(panel: ExampleNotificationPanel) :
 
     override val headerViewModel = HeaderViewModel(
         imageDescriptor = ImageDescriptor(
-            ResourceDrawableResolver(R.drawable.ttivi_notification_icon_placeholder_alternative)
+            ResourceDrawableResolver(R.drawable.ttivi_notification_icon_placeholder_alternative),
         ),
         title = StaticStringResolver("Custom"),
-        description = StaticStringResolver("Extend from NotificationPanel")
+        description = StaticStringResolver("Extend from NotificationPanel"),
     )
 
     override val bodyText: LiveData<StringResolver?> =
@@ -40,8 +40,8 @@ internal class ExampleNotificationViewModel(panel: ExampleNotificationPanel) :
             TtButtonViewModel(
                 text = StaticStringResolver("Primary"),
                 actionType = TtButton.ActionType.ACCEPTANCE,
-                onClick = { onPrimaryButtonClicked() }
-            )
+                onClick = { onPrimaryButtonClicked() },
+            ),
         )
 
     private fun onPrimaryButtonClicked() {
@@ -52,8 +52,8 @@ internal class ExampleNotificationViewModel(panel: ExampleNotificationPanel) :
         TtButtonViewModel(
             text = StaticStringResolver("Secondary"),
             actionType = TtButton.ActionType.DESTRUCTIVE,
-            onClick = { onSecondaryButtonClicked() }
-        )
+            onClick = { onSecondaryButtonClicked() },
+        ),
     )
 
     private fun onSecondaryButtonClicked() {
@@ -66,14 +66,14 @@ internal class ExampleNotificationViewModel(panel: ExampleNotificationPanel) :
                 imageDescriptor = ImmutableLiveData(
                     ImageDescriptor(
                         ResourceDrawableResolver(
-                            R.drawable.ttivi_notificationoption_icon_placeholder
-                        )
+                            R.drawable.ttivi_notificationoption_icon_placeholder,
+                        ),
                     ),
                 ),
                 description = ImmutableLiveData(
-                    StaticStringResolver("Notification option")
+                    StaticStringResolver("Notification option"),
                 ),
-            )
-        )
+            ),
+        ),
     )
 }

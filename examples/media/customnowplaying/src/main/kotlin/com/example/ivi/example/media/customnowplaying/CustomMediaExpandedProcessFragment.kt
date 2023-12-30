@@ -23,7 +23,7 @@ import com.tomtom.tools.android.core.theme.R as CoreThemeR
  */
 internal class CustomMediaExpandedProcessFragment :
     IviFragment<MediaExpandedProcessPanelBase, CustomMediaExpandedProcessViewModel>(
-        CustomMediaExpandedProcessViewModel::class
+        CustomMediaExpandedProcessViewModel::class,
     ) {
 
     override val viewFactory = ViewFactory(CustomMediaExpandedprocessLayoutBinding::inflate) {
@@ -34,11 +34,11 @@ internal class CustomMediaExpandedProcessFragment :
             it.backgroundArt =
                 viewModel.art.toBlurredDrawable(
                     context,
-                    it.customMediaNowplayingBlurredbackground
+                    it.customMediaNowplayingBlurredbackground,
                 )
             it.dominantColor = viewModel.art.toDominantColor(
                 context,
-                context.getColorByAttr(CoreThemeR.attr.tt_surface_content_color_emphasis_high)
+                context.getColorByAttr(CoreThemeR.attr.tt_surface_content_color_emphasis_high),
             )
         }
     }

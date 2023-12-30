@@ -21,7 +21,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
  */
 internal class CustomMediaDashboardFragment :
     IviFragment<MediaDashboardPanelBase, CustomMediaDashboardViewModel>(
-        CustomMediaDashboardViewModel::class
+        CustomMediaDashboardViewModel::class,
     ) {
     override val viewFactory: ViewFactory<*> =
         ViewFactory(TtiviCustomdashboardFragmentBinding::inflate) { binding ->
@@ -30,7 +30,7 @@ internal class CustomMediaDashboardFragment :
             // It is intended to be used within the stock media frontend.
             binding.ttiviMediaCustomdashboardSourcepickerview.setMediaFrontendContext(
                 viewLifecycleOwner,
-                panel.mediaFrontendContext
+                panel.mediaFrontendContext,
             )
         }
 }

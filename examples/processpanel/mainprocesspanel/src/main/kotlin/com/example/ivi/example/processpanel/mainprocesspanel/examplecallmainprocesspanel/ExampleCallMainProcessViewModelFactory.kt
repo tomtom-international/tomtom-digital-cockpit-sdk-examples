@@ -39,13 +39,13 @@ internal class ExampleCallMainProcessViewModelFactory(
         buttonViewModel = TtButtonViewModel(
             actionType = TtButton.ActionType.DESTRUCTIVE,
             image = ResourceDrawableResolver(
-                R.drawable.ttivi_processcreation_icon_callhangup
+                R.drawable.ttivi_processcreation_icon_callhangup,
             ),
             isEnabled = true,
             isVisible = true,
-            onClick = doEndCall
+            onClick = doEndCall,
         ),
-        isFixedWidth = true
+        isFixedWidth = true,
     )
 
     private val toggleMuteControl = CompactProcessControlViewModel(
@@ -57,8 +57,8 @@ internal class ExampleCallMainProcessViewModelFactory(
                 // Add your implementation to toggle mute control.
             },
             image = ResourceDrawableResolver(R.drawable.ttivi_processcreation_icon_microphonemuted),
-            isVisible = true
-        )
+            isVisible = true,
+        ),
     )
 
     private val closeControl = CompactProcessControlViewModel(
@@ -66,17 +66,17 @@ internal class ExampleCallMainProcessViewModelFactory(
             actionType = TtButton.ActionType.SECONDARY,
             text = ResourceStringResolver(R.string.ttivi_processcreation_common_action_close),
             isVisible = true,
-            onClick = doDismissCall
+            onClick = doDismissCall,
         ),
-        isFixedWidth = true
+        isFixedWidth = true,
     )
 
     fun createPrimaryControls():
         LiveData<VisibilityProvidingCompositeViewModel<CompactProcessControlViewModel>> =
         ImmutableLiveData(
             StockVisibilityProvidingCompositeViewModel(
-                endCallControl
-            )
+                endCallControl,
+            ),
         )
 
     fun createSecondaryControls():
@@ -84,21 +84,21 @@ internal class ExampleCallMainProcessViewModelFactory(
         ImmutableLiveData(
             StockVisibilityProvidingCompositeViewModel(
                 toggleMuteControl,
-                closeControl
-            )
+                closeControl,
+            ),
         )
 
     fun createMetadata() = CompactProcessMetadataViewModel(
         image = ImmutableLiveData(
             ImageDescriptor(
                 ResourceDrawableResolver(R.drawable.ttivi_processcreation_icon_thumbnail),
-                ImageType.AVATAR
-            )
+                ImageType.AVATAR,
+            ),
         ),
         primaryText = ImmutableLiveData(title),
         secondaryText = ImmutableLiveData(StaticStringResolver("1:00")),
         onClick = ImmutableLiveData {
             // Add click action when Metadata section has been clicked.
-        }
+        },
     )
 }

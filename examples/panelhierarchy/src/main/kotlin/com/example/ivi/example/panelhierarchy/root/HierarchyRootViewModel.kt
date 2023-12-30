@@ -20,7 +20,7 @@ internal class HierarchyRootViewModel(panel: HierarchyRootPanel) :
     val children = listOf(
         Node("One", listOf(Node("One A"))),
         Node("Two"),
-        Node("Three")
+        Node("Three"),
     )
 
     fun onGoToChildClick(child: Node) = panel.openChild(child)

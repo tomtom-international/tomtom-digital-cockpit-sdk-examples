@@ -17,5 +17,5 @@ val activityViewMenuItem =
     MenuItem(
         ActivityViewFrontend::class.qualifiedName!!,
         R.drawable.activityview_menuitem,
-        R.string.activityview_title
+        R.string.activityview_title,
     )

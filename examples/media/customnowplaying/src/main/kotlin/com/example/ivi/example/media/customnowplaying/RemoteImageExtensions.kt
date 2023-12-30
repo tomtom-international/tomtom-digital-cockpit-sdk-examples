@@ -32,7 +32,7 @@ internal fun LiveData<RemoteImage>.toBlurredDrawable(context: Context, image: Im
     LiveData<Drawable> {
     val blurRadiusFraction =
         context.getFloatByAttr(
-            MediaAttributesR.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction
+            MediaAttributesR.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction,
         )
 
     return switchMap { TtImageLoader.download(context, it) }
@@ -55,7 +55,7 @@ internal fun LiveData<RemoteImage>.toBlurredDrawable(context: Context, image: Im
  */
 internal fun LiveData<RemoteImage>.toDominantColor(
     context: Context,
-    @ColorInt defaultColor: Int
+    @ColorInt defaultColor: Int,
 ): LiveData<Int> {
     return switchMap {
         // It is important to use the context to get the drawable independently of the image view

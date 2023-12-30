@@ -28,7 +28,7 @@ import com.tomtom.tools.android.api.resourceresolution.string.StaticStringResolv
 internal class HierarchyChildPanel(
     frontendContext: FrontendContext,
     val node: Node,
-    private val addPanel: AddPanel
+    private val addPanel: AddPanel,
 ) : TaskPanel(frontendContext) {
 
     override val descriptor: LiveData<PanelDescriptor>

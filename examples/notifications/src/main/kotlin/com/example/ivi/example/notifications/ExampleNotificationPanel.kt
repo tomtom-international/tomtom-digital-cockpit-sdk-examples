@@ -19,13 +19,13 @@ import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.Notificat
 import com.tomtom.tools.android.api.livedata.valueUpToDate
 
 internal class ExampleNotificationPanel(
-    frontendContext: FrontendContext
+    frontendContext: FrontendContext,
 ) : NotificationPanel(frontendContext, Priority.HIGH) {
 
     override fun createInitialFragmentInitializer() =
         IviFragment.Initializer(
             NotificationFragment(ExampleNotificationViewModel::class),
-            this
+            this,
         )
 
     override fun onRemovedFromFrontend() {

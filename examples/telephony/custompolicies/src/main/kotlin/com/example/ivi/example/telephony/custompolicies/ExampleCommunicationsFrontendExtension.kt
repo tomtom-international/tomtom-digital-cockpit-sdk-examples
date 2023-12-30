@@ -25,5 +25,5 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.FrontendExtension
 internal val exampleCommunicationsFrontendExtension: FrontendExtension =
     CommunicationsPolicyFrontendExtension(
         phoneAccountId = "ExampleID",
-        callDetailsPolicy = ExampleCallDetailsPolicy()
+        callDetailsPolicy = ExampleCallDetailsPolicy(),
     )

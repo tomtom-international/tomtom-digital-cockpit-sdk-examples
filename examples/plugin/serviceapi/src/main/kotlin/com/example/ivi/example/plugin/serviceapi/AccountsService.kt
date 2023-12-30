@@ -21,7 +21,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviserviceannotations.IviServic
  * IVI service to manage an account state.
  */
 @IviService(
-    serviceId = "com.example.ivi.example.plugin.service"
+    serviceId = "com.example.ivi.example.plugin.service",
 )
 interface AccountsService {
     /**

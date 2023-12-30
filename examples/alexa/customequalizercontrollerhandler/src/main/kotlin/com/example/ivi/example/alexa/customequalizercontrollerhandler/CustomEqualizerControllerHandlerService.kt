@@ -28,7 +28,7 @@ import kotlinx.serialization.Serializable
 
 internal class CustomEqualizerControllerHandlerService(
     iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : AlexaHandlerServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     private val tracer =
@@ -45,29 +45,29 @@ internal class CustomEqualizerControllerHandlerService(
     @Serializable
     data class EqualizerBandLevel(
         val band: EqualizerBand,
-        val level: Int
+        val level: Int,
     )
 
     enum class EqualizerBand {
         BASS,
         MIDRANGE,
-        TREBLE
+        TREBLE,
     }
 
     @Serializable
     data class SetBandLevelsIncomingMessagePayload(
-        val bandLevels: List<EqualizerBandLevel>
+        val bandLevels: List<EqualizerBandLevel>,
     )
 
     @Serializable
     data class GetBandLevelsOutgoingMessagePayload(
-        val bandLevels: List<EqualizerBandLevel>
+        val bandLevels: List<EqualizerBandLevel>,
     )
 
     private var bandLevels = listOf(
         EqualizerBandLevel(EqualizerBand.BASS, 0),
         EqualizerBandLevel(EqualizerBand.MIDRANGE, 0),
-        EqualizerBandLevel(EqualizerBand.TREBLE, 0)
+        EqualizerBandLevel(EqualizerBand.TREBLE, 0),
     )
 
     override fun onCreate() {
@@ -110,7 +110,7 @@ internal class CustomEqualizerControllerHandlerService(
             messageId,
             Topic.EQUALIZER_CONTROLLER,
             Action.EqualizerController.GET_BAND_LEVELS,
-            messageToSend
+            messageToSend,
         )
         tracer.sendingGetBandLevelsOutgoingMessage(messageToSend)
         return true

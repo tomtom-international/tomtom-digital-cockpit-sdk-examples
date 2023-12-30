@@ -38,7 +38,7 @@ ivi {
                 launchableAndroidAppLaunchHandlerServiceHost,
                 webAppLaunchTriggerServiceHost,
                 webAppLaunchHandlerServiceHost,
-                webAppSourceProviderServiceHost
+                webAppSourceProviderServiceHost,
             )
         }
     }

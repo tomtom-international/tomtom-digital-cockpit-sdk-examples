@@ -25,7 +25,7 @@ plugins {
  */
 val exampleMediaSourceFrontendExtension = FrontendExtensionConfig(
     frontendExtensionName = "exampleMediaSourceFrontendExtension",
-    implementationModule = ExampleModuleReference("examples_media_userflowpolicy")
+    implementationModule = ExampleModuleReference("examples_media_userflowpolicy"),
 )
 
 /**

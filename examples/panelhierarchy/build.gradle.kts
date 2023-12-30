@@ -27,7 +27,7 @@ plugins {
 val hierarchyFrontend = FrontendConfig(
     frontendBuilderName = "HierarchyFrontendBuilder",
     implementationModule = ExampleModuleReference("examples_panelhierarchy"),
-    creationPolicy = FrontendCreationPolicy.CREATE_ON_DEMAND
+    creationPolicy = FrontendCreationPolicy.CREATE_ON_DEMAND,
 )
 
 val hierarchyMenuItem = hierarchyFrontend.toMenuItem("hierarchyMenuItem")

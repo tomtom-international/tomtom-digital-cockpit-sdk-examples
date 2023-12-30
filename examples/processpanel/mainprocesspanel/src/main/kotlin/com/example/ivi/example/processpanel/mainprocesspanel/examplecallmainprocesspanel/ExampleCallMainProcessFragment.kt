@@ -17,5 +17,5 @@ import com.tomtom.ivi.platform.frontend.api.template.compactprocesspanel.MainCom
 @OptIn(IviExperimental::class)
 internal class ExampleCallMainProcessFragment :
     MainCompactProcessFragment<ExampleCallMainProcessPanel, ExampleCallMainProcessViewModel>(
-        ExampleCallMainProcessViewModel::class
+        ExampleCallMainProcessViewModel::class,
     )

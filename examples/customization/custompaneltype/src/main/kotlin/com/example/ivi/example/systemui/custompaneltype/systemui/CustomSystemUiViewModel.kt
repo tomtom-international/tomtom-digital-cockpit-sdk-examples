@@ -21,7 +21,7 @@ import com.tomtom.tools.android.api.lifecycle.LifecycleViewModel
  * to the view layer.
  */
 internal class CustomSystemUiViewModel(
-    coreViewModel: CoreSystemUiViewModel
+    coreViewModel: CoreSystemUiViewModel,
 ) : LifecycleViewModel() {
 
     val frontendCoordinator = FrontendCoordinator(
@@ -33,13 +33,13 @@ internal class CustomSystemUiViewModel(
             CustomPanelRegistry.create(
                 frontendRegistry,
                 lifecycleOwner = this,
-                coreViewModel.iviServiceProvider
+                coreViewModel.iviServiceProvider,
             )
         },
         { frontendRegistry, panelRegistry ->
             DefaultFrontendCoordinationRules
                 .create(frontendRegistry, panelRegistry.iviPanelRegistry)
-        }
+        },
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry

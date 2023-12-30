@@ -47,7 +47,7 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
     override val viewFactory: ViewFactory =
         BindingViewFactory(
             TtiviCustompanelcontainerCustomsystemuiBinding::inflate,
-            ::bindSystemUiView
+            ::bindSystemUiView,
         )
 
     override val supportedPanelTypes: PanelTypeSet = panelTypeSetOf(
@@ -67,7 +67,7 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
         OverlayPanel::class,
         SettingsPanel::class,
         TaskPanel::class,
-        TaskProcessPanel::class
+        TaskProcessPanel::class,
     )
 
     private lateinit var viewModel: CustomSystemUiViewModel
@@ -75,7 +75,7 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
     override fun onCreate() {
         viewModel = ViewModelProvider(
             viewModelStoreOwner,
-            FixedConstructorFactory(coreViewModel)
+            FixedConstructorFactory(coreViewModel),
         )[CustomSystemUiViewModel::class.java]
     }
 

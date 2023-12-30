@@ -22,7 +22,7 @@ import com.tomtom.tools.android.api.resourceresolution.string.StaticStringResolv
 
 class WebAppSourceProviderService(
     iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : AppSourceProviderServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     override fun onCreate() {
@@ -40,9 +40,9 @@ class WebAppSourceProviderService(
                 displayName = StaticStringResolver("TomTom"),
                 summary = StaticStringResolver("TomTom Web"),
                 icon = ResourceDrawableResolver(
-                    AppStoreModelR.drawable.ttivi_appstore_icon_invalidpackage
-                )
-            )
+                    AppStoreModelR.drawable.ttivi_appstore_icon_invalidpackage,
+                ),
+            ),
         )
     }
 

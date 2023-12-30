@@ -27,7 +27,7 @@ import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.stock.Sto
  */
 internal class CustomNotificationFragment :
     IviFragment<StockNotificationPanel, StockNotificationViewModel>(
-        StockNotificationViewModel::class
+        StockNotificationViewModel::class,
     ) {
     override val viewFactory: ViewFactory<*> =
         ViewFactory(TtiviCustomfragmentNotificationfragmentBinding::inflate)

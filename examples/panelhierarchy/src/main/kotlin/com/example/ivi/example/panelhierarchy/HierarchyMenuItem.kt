@@ -17,5 +17,5 @@ val hierarchyMenuItem =
     MenuItem(
         HierarchyFrontend::class.qualifiedName!!,
         R.drawable.ttivi_hierarchy_menuitem,
-        R.string.ttivi_hierarchy_menuitem_name
+        R.string.ttivi_hierarchy_menuitem_name,
     )

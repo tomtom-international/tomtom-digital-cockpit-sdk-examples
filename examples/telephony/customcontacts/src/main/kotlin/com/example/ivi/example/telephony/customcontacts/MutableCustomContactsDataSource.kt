@@ -39,7 +39,7 @@ import java.util.Locale
  */
 internal class MutableCustomContactsDataSource(private val context: Context) :
     MutableIviDataSource<ContactsDataSourceElement, ContactsDataSourceQuery>(
-        jumpingSupported = true
+        jumpingSupported = true,
     ) {
 
     private val mutableContacts = mutableListOf<Contact>()
@@ -90,7 +90,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     private fun applyContactFilter(
         filter: ContactFilter,
-        allContacts: List<Contact>
+        allContacts: List<Contact>,
     ): List<Contact> {
         return when (filter) {
             is CompanyName -> {
@@ -148,7 +148,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     private fun applyContactFilterGroup(
         filterOperator: ContactFilter.ContactFilterOperator,
-        selection: List<Contact>
+        selection: List<Contact>,
     ): List<Contact> =
         when (filterOperator.filterOperator) {
             ContactFilter.ContactFilterOperator.FilterOperator.OR -> {
@@ -184,7 +184,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     private fun sortContacts(
         order: ContactItemOrder,
-        contacts: List<Contact>
+        contacts: List<Contact>,
     ): List<Contact> = when (order) {
         ContactItemOrder.FAMILY_NAME_ASC -> {
             contacts.sortedBy {
@@ -205,7 +205,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     private fun applyGroupBy(
         groupBy: ContactsDataSourceQuery.ContactGroupBy,
-        contacts: List<Contact>
+        contacts: List<Contact>,
     ): List<ContactsDataSourceElement> =
         contacts.groupBy {
             it.contactGroup(groupBy)
@@ -214,10 +214,10 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
 
     private fun orderContactElements(
         orderBy: ContactsDataSourceQuery.ContactOrderBy,
-        contactElements: List<Contact>
+        contactElements: List<Contact>,
     ): List<Contact> = sortContacts(
         orderBy.order,
-        contactElements
+        contactElements,
     )
 
     private class MutableContactsPagingSource(val data: List<ContactsDataSourceElement>) :
@@ -225,17 +225,18 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
         override val loadSizeLimit = DATA_SOURCE_MAX_PAGE_SIZE
 
         override suspend fun loadWithLoadSizeLimited(
-            loadParams: IviPagingSource.LoadParams
+            loadParams: IviPagingSource.LoadParams,
         ): IviPagingSource.LoadResult<ContactsDataSourceElement> {
             return when (loadParams) {
                 is IviPagingSource.LoadParams.Refresh,
-                is IviPagingSource.LoadParams.Append -> {
+                is IviPagingSource.LoadParams.Append,
+                -> {
                     val dataIndex = minOf(loadParams.dataIndex, data.size)
 
                     createPage(
                         dataIndex = dataIndex,
                         pageSize = minOf(loadParams.loadSize, data.size - dataIndex),
-                        placeholdersEnabled = loadParams.placeholdersEnabled
+                        placeholdersEnabled = loadParams.placeholdersEnabled,
                     )
                 }
                 is IviPagingSource.LoadParams.Prepend -> {
@@ -244,7 +245,7 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
                     createPage(
                         dataIndex = dataIndex,
                         pageSize = size,
-                        placeholdersEnabled = loadParams.placeholdersEnabled
+                        placeholdersEnabled = loadParams.placeholdersEnabled,
                     )
                 }
             }
@@ -253,13 +254,13 @@ internal class MutableCustomContactsDataSource(private val context: Context) :
         private fun createPage(
             dataIndex: Int,
             pageSize: Int,
-            placeholdersEnabled: Boolean
+            placeholdersEnabled: Boolean,
         ): IviPagingSource.LoadResult.Page<ContactsDataSourceElement> {
             return IviPagingSource.LoadResult.Page(
                 dataIndex = dataIndex,
                 data = data.subList(dataIndex, dataIndex + pageSize),
                 itemsBefore = dataIndex.takeIf { placeholdersEnabled },
-                itemsAfter = (data.size - dataIndex - pageSize).takeIf { placeholdersEnabled }
+                itemsAfter = (data.size - dataIndex - pageSize).takeIf { placeholdersEnabled },
             )
         }
     }

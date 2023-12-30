@@ -30,7 +30,7 @@ import com.tomtom.tools.android.api.livedata.ImmutableLiveData
  * [CloseDebugPanelOnMenuItemClickFrontendCoordinationRule] is added to a collection of default rules.
  */
 internal class CustomSystemUiViewModel(
-    coreViewModel: CoreSystemUiViewModel
+    coreViewModel: CoreSystemUiViewModel,
 ) : LifecycleViewModel() {
 
     val debugPanelService =
@@ -47,10 +47,10 @@ internal class CustomSystemUiViewModel(
         frontendCoordinationRulesFactory = { frontendRegistry, panelRegistry ->
             val defaultRules = DefaultFrontendCoordinationRules.create(
                 frontendRegistry,
-                panelRegistry
+                panelRegistry,
             )
             defaultRules + CloseDebugPanelOnMenuItemClickFrontendCoordinationRule(debugPanelService)
-        }
+        },
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry

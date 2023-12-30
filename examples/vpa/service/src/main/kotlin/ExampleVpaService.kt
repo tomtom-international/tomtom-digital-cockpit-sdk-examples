@@ -30,7 +30,7 @@ import java.util.Locale
 
 internal class ExampleVpaService(
     iviServiceHostContext: IviServiceHostContext,
-    serviceIdProvider: IviDiscoverableServiceIdProvider
+    serviceIdProvider: IviDiscoverableServiceIdProvider,
 ) : VpaAdaptationServiceBase(iviServiceHostContext, serviceIdProvider) {
 
     override fun onCreate() {
@@ -39,7 +39,7 @@ internal class ExampleVpaService(
         vpaProperties = VpaProperties(
             vpaIdentifier = VPA_IDENTIFIER,
             supportedLocales = SUPPORTED_LOCALES,
-            supportedCountries = SUPPORTED_COUNTRIES
+            supportedCountries = SUPPORTED_COUNTRIES,
         )
 
         vpaAuthenticationStatus = VpaAuthenticationStatus(AuthenticationState.NOT_AUTHENTICATED)
@@ -59,7 +59,7 @@ internal class ExampleVpaService(
             doNotDisturbModeEnabled = false,
             locationSharingEnabled = false,
             syncVehicleNavigationFavoritesEnabled = false,
-            allowedPersonalData = emptyMap()
+            allowedPersonalData = emptyMap(),
         )
 
         serviceReady = true
@@ -105,7 +105,7 @@ internal class ExampleVpaService(
 
     override suspend fun updateAllowedPersonalData(
         bluetoothDeviceAddress: BluetoothDeviceAddress,
-        allowedPersonalData: EnumSet<PersonalDataType>
+        allowedPersonalData: EnumSet<PersonalDataType>,
     ) {
         // TODO: Update what personal data is allowed to be sent to the VPA.
     }

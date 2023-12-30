@@ -25,7 +25,7 @@ plugins {
  */
 val exampleCommunicationsFrontendExtension = FrontendExtensionConfig(
     frontendExtensionName = "exampleCommunicationsFrontendExtension",
-    implementationModule = ExampleModuleReference("examples_telephony_custompolicies")
+    implementationModule = ExampleModuleReference("examples_telephony_custompolicies"),
 )
 
 /**

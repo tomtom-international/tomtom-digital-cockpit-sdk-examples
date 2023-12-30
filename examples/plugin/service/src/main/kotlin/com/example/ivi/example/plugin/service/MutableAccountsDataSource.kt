@@ -18,7 +18,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIv
 import com.tomtom.ivi.platform.framework.api.ipc.iviservice.datasource.MutableIviPagingSource
 
 internal class MutableAccountsDataSource : MutableIviDataSource<Account, AccountsDataSourceQuery>(
-    jumpingSupported = true
+    jumpingSupported = true,
 ) {
     private val mutableAccounts = mutableMapOf<Uid<Account>, Account>()
 
@@ -30,7 +30,7 @@ internal class MutableAccountsDataSource : MutableIviDataSource<Account, Account
     }
 
     override fun createPagingSource(
-        query: AccountsDataSourceQuery
+        query: AccountsDataSourceQuery,
     ): MutableIviPagingSource<Account> =
         MutableAccountsPagingSource(
             when (query.selection) {
@@ -49,11 +49,11 @@ internal class MutableAccountsDataSource : MutableIviDataSource<Account, Account
                         data.sortedByDescending { it.lastLogIn }
                     }
                 }
-            }
+            },
         )
 
     private class MutableAccountsPagingSource(
-        val data: List<Account>
+        val data: List<Account>,
     ) : MutableIviPagingSource<Account>() {
         override val loadSizeLimit = DATA_SOURCE_MAX_PAGE_SIZE
 
@@ -64,16 +64,17 @@ internal class MutableAccountsDataSource : MutableIviDataSource<Account, Account
         }
 
         override suspend fun loadWithLoadSizeLimited(
-            loadParams: IviPagingSource.LoadParams
+            loadParams: IviPagingSource.LoadParams,
         ): IviPagingSource.LoadResult<Account> {
             return when (loadParams) {
                 is IviPagingSource.LoadParams.Refresh,
-                is IviPagingSource.LoadParams.Append -> {
+                is IviPagingSource.LoadParams.Append,
+                -> {
                     val dataIndex = minOf(loadParams.dataIndex, data.size)
                     createPage(
                         dataIndex = dataIndex,
                         pageSize = minOf(loadParams.loadSize, data.size - dataIndex),
-                        placeholdersEnabled = loadParams.placeholdersEnabled
+                        placeholdersEnabled = loadParams.placeholdersEnabled,
                     )
                 }
                 is IviPagingSource.LoadParams.Prepend -> {
@@ -82,7 +83,7 @@ internal class MutableAccountsDataSource : MutableIviDataSource<Account, Account
                     createPage(
                         dataIndex = dataIndex,
                         pageSize = size,
-                        placeholdersEnabled = loadParams.placeholdersEnabled
+                        placeholdersEnabled = loadParams.placeholdersEnabled,
                     )
                 }
             }
@@ -91,13 +92,13 @@ internal class MutableAccountsDataSource : MutableIviDataSource<Account, Account
         private fun createPage(
             dataIndex: Int,
             pageSize: Int,
-            placeholdersEnabled: Boolean
+            placeholdersEnabled: Boolean,
         ): IviPagingSource.LoadResult.Page<Account> {
             return IviPagingSource.LoadResult.Page(
                 dataIndex = dataIndex,
                 data = data.subList(dataIndex, dataIndex + pageSize),
                 itemsBefore = dataIndex.takeIf { placeholdersEnabled },
-                itemsAfter = (data.size - dataIndex - pageSize).takeIf { placeholdersEnabled }
+                itemsAfter = (data.size - dataIndex - pageSize).takeIf { placeholdersEnabled },
             )
         }
     }

@@ -45,13 +45,13 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
     override val viewFactory: ViewFactory =
         BindingViewFactory(
             TtiviCustomsubcontainerlayoutCustomsystemuiBinding::inflate,
-            ::bindSystemUiView
+            ::bindSystemUiView,
         )
 
     override val supportedPanelTypes: PanelTypeSet = panelTypeSetOf(
         MainMenuPanel::class,
         TaskPanel::class,
-        TaskProcessPanel::class
+        TaskProcessPanel::class,
     )
 
     override val unsupportedPanelTypes: PanelTypeSet = panelTypeSetOf(

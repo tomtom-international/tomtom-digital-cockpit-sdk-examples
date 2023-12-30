@@ -52,12 +52,12 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
                         IntArray(50 * 50) { Color.BLACK },
                         50,
                         50,
-                        Bitmap.Config.ARGB_8888
-                    )
-                )
+                        Bitmap.Config.ARGB_8888,
+                    ),
+                ),
             ),
             primarySortKey = "John Smith",
-            alternativeSortKey = "Smith John"
+            alternativeSortKey = "Smith John",
         ),
         Contact(
             displayName = "Kelly Goodwin",
@@ -70,14 +70,14 @@ internal class CustomContactsService(iviServiceHostContext: IviServiceHostContex
             addresses = listOf(
                 Address(
                     "45 Some Other Street, SomeOtherCity, SC 12000",
-                    AddressType.Work
-                )
+                    AddressType.Work,
+                ),
             ),
             image = null,
             defaultAddressIndex = 0,
             favorite = false,
             primarySortKey = "Kelly Goodwin",
-            alternativeSortKey = "Goodwin Kelly"
+            alternativeSortKey = "Goodwin Kelly",
         ),
     )
 

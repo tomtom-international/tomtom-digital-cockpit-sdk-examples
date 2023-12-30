@@ -16,7 +16,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
 
 internal class NotificationCreationFragment :
     IviFragment<NotificationCreationPanel, NotificationCreationViewModel>(
-        NotificationCreationViewModel::class
+        NotificationCreationViewModel::class,
     ) {
 
     override val viewFactory = ViewFactory(TtiviNotificationcreationFragmentBinding::inflate)

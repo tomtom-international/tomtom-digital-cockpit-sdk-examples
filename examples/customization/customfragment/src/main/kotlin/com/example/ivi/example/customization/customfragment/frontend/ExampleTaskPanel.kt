@@ -23,7 +23,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendV
  */
 internal class ExampleTaskPanel(
     frontendContext: FrontendContext,
-    val addNotificationPanel: () -> Unit
+    val addNotificationPanel: () -> Unit,
 ) : TaskPanel(frontendContext) {
     override fun createInitialFragmentInitializer(): IviFragment.Initializer<*, *> =
         IviFragment.Initializer(ExampleTaskFragment(), this)

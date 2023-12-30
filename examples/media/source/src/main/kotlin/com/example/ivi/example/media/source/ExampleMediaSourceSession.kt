@@ -34,11 +34,11 @@ internal class ExampleMediaSourceSession(
     private val onBeforeStop: () -> Unit,
 ) : MediaSessionCompat(
     context,
-    ExampleMediaSourceService::class.simpleName!!
+    ExampleMediaSourceService::class.simpleName!!,
 ) {
     private val initialState: PlaybackStateCompat = PlaybackStateCompat.Builder()
         .setActions(
-            PlaybackStateCompat.ACTION_PLAY or PlaybackStateCompat.ACTION_PLAY_FROM_MEDIA_ID
+            PlaybackStateCompat.ACTION_PLAY or PlaybackStateCompat.ACTION_PLAY_FROM_MEDIA_ID,
         )
         .setState(PlaybackStateCompat.STATE_NONE, 0, 1f, SystemClock.elapsedRealtime())
         .build()
@@ -106,7 +106,7 @@ internal class ExampleMediaSourceSession(
         private fun startPlayback(
             mediaId: String,
             playbackState: PlaybackStateCompat?,
-            duration: Long?
+            duration: Long?,
         ) {
             onBeforeStart()
 
@@ -114,7 +114,7 @@ internal class ExampleMediaSourceSession(
 
             updatePlaybackState(
                 PlaybackStateCompat.STATE_PLAYING,
-                currentPosition = playbackState?.position ?: 0
+                currentPosition = playbackState?.position ?: 0,
             )
             when (duration) {
                 null -> mediaPlayer.start()

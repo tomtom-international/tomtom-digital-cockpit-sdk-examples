@@ -27,7 +27,7 @@ private class AccountSurrogate(
     val accountUid: String,
     val username: String,
     val loggedIn: Boolean?,
-    val lastLogIn: String?
+    val lastLogIn: String?,
 )
 
 internal object AccountSerializer : KSerializer<Account> {
@@ -41,7 +41,7 @@ internal object AccountSerializer : KSerializer<Account> {
                     accountUid = Uid.fromString(surrogate.accountUid),
                     username = surrogate.username,
                     loggedIn = surrogate.loggedIn == true,
-                    lastLogIn = surrogate.lastLogIn?.let { Instant.parse(it) }
+                    lastLogIn = surrogate.lastLogIn?.let { Instant.parse(it) },
                 )
             }
 
@@ -50,7 +50,7 @@ internal object AccountSerializer : KSerializer<Account> {
             accountUid = value.accountUid.toString(),
             username = value.username,
             loggedIn = value.loggedIn,
-            lastLogIn = value.lastLogIn?.toString()
+            lastLogIn = value.lastLogIn?.toString(),
         ).let { surrogate ->
             encoder.encodeSerializableValue(AccountSurrogate.serializer(), surrogate)
         }

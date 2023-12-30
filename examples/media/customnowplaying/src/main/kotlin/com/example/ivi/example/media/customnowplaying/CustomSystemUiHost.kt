@@ -55,7 +55,7 @@ import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.MainPr
  * for more information on creating a custom system UI.
  */
 internal class CustomSystemUiHost(
-    systemUiHostContext: SystemUiHostContext
+    systemUiHostContext: SystemUiHostContext,
 ) : SystemUiHost(systemUiHostContext) {
 
     override val supportedPanelTypes: PanelTypeSet = panelTypeSetOf(
@@ -103,11 +103,11 @@ internal class CustomSystemUiHost(
             panelRegistryExtension,
             MainProcessPanelPositionSystemUiHostExtension(
                 systemUiHostExtensionContext,
-                panelRegistryExtension.panelRegistry
+                panelRegistryExtension.panelRegistry,
             ),
             ControlCenterPanelSystemUiHostExtension(
                 systemUiHostExtensionContext,
-                panelRegistryExtension.panelRegistry.controlCenterPanels
+                panelRegistryExtension.panelRegistry.controlCenterPanels,
             ),
             BackPressCallbacksSystemUiHostExtension(systemUiHostExtensionContext),
             DebugPanelSystemUiHostExtension(systemUiHostExtensionContext),

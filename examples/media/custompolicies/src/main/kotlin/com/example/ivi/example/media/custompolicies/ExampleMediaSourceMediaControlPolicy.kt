@@ -37,7 +37,7 @@ internal class ExampleMediaSourceMediaControlPolicy : MediaControlPolicy {
     override val replacedStandardControls: Map<StandardMediaControls, MediaControlFactory> =
         mapOf(
             StandardMediaControls.SEEK_BACKWARD to InvisibleControlFactory,
-            StandardMediaControls.SEEK_FORWARD to InvisibleControlFactory
+            StandardMediaControls.SEEK_FORWARD to InvisibleControlFactory,
         )
 
     /**
@@ -49,6 +49,6 @@ internal class ExampleMediaSourceMediaControlPolicy : MediaControlPolicy {
     override val mediaControlsDisplayLimit: MediaControlsDisplayLimit =
         super.mediaControlsDisplayLimit.copy(
             primaryControlsLargeLimit = 3,
-            secondaryControlsSmallLimit = 1
+            secondaryControlsSmallLimit = 1,
         )
 }

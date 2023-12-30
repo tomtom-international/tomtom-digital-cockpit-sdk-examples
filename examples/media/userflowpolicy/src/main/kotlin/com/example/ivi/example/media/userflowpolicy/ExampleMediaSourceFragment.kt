@@ -22,7 +22,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
  */
 internal class ExampleMediaSourceFragment :
     IviFragment<ExampleMediaSourcePanel, ExampleMediaSourceViewModel>(
-        ExampleMediaSourceViewModel::class
+        ExampleMediaSourceViewModel::class,
     ) {
 
     override val viewFactory =

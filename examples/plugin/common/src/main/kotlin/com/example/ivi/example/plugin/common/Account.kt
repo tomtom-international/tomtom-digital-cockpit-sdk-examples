@@ -39,5 +39,5 @@ data class Account(
     /**
      * Date time when this user logged in for the last time.
      */
-    val lastLogIn: Instant? = null
+    val lastLogIn: Instant? = null,
 ) : Parcelable

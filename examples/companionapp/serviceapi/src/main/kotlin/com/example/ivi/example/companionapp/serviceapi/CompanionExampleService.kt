@@ -20,7 +20,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviserviceannotations.IviServic
  * app service over a service api.
  */
 @IviService(
-    serviceId = "com.example.ivi.example.companionapp.serviceapi"
+    serviceId = "com.example.ivi.example.companionapp.serviceapi",
 )
 interface CompanionExampleService {
     val testProperty: String

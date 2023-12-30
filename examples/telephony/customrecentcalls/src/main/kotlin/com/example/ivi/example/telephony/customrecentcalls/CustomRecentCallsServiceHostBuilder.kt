@@ -26,7 +26,7 @@ class CustomRecentCallsServiceHostBuilder : IviServiceHostBuilder() {
     override fun build(iviServiceHostContext: IviServiceHostContext) =
         SimpleIviServiceHost(
             iviServiceHostContext,
-            setOf(CustomRecentCallsService(iviServiceHostContext))
+            setOf(CustomRecentCallsService(iviServiceHostContext)),
         )
 
     companion object

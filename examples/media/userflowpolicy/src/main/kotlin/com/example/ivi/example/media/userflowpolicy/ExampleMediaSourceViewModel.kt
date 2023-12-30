@@ -44,7 +44,7 @@ internal class ExampleMediaSourceViewModel(panel: ExampleMediaSourcePanel) :
 
     private fun IviMediaItem.asMediaItemViewModel(onClick: ClickAction) = MediaItemViewModel(
         item = panel.policyProvider.itemMappingPolicy(this),
-        clickAction = onClick
+        clickAction = onClick,
     )
 }
 
@@ -52,5 +52,5 @@ internal typealias ClickAction = (MediaItemViewModel) -> Unit
 
 internal class MediaItemViewModel(
     val item: IviMediaItem,
-    val clickAction: ClickAction
+    val clickAction: ClickAction,
 )

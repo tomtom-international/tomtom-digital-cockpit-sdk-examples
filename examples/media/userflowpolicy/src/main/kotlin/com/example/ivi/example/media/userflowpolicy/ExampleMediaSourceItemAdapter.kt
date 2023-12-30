@@ -50,13 +50,13 @@ internal class ExampleMediaSourceItemAdapter :
         private val diffUtilCallback = object : DiffUtil.ItemCallback<MediaItemViewModel>() {
             override fun areItemsTheSame(
                 oldItem: MediaItemViewModel,
-                newItem: MediaItemViewModel
+                newItem: MediaItemViewModel,
             ): Boolean =
                 oldItem == newItem || oldItem.item.id == newItem.item.id
 
             override fun areContentsTheSame(
                 oldItem: MediaItemViewModel,
-                newItem: MediaItemViewModel
+                newItem: MediaItemViewModel,
             ): Boolean =
                 oldItem.item.title == newItem.item.title
         }

@@ -20,7 +20,7 @@ import com.tomtom.ivi.platform.framework.api.ipc.iviservice.SimpleIviServiceHost
  */
 class ExampleAlexaPreviewModeServiceHostBuilder : SimpleIviServiceHostBuilder() {
     override fun createIviServices(
-        iviServiceHostContext: IviServiceHostContext
+        iviServiceHostContext: IviServiceHostContext,
     ): Collection<AnyIviServiceBase> =
         listOf(ExampleAlexaPreviewModeService(iviServiceHostContext))
 

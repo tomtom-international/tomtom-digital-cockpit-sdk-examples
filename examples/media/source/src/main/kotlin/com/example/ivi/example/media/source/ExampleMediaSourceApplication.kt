@@ -28,31 +28,33 @@ internal class ExampleMediaSourceApplication : Application() {
 
     private fun configureTracer() {
         // Use the default Android logger.
-        TraceLog.setLogger(object : TraceLog.Logger {
-            override fun log(
-                logLevel: TraceLog.LogLevel,
-                tag: String,
-                message: String,
-                e: Throwable?
-            ) {
-                if (e == null) {
-                    when (logLevel) {
-                        TraceLog.LogLevel.VERBOSE -> Log.v(tag, message)
-                        TraceLog.LogLevel.DEBUG -> Log.d(tag, message)
-                        TraceLog.LogLevel.INFO -> Log.i(tag, message)
-                        TraceLog.LogLevel.WARN -> Log.w(tag, message)
-                        TraceLog.LogLevel.ERROR -> Log.e(tag, message)
-                    }
-                } else {
-                    when (logLevel) {
-                        TraceLog.LogLevel.VERBOSE -> Log.v(tag, message, e)
-                        TraceLog.LogLevel.DEBUG -> Log.d(tag, message, e)
-                        TraceLog.LogLevel.INFO -> Log.i(tag, message, e)
-                        TraceLog.LogLevel.WARN -> Log.w(tag, message, e)
-                        TraceLog.LogLevel.ERROR -> Log.e(tag, message, e)
+        TraceLog.setLogger(
+            object : TraceLog.Logger {
+                override fun log(
+                    logLevel: TraceLog.LogLevel,
+                    tag: String,
+                    message: String,
+                    e: Throwable?,
+                ) {
+                    if (e == null) {
+                        when (logLevel) {
+                            TraceLog.LogLevel.VERBOSE -> Log.v(tag, message)
+                            TraceLog.LogLevel.DEBUG -> Log.d(tag, message)
+                            TraceLog.LogLevel.INFO -> Log.i(tag, message)
+                            TraceLog.LogLevel.WARN -> Log.w(tag, message)
+                            TraceLog.LogLevel.ERROR -> Log.e(tag, message)
+                        }
+                    } else {
+                        when (logLevel) {
+                            TraceLog.LogLevel.VERBOSE -> Log.v(tag, message, e)
+                            TraceLog.LogLevel.DEBUG -> Log.d(tag, message, e)
+                            TraceLog.LogLevel.INFO -> Log.i(tag, message, e)
+                            TraceLog.LogLevel.WARN -> Log.w(tag, message, e)
+                            TraceLog.LogLevel.ERROR -> Log.e(tag, message, e)
+                        }
                     }
                 }
-            }
-        })
+            },
+        )
     }
 }

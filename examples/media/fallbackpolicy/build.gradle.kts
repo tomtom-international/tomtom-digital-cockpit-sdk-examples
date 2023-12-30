@@ -27,7 +27,7 @@ plugins {
  */
 val exampleFallbackPolicyFrontendExtension = FrontendExtensionConfig(
     frontendExtensionName = "exampleFallbackPolicyFrontendExtension",
-    implementationModule = ExampleModuleReference("examples_media_fallbackpolicy")
+    implementationModule = ExampleModuleReference("examples_media_fallbackpolicy"),
 )
 
 /**
@@ -52,7 +52,7 @@ ivi {
                         @Suppress(EXPERIMENTAL_API_USAGE)
                         replaceExtension(
                             fallbackMediaPolicyFrontendExtension,
-                            exampleFallbackPolicyFrontendExtension
+                            exampleFallbackPolicyFrontendExtension,
                         )
                     }
                 }

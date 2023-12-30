@@ -117,7 +117,7 @@ class CustomConnectionFacade(private val context: Context) {
         val uri = phoneNumber.toPhoneUri().uri
         extras.putParcelable(
             TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE,
-            customPhoneAccount.accountHandle
+            customPhoneAccount.accountHandle,
         )
 
         if (context.checkSelfPermission(Manifest.permission.MANAGE_OWN_CALLS) !=
@@ -173,7 +173,7 @@ class CustomConnectionFacade(private val context: Context) {
     fun applyCallState(
         phoneNumber: String,
         callState: CallState,
-        disconnectCause: DisconnectCause?
+        disconnectCause: DisconnectCause?,
     ) {
         require(isCustomPhoneAccountRegisteredAsSelfManagedAccount())
         require(isCustomConnectionServiceReady())
@@ -190,7 +190,7 @@ class CustomConnectionFacade(private val context: Context) {
      * @return The call state, if the call exists else `null`.
      */
     fun getCallState(
-        phoneNumber: String
+        phoneNumber: String,
     ): CallState? {
         return CustomConnectionServiceHolder.withCustomConnectionService {
             it.getConnectionState(phoneNumber)
@@ -236,11 +236,11 @@ class CustomConnectionFacade(private val context: Context) {
             PhoneAccountHandle(
                 ComponentName(
                     context,
-                    CustomConnectionService::class.qualifiedName!!
+                    CustomConnectionService::class.qualifiedName!!,
                 ),
-                IVI_CUSTOM_PHONE_ACCOUNT_ID
+                IVI_CUSTOM_PHONE_ACCOUNT_ID,
             ),
-            "IviCustomPhoneAccountLabel"
+            "IviCustomPhoneAccountLabel",
         ).setCapabilities(PhoneAccount.CAPABILITY_SELF_MANAGED).build()
     }
 }

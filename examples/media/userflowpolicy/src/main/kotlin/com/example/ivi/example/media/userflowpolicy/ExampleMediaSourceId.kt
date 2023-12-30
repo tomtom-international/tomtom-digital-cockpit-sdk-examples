@@ -18,5 +18,5 @@ import com.tomtom.ivi.appsuite.media.api.common.core.SourceId
  */
 internal object ExampleMediaSourceId : SourceId(
     "com.example.ivi.example.media.source",
-    "com.example.ivi.example.media.source.ExampleMediaSourceService"
+    "com.example.ivi.example.media.source.ExampleMediaSourceService",
 )

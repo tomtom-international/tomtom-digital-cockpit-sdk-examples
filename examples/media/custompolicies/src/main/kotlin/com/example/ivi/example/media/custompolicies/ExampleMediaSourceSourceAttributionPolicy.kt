@@ -29,7 +29,7 @@ internal class ExampleMediaSourceSourceAttributionPolicy : MediaSourceAttributio
     override fun getName(
         sourceInfo: SourceInfo?,
         mediaItem: IviMediaItem?,
-        sourceAttributionFormat: SourceAttributionFormat
+        sourceAttributionFormat: SourceAttributionFormat,
     ): StringResolver? {
         return sourceAttributionFormat
             .takeIf { !it.preferWordMark }
@@ -39,7 +39,7 @@ internal class ExampleMediaSourceSourceAttributionPolicy : MediaSourceAttributio
     override fun getLogo(
         sourceInfo: SourceInfo?,
         mediaItem: IviMediaItem?,
-        sourceAttributionFormat: SourceAttributionFormat
+        sourceAttributionFormat: SourceAttributionFormat,
     ): DrawableResolver {
         return sourceAttributionFormat
             .takeIf { it.preferMonochrome }

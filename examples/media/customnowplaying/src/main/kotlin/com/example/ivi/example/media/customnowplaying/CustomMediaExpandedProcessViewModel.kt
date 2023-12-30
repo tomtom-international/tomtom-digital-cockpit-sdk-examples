@@ -71,7 +71,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
         panel.mediaFrontendContext.mediaConfiguration,
         mediaPlaybackParameters,
         viewModelScope,
-        SourceAttributionFormat(preferPresentation = true)
+        SourceAttributionFormat(preferPresentation = true),
     )
 
     val sourceIcon = playbackViewModel.sourceIcon
@@ -109,7 +109,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
                 it.replacedStandardControls,
                 it.customControls,
                 it.mediaControlsDisplayLimit.primaryControlsSmallLimit,
-                it.mediaControlsDisplayLimit.secondaryControlsSmallLimit
+                it.mediaControlsDisplayLimit.secondaryControlsSmallLimit,
             )
         }
 
@@ -136,7 +136,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
                 buttonConfiguration.getReplacedMediaControlFactoryFor(TOGGLE_PLAY),
                 buttonConfiguration.getReplacedMediaControlFactoryFor(SKIP_FORWARD),
                 buttonConfiguration.getReplacedMediaControlFactoryFor(SEEK_FORWARD),
-                buttonConfiguration.getReplacedMediaControlFactoryFor(REPEAT)
+                buttonConfiguration.getReplacedMediaControlFactoryFor(REPEAT),
             ).map { mediaControlFactory ->
                 mediaControlFactory.createControlFor(mediaControlContext)
             }.map { mediaControl ->
@@ -180,7 +180,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
         mediaService.activeQueue,
         mediaService.activeMediaItem,
         mediaService.playbackState,
-        activePolicyProvider
+        activePolicyProvider,
     ) { activeQueue, activeItem, playbackState, policyProvider ->
         activeQueue.map { iviMediaItem ->
             val isActiveItem = policyProvider.compareItemsPolicy(iviMediaItem, activeItem)
@@ -190,7 +190,7 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
                 isPlaying = isPlaying,
                 onClickItem = createOnQueueItemClickCallback(
                     policyProvider = policyProvider,
-                )
+                ),
             )
         }
     }
@@ -203,20 +203,20 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
     private fun IviMediaItem.toListItemContentViewModel(
         isActiveItem: Boolean,
         isPlaying: Boolean,
-        onClickItem: (IviMediaItem) -> Unit
+        onClickItem: (IviMediaItem) -> Unit,
     ) =
         ListItemContentViewModel(
             itemId = id,
             headImage = ImageDescriptor(
                 artUri ?: Uri.EMPTY,
-                ImageType.ARTWORK
+                ImageType.ARTWORK,
             ),
             primaryTextArea = ListItemContentViewModel.TextAreaViewModel(
                 title?.let {
                     StaticStringResolver(
-                        it
+                        it,
                     )
-                }
+                },
             ),
             tailText = if (!isActiveItem) DurationStringResolver(this.duration) else null,
             tailIcon = if (isActiveItem) {
@@ -225,16 +225,16 @@ internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPa
                         MediaCommonFrontendR.drawable.ttivi_media_mediastate_icon_playing
                     } else {
                         MediaCommonFrontendR.drawable.ttivi_media_mediastate_icon_paused
-                    }
+                    },
                 )
             } else {
                 null
             },
-            onClick = { onClickItem(this) }
+            onClick = { onClickItem(this) },
         )
 
     private fun createOnQueueItemClickCallback(
-        policyProvider: PolicyProvider
+        policyProvider: PolicyProvider,
     ): (IviMediaItem) -> Unit {
         return { iviMediaItemClicked ->
             val currentPlaybackState = mediaService.playbackState.valueUpToDate

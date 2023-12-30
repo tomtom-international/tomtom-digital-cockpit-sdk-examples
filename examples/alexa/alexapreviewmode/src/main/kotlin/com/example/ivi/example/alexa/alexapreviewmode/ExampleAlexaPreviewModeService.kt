@@ -19,19 +19,19 @@ import com.tomtom.tools.android.core.geography.CountryId
 import java.time.Instant
 
 internal class ExampleAlexaPreviewModeService(
-    iviServiceHostContext: IviServiceHostContext
+    iviServiceHostContext: IviServiceHostContext,
 ) :
     AlexaPreviewModeServiceBase(iviServiceHostContext) {
 
     override suspend fun registerDevice(
         deviceSerialNumber: String,
-        countryId: CountryId
+        countryId: CountryId,
     ): PreviewModeResult {
         // TODO: Requests the OEM's backend to register this device for Alexa Preview Mode using the
         //  AVS `InstantDeviceRegistration` API.
 
         return PreviewModeResult.Success(
-            PreviewModeToken(EXAMPLE_ACCESS_TOKEN, EXAMPLE_EXPIRATION_TIME)
+            PreviewModeToken(EXAMPLE_ACCESS_TOKEN, EXAMPLE_EXPIRATION_TIME),
         )
     }
 
@@ -44,13 +44,13 @@ internal class ExampleAlexaPreviewModeService(
 
     override suspend fun refreshToken(
         deviceSerialNumber: String,
-        countryId: CountryId
+        countryId: CountryId,
     ): PreviewModeResult {
         // TODO: Requests the OEM's backend to retrieve a new access token using the AVS
         //  `InstantDeviceRegistration` API.
 
         return PreviewModeResult.Success(
-            PreviewModeToken(EXAMPLE_ACCESS_TOKEN, EXAMPLE_EXPIRATION_TIME)
+            PreviewModeToken(EXAMPLE_ACCESS_TOKEN, EXAMPLE_EXPIRATION_TIME),
         )
     }
 

@@ -31,14 +31,14 @@ val module = ExampleModuleReference("examples_customization_custompanelcontainer
 val customPanelTypes = PanelTypesConfig(
     "CUSTOM_SYSTEM_UI_PANEL_TYPES",
     module,
-    "common"
+    "common",
 )
 
 val customFrontend = FrontendConfig(
     frontendBuilderName = "CustomFrontendBuilder",
     implementationModule = module,
     subPackageName = "frontend",
-    availablePanelTypes = customPanelTypes
+    availablePanelTypes = customPanelTypes,
 )
 
 ivi {
