@@ -30,19 +30,8 @@ pluginManagement.repositories {
     // Local artifact cache.
     mavenLocal()
     
-    if (extra.has("artifactoryEdgeUser") && extra.has("artifactoryEdgeToken")) {
-        tomtomArtifactory()
-    } else if (extra.has("nexusUsername") && extra.has("nexusPassword")) {
-        maven("https://repo.tomtom.com/repository/ivi") {
-            credentials {
-                username = extra["nexusUsername"].toString()
-                password = extra["nexusPassword"].toString()
-            }
-            content {
-                includeGroupByRegex("com\\.tomtom\\..+")
-            }
-        }
-    }
+    tomtomArtifactory()
+
     // External repositories.
     mavenCentral()
     google()
@@ -54,21 +43,8 @@ dependencyResolutionManagement {
         // Local artifact cache.
         mavenLocal()
         
-        if (extra.has("artifactoryEdgeUser") && extra.has("artifactoryEdgeToken")) {
-            tomtomArtifactory()
-        } else if (extra.has("nexusUsername") && extra.has("nexusPassword")) {
-            maven("https://repo.tomtom.com/repository/ivi") {
-                credentials {
-                    username = extra["nexusUsername"].toString()
-                    password = extra["nexusPassword"].toString()
-                }
-                content {
-                    includeGroupByRegex("com\\.tomtom\\..+")
-                    includeGroup("com.tomtom")
-                    includeGroup("com.amazon.alexa.aace")
-                }
-            }
-        }
+        tomtomArtifactory()
+
         // External repositories.
         mavenCentral()
         google()
