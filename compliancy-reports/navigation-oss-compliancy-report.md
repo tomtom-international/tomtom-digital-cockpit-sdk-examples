@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6776-3675
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6779-3679
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -72,12 +72,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.13.0 | Apache License 2.0 |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
-| [Checker Qual](https://checkerframework.org) | 3.33.0 | MIT License |
+| [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [coil](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [coil-base](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [coil-test](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.3.0 | Apache License 2.0 |
-| [com.google.api.grpc:proto-google-common-protos](https://github.com/googleapis/googleapis) | 2.22.0 | Apache License 2.0 |
+| [com.google.api.grpc:proto-google-common-protos](https://github.com/googleapis/googleapis) | 2.29.0 | Apache License 2.0 |
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [Dagger 2](http://google.github.io/dagger) | 2.45 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.45 | Apache License 2.0 |
@@ -86,27 +86,26 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-adapters](https://maven.google.com/androidx/databinding/databinding-adapters/) | 8.0.2 | Apache License 2.0 |
 | [databinding-ktx](https://maven.google.com/androidx/databinding/databinding-ktx/) | 8.0.2 | Apache License 2.0 |
 | [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 8.0.2 | Apache License 2.0 |
-| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.20.0 | Apache License 2.0 |
+| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.23.0 | Apache License 2.0 |
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.3.0 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
 | [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.7 | Apache License 2.0 |
 | [Google Android Annotations Library](http://source.android.com/) | 4.1.1.4 | Apache License 2.0 |
 | [google-gson](https://github.com/google/gson) | 2.10.1 | Apache License 2.0 |
-| [google-guava](https://github.com/google/guava) | v32.0.1 | Apache License 2.0 |
+| [google-guava](https://github.com/google/guava) | 32.1.3-android | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
-| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
-| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
+| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
-| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
-| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
-| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.60.1 | Apache License 2.0 |
+| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
-| [J2ObjC Annotations](https://github.com/google/j2objc/) | 2.8 | Apache License 2.0 |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 23.0.0 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
@@ -147,14 +146,14 @@ This offer is valid for a period of three years from the date of distribution of
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.8.0 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.10.0, 4.11.0 | Apache License 2.0 |
-| [OkIO](https://github.com/square/OkIO) | 3.0.0, 3.2.0, 3.3.0 | Apache License 2.0 |
+| [OkIO](https://github.com/square/OkIO) | 3.0.0, 3.2.0, 3.3.0, 3.4.0 | Apache License 2.0 |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | Eclipse Distribution License - v 1.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [perfmark:perfmark-api](https://github.com/perfmark/perfmark) | 0.26.0 | Apache License 2.0 |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.1 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.1 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.2 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.2 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
