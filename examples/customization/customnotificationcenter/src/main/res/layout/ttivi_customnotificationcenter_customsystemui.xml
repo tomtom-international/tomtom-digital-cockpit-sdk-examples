@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2023 TomTom NV. All rights reserved.
+  ~
+  ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+  ~ used for internal evaluation purposes or commercial use strictly subject to separate
+  ~ license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+  ~ to use this software in accordance with the terms of your license agreement. If you are
+  ~ not the licensee, you are not authorized to use this software in any manner and should
+  ~ immediately return or destroy it.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.tomtom.ivi.platform.frontend.api.common.frontend.panels.ControlCenterPanel" />
+
+        <variable
+            name="panelRegistry"
+            type="com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.IviPanelRegistry" />
+
+        <variable
+            name="panelContainerContext"
+            type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
+
+        <variable
+            name="controlCenterPanelViewModel"
+            type="com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.ControlCenterPanelSystemUiViewModel" />
+
+        <variable
+            name="notificationDisplayViewModel"
+            type="com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.NotificationDisplaySystemUiViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ttivi_systemui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        tools:ignore="ContentDescription">
+
+        <!--
+          This panel container uses a custom header and custom empty state layout.
+          Note the `ttiviHeaderLayoutId` and `ttiviEmptyStateLayoutId` parameters that point to
+          custom layouts.
+        -->
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.NotificationCenterPanelContainer
+            android:id="@+id/example_systemui_notificationcenter_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipChildren="false"
+            android:orientation="vertical"
+            auto:layout_constraintBottom_toTopOf="@id/example_systemui_control_center_container"
+            auto:layout_constraintLeft_toLeftOf="parent"
+            auto:layout_constraintRight_toRightOf="parent"
+            auto:layout_constraintTop_toTopOf="parent"
+            auto:ttiviEmptyStateLayoutId="@layout/ttivi_customnotificationcenter_emptystate"
+            auto:ttiviHeaderLayoutId="@layout/ttivi_customnotificationcenter_header"
+            auto:ttiviOnCloseClicked="@{() -> notificationDisplayViewModel.closeNotificationCenter()}"
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{notificationDisplayViewModel.notificationCenterPanels}"
+            auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationcenter_notificationpanel_subcontainer"
+            auto:ttiviUseStockNotificationPanelAnimations="@{true}"
+            auto:visibleIf="@{notificationDisplayViewModel.isNotificationCenterContainerVisible}" />
+
+        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+            android:id="@+id/example_systemui_control_center_container"
+            android:layout_width="0dp"
+            android:layout_height="?attr/ttivi_controlcenter_panel_height"
+            android:background="?attr/ttivi_mainmenu_color"
+            auto:layout_constraintBottom_toBottomOf="parent"
+            auto:layout_constraintLeft_toLeftOf="parent"
+            auto:layout_constraintRight_toRightOf="parent"
+            auto:ttiviPanelContainerContext="@{panelContainerContext}"
+            auto:ttiviPanelContainerData="@{controlCenterPanelViewModel.getControlCenterPanel(ControlCenterPanel.Type.SYSTEM_STATUS_DRIVER)}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
