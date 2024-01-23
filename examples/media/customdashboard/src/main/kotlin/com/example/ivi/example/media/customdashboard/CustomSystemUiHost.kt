@@ -42,6 +42,7 @@ import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugP
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugSystemUiLayoutTagSystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.IviPanelRegistrySystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.MainProcessPanelPositionSystemUiHostExtension
+import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * This is a custom implementation of a [SystemUiHost], mostly based on [StockSystemUiHost].
@@ -95,9 +96,14 @@ internal class CustomSystemUiHost(
         panelRegistryExtension.areImmediatelyStartedFrontendsReady
     }
 
+    private val createAfterStartupFrontendsTrigger = MutableStateFlow(false)
+
     override fun onCreate() {
         panelRegistryExtension =
-            IviPanelRegistrySystemUiHostExtension(systemUiHostExtensionContext)
+            IviPanelRegistrySystemUiHostExtension(
+                systemUiHostExtensionContext,
+                createAfterStartupFrontendsTrigger,
+            )
         systemUiHostExtensions = listOf(
             panelRegistryExtension,
             MainProcessPanelPositionSystemUiHostExtension(
@@ -115,7 +121,7 @@ internal class CustomSystemUiHost(
     }
 
     override fun onSystemUiPresented() {
-        panelRegistryExtension.onSystemUiPresented()
+        createAfterStartupFrontendsTrigger.value = true
     }
 
     private fun bindSystemUiView(binding: ViewDataBinding) {

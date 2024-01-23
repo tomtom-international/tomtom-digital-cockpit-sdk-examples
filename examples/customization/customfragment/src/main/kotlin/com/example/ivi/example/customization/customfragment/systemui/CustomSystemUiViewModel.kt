@@ -13,7 +13,9 @@ package com.example.ivi.example.customization.customfragment.systemui
 
 import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.FrontendCoordinator
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.CoreSystemUiViewModel
+import com.tomtom.ivi.platform.systemui.api.common.systemuihost.createDefaultFrontendCoordinatorContext
 import com.tomtom.tools.android.api.lifecycle.LifecycleViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * The view model for the system UI. It exposes a subset of the data from the [frontendCoordinator]
@@ -25,14 +27,24 @@ internal class CustomSystemUiViewModel(
     coreViewModel: CoreSystemUiViewModel,
 ) : LifecycleViewModel() {
 
-    val frontendCoordinator = FrontendCoordinator.createDefault(
-        lifecycleOwner = this,
-        coreViewModel.iviServiceProvider,
-        coreViewModel.frontendMetadata,
-        coreViewModel.defaultFrontendContextFactory,
+    private val createAfterStartupFrontendsTrigger = MutableStateFlow(false)
+
+    private val frontendCoordinator = FrontendCoordinator(
+        createDefaultFrontendCoordinatorContext(
+            coreSystemUiViewModel = coreViewModel,
+            createAfterStartupFrontendsTrigger = createAfterStartupFrontendsTrigger,
+        ),
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry
 
     val menuPanel = panelRegistry.mainMenuPanel
+
+    /**
+     * A callback to be called when frontends with
+     * [FrontendCreationPolicy.CREATE_FRONTEND_AFTER_STARTUP] can be created.
+     */
+    internal fun onCreateAfterStartupFrontends() {
+        createAfterStartupFrontendsTrigger.value = true
+    }
 }

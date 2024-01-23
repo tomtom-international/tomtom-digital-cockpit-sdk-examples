@@ -96,7 +96,7 @@ internal class CustomSystemUiHost(
     }
 
     override fun onSystemUiPresented() {
-        viewModel.frontendCoordinator.onSystemUiPresented()
+        viewModel.onCreateAfterStartupFrontends()
     }
 
     private fun bindSystemUiView(binding: TtiviCustomfragmentCustomsystemuiBinding) {

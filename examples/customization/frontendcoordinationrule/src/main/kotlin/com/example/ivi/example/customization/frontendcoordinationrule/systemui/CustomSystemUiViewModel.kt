@@ -16,10 +16,12 @@ import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.FrontendC
 import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.frontendcoordination.DefaultFrontendCoordinationRules
 import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.frontendcoordination.FrontendCoordinationRule
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.CoreSystemUiViewModel
+import com.tomtom.ivi.platform.systemui.api.common.systemuihost.createDefaultFrontendCoordinatorContext
 import com.tomtom.ivi.platform.systemui.api.service.debugpanel.DebugPanelService
 import com.tomtom.ivi.platform.systemui.api.service.debugpanel.createApiOrNull
 import com.tomtom.tools.android.api.lifecycle.LifecycleViewModel
 import com.tomtom.tools.android.api.livedata.ImmutableLiveData
+import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * The view model for the system UI. It exposes a subset of the data from the [frontendCoordinator]
@@ -33,27 +35,40 @@ internal class CustomSystemUiViewModel(
     coreViewModel: CoreSystemUiViewModel,
 ) : LifecycleViewModel() {
 
+    private val createAfterStartupFrontendsTrigger = MutableStateFlow(false)
+
     val debugPanelService =
         DebugPanelService.createApiOrNull(this, coreViewModel.iviServiceProvider)
 
     val shouldShowDebugPanel = debugPanelService?.shouldShowDebugPanel
         ?: ImmutableLiveData(false)
 
-    val frontendCoordinator = FrontendCoordinator.createDefault(
-        lifecycleOwner = this,
-        iviServiceProvider = coreViewModel.iviServiceProvider,
-        frontendMetadata = coreViewModel.frontendMetadata,
-        frontendContextFactory = coreViewModel.defaultFrontendContextFactory,
-        frontendCoordinationRulesFactory = { frontendRegistry, panelRegistry ->
-            val defaultRules = DefaultFrontendCoordinationRules.create(
-                frontendRegistry,
-                panelRegistry,
-            )
-            defaultRules + CloseDebugPanelOnMenuItemClickFrontendCoordinationRule(debugPanelService)
-        },
+    private val frontendCoordinator = FrontendCoordinator(
+        createDefaultFrontendCoordinatorContext(
+            coreSystemUiViewModel = coreViewModel,
+            createAfterStartupFrontendsTrigger = createAfterStartupFrontendsTrigger,
+        ).copy(
+            frontendCoordinationRulesFactory = { frontendRegistry, panelRegistry ->
+                val defaultRules = DefaultFrontendCoordinationRules.create(
+                    frontendRegistry,
+                    panelRegistry,
+                )
+                defaultRules + CloseDebugPanelOnMenuItemClickFrontendCoordinationRule(
+                    debugPanelService,
+                )
+            },
+        ),
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry
 
     val menuPanel = panelRegistry.mainMenuPanel
+
+    /**
+     * A callback to be called when frontends with
+     * [FrontendCreationPolicy.CREATE_FRONTEND_AFTER_STARTUP] can be created.
+     */
+    internal fun onCreateAfterStartupFrontends() {
+        createAfterStartupFrontendsTrigger.value = true
+    }
 }

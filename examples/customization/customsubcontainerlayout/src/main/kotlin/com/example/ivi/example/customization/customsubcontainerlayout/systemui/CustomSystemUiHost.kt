@@ -30,6 +30,7 @@ import com.tomtom.ivi.platform.frontend.api.common.frontend.panels.panelTypeSetO
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHost
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.SystemUiHostContext
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.IviPanelRegistrySystemUiHostExtension
+import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * The system UI host is the overarching class of the system UI. It's responsible for creating
@@ -69,13 +70,18 @@ internal class CustomSystemUiHost(systemUiHostContext: SystemUiHostContext) :
 
     private lateinit var panelRegistryExtension: IviPanelRegistrySystemUiHostExtension
 
+    private val createAfterStartupFrontendsTrigger = MutableStateFlow(false)
+
     override fun onCreate() {
         panelRegistryExtension =
-            IviPanelRegistrySystemUiHostExtension(systemUiHostExtensionContext)
+            IviPanelRegistrySystemUiHostExtension(
+                systemUiHostExtensionContext,
+                createAfterStartupFrontendsTrigger,
+            )
     }
 
     override fun onSystemUiPresented() {
-        panelRegistryExtension.onSystemUiPresented()
+        createAfterStartupFrontendsTrigger.value = true
     }
 
     private fun bindSystemUiView(binding: TtiviCustomsubcontainerlayoutCustomsystemuiBinding) {

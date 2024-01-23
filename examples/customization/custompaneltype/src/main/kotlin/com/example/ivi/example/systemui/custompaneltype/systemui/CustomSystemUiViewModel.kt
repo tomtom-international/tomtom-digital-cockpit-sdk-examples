@@ -12,9 +12,12 @@
 package com.example.ivi.example.customization.custompaneltype.systemui
 
 import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.FrontendCoordinator
+import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.FrontendRegistry
 import com.tomtom.ivi.platform.systemui.api.common.frontendcoordinator.frontendcoordination.DefaultFrontendCoordinationRules
 import com.tomtom.ivi.platform.systemui.api.common.systemuihost.CoreSystemUiViewModel
+import com.tomtom.ivi.platform.systemui.api.common.systemuihost.createFrontendCoordinatorContext
 import com.tomtom.tools.android.api.lifecycle.LifecycleViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * The view model for the system UI. It exposes a subset of the data from the [frontendCoordinator]
@@ -24,22 +27,24 @@ internal class CustomSystemUiViewModel(
     coreViewModel: CoreSystemUiViewModel,
 ) : LifecycleViewModel() {
 
-    val frontendCoordinator = FrontendCoordinator(
-        lifecycleOwner = this,
-        coreViewModel.iviServiceProvider,
-        coreViewModel.frontendMetadata,
-        coreViewModel.defaultFrontendContextFactory,
-        { frontendRegistry ->
-            CustomPanelRegistry.create(
-                frontendRegistry,
-                lifecycleOwner = this,
-                coreViewModel.iviServiceProvider,
-            )
-        },
-        { frontendRegistry, panelRegistry ->
-            DefaultFrontendCoordinationRules
-                .create(frontendRegistry, panelRegistry.iviPanelRegistry)
-        },
+    private val createAfterStartupFrontendsTrigger = MutableStateFlow(false)
+
+    private val frontendCoordinator = FrontendCoordinator(
+        createFrontendCoordinatorContext(
+            coreSystemUiViewModel = coreViewModel,
+            createAfterStartupFrontendsTrigger = createAfterStartupFrontendsTrigger,
+            panelRegistryFactory = { frontendRegistry: FrontendRegistry ->
+                CustomPanelRegistry.create(
+                    frontendRegistry,
+                    this,
+                    coreViewModel.iviServiceProvider,
+                )
+            },
+            frontendCoordinationRulesFactory = { frontendRegistry, panelRegistry ->
+                DefaultFrontendCoordinationRules
+                    .create(frontendRegistry, panelRegistry.iviPanelRegistry)
+            },
+        ),
     )
 
     val panelRegistry = frontendCoordinator.panelRegistry
@@ -47,4 +52,12 @@ internal class CustomSystemUiViewModel(
     val menuPanel = panelRegistry.iviPanelRegistry.mainMenuPanel
 
     val customPanel = panelRegistry.customPanel
+
+    /**
+     * A callback to be called when frontends with
+     * [FrontendCreationPolicy.CREATE_FRONTEND_AFTER_STARTUP] can be created.
+     */
+    internal fun onCreateAfterStartupFrontends() {
+        createAfterStartupFrontendsTrigger.value = true
+    }
 }

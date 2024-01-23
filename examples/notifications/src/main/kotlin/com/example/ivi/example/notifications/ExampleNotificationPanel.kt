@@ -20,7 +20,8 @@ import com.tomtom.tools.android.api.livedata.valueUpToDate
 
 internal class ExampleNotificationPanel(
     frontendContext: FrontendContext,
-) : NotificationPanel(frontendContext, Priority.HIGH) {
+    priority: Priority,
+) : NotificationPanel(frontendContext, priority) {
 
     override fun createInitialFragmentInitializer() =
         IviFragment.Initializer(
