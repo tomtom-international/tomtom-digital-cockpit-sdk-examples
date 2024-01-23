@@ -53,7 +53,7 @@ ivi {
                     add(notificationCreationFrontend)
                 }
                 menuItems {
-                    addLast(notificationCreationMenuItem to notificationCreationFrontend)
+                    addFirst(notificationCreationMenuItem to notificationCreationFrontend)
                 }
             }
         }

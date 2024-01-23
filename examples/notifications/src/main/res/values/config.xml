@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  ~ Copyright © 2022 TomTom NV. All rights reserved.
+  ~ Copyright © 2024 TomTom NV. All rights reserved.
   ~
   ~ This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
   ~ used for internal evaluation purposes or commercial use strictly subject to separate
@@ -12,11 +12,5 @@
   -->
 
 <resources>
-    <string name="app_name">IVI Example: Notifications</string>
-
-    <string name="notification_creation_taskpanel_button">Notification</string>
-    <string name="notification_button">Create notification</string>
-    <string name="high_priority_notification">HIGH priority notification</string>
-    <string name="use_custom_panel">Use custom panel</string>
-
+    <bool name="isNotificationCenterEnabledConfigKey">true</bool>
 </resources>

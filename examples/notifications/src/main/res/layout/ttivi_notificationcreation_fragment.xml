@@ -10,11 +10,12 @@
   ~ immediately return or destroy it.
   -->
 
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:auto="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.ivi.example.notifications.NotificationCreationViewModel" />
@@ -26,36 +27,45 @@
         android:baselineAligned="false"
         android:gravity="end"
         android:orientation="horizontal"
-        android:weightSum="1" >
+        android:weightSum="1">
 
         <LinearLayout
             android:id="@+id/buttonContainer"
-            android:layout_weight="0.35"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.35"
             android:orientation="vertical"
+            android:paddingHorizontal="?attr/tt_spacing_8"
             android:paddingVertical="?attr/tt_spacing_8"
-            tools:ignore="UselessParent" >
+            tools:ignore="UselessParent">
+
+            <com.tomtom.tools.android.api.uicontrols.checkbox.TtCheckBox
+                style="?attr/tt_checkbox_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/tt_spacing_8"
+                android:drawablePadding="?attr/tt_spacing_4"
+                android:checked="@{viewModel.highPriorityChecked}"
+                android:onCheckedChanged="@{(button, checked) -> viewModel.onHighPriorityCheckedChanged(checked)}"
+                android:text="@string/high_priority_notification" />
+
+            <com.tomtom.tools.android.api.uicontrols.checkbox.TtCheckBox
+                style="?attr/tt_checkbox_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{viewModel.customPanelChecked}"
+                android:layout_marginBottom="?attr/tt_spacing_8"
+                android:onCheckedChanged="@{(button, checked) -> viewModel.onCustomPanelCheckedChanged(checked)}"
+                android:drawablePadding="?attr/tt_spacing_4"
+                android:text="@string/use_custom_panel" />
 
             <com.tomtom.tools.android.api.uicontrols.button.TtButton
                 style="?attr/tt_button_style"
                 android:layout_width="match_parent"
+                android:layout_marginBottom="?attr/tt_spacing_8"
                 android:onClick="@{() -> viewModel.onStockNotificationButtonClicked()}"
-                android:text="@string/stock_notification_button"
-                auto:ttActionType="primary" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="?attr/tt_spacing_8" />
-
-            <com.tomtom.tools.android.api.uicontrols.button.TtButton
-                style="?attr/tt_button_style"
-                android:layout_width="match_parent"
-                android:onClick="@{() -> viewModel.onCustomNotificationButtonClicked()}"
                 android:text="@string/notification_button"
                 auto:ttActionType="primary" />
-
         </LinearLayout>
     </LinearLayout>
-
 </layout>

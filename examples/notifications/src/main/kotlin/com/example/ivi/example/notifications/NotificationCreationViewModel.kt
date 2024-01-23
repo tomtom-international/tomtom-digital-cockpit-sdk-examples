@@ -23,25 +23,49 @@ import com.tomtom.tools.android.api.resourceresolution.string.StringResolver
 import com.tomtom.tools.android.api.uicontrols.button.TtButton
 import com.tomtom.tools.android.api.uicontrols.button.TtButtonViewModel
 import com.tomtom.tools.android.api.uicontrols.imageview.ImageDescriptor
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 internal class NotificationCreationViewModel(panel: NotificationCreationPanel) :
     FrontendViewModel<NotificationCreationPanel>(panel) {
 
-    fun onStockNotificationButtonClicked() =
-        panel.addPanel(
-            StockNotificationPanel.create {
-                frontendContext = panel.frontendContext
-                priority = NotificationPanel.Priority.HIGH
-                headerViewModel = HEADER
-                bodyText = BODY_TEXT
-                primaryActionButtonViewModel = PRIMARY_BUTTON
-                secondaryActionButtonViewModel = SECONDARY_BUTTON
-                optionViewModels = NOTIFICATION_OPTIONS
-            },
-        )
+    private val _highPriorityChecked = MutableStateFlow(true)
+    val highPriorityChecked = _highPriorityChecked.asStateFlow()
 
-    fun onCustomNotificationButtonClicked() =
-        panel.addPanel(ExampleNotificationPanel(panel.frontendContext))
+    private val _customPanelChecked = MutableStateFlow(false)
+    val customPanelChecked = _customPanelChecked.asStateFlow()
+
+    fun onStockNotificationButtonClicked() {
+        if (customPanelChecked.value) {
+            panel.addPanel(createExampleNotificationPanel())
+        } else {
+            panel.addPanel(createStockNotificationPanel())
+        }
+    }
+
+    fun onHighPriorityCheckedChanged(checked: Boolean) {
+        _highPriorityChecked.value = checked
+    }
+
+    fun onCustomPanelCheckedChanged(checked: Boolean) {
+        _customPanelChecked.value = checked
+    }
+
+    private fun createStockNotificationPanel() = StockNotificationPanel.create {
+        frontendContext = panel.frontendContext
+        priority = highPriorityChecked.toNotificationPriority()
+        headerViewModel = HEADER
+        bodyText = BODY_TEXT
+        primaryActionButtonViewModel = PRIMARY_BUTTON
+        secondaryActionButtonViewModel = SECONDARY_BUTTON
+        optionViewModels = NOTIFICATION_OPTIONS
+    }
+
+    private fun createExampleNotificationPanel() = ExampleNotificationPanel(
+        panel.frontendContext,
+        highPriorityChecked.toNotificationPriority(),
+    )
 
     private companion object {
         val HEADER = NotificationViewModel.HeaderViewModel(
@@ -80,3 +104,6 @@ internal class NotificationCreationViewModel(panel: NotificationCreationPanel) :
         )
     }
 }
+
+private fun StateFlow<Boolean>.toNotificationPriority() =
+    if (value) NotificationPanel.Priority.HIGH else NotificationPanel.Priority.LOW
