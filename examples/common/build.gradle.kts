@@ -16,6 +16,7 @@ android {
     namespace = "com.example.ivi.common"
     buildFeatures {
         dataBinding = true
+        buildConfig = true
     }
 
     signingConfigs.maybeCreate("release")

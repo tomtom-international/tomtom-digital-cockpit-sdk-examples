@@ -17,7 +17,6 @@
         android:name=".ExampleMediaSourceApplication"
         android:label="@string/example_media_source_title"
         android:icon="@drawable/example_media_source_icon"
-        tools:ignore="MissingApplicationIcon"
         android:theme="@style/Theme.ExampleMusicTheme">
 
         <receiver

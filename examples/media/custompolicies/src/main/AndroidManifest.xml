@@ -15,6 +15,5 @@
 
     <application
         android:label="@string/example_media_custompolicies_title"
-        tools:ignore="MissingApplicationIcon"
         tools:replace="android:label" />
 </manifest>

@@ -15,7 +15,6 @@
 
     <application
         android:label="@string/custom_media_miniplayer_title"
-        tools:ignore="MissingApplicationIcon"
         tools:replace="android:label">
 
         <activity
