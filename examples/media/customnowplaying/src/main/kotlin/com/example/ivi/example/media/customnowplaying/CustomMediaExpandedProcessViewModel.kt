@@ -39,6 +39,7 @@ import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsC
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaButtonsViewModel
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.MediaPlaybackViewModel
 import com.tomtom.ivi.appsuite.media.api.common.frontend.viewmodel.asMediaPlaybackParameters
+import com.tomtom.ivi.platform.framework.api.common.annotations.IviExperimental
 import com.tomtom.ivi.platform.frontend.api.common.frontend.viewmodels.FrontendViewModel
 import com.tomtom.tools.android.api.livedata.combine
 import com.tomtom.tools.android.api.livedata.valueUpToDate
@@ -53,6 +54,7 @@ import com.tomtom.tools.android.api.uicontrols.recyclerview.ListItemContentViewM
 /**
  * This ViewModel replaces the stock ViewModel of the [MediaExpandedProcessPanelBase].
  */
+@OptIn(IviExperimental::class)
 internal class CustomMediaExpandedProcessViewModel(panel: MediaExpandedProcessPanelBase) :
     FrontendViewModel<MediaExpandedProcessPanelBase>(panel) {
 

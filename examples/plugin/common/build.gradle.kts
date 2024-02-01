@@ -11,6 +11,17 @@
 
 android {
     namespace = "com.example.ivi.example.plugin.common"
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes.configureEach {
+        buildConfigField(
+            "int",
+            "ROBOLECTRIC_TARGET_SDK",
+            rootProject.iviDependencies.versions.targetSdk.get(),
+        )
+    }
 }
 
 dependencies {

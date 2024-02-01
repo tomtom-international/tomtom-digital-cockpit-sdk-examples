@@ -13,6 +13,18 @@ import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 
 android {
     namespace = "com.example.ivi.example.telephony.customcontacts"
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes.configureEach {
+        buildConfigField(
+            "int",
+            "ROBOLECTRIC_TARGET_SDK",
+            rootProject.iviDependencies.versions.targetSdk.get(),
+        )
+    }
 }
 
 ivi {
