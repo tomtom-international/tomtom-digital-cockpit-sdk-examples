@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6819-3709
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6843-3728
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -28,7 +28,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.1 | Apache License 2.0 |
 | [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.6.1 | Apache License 2.0 |
 | [Android Lifecycle ViewModel with SavedState](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.1 | Apache License 2.0 |
-| [Android Lifecycle-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.1 | Apache License 2.0 |
+| [Android Lifecycle-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.0.0, 2.6.1 | Apache License 2.0 |
 | [Android Lifecycle-Common for Java 8 Language](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.1 | Apache License 2.0 |
 | [Android Navigation Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.3 | Apache License 2.0 |
 | [Android Navigation Common Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.3 | Apache License 2.0 |
@@ -49,7 +49,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support CardView v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.6 | Apache License 2.0 |
 | [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.7.0 | Apache License 2.0 |
-| [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.3.0 | Apache License 2.0 |
+| [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.4.0 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.10.1 | Apache License 2.0 |
 | [Android Support Library core utils](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Cursor Adapter](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -64,7 +64,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Transition Support Library](http://developer.android.com/tools/extras/support-library.html) | 1.4.1 | Apache License 2.0 |
 | [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.2.0 | Apache License 2.0 |
+| [AndroidX Test Library - core](https://developer.android.com/testing) | 1.4.0 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.4.0 | Apache License 2.0 |
+| [AndroidX Test Library - monitor](https://developer.android.com/testing) | 1.4.0 | Apache License 2.0 |
 | [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
 | [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.23 | MIT License |
@@ -76,7 +78,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [coil](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [coil-base](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
 | [coil-test](https://github.com/coil-kt/coil) | 2.3.0 | Apache License 2.0 |
-| [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.3.0 | Apache License 2.0 |
+| [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.0 | Apache License 2.0 |
 | [com.google.api.grpc:proto-google-common-protos](https://github.com/googleapis/googleapis) | 2.29.0 | Apache License 2.0 |
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [Dagger 2](http://google.github.io/dagger) | 2.45 | Apache License 2.0 |
@@ -96,15 +98,15 @@ This offer is valid for a period of three years from the date of distribution of
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
-| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
-| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
-| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
-| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
-| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.61.0 | Apache License 2.0 |
+| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 23.0.0 | Apache License 2.0 |
@@ -174,4 +176,4 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.4.4 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.8.3 | Apache License 2.0 |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
-| [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.3, 8.0.2 | Apache License 2.0 |
+| [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.3, 8.0.2, 8.1.4 | Apache License 2.0 |

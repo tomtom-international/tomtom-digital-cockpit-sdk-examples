@@ -5,7 +5,6 @@
 import com.tomtom.ivi.appsuite.gradle.appstore.api.appsuitedefaults.appstore.appStoreGroup
 import com.tomtom.ivi.appsuite.gradle.bluetooth.api.appsuitedefaults.bluetooth.bluetoothGroup
 import com.tomtom.ivi.appsuite.gradle.communications.api.appsuitedefaults.communications.communicationsGroup
-import com.tomtom.ivi.appsuite.gradle.companionapp.api.appsuitedefaults.companionapp.companionAppGroup
 import com.tomtom.ivi.appsuite.gradle.hvac.api.appsuitedefaults.hvac.hvacGroup
 import com.tomtom.ivi.appsuite.gradle.media.api.appsuitedefaults.media.mediaGroup
 import com.tomtom.ivi.appsuite.gradle.messaging.api.appsuitedefaults.messaging.messagingGroup
@@ -61,7 +60,6 @@ fun IviDefaultsGroupsSelectionConfigurator.selectGroups() {
         IviAppsuite.appStoreGroup,
         IviAppsuite.bluetoothGroup,
         IviAppsuite.communicationsGroup,
-        IviAppsuite.companionAppGroup,
         IviAppsuite.hvacGroup,
         IviAppsuite.mediaGroup,
         IviAppsuite.messagingGroup,
