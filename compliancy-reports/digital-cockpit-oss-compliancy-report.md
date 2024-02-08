@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6843-3728
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6853-3737
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -119,7 +119,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
-| [app.softwork KOBOL](https://github.com/hfhbd/kobol) | 0.2.9 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [ASIO C++ Library](http://think-async.com/Asio/) | 1.14.0 | Boost Software License 1.0 |
 | [ASM](http://asm.ow2.org/) | 9.4, 9.6 | BSD 3-clause "New" or "Revised" License |
@@ -326,6 +325,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Shark Graph](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [Shark Hprof](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
 | [Shark Log](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [sigstore-gradle-sign-base-plugin](https://github.com/sigstore/sigstore-java) | 0.7.0 | Apache License 2.0 |
 | [SILGraphite: rendering non-roman scripts](https://sourceforge.net/projects/silgraphite) | 1.3.12 | GNU Lesser General Public License v2.1 or later |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.36, 2.0.3 | MIT License |
 | [SQLDelight Android Driver](https://github.com/square/sqldelight/) | 1.5.5 | Apache License 2.0 |
