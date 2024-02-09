@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6844-3729
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6859-3743
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -84,10 +84,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Dagger 2](http://google.github.io/dagger) | 2.45 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.45 | Apache License 2.0 |
 | [Dagger Lint Rules AAR Distribution](https://github.com/google/dagger) | 2.45 | Apache License 2.0 |
-| [Data Binding Base Library](https://developer.android.com/studio) | 8.0.2 | Apache License 2.0 |
-| [databinding-adapters](https://maven.google.com/androidx/databinding/databinding-adapters/) | 8.0.2 | Apache License 2.0 |
-| [databinding-ktx](https://maven.google.com/androidx/databinding/databinding-ktx/) | 8.0.2 | Apache License 2.0 |
-| [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 8.0.2 | Apache License 2.0 |
+| [Data Binding Base Library](https://developer.android.com/studio) | 8.2.1 | Apache License 2.0 |
+| [databinding-adapters](https://maven.google.com/androidx/databinding/databinding-adapters/) | 8.0.2, 8.2.1 | Apache License 2.0 |
+| [databinding-ktx](https://maven.google.com/androidx/databinding/databinding-ktx/) | 8.0.2, 8.2.1 | Apache License 2.0 |
+| [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 8.2.1 | Apache License 2.0 |
 | [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.23.0 | Apache License 2.0 |
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.3.0 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
@@ -176,4 +176,4 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.4.4 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.8.3 | Apache License 2.0 |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
-| [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.3, 8.0.2, 8.1.4 | Apache License 2.0 |
+| [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.3, 8.2.1 | Apache License 2.0 |

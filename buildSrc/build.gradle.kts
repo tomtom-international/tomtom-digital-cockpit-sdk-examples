@@ -23,6 +23,7 @@ dependencies {
     implementation(iviDependencies.gradlePluginKsp)
     implementation(iviDependencies.gradlePluginTomtomTools)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsAlexa)
+    implementation(libraries.gradlePluginApiAppsuiteDefaultsEvcharging)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsUserprofiles)
     implementation(libraries.gradlePluginApiProductDefaultsCore)
     implementation(libraries.gradlePluginApiFrameworksConfig)
