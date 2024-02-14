@@ -14,11 +14,12 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.6853"
+iviPlatform = "1.0.6872"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.
 gradlePluginApiAppsuiteDefaultsAlexa = { module = "com.tomtom.ivi.appsuite.gradle.alexa:api_appsuitedefaults_alexa", version.ref = "iviPlatform" }
+gradlePluginApiAppsuiteDefaultsEvcharging = { module = "com.tomtom.ivi.appsuite.gradle.evcharging:api_appsuitedefaults_evcharging", version.ref = "iviPlatform" }
 gradlePluginApiAppsuiteDefaultsUserprofiles = { module = "com.tomtom.ivi.appsuite.gradle.userprofiles:api_appsuitedefaults_userprofiles", version.ref = "iviPlatform" }
 gradlePluginApiFrameworksConfig = { module = "com.tomtom.ivi.platform.gradle:api_framework_config", version.ref = "iviPlatform" }
 gradlePluginApiFrameworksFrontend = { module = "com.tomtom.ivi.platform.gradle:api_framework_frontend", version.ref = "iviPlatform" }
@@ -33,6 +34,10 @@ iviPlatformContactsApiCommonUtil = { module = "com.tomtom.ivi.platform:platform_
 iviPlatformContactsApiServiceContacts = { module = "com.tomtom.ivi.platform:platform_contacts_api_service_contacts", version.ref = "iviPlatform" }
 iviPlatformDebugApiFrontendExtensionDebugTab = { module = "com.tomtom.ivi.platform:platform_debug_api_frontendextension_debugtab", version.ref = "iviPlatform" }
 iviPlatformDebugApiTestingTools = { module = "com.tomtom.ivi.platform:platform_debug_api_testing_tools", version.ref = "iviPlatform" }
+iviPlatformEvchargingApiCommonEvcharging= { module = "com.tomtom.ivi.platform:platform_evcharging_api_common_evcharging", version.ref = "iviPlatform" }
+iviPlatformEvchargingApiServiceEvcharging= { module = "com.tomtom.ivi.platform:platform_evcharging_api_service_evcharging", version.ref = "iviPlatform" }
+iviPlatformEvchargingApiServiceEvchargingMediator= { module = "com.tomtom.ivi.platform:platform_evcharging_api_service_evchargingmediator", version.ref = "iviPlatform" }
+iviPlatformEvchargingApiServiceEvchargingStation= { module = "com.tomtom.ivi.platform:platform_evcharging_api_service_evchargingstation", version.ref = "iviPlatform" }
 iviPlatformFrameworkApiCommonLifecycle = { module = "com.tomtom.ivi.platform:platform_framework_api_common_lifecycle", version.ref = "iviPlatform" }
 iviPlatformFrameworkApiCommonUid = { module = "com.tomtom.ivi.platform:platform_framework_api_common_uid", version.ref = "iviPlatform" }
 iviPlatformFrameworkApiCommonUiEmbedding = { module = "com.tomtom.ivi.platform:platform_framework_api_common_uiembedding", version.ref = "iviPlatform" }
