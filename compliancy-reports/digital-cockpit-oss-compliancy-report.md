@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6862-3746
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6875-3757
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -30,7 +30,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Arch-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
 | [Android ConstraintLayout](http://tools.android.com) | 2.1.4 | Apache License 2.0 |
 | [Android ConstraintLayout Core](http://tools.android.com) | 1.0.4 | Apache License 2.0 |
-| [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.3.0 | Apache License 2.0 |
+| [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
 | [Android KTX Core](https://github.com/android/android-ktx) | 1.10.1, 1.7.0 | Apache License 2.0 |
@@ -58,8 +58,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Paging-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 3.1.1 | Apache License 2.0 |
 | [Android Resource Inspection - Annotations](https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.0-alpha01) | 1.0.1 | Apache License 2.0 |
 | [Android Resources Library](http://developer.android.com/tools/extras/support-library.html) | 1.6.1 | Apache License 2.0 |
-| [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.5.0 | Apache License 2.0 |
-| [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.5.0 | Apache License 2.0 |
+| [Android Room Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.0 | Apache License 2.0 |
+| [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.0 | Apache License 2.0 |
+| [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.0 | Apache License 2.0 |
 | [Android Support AnimatedVectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Support CardView v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Custom Tabs](http://developer.android.com/tools/extras/support-library.html) | 1.3.0 | Apache License 2.0 |
@@ -88,12 +89,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library View Pager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Palette v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support RecyclerView v7](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.2.1 | Apache License 2.0 |
-| [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.3.0 | Apache License 2.0 |
+| [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
 | [Android Support VectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Tracing](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0 | Apache License 2.0 |
 | [Android Transition Support Library](http://developer.android.com/tools/extras/support-library.html) | 1.2.0, 1.4.1 | Apache License 2.0 |
-| [Android WorkManager Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.8.1 | Apache License 2.0 |
-| [Android WorkManager Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.8.1 | Apache License 2.0 |
+| [Android WorkManager Multiprocess Implementation](https://developer.android.com/jetpack/androidx/releases/work#2.5.0-alpha02) | 2.9.0 | Apache License 2.0 |
+| [Android WorkManager Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.9.0 | Apache License 2.0 |
 | [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.2.0 | Apache License 2.0 |
 | [AndroidX Security](https://developer.android.com/jetpack/androidx/releases/security#1.0.0-alpha01) | 1.0.0-alpha02, 1.1.0-alpha06 | Apache License 2.0 |
