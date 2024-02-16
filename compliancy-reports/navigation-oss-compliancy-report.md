@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6872-3751
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6878-3759
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -121,6 +121,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.2, 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
+| [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-bom](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
