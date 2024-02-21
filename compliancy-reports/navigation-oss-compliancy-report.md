@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6895-3768
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6901-3773
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -98,9 +98,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-api](http://grpc.io) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
-| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-core](http://grpc.io) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
 | [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
