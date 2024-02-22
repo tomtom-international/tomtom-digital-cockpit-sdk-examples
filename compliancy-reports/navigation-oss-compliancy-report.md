@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6886-3763
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6910-3780
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -96,11 +96,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [google-gson](https://github.com/google/gson) | 2.10.1 | Apache License 2.0 |
 | [google-guava](https://github.com/google/guava) | 32.1.3-android | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
+| [grpc](http://grpc.io) | 1.61.1 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [io.grpc:grpc-api](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-android](https://conscrypt.org/) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
-| [io.grpc:grpc-core](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
 | [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
@@ -155,8 +155,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [perfmark:perfmark-api](https://github.com/perfmark/perfmark) | 0.26.0 | Apache License 2.0 |
-| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.2 | BSD 3-clause "New" or "Revised" License |
-| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.2 | BSD 3-clause "New" or "Revised" License |
+| [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.3 | BSD 3-clause "New" or "Revised" License |
+| [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.3 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
