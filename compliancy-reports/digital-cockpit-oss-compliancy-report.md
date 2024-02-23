@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6903-3775
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6918-3788
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -203,6 +203,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [JUnit 5 (Bill of Materials)](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [JUnit Jupiter (Aggregator)](https://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [JWT-Decode](https://github.com/auth0/JWTDecode.Android) | 2.0.1 | MIT License |
+| [Kolasu language server testing](https://github.com/Strumenta/kolasu-languageserver-library) | 1.0.0 | Apache License 2.0 |
 | [koom-fast-dump](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
 | [koom-monitor-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
 | [Kotlin](http://kotlin.jetbrains.org) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |

@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6903-3775
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6918-3788
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -69,7 +69,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Test Library - monitor](https://developer.android.com/testing) | 1.4.0 | Apache License 2.0 |
 | [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
-| [Animal Sniffer Annotations](http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) | 1.23 | MIT License |
+| [Animal Sniffer Annotations](https://www.mojohaus.org/animal-sniffer/animal-sniffer-annotations/) | 1.23 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Lang](http://commons.apache.org/lang/) | 3.13.0 | Apache License 2.0 |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
@@ -96,11 +96,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [google-gson](https://github.com/google/gson) | 2.10.1 | Apache License 2.0 |
 | [google-guava](https://github.com/google/guava) | 32.1.3-android | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
+| [grpc](http://grpc.io) | 1.61.1 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
-| [io.grpc:grpc-api](http://grpc.io) | 1.61.1 | Apache License 2.0 |
+| [io.grpc:grpc-android](https://conscrypt.org/) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
-| [io.grpc:grpc-core](http://grpc.io) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
 | [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
 | [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.61.1 | Apache License 2.0 |
@@ -111,6 +111,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 23.0.0 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
+| [Kolasu language server testing](https://github.com/Strumenta/kolasu-languageserver-library) | 1.0.0 | Apache License 2.0 |
 | [Kotlin](http://kotlin.jetbrains.org) | 1.8.20, 1.8.22 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.8.22 | Apache License 2.0 |
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23 | Apache License 2.0 |
