@@ -1,0 +1,52 @@
+Subject: [PATCH] PackageManager: enable dexopt on install for debuggable apps
+ by default
+
+Commit 58adf3a8eead2d7594fc1ac15aaed6a5760e7ba4 skipped dexopt on
+install for debuggable apps, to improve turnaround time during
+development.
+
+This, however, causes memory consumption to increase a lot when running
+applications with many processes, such as TTDC.
+
+Enable dexopt on installation for debuggable apps by default. This
+behaviour by can be overridden by setting the "pm.dexopt.disable_debuggable_dexopt"
+system property to `true`.
+---
+ .../java/com/android/server/pm/PackageManagerService.java  | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/services/core/java/com/android/server/pm/PackageManagerService.java b/services/core/java/com/android/server/pm/PackageManagerService.java
+index d6148f799e6a..5867b98444d5 100644
+--- a/services/core/java/com/android/server/pm/PackageManagerService.java
++++ b/services/core/java/com/android/server/pm/PackageManagerService.java
+@@ -549,6 +549,7 @@ public class PackageManagerService extends IPackageManager.Stub
+     private static final boolean HIDE_EPHEMERAL_APIS = false;
+ 
+     private static final String PRECOMPILE_LAYOUTS = "pm.precompile_layouts";
++    private static final String DISABLE_DEBUGGABLE_DEXOPT_PROPERTY = "pm.dexopt.disable_debuggable_dexopt";
+ 
+     private static final int RADIO_UID = Process.PHONE_UID;
+     private static final int LOG_UID = Process.LOG_UID;
+@@ -20178,7 +20179,8 @@ public class PackageManagerService extends IPackageManager.Stub
+             //
+             // We only need to dexopt if the package meets ALL of the following conditions:
+             //   1) it is not an instant app or if it is then dexopt is enabled via gservices.
+-            //   2) it is not debuggable.
++            //   2) it is not debuggable or if it is, the "pm.dexopt.disable_debuggable_dexopt"
++            //      system property is `false`.
+             //   3) it is not on Incremental File System.
+             //
+             // Note that we do not dexopt instant apps by default. dexopt can take some time to
+@@ -20196,7 +20198,8 @@ public class PackageManagerService extends IPackageManager.Stub
+             final boolean performDexopt =
+                     (!instantApp || Global.getInt(mContext.getContentResolver(),
+                     Global.INSTANT_APP_DEXOPT_ENABLED, 0) != 0)
+-                    && !pkg.isDebuggable()
++                    && (!pkg.isDebuggable() ||
++                            !SystemProperties.getBoolean(DISABLE_DEBUGGABLE_DEXOPT_PROPERTY, false))
+                     && (!onIncremental)
+                     && dexoptOptions.isCompilationEnabled();
+ 
+-- 
+2.39.3 (Apple Git-145)
+
