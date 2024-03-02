@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.6957"
+iviPlatform = "1.0.6958"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.
