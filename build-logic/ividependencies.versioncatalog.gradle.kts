@@ -26,7 +26,6 @@ fun getIviPlatformVersionFromTomlFile() : String {
 }
 
 dependencyResolutionManagement {
-    @Suppress("UnstableApiUsage")
     versionCatalogs {
         create("iviDependencies") {
             val group = "com.tomtom.ivi.platform"

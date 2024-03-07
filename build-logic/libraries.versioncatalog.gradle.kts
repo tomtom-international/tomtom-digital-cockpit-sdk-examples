@@ -10,7 +10,6 @@
  */
 
 dependencyResolutionManagement {
-    @Suppress("UnstableApiUsage")
     versionCatalogs {
         create("libraries") {
             from(files("libraries.versions.toml"))

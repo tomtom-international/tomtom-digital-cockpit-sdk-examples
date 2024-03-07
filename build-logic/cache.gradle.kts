@@ -22,10 +22,10 @@ buildCache {
         // Remote cache is for CI builds only (as it requires corp network and password).
         isEnabled = isCiBuild
         isPush = isCiBuild
-        url = uri("https://gradlecache-ivi.tomtomgroup.com/cache/")
+        url = uri("https://ivi-gradle-cache.ado-prod.tomtomgroup.com/cache/")
         credentials {
-            username = "ci"
-            password = System.getenv("GRADLE_REMOTE_CACHE_PWD")
+            username = System.getenv("GRADLE_REMOTE_CACHE_USER")
+            password = System.getenv("GRADLE_REMOTE_CACHE_PASSWORD")
         }
     }
 }

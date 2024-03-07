@@ -163,7 +163,6 @@ subprojects {
         }
 
         kotlinOptions {
-            @Suppress("UnstableApiUsage")
             jvmTarget = versions.jvm.get()
         }
 
@@ -196,7 +195,6 @@ subprojects {
 
         // Split the output into multiple APKs based on their ABI.
         splits.abi {
-            @Suppress("UnstableApiUsage")
             isEnable = true
             reset()
             include(*ProjectAbis.enabledAbis)
