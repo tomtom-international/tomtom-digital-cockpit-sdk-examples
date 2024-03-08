@@ -27,6 +27,10 @@
         <variable
             name="viewModel"
             type="com.tomtom.ivi.platform.frontend.api.template.notificationpanel.NotificationViewModel" />
+
+        <variable
+            name="viewProvider"
+            type="com.tomtom.tools.android.api.viewprovider.ViewProvider&lt;com.tomtom.ivi.platform.frontend.api.template.notificationpanel.NotificationViewModel.OptionViewModel&gt;" />
     </data>
 
     <LinearLayout
@@ -105,7 +109,7 @@
             android:layout_marginTop="?attr/tt_spacing_5"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            auto:ttContentLayout="@layout/ttivi_notification_option"
+            auto:ttViewProvider="@{viewProvider}"
             auto:ttContents="@{viewModel.optionViewModels}"
             auto:visibleIf="@{viewModel.optionViewModels.size() > 0}"/>
 

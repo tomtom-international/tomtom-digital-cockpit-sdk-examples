@@ -13,13 +13,21 @@ package com.example.ivi.example.media.customminiplayer
 
 import android.content.Context
 import android.util.AttributeSet
+import androidx.lifecycle.findViewTreeLifecycleOwner
+import com.tomtom.tools.android.api.lifecycle.withAttachedView
 import com.tomtom.tools.android.api.uicontrols.button.TtButtonViewModel
 import com.tomtom.tools.android.api.uicontrols.list.TtListLinearLayout
+import com.tomtom.tools.android.api.viewprovider.ViewProvider
 
 internal class MediaControlLayout(context: Context, attrs: AttributeSet) :
     TtListLinearLayout<TtButtonViewModel>(context, attrs) {
 
-    init {
-        ttContentLayoutId = R.layout.custom_media_mainprocess_mediacontrol_layout
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        ttViewProvider = checkNotNull(findViewTreeLifecycleOwner()) {
+            "View tree lifecycle owner not found"
+        }.withAttachedView(this).let {
+            ViewProvider(it, R.layout.custom_media_mainprocess_mediacontrol_layout)
+        }
     }
 }

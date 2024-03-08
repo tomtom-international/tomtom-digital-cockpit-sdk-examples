@@ -13,8 +13,11 @@ package com.example.ivi.example.customization.customfragment.systemui
 
 import com.example.ivi.example.customization.customfragment.databinding.TtiviCustomfragmentNotificationfragmentBinding
 import com.tomtom.ivi.platform.frontend.api.common.frontend.IviFragment
+import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.NotificationViewModel
+import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.R
 import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.stock.StockNotificationPanel
 import com.tomtom.ivi.platform.frontend.api.template.notificationpanel.stock.StockNotificationPanel.StockNotificationViewModel
+import com.tomtom.tools.android.api.viewprovider.ViewProvider
 
 /**
  * This fragment replaces the normal fragment of the [StockNotificationPanel].
@@ -30,5 +33,11 @@ internal class CustomNotificationFragment :
         StockNotificationViewModel::class,
     ) {
     override val viewFactory: ViewFactory<*> =
-        ViewFactory(TtiviCustomfragmentNotificationfragmentBinding::inflate)
+        ViewFactory(TtiviCustomfragmentNotificationfragmentBinding::inflate) {
+            it.viewProvider =
+                ViewProvider<NotificationViewModel.OptionViewModel>(
+                    viewLifecycleOwner,
+                    R.layout.ttivi_notification_option,
+                )
+        }
 }
