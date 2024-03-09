@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6990-3847
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.6995-3853
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -316,6 +316,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [RxJava](http://reactivex.io/) | 3.0.4 | Apache License 2.0 |
 | [sandbox](http://robolectric.org) | 4.11.1, 4.9.2 | MIT License |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
+| [Semver4k](https://github.com/voize-gmbh/semver4k) | 4.2.1 | MIT License |
 | [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.32.0 | MIT License |
 | [sentry-android-core](https://sentry.io) | 6.32.0 | MIT License |
 | [sentry-android-ndk](https://sentry.io) | 6.32.0 | MIT License |
