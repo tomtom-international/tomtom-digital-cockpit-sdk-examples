@@ -30,3 +30,15 @@ dependencies {
     implementation(libraries.gradlePluginApiFrameworksFrontend)
     implementation(libraries.gradlePluginApiToolsSigningConfig)
 }
+
+configurations.all {
+    resolutionStrategy {
+        eachDependency {
+            when (requested.group) {
+                "com.tomtom.navtest" -> {
+                    useVersion(iviDependencies.versions.navtest.get())
+                }
+            }
+        }
+    }
+}
