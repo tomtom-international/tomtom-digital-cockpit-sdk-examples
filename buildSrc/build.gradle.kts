@@ -22,6 +22,7 @@ dependencies {
     implementation(iviDependencies.gradlePluginKotlinSerialization)
     implementation(iviDependencies.gradlePluginKsp)
     implementation(iviDependencies.gradlePluginTomtomTools)
+    implementation(libraries.gradlePluginApiAppsuiteConfigsNavappcomponents)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsAlexa)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsEvcharging)
     implementation(libraries.gradlePluginApiAppsuiteDefaultsUserprofiles)
