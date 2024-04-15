@@ -9,12 +9,16 @@
  * immediately return or destroy it.
  */
 
+import com.android.build.api.variant.ApplicationAndroidComponentsExtension
+import com.tomtom.ivi.appsuite.gradle.navappcomponents.api.appsuiteconfigs.navappcomponents.automotiveUiApiKeyConfig
+import com.tomtom.ivi.appsuite.gradle.navappcomponents.api.appsuiteconfigs.navappcomponents.setApiKey
 import com.tomtom.ivi.buildsrc.environment.ProjectAbis
 import com.tomtom.ivi.buildsrc.extensions.android
 import com.tomtom.ivi.buildsrc.extensions.androidApplication
 import com.tomtom.ivi.buildsrc.extensions.getGradleProperty
 import com.tomtom.ivi.buildsrc.extensions.kotlinOptions
 import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviDependencySource
+import com.tomtom.ivi.platform.gradle.api.common.extensions.getLocalOrGradleProperty
 import com.tomtom.ivi.platform.gradle.api.framework.config.ivi
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -26,6 +30,7 @@ plugins {
     id("com.android.library") apply false
     id("com.android.test") apply false
     id("com.google.devtools.ksp") apply false
+    id("com.tomtom.ivi.appsuite.navappcomponents.config.automotiveuiapikey") apply false
     id("com.tomtom.ivi.platform.framework.config") apply true
     id("com.tomtom.tools.android.extractstringsources") apply false
 }
@@ -48,7 +53,18 @@ ivi {
     dependencySource =
         IviDependencySource.ArtifactRepository(libraries.versions.iviPlatform.get())
 }
+tasks.register<DefaultTask>("showAllDependencies") { }
 
+allprojects {
+    val project = this
+    rootProject.tasks.named("showAllDependencies") {
+        if (project.name == rootProject.name) {
+            dependsOn("dependencies")
+        } else {
+            dependsOn(":${project.name}:dependencies")
+        }
+    }
+}
 // Set up global test options
 tasks.withType<Test> {
     testLogging {
@@ -66,6 +82,7 @@ subprojects {
 
     val iviDependencies = rootProject.iviDependencies
     val versions = rootProject.iviDependencies.versions
+    val examplesAppVersions = rootProject.libraries.versions
 
     when {
         isApplicationProject -> apply(plugin = "com.android.application")
@@ -112,6 +129,13 @@ subprojects {
                                 useVersion(versions.kotlinxSerialization.get())
                         }
                     }
+                    "com.google.protobuf" -> if (requested.name == "protobuf-java") {
+                        useVersion(iviDependencies.versions.protobufJava.get())
+                        because(
+                            "protobuf-java versions before 3.21.7 have CVE-2022-3510," +
+                                "CVE-2022-3509 and CVE-2022-3171.",
+                        )
+                    }
                     "com.google.guava" -> {
                         if (requested.name == "guava") {
                             useVersion(versions.guava.get())
@@ -121,6 +145,24 @@ subprojects {
                             )
                         }
                     }
+
+                    "org.jsoup" ->
+                        if (requested.name == "jsoup") {
+                            useVersion(iviDependencies.versions.jsoup.get())
+                            because(
+                                "jsoup versions before 1.15.3 have CVE-2022-36033 " +
+                                    "and versions before 1.14.2 have CVE-2021-37714",
+                            )
+                        }
+
+                    "com.squareup.okio" ->
+                        if (requested.name == "okio") {
+                            useVersion(iviDependencies.versions.okio.get())
+                            because(
+                                "Okio versions before 3.3.0 have CVE-2023-3635" +
+                                    " and broken functionality",
+                            )
+                        }
                 }
             }
             dependencySubstitution {
@@ -135,7 +177,7 @@ subprojects {
         buildToolsVersion = versions.buildTools.get()
 
         defaultConfig {
-            minSdk = versions.minSdk.get().toInt()
+            minSdk = examplesAppVersions.examplesAppMinSdk.get().toInt()
             // AutomotiveUI has enabled flavorized publication of their modules, because of
             // this, it is now needed on the integrator side to specify which flavor to use.
             missingDimensionStrategy("engine", "navkit1")
@@ -147,7 +189,7 @@ subprojects {
 
         if (isApplicationProject) {
             androidApplication {
-                defaultConfig.targetSdk = versions.targetSdk.get().toInt()
+                defaultConfig.targetSdk = examplesAppVersions.examplesAppTargetSdk.get().toInt()
                 // Use hardcoded product versions, or pass them from CI, or adopt a solution for
                 // dynamic version codes. See the recommendations from Android Gradle Plugin docs:
                 //  - https://developer.android.com/studio/publish/versioning
@@ -210,5 +252,25 @@ subprojects {
         }
 
         apply(plugin = "com.tomtom.ivi.platform.tools.signing-config")
+    }
+
+    // Configure the AutomotiveUI API key for the application projects based on the presence of the
+    // `automotiveUiApiKey` Gradle property.
+    if (isApplicationProject) {
+        val automotiveUiApiKey = project.getLocalOrGradleProperty("automotiveUiApiKey")
+        plugins.apply("com.tomtom.ivi.appsuite.navappcomponents.config.automotiveuiapikey")
+        configure<ApplicationAndroidComponentsExtension> {
+            onVariants { variant ->
+                variant.ivi {
+                    automotiveUiApiKeyConfig {
+                        if (!automotiveUiApiKey.isNullOrEmpty()) {
+                            setApiKey(automotiveUiApiKey)
+                        } else {
+                            useNoApiKey()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
