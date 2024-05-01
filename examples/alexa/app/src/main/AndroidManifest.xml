@@ -10,7 +10,7 @@
   ~ immediately return or destroy it.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:sharedUserId="com.tomtom.ivi.IviUserId"
-    tools:ignore="Deprecated" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+</manifest>

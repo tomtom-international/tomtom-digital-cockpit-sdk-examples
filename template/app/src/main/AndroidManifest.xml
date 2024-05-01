@@ -18,11 +18,7 @@
         android:name=".TemplateApplication"
         android:icon="@drawable/ttivi_product_icon_main"
         android:label="@string/ttivi_template_app_name"
-        android:theme="@style/TtiviApplicationTheme"
-        android:allowBackup="false"
-        android:fullBackupContent="false"
-        android:usesCleartextTraffic="false"
-        tools:replace="android:label">
+        android:theme="@style/TtiviApplicationTheme">
 
         <activity
             android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupProxyActivity"

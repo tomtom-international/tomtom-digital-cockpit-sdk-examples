@@ -34,7 +34,6 @@ internal class CustomMediaExpandedProcessFragment :
             it.backgroundArt =
                 viewModel.art.toBlurredDrawable(
                     context,
-                    it.customMediaNowplayingBlurredbackground,
                 )
             it.dominantColor = viewModel.art.toDominantColor(
                 context,

@@ -10,10 +10,8 @@
   ~ immediately return or destroy it.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:label="@string/example_telephony_custompolicies_title"
-        tools:replace="android:label" />
+        android:label="@string/example_telephony_custompolicies_title" />
 </manifest>

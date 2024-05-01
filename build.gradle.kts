@@ -154,15 +154,6 @@ subprojects {
                                     "and versions before 1.14.2 have CVE-2021-37714",
                             )
                         }
-
-                    "com.squareup.okio" ->
-                        if (requested.name == "okio") {
-                            useVersion(iviDependencies.versions.okio.get())
-                            because(
-                                "Okio versions before 3.3.0 have CVE-2023-3635" +
-                                    " and broken functionality",
-                            )
-                        }
                 }
             }
             dependencySubstitution {

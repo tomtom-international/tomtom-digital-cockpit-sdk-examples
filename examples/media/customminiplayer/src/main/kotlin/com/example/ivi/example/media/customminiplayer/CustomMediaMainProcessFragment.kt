@@ -63,7 +63,6 @@ internal class CustomMediaMainProcessFragment :
                             it.backgroundArt =
                                 viewModel.customMediaCommonProcessViewModel.art.toBlurredDrawable(
                                     context,
-                                    it.customMediaMiniplayerBlurredbackground,
                                 )
                             it.dominantColor =
                                 viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
@@ -83,7 +82,6 @@ internal class CustomMediaMainProcessFragment :
                             it.backgroundArt =
                                 viewModel.customMediaCommonProcessViewModel.art.toBlurredDrawable(
                                     context,
-                                    it.customMediaMiniplayerBlurredbackground,
                                 )
                             it.dominantColor =
                                 viewModel.customMediaCommonProcessViewModel.art.toDominantColor(
