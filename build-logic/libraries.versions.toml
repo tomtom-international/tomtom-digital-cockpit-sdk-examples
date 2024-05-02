@@ -14,9 +14,10 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.7189"
+iviPlatform = "1.0.7256"
+
 examplesAppMinSdk = "29"
-examplesAppTargetSdk = "29"
+examplesAppTargetSdk = "34"
 
 [libraries]
 # Gradle plugins from the TomTom Digital Cockpit platform & appsuite.

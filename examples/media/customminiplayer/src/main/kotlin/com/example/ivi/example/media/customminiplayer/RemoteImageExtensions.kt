@@ -12,7 +12,6 @@ package com.example.ivi.example.media.customminiplayer
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.widget.ImageView
 import androidx.annotation.ColorInt
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
@@ -27,8 +26,7 @@ import com.tomtom.tools.android.api.resourceresolution.getFloatByAttr
 /**
  * Transforms the [RemoteImage] into a blurred [Drawable] using [blur] function.
  */
-internal fun LiveData<RemoteImage>.toBlurredDrawable(context: Context, image: ImageView):
-    LiveData<Drawable> {
+internal fun LiveData<RemoteImage>.toBlurredDrawable(context: Context): LiveData<Drawable> {
     val blurRadiusFraction =
         context.getFloatByAttr(
             MediaAttributesR.attr.ttivi_media_nowplayingview_backgroundblur_radius_fraction,
