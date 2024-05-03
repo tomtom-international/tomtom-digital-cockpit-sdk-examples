@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7251-4043
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7264-4057
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -193,16 +193,16 @@ This offer is valid for a period of three years from the date of distribution of
 | [JUnit Jupiter (Aggregator)](https://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [JWT-Decode](https://github.com/auth0/JWTDecode.Android) | 2.0.1 | MIT License |
 | [Kolasu language server testing](https://github.com/Strumenta/kolasu-languageserver-library) | 1.0.0 | Apache License 2.0 |
-| [koom-fast-dump](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
-| [koom-monitor-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
-| [Kotlin](http://kotlin.jetbrains.org) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
-| [Kotlin Libraries bill-of-materials](http://kotlinlang.org/) | 1.9.21 | Apache License 2.0 |
-| [Kotlin Test Junit](https://kotlinlang.org/) | 1.8.22, 1.9.21 | Apache License 2.0 |
-| [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
-| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23, 3.0.4 | Apache License 2.0 |
-| [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
-| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
-| [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.22, 1.9.21 | Apache License 2.0 |
+| [koom-fast-dump](https://github.com/KwaiAppTeam/KOOM) | 2.2.2 | Apache License 2.0 |
+| [koom-monitor-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.2 | Apache License 2.0 |
+| [Kotlin](http://kotlin.jetbrains.org) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
+| [Kotlin Libraries bill-of-materials](http://kotlinlang.org/) | 1.9.22 | Apache License 2.0 |
+| [Kotlin Test Junit](https://kotlinlang.org/) | 1.8.22, 1.9.22 | Apache License 2.0 |
+| [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
+| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 3.0.5 | Apache License 2.0 |
+| [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
+| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
+| [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.22, 1.9.22 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.5.2, 1.7.3 | Apache License 2.0 |
@@ -237,17 +237,17 @@ This offer is valid for a period of three years from the date of distribution of
 | [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
 | [ktor-websockets](https://github.com/ktorio/ktor) | 2.3.2 | Apache License 2.0 |
-| [kwai-android-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.1 | Apache License 2.0 |
-| [LeakCanary](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [leakcanary](https://github.com/square/leakcanary) | 2.12 | Apache License 2.0 |
-| [LeakCanary Android Utils](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary extension for Android instrumentation tests.](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary Object Watcher](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android - Core](https://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [kwai-android-base](https://github.com/KwaiAppTeam/KOOM) | 2.2.2 | Apache License 2.0 |
+| [LeakCanary](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [leakcanary](https://github.com/square/leakcanary) | 2.14 | Apache License 2.0 |
+| [LeakCanary Android Utils](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary extension for Android instrumentation tests.](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary for Android - Core](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary Object Watcher](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android - Core](https://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.8.0 | Apache License 2.0 |
@@ -268,15 +268,15 @@ This offer is valid for a period of three years from the date of distribution of
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 3.7.0, 3.8.0 | Apache License 2.0 |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.22, 1.9.21 | Apache License 2.0 |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.22, 1.9.22 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
 | [org.junit.jupiter:junit-jupiter-api](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [org.junit.jupiter:junit-jupiter-engine](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [org.junit.jupiter:junit-jupiter-params](http://junit.org/junit5/) | 5.8.2 | Eclipse Public License 2.0 |
 | [org.junit.platform:junit-platform-commons](http://junit.org/junit5/) | 1.8.2 | Eclipse Public License 2.0 |
 | [org.junit.platform:junit-platform-engine](http://junit.org/junit5/) | 1.8.2 | Eclipse Public License 2.0 |
 | [org.opentest4j:opentest4j](https://github.com/ota4j-team/opentest4j) | 1.2.0 | Apache License 2.0 |
-| [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.21 | Apache License 2.0 |
+| [Parcelize Runtime](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
 | [platform/dalvik dx](http://nexus.sonatype.org/oss-repository-hosting.html/dalvik-dx) | 11.0.0_r3, 9.0.0_r3 | Apache License 2.0 |
 | [plexus-utils](https://codehaus-plexus.github.io/plexus-utils/) | 3.5.1 | Apache License 2.0 |
 | [pluginapi](http://robolectric.org) | 4.11.1 | MIT License |
@@ -304,11 +304,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.32.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.32.0 | MIT License |
 | [shadowapi](http://robolectric.org) | 4.11.1 | MIT License |
-| [Shark](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [Shark for Android heaps](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [Shark Graph](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [Shark Hprof](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
-| [Shark Log](http://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [Shark](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [Shark for Android heaps](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [Shark Graph](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [Shark Hprof](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
+| [Shark Log](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [sigstore-gradle-sign-base-plugin](https://github.com/sigstore/sigstore-java) | 0.7.0 | Apache License 2.0 |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.36, 2.0.3 | MIT License |
 | [SQLDelight Android Driver](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
@@ -321,7 +321,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.8.0 | Apache License 2.0 |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.3 | Apache License 2.0 |
 | [Turbine](https://github.com/cashapp/turbine/) | 1.0.0 | Apache License 2.0 |
-| [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.12 | Apache License 2.0 |
+| [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.11.1 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
