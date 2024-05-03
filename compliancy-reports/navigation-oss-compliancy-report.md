@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7258-4049
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7263-4053
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -163,7 +163,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [JsonCpp](https://github.com/open-source-parsers/jsoncpp) | 1.8.4 | MIT License |
 | [Kotlin](http://kotlin.jetbrains.org) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.8.22 | Apache License 2.0 |
-| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23, 3.0.4 | Apache License 2.0 |
+| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 3.0.4, 3.0.5 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.7.10, 1.8.22 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
@@ -246,7 +246,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [sentry-android-ndk](https://sentry.io) | 6.32.0 | MIT License |
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.32.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.32.0 | MIT License |
-| [SLF4J API Module](http://www.slf4j.org) | 1.7.25, 1.7.32, 1.7.36, 2.0.3 | MIT License |
+| [SLF4J API Module](http://www.slf4j.org) | 1.7.25, 2.0.12, 2.0.3 | MIT License |
 | [sml](https://boost-ext.github.io/sml/) | v1.1.3 | Boost Software License 1.0 |
 | [sparsehash](http://code.google.com/p/google-sparsehash) | 2.0.3 | (X11 License AND BSD 3-clause "New" or "Revised" License AND Christian Michelsen Research License) |
 | [SQLDelight Android Driver](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |

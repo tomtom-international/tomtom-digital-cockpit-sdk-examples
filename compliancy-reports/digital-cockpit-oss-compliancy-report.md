@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7258-4049
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7263-4053
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -199,7 +199,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Kotlin Libraries bill-of-materials](http://kotlinlang.org/) | 1.9.22 | Apache License 2.0 |
 | [Kotlin Test Junit](https://kotlinlang.org/) | 1.8.22, 1.9.22 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
-| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 2.1.23, 3.0.4 | Apache License 2.0 |
+| [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 3.0.5 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
 | [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.6.10, 1.8.22, 1.9.22 | Apache License 2.0 |
 | [kotlin-test](http://kotlinlang.org/kotlin-test-parent/kotlin-test/) | 1.8.22, 1.9.22 | Apache License 2.0 |
