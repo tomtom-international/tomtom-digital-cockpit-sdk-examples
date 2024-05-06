@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7263-4053
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7267-4061
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -22,7 +22,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.0 | Apache License 2.0 |
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
-| [Android KTX Core](https://github.com/android/android-ktx) | 1.12.0, 1.13.0, 1.7.0 | Apache License 2.0 |
+| [Android KTX Core](https://github.com/android/android-ktx) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
 | [Android Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 2.4.1, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.0.0, 2.4.1, 2.6.2, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle LiveData Core](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
@@ -59,7 +59,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.7.1 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.4.0 | Apache License 2.0 |
-| [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.0, 1.7.0 | Apache License 2.0 |
+| [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
 | [Android Support Library Coordinator Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [Android Support Library core UI](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library core utils](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |

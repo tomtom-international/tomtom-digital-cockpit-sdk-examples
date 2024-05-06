@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7263-4053
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7267-4061
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -238,7 +238,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [RATreeView](https://github.com/Augustyniak/RATreeView) | 2.1.2 | MIT License |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
-| [redis - Official](http://redis.io) | 7.0.5 | BSD 3-clause "New" or "Revised" License |
+| [redis - Official](http://redis.io) | 7.0.5, 7.2.4 | BSD 3-clause "New" or "Revised" License |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
 | [semver](https://github.com/swiftzer/semver) | 1.1.1 | MIT License |
 | [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.32.0 | MIT License |
