@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7267-4061
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7278-4070
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -141,10 +141,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [gtest](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
+| [hiredis](http://github.com/antirez/hiredis) | v1.2.0 | BSD 3-clause "New" or "Revised" License |
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
 | [hyprland](https://github.com/hyprwm/Hyprland) | 0.29.1 | BSD 3-clause "New" or "Revised" License |
 | [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 72-1 | ICU License |
-| [ImageMagick](http://www.imagemagick.org/) | 4.2, 5.2, 5.3, 5.4, 6.0, 6.1, 6.2, 6.3, 6.3.6, 6.4.6, 6.5.4, 6.5.7-3, 6.6.5-4, 6.6.9-10, 6.7.0-9, 6.8.7-5, 6.8.7-8, 6.8.9-3, 6.8.9.9, 6.9.0, 6.9.1-10, 6.9.1.2, 6.9.2.7, 6.9.9-24 | (MIT License AND MIT v2 with Ad Clause License) |
+| [ImageMagick](http://www.imagemagick.org/) | 4.2, 5.2, 5.3, 5.4, 6.0, 6.2, 6.3, 6.3.6, 6.4.6, 6.5.4, 6.5.7-3, 6.6.5-4, 6.6.9-10, 6.7.0-9, 6.8.7-5, 6.8.7-8, 6.8.9-3, 6.8.9.9, 6.9.0, 6.9.1-10, 6.9.1.2, 6.9.2.7, 6.9.9-24 | (MIT License AND MIT v2 with Ad Clause License) |
 | [io.grpc:grpc-android](https://conscrypt.org/) | 1.63.0 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
@@ -156,6 +157,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [iptux](http://code.google.com/p/iptux/) | 0.8.3+git20211122 | GNU General Public License v2.0 or later |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
+| [jemalloc](http://github.com/jemalloc/jemalloc/) | 5.3.0 | BSD 2-clause "Simplified" License |
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0, 23.0.0 | Apache License 2.0 |
 | [Jetpack WindowManager Library](https://developer.android.com/jetpack/androidx) | 1.0.0 | Apache License 2.0 |
 | [jkuhlmann/cgltf](https://github.com/jkuhlmann/cgltf) | v1.4 | MIT License |
@@ -238,7 +240,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [rapidjson](http://rapidjson.org/) | 1.1.0 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [RATreeView](https://github.com/Augustyniak/RATreeView) | 2.1.2 | MIT License |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
-| [redis - Official](http://redis.io) | 7.0.5, 7.2.4 | BSD 3-clause "New" or "Revised" License |
+| [redis - Official](http://redis.io) | 7.2.4 | BSD 3-clause "New" or "Revised" License |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
 | [semver](https://github.com/swiftzer/semver) | 1.1.1 | MIT License |
 | [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.32.0 | MIT License |
@@ -261,7 +263,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Trace Events](http://tomtom.com/traceevents) | 1.8.3 | Apache License 2.0 |
 | [tracy](https://github.com/wolfpld/tracy) | 0.8.1, 0.8.2.1 | BSD 3-clause "New" or "Revised" License |
 | [tracy-client-sys](https://github.com/nagisa/rust_tracy_client) | 0.13.0, 0.15.0, 0.18.0 | (MIT License OR Apache License 2.0) |
-| [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.3, 8.2.1 | Apache License 2.0 |
 | [vil](https://github.com/nyorain/vil) | v0.1-alpha | GNU General Public License v3.0 only |
 | [vtzero](https://pypi.org/project/vtzero/) | 0.0.1b3 | MIT License |
