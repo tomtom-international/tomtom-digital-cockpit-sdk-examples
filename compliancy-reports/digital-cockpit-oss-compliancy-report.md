@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7278-4070
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7279-4071
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -108,7 +108,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [annotations](http://robolectric.org) | 4.11.1 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](http://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
+| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [ASM](http://asm.ow2.org/) | 9.6 | BSD 3-clause "New" or "Revised" License |

@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7278-4070
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7279-4071
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -76,7 +76,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Animal Sniffer Annotations](https://www.mojohaus.org/animal-sniffer/animal-sniffer-annotations/) | 1.23 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](http://github.com/apache/commons-lang) | 3.11, 3.14.0 | Apache License 2.0 |
+| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11, 3.14.0 | Apache License 2.0 |
 | [Apache Harmony](http://harmony.apache.org) | 2006-11-27 | Apache License 2.0 |
 | [Apache OpenOffice.org Templates]() | 1 | TomTom Internal License |
 | [Apache Thrift](http://thrift.apache.org/) | 1.0.0-dev, hier, r938206 | Apache License 2.0 |
@@ -90,7 +90,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [c-ares](http://c-ares.haxx.se/) | 1.19.0 | MIT License |
 | [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [cimgui/cimgui](https://github.com/cimgui/cimgui) | v1.63 | MIT License |
-| [Cinder](http://libcinder.org) | v0.9.0 | BSD 3-clause "New" or "Revised" License |
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
 | [coil-base](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
 | [coil-test](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
@@ -114,10 +113,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [exposed-core](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-core/) | 0.39.2 | Apache License 2.0 |
 | [exposed-jdbc](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-jdbc/) | 0.39.2 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
-| [firebase](https://www.firebase.com/) | 10.2.0 | Apache License 2.0 |
 | [fmtlib/fmt](https://github.com/fmtlib/fmt) | 6.2.1 | MIT License |
 | [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.7 | Apache License 2.0 |
-| [GLEW](http://glew.sourceforge.net/) | 1.12.0, 1.2.0, 1.3.2, 1.5.5 | (MIT License AND BSD 3-clause "New" or "Revised" License) |
+| [GLEW](http://glew.sourceforge.net/) | 1.12.0 | (MIT License AND BSD 3-clause "New" or "Revised" License) |
 | [GLFW](http://glfw.sourceforge.net/) | 3.3.1 | zlib License |
 | [glm](http://glm.g-truc.net) | 0.9.9.4 | MIT License |
 | [gmock-devel](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
@@ -129,13 +127,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [google-maps-services-java](http://github.com/googlemaps/google-maps-services-java/) | v0.2.9 | Apache License 2.0 |
 | [google/breakpad](https://github.com/google/breakpad) | v2022.07.12 | BSD 3-clause "New" or "Revised" License |
 | [google/shaka-packager](https://github.com/write-for-CHRIST/node-shaka-packager#readme) | v1.4.0 | BSD 3-clause "New" or "Revised" License |
-| [GoogleCloudPlatform/agones](https://agones.dev) | v1.22.0-rc | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | 8.12.34 | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [GPUOpen-Tools/Compressonator](https://github.com/GPUOpen-Tools/Compressonator) | V2.3.2953 | MIT License |
 | [gradle](https://gradle.org) | 7.4.2 | Apache License 2.0 |
 | [greg7mdp/parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) | 1.31, v1.3.12 | Apache License 2.0 |
-| [grp/newsyc](https://github.com/grp/newsyc) | 20160929-snapshot-fd758306 | BSD 2-clause "Simplified" License |
 | [grpc](http://grpc.io) | 1.63.0 | Apache License 2.0 |
 | [gsl-lite](https://github.com/gsl-lite/gsl-lite) | 0.39.0 | MIT License |
 | [gtest](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
@@ -143,9 +139,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [hiredis](http://github.com/antirez/hiredis) | v1.2.0 | BSD 3-clause "New" or "Revised" License |
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
-| [hyprland](https://github.com/hyprwm/Hyprland) | 0.29.1 | BSD 3-clause "New" or "Revised" License |
 | [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 72-1 | ICU License |
-| [ImageMagick](http://www.imagemagick.org/) | 4.2, 5.2, 5.3, 5.4, 6.0, 6.2, 6.3, 6.3.6, 6.4.6, 6.5.4, 6.5.7-3, 6.6.5-4, 6.6.9-10, 6.7.0-9, 6.8.7-5, 6.8.7-8, 6.8.9-3, 6.8.9.9, 6.9.0, 6.9.1-10, 6.9.1.2, 6.9.2.7, 6.9.9-24 | (MIT License AND MIT v2 with Ad Clause License) |
+| [ImageMagick](http://www.imagemagick.org/) | 6.3.6, 6.9.0 | ImageMagick License |
 | [io.grpc:grpc-android](https://conscrypt.org/) | 1.63.0 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
@@ -201,7 +196,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [libjpeg](https://www.ijg.org) | 9d | Independent JPEG Group License |
 | [libpng](http://www.libpng.org/pub/png/libpng.html) | 1.6.37 | PNG Reference Library version 2 |
 | [libprotozero-dev](https://github.com/mapbox/protozero) | 1.6.3 | BSD 2-clause FreeBSD License |
-| [LibreOffice](https://www.libreoffice.org/) | 4.3.2 | (Mozilla Public License 1.1 OR Open LDAP Public License v2.8 OR GNU Lesser General Public License v2.1 or later OR X11 License OR SIL Open Font License 1.1 OR Common Development and Distribution License 1.0 OR curl License OR Boost Software License 1.0 OR Public Domain OR BigInteger License OR GNU General Public License v2.0 or later OR Christian Michelsen Research License OR Bitstream Vera Fonts Copyright OR GNU General Public License v3.0 or later OR SSLeay License - standalone OR GNU Library General Public License v2 or later OR MIT License OR GNU Lesser General Public License v3.0 or later OR The Open SSL License) |
 | [libtext-template-perl](https://metacpan.org/release/Text-Template/) | 1.46 | OpenSSL Combined License |
 | [libunibreak](https://github.com/adah1972/libunibreak) | libunibreak_4_2-1 | zlib License |
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0 | Apache License 2.0 |
@@ -230,10 +224,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.3 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.3 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
-| [pyimgui](https://pyimgui.readthedocs.io) | 2.0.0 | BSD 3-clause "New" or "Revised" License |
 | [pyserial](http://pyserial.sourceforge.net) | 3.5 | BSD 3-clause "New" or "Revised" License |
 | [python-thrift](http://thrift.apache.org/) | 0.9.2 | Apache License 2.0 |
-| [python-zstd](https://github.com/sergey-dryabzhinsky/python-zstd) | v1.5.0.2, v1.5.5.1 | BSD 2-clause "Simplified" License |
+| [python-zstd](https://github.com/sergey-dryabzhinsky/python-zstd) | v1.5.5.1 | BSD 2-clause "Simplified" License |
 | [qpid-proton](https://github.com/apache/qpid-proton) | 0.34.0 | Apache License 2.0 |
 | [qpid-proton-j-extensions](https://github.com/Azure/qpid-proton-j-extensions) | 1.2.4 | MIT License |
 | [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.16.12.Final | Apache License 2.0 |
@@ -256,7 +249,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [SQLDelight Coroutines Extensions](https://github.com/cashapp/sqldelight/) | 2.0.0, 2.0.2 | Apache License 2.0 |
 | [SQLDelight Multiplatform Runtime (Experimental)](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
 | [SQLite](http://sqlite.org/) | 3.42.0 | Public Domain |
-| [The GNU Triangulated Surface Library](http://gts.sourceforge.net/) | 0.1.0 | GNU Lesser General Public License v2.1 or later |
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.6.5 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.4.4 | Apache License 2.0 |
 | [TinyXML2](https://github.com/leethomason/tinyxml2) | 7.1.0 | zlib License |
@@ -264,8 +256,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [tracy](https://github.com/wolfpld/tracy) | 0.8.1, 0.8.2.1 | BSD 3-clause "New" or "Revised" License |
 | [tracy-client-sys](https://github.com/nagisa/rust_tracy_client) | 0.13.0, 0.15.0, 0.18.0 | (MIT License OR Apache License 2.0) |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.3, 8.2.1 | Apache License 2.0 |
-| [vil](https://github.com/nyorain/vil) | v0.1-alpha | GNU General Public License v3.0 only |
+| [vladimir](https://github.com/vdeturckheim/vladimir#readme) | 2.0.2 | ISC License |
 | [vtzero](https://pypi.org/project/vtzero/) | 0.0.1b3 | MIT License |
 | [Waybar](https://github.com/Alexays/Waybar) | 0.9.2 | MIT License |
 | [zlib](http://www.zlib.net/) | 1.1.3.1 | zlib License |
-| [zstd](http://www.zstd.net) | 1.5.0, 1.5.5 | BSD 3-clause "New" or "Revised" License |
+| [zstd](http://www.zstd.net) | 1.5.5 | (BSD 3-clause "New" or "Revised" License OR GNU General Public License v2.0 or later) |
