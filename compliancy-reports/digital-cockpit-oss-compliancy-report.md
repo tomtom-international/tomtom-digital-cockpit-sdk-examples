@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7279-4071
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7281-4072
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -324,7 +324,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Turbine](https://github.com/cashapp/turbine/) | 1.0.0 | Apache License 2.0 |
 | [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.11.1 | MIT License |
-| [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
+| [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1, 1.2.0 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 8.2.1 | Apache License 2.0 |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |
