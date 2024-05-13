@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7281-4072
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7283-4075
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -194,7 +194,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [libboost1.81-dev](https://www.boost.org/) | 1.81.0 | Boost Software License 1.0 |
 | [libglfw3-doc](http://www.glfw.org/) | 3.3.2 | zlib License |
 | [libjpeg](https://www.ijg.org) | 9d | Independent JPEG Group License |
-| [libpng](http://www.libpng.org/pub/png/libpng.html) | 1.6.37 | PNG Reference Library version 2 |
+| [libpng](http://www.libpng.org/pub/png/libpng.html) | v1.6.43 | PNG Reference Library version 2 |
 | [libprotozero-dev](https://github.com/mapbox/protozero) | 1.6.3 | BSD 2-clause FreeBSD License |
 | [libtext-template-perl](https://metacpan.org/release/Text-Template/) | 1.46 | OpenSSL Combined License |
 | [libunibreak](https://github.com/adah1972/libunibreak) | libunibreak_4_2-1 | zlib License |
