@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7264-4057
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7287-4077
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -22,7 +22,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.0 | Apache License 2.0 |
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
-| [Android KTX Core](https://github.com/android/android-ktx) | 1.12.0, 1.13.0, 1.7.0 | Apache License 2.0 |
+| [Android KTX Core](https://github.com/android/android-ktx) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
 | [Android Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 2.4.1, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.0.0, 2.4.1, 2.6.2, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle LiveData Core](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
@@ -59,7 +59,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.7.1 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.4.0 | Apache License 2.0 |
-| [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.0, 1.7.0 | Apache License 2.0 |
+| [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
 | [Android Support Library Coordinator Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0 | Apache License 2.0 |
 | [Android Support Library core UI](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library core utils](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -108,7 +108,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [annotations](http://robolectric.org) | 4.11.1 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](http://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
+| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [ASM](http://asm.ow2.org/) | 9.6 | BSD 3-clause "New" or "Revised" License |
@@ -319,11 +319,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.6.8 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.4.6 | Apache License 2.0 |
 | [Tink Cryptography API for Android](http://github.com/google/tink) | 1.8.0 | Apache License 2.0 |
+| [toolargetool](https://github.com/guardian/toolargetool) | 0.3.0 | MIT License |
 | [Trace Events](http://tomtom.com/traceevents) | 1.7.0, 1.8.3 | Apache License 2.0 |
 | [Turbine](https://github.com/cashapp/turbine/) | 1.0.0 | Apache License 2.0 |
 | [Use Plumber Android to fix known leaks in the Android Framework and other Google Android libraries.](https://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [utils](http://robolectric.org) | 4.11.1 | MIT License |
-| [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1 | Apache License 2.0 |
+| [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1, 1.2.0 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
 | [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 8.2.1 | Apache License 2.0 |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |
