@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7289-4080
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7291-4083
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -118,7 +118,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [asm-analysis](http://asm.objectweb.org/asm-analysis/) | 9.6 | BSD 3-clause "New" or "Revised" License |
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.4 | Apache License 2.0 |
 | [Bouncy Castle Provider](https://www.bouncycastle.org/java.html) | 1.76 | MIT License |
-| [Byte Buddy](http://bytebuddy.net) | 1.12.18, 1.14.4, 1.14.6 | Apache License 2.0 |
+| [Byte Buddy](http://bytebuddy.net) | 1.12.18, 1.14.14, 1.14.4, 1.14.6 | Apache License 2.0 |
+| [Byte Buddy for Android](http://bytebuddy.net/byte-buddy-android) | 1.14.14 | Apache License 2.0 |
 | [byte-buddy-agent](https://github.com/raphw/byte-buddy) | 1.12.18, 1.14.6 | Apache License 2.0 |
 | [Checker Qual](https://checkerframework.org) | 3.33.0, 3.37.0 | MIT License |
 | [ChickenHook/RestrictionBypass](https://github.com/ChickenHook/RestrictionBypass) | 2.2 | Apache License 2.0 |

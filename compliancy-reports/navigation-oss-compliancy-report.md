@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7289-4080
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7291-4083
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -87,7 +87,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Boost C++ Libraries - boost](https://www.boost.org/) | 1.75.0, 1.81.0 | Boost Software License 1.0 |
 | [breakpad](http://github.com/darwin/breakpad/) | master-20100925 | (FSF Unlimited License AND BSD 3-clause "New" or "Revised" License) |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
-| [c-ares](http://c-ares.haxx.se/) | 1.19.0 | MIT License |
+| [c-ares](http://c-ares.haxx.se/) | 1.19.0, 1.28.1 | MIT License |
 | [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [cimgui/cimgui](https://github.com/cimgui/cimgui) | v1.63 | MIT License |
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
@@ -248,7 +248,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [SQLDelight Async Driver Extensions](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
 | [SQLDelight Coroutines Extensions](https://github.com/cashapp/sqldelight/) | 2.0.0, 2.0.2 | Apache License 2.0 |
 | [SQLDelight Multiplatform Runtime (Experimental)](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
-| [SQLite](http://sqlite.org/) | 3.42.0 | Public Domain |
+| [SQLite](http://sqlite.org/) | 3.45.2 | Public Domain |
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.6.5 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.4.4 | Apache License 2.0 |
 | [TinyXML2](https://github.com/leethomason/tinyxml2) | 7.1.0 | zlib License |
