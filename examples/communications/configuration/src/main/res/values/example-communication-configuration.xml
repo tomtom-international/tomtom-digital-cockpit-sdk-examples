@@ -31,4 +31,9 @@
      Indicates that the task process panel will not be suppressed for an ongoing call.
      -->
     <bool name="suppressCallTaskProcessPanelConfigKey">false</bool>
+
+    <!--
+    Indicates which filter strategy should be used for filtering contacts and recent calls.
+    -->
+    <string name="phoneBookFilterStrategyConfigKey">HFP_HSP_BLUETOOTH_PROFILE_BOUND</string>
 </resources>

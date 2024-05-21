@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7287-4077
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7303-4092
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -87,7 +87,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Boost C++ Libraries - boost](https://www.boost.org/) | 1.75.0, 1.81.0 | Boost Software License 1.0 |
 | [breakpad](http://github.com/darwin/breakpad/) | master-20100925 | (FSF Unlimited License AND BSD 3-clause "New" or "Revised" License) |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
-| [c-ares](http://c-ares.haxx.se/) | 1.19.0 | MIT License |
+| [c-ares](http://c-ares.haxx.se/) | 1.19.0, 1.28.1 | MIT License |
 | [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [cimgui/cimgui](https://github.com/cimgui/cimgui) | v1.63 | MIT License |
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
@@ -132,7 +132,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [GPUOpen-Tools/Compressonator](https://github.com/GPUOpen-Tools/Compressonator) | V2.3.2953 | MIT License |
 | [gradle](https://gradle.org) | 7.4.2 | Apache License 2.0 |
 | [greg7mdp/parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) | 1.31, v1.3.12 | Apache License 2.0 |
-| [grpc](http://grpc.io) | 1.63.0 | Apache License 2.0 |
+| [grpc](http://grpc.io) | 1.64.0 | Apache License 2.0 |
 | [gsl-lite](https://github.com/gsl-lite/gsl-lite) | 0.39.0 | MIT License |
 | [gtest](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
@@ -141,14 +141,14 @@ This offer is valid for a period of three years from the date of distribution of
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
 | [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 72-1 | ICU License |
 | [ImageMagick](http://www.imagemagick.org/) | 6.3.6, 6.9.0 | ImageMagick License |
-| [io.grpc:grpc-android](https://conscrypt.org/) | 1.63.0 | Apache License 2.0 |
-| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
+| [io.grpc:grpc-android](https://conscrypt.org/) | 1.64.0 | Apache License 2.0 |
+| [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
-| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
-| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
-| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
-| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.63.0 | Apache License 2.0 |
+| [io.grpc:grpc-okhttp](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
+| [io.grpc:grpc-protobuf-lite](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
+| [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
+| [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [iptux](http://code.google.com/p/iptux/) | 0.8.3+git20211122 | GNU General Public License v2.0 or later |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
@@ -248,7 +248,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [SQLDelight Async Driver Extensions](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
 | [SQLDelight Coroutines Extensions](https://github.com/cashapp/sqldelight/) | 2.0.0, 2.0.2 | Apache License 2.0 |
 | [SQLDelight Multiplatform Runtime (Experimental)](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
-| [SQLite](http://sqlite.org/) | 3.42.0 | Public Domain |
+| [SQLite](http://sqlite.org/) | 3.45.2 | Public Domain |
 | [ThreeTen backport](https://github.com/ThreeTen/threetenbp) | 1.6.5 | BSD 3-clause "New" or "Revised" License |
 | [ThreeTenAbp](https://github.com/JakeWharton/ThreeTenABP/) | 1.4.4 | Apache License 2.0 |
 | [TinyXML2](https://github.com/leethomason/tinyxml2) | 7.1.0 | zlib License |
