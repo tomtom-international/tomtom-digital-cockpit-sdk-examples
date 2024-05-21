@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7301-4090
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7302-4091
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -128,6 +128,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [coil-test](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
 | [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.4.0 | Apache License 2.0 |
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 4.1.0 | Apache License 2.0 |
+| [common-gradle-dependencies](https://plugins.gradle.org/m2/com/huanshankeji/common-gradle-dependencies/) | 0.7.1-20240314 | Apache License 2.0 |
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [Compose Android Core Text](https://developer.android.com/jetpack/androidx) | 1.5.4 | Apache License 2.0 |
 | [Compose Animation Core](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
@@ -310,7 +311,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Shark Graph](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [Shark Hprof](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [Shark Log](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
-| [sigstore-gradle-sign-base-plugin](https://github.com/sigstore/sigstore-java) | 0.7.0 | Apache License 2.0 |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.36, 2.0.3 | MIT License |
 | [SQLDelight Android Driver](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
 | [SQLDelight Async Driver Extensions](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
