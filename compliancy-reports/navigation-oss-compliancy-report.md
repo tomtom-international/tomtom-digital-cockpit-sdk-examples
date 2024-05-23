@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7303-4092
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7312-4099
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -87,7 +87,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Boost C++ Libraries - boost](https://www.boost.org/) | 1.75.0, 1.81.0 | Boost Software License 1.0 |
 | [breakpad](http://github.com/darwin/breakpad/) | master-20100925 | (FSF Unlimited License AND BSD 3-clause "New" or "Revised" License) |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
-| [c-ares](http://c-ares.haxx.se/) | 1.19.0, 1.28.1 | MIT License |
+| [c-ares](http://c-ares.haxx.se/) | 1.28.1 | MIT License |
 | [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [cimgui/cimgui](https://github.com/cimgui/cimgui) | v1.63 | MIT License |
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
@@ -140,7 +140,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [hiredis](http://github.com/antirez/hiredis) | v1.2.0 | BSD 3-clause "New" or "Revised" License |
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
 | [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 72-1 | ICU License |
-| [ImageMagick](http://www.imagemagick.org/) | 6.3.6, 6.9.0 | ImageMagick License |
+| [ImageMagick](http://www.imagemagick.org/) | 6.9.0 | ImageMagick License |
 | [io.grpc:grpc-android](https://conscrypt.org/) | 1.64.0 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
 | [io.grpc:grpc-kotlin-stub](https://github.com/grpc/grpc-kotlin) | 1.4.1 | Apache License 2.0 |
@@ -162,34 +162,16 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.8.22 | Apache License 2.0 |
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 3.0.4, 3.0.5 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.7.10, 1.8.22 | Apache License 2.0 |
-| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |
+| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.7.21, 1.8.20, 1.8.22, 1.9.10 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
-| [kotlinx-coroutines-jdk8](https://github.com/Kotlin/kotlinx.coroutines/integration/kotlinx-coroutines-jdk8/) | 1.7.3 | Apache License 2.0 |
-| [kotlinx-coroutines-slf4j](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-test](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime) | 0.4.0 | Apache License 2.0 |
 | [kotlinx-serialization-bom](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.8.0 | Apache License 2.0 |
-| [ktor-client-cio](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-client-core](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-client-okhttp](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-events](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-http](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-http-cio](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-io](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-network](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-network-tls](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-serialization](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-utils](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-utils-jvm](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-websocket-serialization](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-websockets](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [libboost-type-erasure1.74.0](http://www.boost.org/libs/iostreams/) | 1.74.0 | Boost Software License 1.0 |
 | [libboost1.81-dev](https://www.boost.org/) | 1.81.0 | Boost Software License 1.0 |
 | [libglfw3-doc](http://www.glfw.org/) | 3.3.2 | zlib License |
@@ -201,7 +183,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0 | Apache License 2.0 |
 | [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0 | Apache License 2.0 |
 | [llvm](https://crates.io/crates/llvm) | 0.0.1 | MIT License |
-| [logback-android](https://github.com/tony19/logback-android) | 2.0.1 | Apache License 2.0 |
+| [logback-android](https://github.com/tony19/logback-android) | 3.0.0 | Apache License 2.0 |
 | [Lykke.Common](http://www.nuget.org/packages/Lykke.Common) | 1.0.21 | MIT License |
 | [lz4](http://www.lz4.org) | 1.9.4 | BSD 2-clause "Simplified" License |
 | [lzmaSDK](https://github.com/mdejong/lzmaSDK) | 16.04 | Public Domain |
@@ -210,9 +192,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0 | Apache License 2.0 |
 | [Mumble](https://www.mumble.info) | v1.5.517 | BSD 3-clause "New" or "Revised" License |
 | [nemtrif/utfcpp](https://github.com/nemtrif/utfcpp) | 3.1.2 | Boost Software License 1.0 |
-| [nghttp2](https://nghttp2.org) | v1.58.0 | MIT License |
+| [nghttp2](https://nghttp2.org) | v1.58.0, v1.62.0 | MIT License |
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
-| [OkIO](https://github.com/square/OkIO) | 3.6.0, 3.7.0, 3.8.0 | Apache License 2.0 |
+| [OkIO](https://github.com/square/OkIO) | 3.6.0, 3.8.0 | Apache License 2.0 |
 | [Open Computer Vision Library (OpenCV)](http://opencv.org/) | 4.2.0, 4.5.2 | BSD 3-clause "New" or "Revised" License |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | (Eclipse Distribution License - v 1.0 OR Eclipse Public License 2.0) |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |

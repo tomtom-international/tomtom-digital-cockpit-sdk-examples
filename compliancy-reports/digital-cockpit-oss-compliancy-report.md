@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7303-4092
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7312-4099
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -184,7 +184,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [ICU4J](http://icu-project.org) | 73.2 | (BSD 2-clause "Simplified" License AND Unicode License Agreement - Data Files and Software (2016) AND BSD 3-clause "New" or "Revised" License) |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
 | [J2ObjC Annotations](https://github.com/google/j2objc/) | 2.8 | Apache License 2.0 |
-| [java-vault-driver](https://github.com/BetterCloud/vault-java-driver) | 5.1.0 | MIT License |
 | [JavaWriter](http://github.com/square/javawriter/) | 2.1.1 | Apache License 2.0 |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0, 23.0.0 | Apache License 2.0 |
