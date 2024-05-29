@@ -61,7 +61,7 @@
         <activity-alias
             android:name="com.example.ivi.template.app.aliases.IntentForwardingProxyActivity"
             android:targetActivity="com.tomtom.ivi.platform.framework.api.product.activity.ProxyActivity"
-            tools:ignore="IntentFilterExportedReceiver">
+            android:exported="true">
             <meta-data
                 android:name="com.tomtom.ivi.platform.product.activity.META_DATA_KEY_LAUNCH_ON_DEFAULT_DISPLAY"
                 android:value="true" />

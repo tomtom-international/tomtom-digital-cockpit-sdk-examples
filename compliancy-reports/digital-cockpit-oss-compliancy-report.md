@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7312-4099
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7334-4114
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -23,17 +23,17 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0 | Apache License 2.0 |
 | [Android KTX Core](https://github.com/android/android-ktx) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
-| [Android Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 2.4.1, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.0.0, 2.4.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle LiveData Core](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle Process](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.1, 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle Service](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle ViewModel with SavedState](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.1, 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle-Common for Java 8 Language](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
+| [Android Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 2.4.1, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.0.0, 2.4.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle LiveData Core](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.5.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle Process](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.1, 2.4.1, 2.5.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle Service](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle ViewModel with SavedState](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.1, 2.4.1, 2.5.1, 2.6.2, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [Android Lifecycle-Common for Java 8 Language](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.7.0, 2.8.0 | Apache License 2.0 |
 | [Android Navigation Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.2, 2.5.3 | Apache License 2.0 |
 | [Android Navigation Common Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.2, 2.5.3 | Apache License 2.0 |
 | [Android Navigation Fragment](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.2, 2.5.3 | Apache License 2.0 |
@@ -56,7 +56,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.7 | Apache License 2.0 |
 | [Android Support Grid Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.7.1 | Apache License 2.0 |
+| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.7.1, 1.8.0 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.4.0 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
@@ -249,8 +249,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [LeakCanary Object Watcher for Android - Core](https://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
-| [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
-| [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
+| [Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.0 | Apache License 2.0 |
+| [Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.0 | Apache License 2.0 |
+| [Lifecycle ViewModel](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.0 | Apache License 2.0 |
+| [Lifecycle-Common](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.0 | Apache License 2.0 |
+| [LiveData Core Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.7.0, 2.8.0 | Apache License 2.0 |
+| [LiveData Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.4.1, 2.7.0, 2.8.0 | Apache License 2.0 |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.8.0 | Apache License 2.0 |
 | [Maven Repository Metadata Model](http://maven.apache.org/ref/3.1.1/maven-repository-metadata) | 3.9.5 | Apache License 2.0 |
 | [maven-dependency-resolver](http://robolectric.org) | 4.11.1 | MIT License |
