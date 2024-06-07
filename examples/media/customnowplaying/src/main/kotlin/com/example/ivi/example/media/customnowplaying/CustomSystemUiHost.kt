@@ -42,6 +42,7 @@ import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugP
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.DebugSystemUiLayoutTagSystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.IviPanelRegistrySystemUiHostExtension
 import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.MainProcessPanelPositionSystemUiHostExtension
+import com.tomtom.ivi.platform.systemui.api.stock.systemuihost.extensions.NotificationDisplaySystemUiHostExtension
 import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
@@ -118,6 +119,10 @@ internal class CustomSystemUiHost(
             BackPressCallbacksSystemUiHostExtension(systemUiHostExtensionContext),
             DebugPanelSystemUiHostExtension(systemUiHostExtensionContext),
             DebugSystemUiLayoutTagSystemUiHostExtension(systemUiHostExtensionContext),
+            NotificationDisplaySystemUiHostExtension(
+                systemUiHostExtensionContext,
+                panelRegistryExtension.panelRegistry,
+            ),
         )
     }
 
