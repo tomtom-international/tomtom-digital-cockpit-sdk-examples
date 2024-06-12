@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7370-4154
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7374-4159
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -158,11 +158,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [jkuhlmann/cgltf](https://github.com/jkuhlmann/cgltf) | v1.4 | MIT License |
 | [jml_thrift](https://github.com/jeanlescure/thrift) | 1.0.0.0 | Apache License 2.0 |
 | [JsonCpp](https://github.com/open-source-parsers/jsoncpp) | 1.8.4 | MIT License |
-| [Kotlin](http://kotlin.jetbrains.org) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |
+| [Kotlin](http://kotlin.jetbrains.org) | 1.7.21, 1.8.22, 1.9.20 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.8.22 | Apache License 2.0 |
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 3.0.4, 3.0.5 | Apache License 2.0 |
 | [kotlin-reflect](https://kotlinlang.org/) | 1.7.10, 1.8.22 | Apache License 2.0 |
-| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.7.21, 1.8.20, 1.8.22, 1.9.10 | Apache License 2.0 |
+| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.7.21, 1.8.22, 1.9.10, 1.9.20 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
@@ -221,8 +221,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [OkIO](https://github.com/square/OkIO) | 3.6.0, 3.8.0 | Apache License 2.0 |
 | [Open Computer Vision Library (OpenCV)](http://opencv.org/) | 4.2.0, 4.5.2 | BSD 3-clause "New" or "Revised" License |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | (Eclipse Distribution License - v 1.0 OR Eclipse Public License 2.0) |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.7.21, 1.8.20, 1.8.22 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.7.21, 1.8.0, 1.8.22 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.7.21, 1.8.0, 1.8.22 | Apache License 2.0 |
 | [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22 | Apache License 2.0 |
 | [Passenger (mod_rails for Apache)](http://code.google.com/p/phusion-passenger) | 6.0.13 | MIT License |
 | [perfmark:perfmark-api](https://github.com/perfmark/perfmark) | 0.26.0 | Apache License 2.0 |
