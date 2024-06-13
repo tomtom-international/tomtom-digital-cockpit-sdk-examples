@@ -21,13 +21,13 @@ import org.gradle.api.plugins.ExtensionAware
 import org.gradle.api.plugins.ExtraPropertiesExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
-val Project.android: CommonExtension<*, *, *, *, *>
+val Project.android: CommonExtension<*, *, *, *, *, *>
     get() = extensions.getByType(CommonExtension::class.java)
 
 /**
  * Executes [action] on any Android project.
  */
-fun Project.android(action: Action<CommonExtension<*, *, *, *, *>>) =
+fun Project.android(action: Action<CommonExtension<*, *, *, *, *, *>>) =
     action.execute(android)
 
 val Project.androidTest: TestExtension
@@ -39,7 +39,7 @@ fun Project.androidTest(action: Action<TestExtension>) =
 fun Project.androidApplication(action: Action<ApplicationExtension>) =
     action.execute(extensions.getByType(ApplicationExtension::class.java))
 
-fun CommonExtension<*, *, *, *, *>.kotlinOptions(action: Action<KotlinJvmOptions>) =
+fun CommonExtension<*, *, *, *, *, *>.kotlinOptions(action: Action<KotlinJvmOptions>) =
     action.execute((this as ExtensionAware).extensions.getByType(KotlinJvmOptions::class.java))
 
 /**
