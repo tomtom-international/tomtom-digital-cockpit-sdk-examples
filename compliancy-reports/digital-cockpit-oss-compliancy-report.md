@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7380-4164
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7396-4174
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -19,9 +19,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [aacstts](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
 | [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3 | Apache License 2.0 |
 | [Accessibility Test Framework](https://code.google.com/p/eyes-free/) | 3.1.2 | Apache License 2.0 |
-| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.0 | Apache License 2.0 |
+| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.0, 1.8.1 | Apache License 2.0 |
 | [Activity Compose](https://developer.android.com/jetpack/androidx/releases/activity#1.3.0-alpha01) | 1.7.0 | Apache License 2.0 |
-| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.0 | Apache License 2.0 |
+| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.0, 1.8.1 | Apache License 2.0 |
 | [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3, 4.0, 4.1 | Apache License 2.0 |
 | [alexa](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3, 4.2 | Apache License 2.0 |
 | [alexa/alexa-auto-sdk](https://github.com/alexa/alexa-auto-sdk) | 4.1.1.8 | Apache License 2.0 |
