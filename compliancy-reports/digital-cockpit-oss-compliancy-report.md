@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7396-4174
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7418-4186
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -27,7 +27,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [alexa/alexa-auto-sdk](https://github.com/alexa/alexa-auto-sdk) | 4.1.1.8 | Apache License 2.0 |
 | [alexa/avs-device-sdk](https://developer.amazon.com/avs/sdk) | v0.2, v0.5, v1.0.3, v1.1.0, v1.10, v1.11, v1.15, v1.17.0, v1.18.0, v1.19.0, v1.19.1, v1.20.0, v1.21.0, v1.22.0, v1.23.0, v1.24.0, v1.25.0, v1.26.0, v1.3, v1.5, v1.6, v1.7, v1.7.1, v1.8 | Apache License 2.0 |
 | [Android App Startup Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.1 | Apache License 2.0 |
-| [Android AppCompat Library](http://developer.android.com/tools/extras/support-library.html) | 1.0.2, 1.6.1 | Apache License 2.0 |
+| [Android AppCompat Library](https://developer.android.com/jetpack/androidx/releases/appcompat) | 1.0.2, 1.6.1, 1.7.0 | Apache License 2.0 |
 | [Android Arch-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
 | [Android Arch-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.1.0, 2.2.0 | Apache License 2.0 |
 | [Android ConstraintLayout](http://tools.android.com) | 2.1.4 | Apache License 2.0 |
@@ -40,7 +40,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.0.0, 2.4.1, 2.6.2, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle LiveData Core](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle Process](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.6.2, 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.1, 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
+| [Android Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle) | 2.3.1, 2.4.1, 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle Service](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.1, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.6.2, 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0 | Apache License 2.0 |
@@ -59,7 +59,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Paging-Common Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 3.1.1 | Apache License 2.0 |
 | [Android Paging-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 3.1.1 | Apache License 2.0 |
 | [Android Resource Inspection - Annotations](https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.0-alpha01) | 1.0.1 | Apache License 2.0 |
-| [Android Resources Library](http://developer.android.com/tools/extras/support-library.html) | 1.6.1 | Apache License 2.0 |
+| [Android Resources Library](https://developer.android.com/jetpack/androidx/releases/appcompat) | 1.6.1, 1.7.0 | Apache License 2.0 |
 | [Android Room Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.0 | Apache License 2.0 |
 | [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.0 | Apache License 2.0 |
 | [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.0 | Apache License 2.0 |
@@ -134,7 +134,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AutoValue Annotations](https://github.com/google/auto/auto-value-parent/auto-value-annotations) | 1.10.4 | Apache License 2.0 |
 | [bcml](https://github.com/NiceneNerd/BCML) | 3.9.0b5 | GNU General Public License v3.0 or later |
 | [bleeding182/recyclerviewItemDecorations](https://github.com/bleeding182/recyclerviewItemDecorations) | 20170817-snapshot-c503a5a0 | MIT License |
-| [Bouncy Castle Provider](https://www.bouncycastle.org/java.html) | 1.76 | MIT License |
+| [Bouncy Castle](http://www.bouncycastle.org) | 1.78.1 | (MIT License AND Apache License 2.0) |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.18, 1.14.14, 1.14.4, 1.14.6 | Apache License 2.0 |
 | [Byte Buddy for Android](http://bytebuddy.net/byte-buddy-android) | 1.14.14 | Apache License 2.0 |
 | [byte-buddy-agent](https://github.com/raphw/byte-buddy) | 1.12.18, 1.14.6 | Apache License 2.0 |
@@ -171,10 +171,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Dagger 2](http://google.github.io/dagger) | 2.45, dagger-2.33 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.45 | Apache License 2.0 |
 | [Dagger Lint Rules AAR Distribution](https://github.com/google/dagger) | 2.45 | Apache License 2.0 |
-| [Data Binding Base Library](https://developer.android.com/studio) | 7.1.0, 8.2.1, 8.4.1 | Apache License 2.0 |
-| [databinding-adapters](https://maven.google.com/androidx/databinding/databinding-adapters/) | 8.2.1, 8.4.1 | Apache License 2.0 |
-| [databinding-ktx](https://maven.google.com/androidx/databinding/databinding-ktx/) | 8.2.1, 8.4.1 | Apache License 2.0 |
-| [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 7.1.0, 8.2.1, 8.4.1 | Apache License 2.0 |
+| [Data Binding Base Library](https://developer.android.com/studio) | 7.1.0, 8.2.1 | Apache License 2.0 |
+| [databinding-adapters](https://maven.google.com/androidx/databinding/databinding-adapters/) | 8.2.1 | Apache License 2.0 |
+| [databinding-ktx](https://maven.google.com/androidx/databinding/databinding-ktx/) | 8.2.1 | Apache License 2.0 |
+| [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 7.1.0, 8.2.1 | Apache License 2.0 |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1, 2.28.3 | Apache License 2.0 |
 | [differ](https://github.com/dropbox/differ/) | 0.0.1 | Apache License 2.0 |
 | [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.18.0, 2.21.1 | Apache License 2.0 |
@@ -365,5 +365,5 @@ This offer is valid for a period of three years from the date of distribution of
 | [utils](http://robolectric.org) | 4.11.1 | MIT License |
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1, 1.2.0 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
-| [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 8.2.1, 8.4.1 | Apache License 2.0 |
+| [viewbinding](https://maven.google.com/androidx/databinding/viewbinding/) | 7.1.0, 8.2.1 | Apache License 2.0 |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |

@@ -1,10 +1,9 @@
-# In-Vehicle charging (EvCharging) service example application
+# In-Vehicle charging (EvCharging) frontend
 
 ## Introduction
 
-This example application provides an empty EvCharging service as a starting point to build your 
-own EvCharging service. This can be used as a basis to implement your own EvCharging service,
-integrating a specific e-MSP.
+This example application provides a generic EvCharging frontend as a starting point to build your 
+own EvCharging frontend, integrating a specific e-MSP.
 
 ## Copyright
 
