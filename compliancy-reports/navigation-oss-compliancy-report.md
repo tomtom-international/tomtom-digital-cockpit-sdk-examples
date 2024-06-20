@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7390-4169
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7425-4191
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -9,12 +9,11 @@ This offer is valid for a period of three years from the date of distribution of
 | Component | Version | License |
 | :-------- | :------ | :------ |
 | [999.zlib](https://zlib.net/) | 1.2.13 | zlib License |
-| [aantron/better-enums](http://aantron.github.io/better-enums) | 0.11.2 | BSD 2-clause "Simplified" License |
 | [abseil/googletest](https://github.com/google/googletest/) | v1.10.x | BSD 3-clause "New" or "Revised" License |
 | [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.7.2 | Apache License 2.0 |
 | [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.7.2 | Apache License 2.0 |
 | [Android App Startup Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.1 | Apache License 2.0 |
-| [Android AppCompat Library](http://developer.android.com/tools/extras/support-library.html) | 1.6.1 | Apache License 2.0 |
+| [Android AppCompat Library](https://developer.android.com/jetpack/androidx/releases/appcompat) | 1.6.1 | Apache License 2.0 |
 | [Android Arch-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.2.0 | Apache License 2.0 |
 | [Android Arch-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.2.0 | Apache License 2.0 |
 | [Android ConstraintLayout](http://tools.android.com) | 2.1.4 | Apache License 2.0 |
@@ -27,7 +26,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle LiveData Core](https://developer.android.com/topic/libraries/architecture/index.html) | 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle Process](https://developer.android.com/topic/libraries/architecture/index.html) | 2.7.0 | Apache License 2.0 |
-| [Android Lifecycle Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.7.0 | Apache License 2.0 |
+| [Android Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle) | 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle Service](https://developer.android.com/topic/libraries/architecture/index.html) | 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.7.0 | Apache License 2.0 |
 | [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.7.0 | Apache License 2.0 |
@@ -46,7 +45,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Paging-Common Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 3.1.1 | Apache License 2.0 |
 | [Android Paging-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 3.1.1 | Apache License 2.0 |
 | [Android Resource Inspection - Annotations](https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.0-alpha01) | 1.0.1 | Apache License 2.0 |
-| [Android Resources Library](http://developer.android.com/tools/extras/support-library.html) | 1.6.1 | Apache License 2.0 |
+| [Android Resources Library](https://developer.android.com/jetpack/androidx/releases/appcompat) | 1.6.1 | Apache License 2.0 |
 | [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
 | [Android Room-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
 | [Android Support AnimatedVectorDrawable](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
@@ -59,7 +58,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Cursor Adapter](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Custom View - androidx.customview:customview](http://developer.android.com/tools/extras/support-library.html) | 1.1.0 | Apache License 2.0 |
 | [Android Support Library Document File](http://developer.android.com/tools/extras/support-library.html) | 1.0.1 | Apache License 2.0 |
-| [Android Support Library fragment](http://developer.android.com/tools/extras/support-library.html) | 1.5.7 | Apache License 2.0 |
 | [Android Support Library Interpolators](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Sliding Pane Layout](http://developer.android.com/tools/extras/support-library.html) | 1.2.0 | Apache License 2.0 |
 | [Android Support Library View Pager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -72,7 +70,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Test Library - core](https://developer.android.com/testing) | 1.4.0 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.4.0 | Apache License 2.0 |
 | [AndroidX Test Library - monitor](https://developer.android.com/testing) | 1.4.0 | Apache License 2.0 |
-| [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.0, 1.3.1 | Apache License 2.0 |
+| [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.1 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
 | [Animal Sniffer Annotations](https://www.mojohaus.org/animal-sniffer/animal-sniffer-annotations/) | 1.23 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
@@ -80,7 +78,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11, 3.14.0 | Apache License 2.0 |
 | [Apache Harmony](http://harmony.apache.org) | 2006-11-27 | Apache License 2.0 |
 | [Apache OpenOffice.org Templates]() | 1 | TomTom Internal License |
-| [Apache Thrift](http://thrift.apache.org/) | 0.16.0, 0.2.0, 0.5.0, 0.6.0, 0.7.0, 0.8.0, 0.9.0, 1.0.0-dev, hier, r938206 | Apache License 2.0 |
+| [Apache Thrift](http://thrift.apache.org/) | 1.0.0-dev, hier, r938206 | Apache License 2.0 |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AWS Mobile SDK for iOS](http://aws.amazon.com/mobile/sdk/) | 1.4.2 | Apache License 2.0 |
 | [azure-sdk-for-net](http://www.windowsazure.com/en-us/develop/net/) | Azure.ResourceManager.DeviceUpdate_1.0.0-beta.7 | MIT License |
@@ -88,7 +86,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Boost C++ Libraries - boost](https://www.boost.org/) | 1.75.0, 1.81.0 | Boost Software License 1.0 |
 | [breakpad](http://github.com/darwin/breakpad/) | master-20100925 | (FSF Unlimited License AND BSD 3-clause "New" or "Revised" License) |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
-| [c-ares](http://c-ares.haxx.se/) | 1.19.0, 1.28.1 | MIT License |
+| [c-ares](http://c-ares.haxx.se/) | 1.28.1 | MIT License |
 | [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [cimgui/cimgui](https://github.com/cimgui/cimgui) | v1.63 | MIT License |
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
@@ -100,7 +98,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [cppimgui](https://github.com/ocornut/imgui) | v1.63 | MIT License |
 | [Cucumber-Cpp](https://github.com/cucumber/cucumber-cpp) | v0.5 | MIT License |
-| [curl](https://curl.se/) | 7.65.0, 7.66.0, 8.2.1, 8.7.1 | curl License |
+| [curl](https://curl.se/) | 8.7.1 | MIT License |
 | [Dagger 2](http://google.github.io/dagger) | 2.45 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.45 | Apache License 2.0 |
 | [Dagger Lint Rules AAR Distribution](https://github.com/google/dagger) | 2.45 | Apache License 2.0 |
@@ -110,12 +108,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-runtime](https://maven.google.com/androidx/databinding/databinding-runtime/) | 8.2.1 | Apache License 2.0 |
 | [eidheim/Simple-Web-Server](https://github.com/eidheim/Simple-Web-Server) | v3.0.0-rc2 | MIT License |
 | [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.23.0 | Apache License 2.0 |
-| [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.3.0 | Apache License 2.0 |
+| [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.4.0 | Apache License 2.0 |
 | [exposed-core](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-core/) | 0.39.2 | Apache License 2.0 |
 | [exposed-jdbc](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-jdbc/) | 0.39.2 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
 | [fmtlib/fmt](https://github.com/fmtlib/fmt) | 6.2.1 | MIT License |
-| [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.7 | Apache License 2.0 |
 | [GLEW](http://glew.sourceforge.net/) | 1.12.0 | (MIT License AND BSD 3-clause "New" or "Revised" License) |
 | [GLFW](http://glfw.sourceforge.net/) | 3.3.1 | zlib License |
 | [glm](http://glm.g-truc.net) | 0.9.9.4 | MIT License |
@@ -135,13 +132,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [greg7mdp/parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) | 1.3.8, 1.31 | Apache License 2.0 |
 | [grpc](http://grpc.io) | 1.64.0 | Apache License 2.0 |
 | [gsl-lite](https://github.com/gsl-lite/gsl-lite) | 0.39.0 | MIT License |
-| [gsl-lite/gsl-lite](http://github.com/martinmoene/gsl-lite/) | v0.39.0 | MIT License |
 | [gtest](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [hiredis](http://github.com/antirez/hiredis) | v1.2.0 | BSD 3-clause "New" or "Revised" License |
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
-| [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 63.1, 72-1, release-63-rc | ICU License |
+| [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 72-1 | ICU License |
 | [ImageMagick](http://www.imagemagick.org/) | 6.9.0 | ImageMagick License |
 | [io.grpc:grpc-android](https://conscrypt.org/) | 1.64.0 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
@@ -176,20 +172,20 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-serialization-core](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0, 1.6.1 | Apache License 2.0 |
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.8.0 | Apache License 2.0 |
-| [ktor-client-cio](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
+| [ktor-client-cio](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-client-content-negotiation](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-client-core](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-client-core-jvm](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-client-json](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
-| [ktor-client-json-jvm](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
-| [ktor-client-serialization](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
+| [ktor-client-json](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
+| [ktor-client-json-jvm](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
+| [ktor-client-serialization](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-events](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-http](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-http-cio](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
+| [ktor-http-cio](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-http-jvm](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-io](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
-| [ktor-network](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
-| [ktor-network-tls](https://github.com/ktorio/ktor) | 2.3.7 | Apache License 2.0 |
+| [ktor-network](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
+| [ktor-network-tls](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-serialization](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-serialization-kotlinx](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
 | [ktor-serialization-kotlinx-json](https://github.com/ktorio/ktor) | 2.3.10 | Apache License 2.0 |
@@ -201,7 +197,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [libboost1.81-dev](https://www.boost.org/) | 1.81.0 | Boost Software License 1.0 |
 | [libglfw3-doc](http://www.glfw.org/) | 3.3.2 | zlib License |
 | [libjpeg](https://www.ijg.org) | 9d | Independent JPEG Group License |
-| [libpng](http://www.libpng.org/pub/png/libpng.html) | 1.6.36, v1.6.43 | PNG Reference Library version 2 |
+| [libpng](http://www.libpng.org/pub/png/libpng.html) | v1.6.43 | PNG Reference Library version 2 |
 | [libprotozero-dev](https://github.com/mapbox/protozero) | 1.6.3 | BSD 2-clause FreeBSD License |
 | [libtext-template-perl](https://metacpan.org/release/Text-Template/) | 1.46 | OpenSSL Combined License |
 | [libunibreak](https://github.com/adah1972/libunibreak) | libunibreak_4_2-1 | zlib License |
@@ -216,10 +212,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [mapcode](http://www.mapcode.com/) | 2.5.2 | Apache License 2.0 |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.8.0 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0 | Apache License 2.0 |
-| [multimethods](https://pypi.python.org/pypi/multimethods/) | 1.0.0 | MIT License |
 | [Mumble](https://www.mumble.info) | v1.5.517 | BSD 3-clause "New" or "Revised" License |
 | [nemtrif/utfcpp](https://github.com/nemtrif/utfcpp) | 3.1.2 | Boost Software License 1.0 |
-| [nghttp2](https://nghttp2.org) | v1.58.0, v1.62.0 | MIT License |
+| [nghttp2](https://nghttp2.org) | v1.62.0 | MIT License |
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
 | [OkIO](https://github.com/square/OkIO) | 3.6.0, 3.8.0 | Apache License 2.0 |
 | [Open Computer Vision Library (OpenCV)](http://opencv.org/) | 4.2.0, 4.5.2 | BSD 3-clause "New" or "Revised" License |
@@ -233,6 +228,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.21.12, 3.21.9, 3.25.3 | BSD 3-clause "New" or "Revised" License |
 | [Protocol Buffers [Core]](https://developers.google.com/protocol-buffers/protobuf-kotlin/) | 3.21.9, 3.25.3 | BSD 3-clause "New" or "Revised" License |
 | [Provisioning Security Provider](http://azure.github.io/azure-iot-sdk-java/) | 2.0.1 | MIT License |
+| [proxy-wasm/proxy-wasm-cpp-sdk](https://github.com/proxy-wasm/proxy-wasm-cpp-sdk) | v0.1.0 | Apache License 2.0 |
 | [pySerial](https://github.com/pyserial/pyserial) | 3.5 | BSD 3-clause "New" or "Revised" License |
 | [pyserial](http://pyserial.sourceforge.net) | 3.5 | BSD 3-clause "New" or "Revised" License |
 | [python-thrift](http://thrift.apache.org/) | 0.9.2 | Apache License 2.0 |
@@ -252,7 +248,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.32.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.32.0 | MIT License |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.25, 2.0.12, 2.0.3 | MIT License |
-| [sml](https://boost-ext.github.io/sml/) | 0.1.0, v1.1.3 | BSD 3-clause "New" or "Revised" License |
+| [sml](https://boost-ext.github.io/sml/) | v1.1.3 | Boost Software License 1.0 |
 | [sparsehash](http://code.google.com/p/google-sparsehash) | 2.0.3 | (X11 License AND BSD 3-clause "New" or "Revised" License AND Christian Michelsen Research License) |
 | [SQLDelight Android Driver](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
 | [SQLDelight Async Driver Extensions](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
@@ -270,5 +266,5 @@ This offer is valid for a period of three years from the date of distribution of
 | [vladimir](https://github.com/vdeturckheim/vladimir#readme) | 2.0.2 | ISC License |
 | [vtzero](https://pypi.org/project/vtzero/) | 0.0.1b3 | MIT License |
 | [Waybar](https://github.com/Alexays/Waybar) | 0.9.2 | MIT License |
-| [zlib](http://www.zlib.net/) | 1.1.3.1 | zlib License |
+| [zlib](http://www.zlib.net/) | 1.1.3.1, v1.3.1 | zlib License |
 | [zstd](http://www.zstd.net) | 1.5.5 | (BSD 3-clause "New" or "Revised" License OR GNU General Public License v2.0 or later) |

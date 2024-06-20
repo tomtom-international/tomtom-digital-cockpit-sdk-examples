@@ -67,4 +67,5 @@ ivi {
 dependencies {
     implementation(project(":examples_common"))
     implementation(project(":examples_evcharging_service"))
+    implementation(project(":examples_evcharging_frontend"))
 }

@@ -10,7 +10,10 @@
  */
 
 import com.tomtom.ivi.buildsrc.dependencies.ExampleModuleReference
+import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviAppsuiteModuleReference
 import com.tomtom.ivi.platform.gradle.api.common.dependencies.IviPlatformModuleReference
+import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.FrontendConfig
+import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.FrontendCreationPolicy
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceHostConfig
 import com.tomtom.ivi.platform.gradle.api.common.iviapplication.config.IviServiceInterfaceConfig
 
@@ -60,8 +63,16 @@ val exampleEvChargingServiceHost by extra {
                 serviceApiModule = IviPlatformModuleReference(
                     "platform_evcharging_api_service_evcharging"
                 )
-
             )
         )
     )
 }
+
+val customEvChargingLoginFrontend =
+    FrontendConfig(
+        frontendBuilderName = "EvChargingLoginFrontendBuilder",
+        implementationModule = IviAppsuiteModuleReference(
+            "appsuite_evcharging_plugin_frontend_evcharginglogin",
+        ),
+        creationPolicy = FrontendCreationPolicy.CREATE_AT_STARTUP,
+    )
