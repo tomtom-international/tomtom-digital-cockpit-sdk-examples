@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.7438"
+iviPlatform = "1.0.7439"
 
 examplesAppMinSdk = "29"
 examplesAppTargetSdk = "34"
