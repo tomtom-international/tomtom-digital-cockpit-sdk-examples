@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7423-4189
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7452-4212
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -19,9 +19,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [aacstts](https://github.com/alexa/alexa-auto-sdk) | 3.3 | Apache License 2.0 |
 | [aasb](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.3 | Apache License 2.0 |
 | [Accessibility Test Framework](https://code.google.com/p/eyes-free/) | 3.1.2 | Apache License 2.0 |
-| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.0, 1.8.1 | Apache License 2.0 |
-| [Activity Compose](https://developer.android.com/jetpack/androidx/releases/activity#1.3.0-alpha01) | 1.7.0 | Apache License 2.0 |
-| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.1, 1.6.0, 1.7.0, 1.8.1 | Apache License 2.0 |
+| [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.6.0, 1.7.0, 1.8.1 | Apache License 2.0 |
+| [Activity Compose](https://developer.android.com/jetpack/androidx/releases/activity#1.3.0-alpha01) | 1.8.1 | Apache License 2.0 |
+| [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.8.1 | Apache License 2.0 |
 | [addressbook](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3, 4.0, 4.1 | Apache License 2.0 |
 | [alexa](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.2, 3.3, 4.2 | Apache License 2.0 |
 | [alexa/alexa-auto-sdk](https://github.com/alexa/alexa-auto-sdk) | 4.1.1.8 | Apache License 2.0 |
@@ -81,7 +81,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Custom View - androidx.swiperefreshlayout:swiperefreshlayout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Document File](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Drawer Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.1 | Apache License 2.0 |
-| [Android Support Library fragment](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.3.6, 1.5.4, 1.5.7 | Apache License 2.0 |
+| [Android Support Library fragment](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.3.6, 1.5.4 | Apache License 2.0 |
 | [Android Support Library Interpolators](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library loader](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Local Broadcast Manager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -122,7 +122,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [annotations](http://robolectric.org) | 4.11.1 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
+| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
@@ -189,8 +189,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.1.0, 1.3.0, 1.4.0 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
 | [FindBugs jsr305](http://code.google.com/p/jsr-305) | 2.0.2, 3.0.2 | Apache License 2.0 |
-| [Fragment Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.7 | Apache License 2.0 |
-| [Fragment Test Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.5.7 | Apache License 2.0 |
 | [funsee-logger](https://github.com/TheSecondLab/FunSeeLogger#readme) | 1.0.8 | ISC License |
 | [Glide](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
