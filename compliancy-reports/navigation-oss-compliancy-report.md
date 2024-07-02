@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7447-4208
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7461-4218
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -9,6 +9,7 @@ This offer is valid for a period of three years from the date of distribution of
 | Component | Version | License |
 | :-------- | :------ | :------ |
 | [999.zlib](https://zlib.net/) | 1.2.13 | zlib License |
+| [aantron/better-enums](http://aantron.github.io/better-enums) | 0.11.2 | BSD 2-clause "Simplified" License |
 | [abseil/googletest](https://github.com/google/googletest/) | v1.10.x | BSD 3-clause "New" or "Revised" License |
 | [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.7.2 | Apache License 2.0 |
 | [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.7.2 | Apache License 2.0 |
@@ -75,10 +76,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Animal Sniffer Annotations](https://www.mojohaus.org/animal-sniffer/animal-sniffer-annotations/) | 1.23 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11, 3.14.0 | Apache License 2.0 |
+| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.14.0 | Apache License 2.0 |
 | [Apache Harmony](http://harmony.apache.org) | 2006-11-27 | Apache License 2.0 |
 | [Apache OpenOffice.org Templates]() | 1 | TomTom Internal License |
-| [Apache Thrift](http://thrift.apache.org/) | 1.0.0-dev, hier, r938206 | Apache License 2.0 |
+| [Apache Thrift](http://thrift.apache.org/) | 0.16.0, 0.2.0, 0.5.0, 0.6.0, 0.7.0, 0.8.0, 0.9.0, 1.0.0-dev, hier, r938206 | Apache License 2.0 |
 | [AssertJ fluent assertions](http://nexus.sonatype.org/oss-repository-hosting.html/assertj-parent-pom/assertj-core) | 3.24.2 | Apache License 2.0 |
 | [AWS Mobile SDK for iOS](http://aws.amazon.com/mobile/sdk/) | 1.4.2 | Apache License 2.0 |
 | [azure-sdk-for-net](http://www.windowsazure.com/en-us/develop/net/) | Azure.ResourceManager.DeviceUpdate_1.0.0-beta.7 | MIT License |
@@ -86,7 +87,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Boost C++ Libraries - boost](https://www.boost.org/) | 1.75.0, 1.81.0 | Boost Software License 1.0 |
 | [breakpad](http://github.com/darwin/breakpad/) | master-20100925 | (FSF Unlimited License AND BSD 3-clause "New" or "Revised" License) |
 | [Byte Buddy](http://bytebuddy.net) | 1.12.21 | Apache License 2.0 |
-| [c-ares](http://c-ares.haxx.se/) | 1.28.1 | MIT License |
+| [c-ares](http://c-ares.haxx.se/) | 1.15.0, 1.19.0, 1.28.1 | MIT License |
 | [Checker Qual](https://checkerframework.org) | 3.37.0 | MIT License |
 | [cimgui/cimgui](https://github.com/cimgui/cimgui) | v1.63 | MIT License |
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
@@ -98,7 +99,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [cppimgui](https://github.com/ocornut/imgui) | v1.63 | MIT License |
 | [Cucumber-Cpp](https://github.com/cucumber/cucumber-cpp) | v0.5 | MIT License |
-| [curl](https://curl.se/) | 8.7.1 | MIT License |
+| [curl](https://curl.se/) | 7.65.0, 7.66.0, 8.2.1, 8.7.1 | curl License |
 | [Dagger 2](http://google.github.io/dagger) | 2.45 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.45 | Apache License 2.0 |
 | [Dagger Lint Rules AAR Distribution](https://github.com/google/dagger) | 2.45 | Apache License 2.0 |
@@ -132,12 +133,13 @@ This offer is valid for a period of three years from the date of distribution of
 | [greg7mdp/parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) | 1.3.8, 1.31 | Apache License 2.0 |
 | [grpc](http://grpc.io) | 1.64.0 | Apache License 2.0 |
 | [gsl-lite](https://github.com/gsl-lite/gsl-lite) | 0.39.0 | MIT License |
+| [gsl-lite/gsl-lite](http://github.com/martinmoene/gsl-lite/) | v0.39.0 | MIT License |
 | [gtest](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [hiredis](http://github.com/antirez/hiredis) | v1.2.0 | BSD 3-clause "New" or "Revised" License |
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
-| [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 72-1 | ICU License |
+| [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 63.1, 72-1, release-63-rc | ICU License |
 | [ImageMagick](http://www.imagemagick.org/) | 6.9.0 | ImageMagick License |
 | [io.grpc:grpc-android](https://conscrypt.org/) | 1.64.0 | Apache License 2.0 |
 | [io.grpc:grpc-context](https://github.com/grpc/grpc-java) | 1.64.0 | Apache License 2.0 |
@@ -197,7 +199,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [libboost1.81-dev](https://www.boost.org/) | 1.81.0 | Boost Software License 1.0 |
 | [libglfw3-doc](http://www.glfw.org/) | 3.3.2 | zlib License |
 | [libjpeg](https://www.ijg.org) | 9d | Independent JPEG Group License |
-| [libpng](http://www.libpng.org/pub/png/libpng.html) | v1.6.43 | PNG Reference Library version 2 |
+| [libpng](http://www.libpng.org/pub/png/libpng.html) | 1.6.36, v1.6.43 | PNG Reference Library version 2 |
 | [libprotozero-dev](https://github.com/mapbox/protozero) | 1.6.3 | BSD 2-clause FreeBSD License |
 | [libtext-template-perl](https://metacpan.org/release/Text-Template/) | 1.46 | OpenSSL Combined License |
 | [libunibreak](https://github.com/adah1972/libunibreak) | libunibreak_4_2-1 | zlib License |
@@ -212,11 +214,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [mapcode](http://www.mapcode.com/) | 2.5.2 | Apache License 2.0 |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.8.0 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.14.0 | Apache License 2.0 |
+| [multimethods](https://pypi.python.org/pypi/multimethods/) | 1.0.0 | MIT License |
 | [Mumble](https://www.mumble.info) | v1.5.517 | BSD 3-clause "New" or "Revised" License |
 | [nemtrif/utfcpp](https://github.com/nemtrif/utfcpp) | 3.1.2 | Boost Software License 1.0 |
-| [nghttp2](https://nghttp2.org) | v1.62.0 | MIT License |
+| [nghttp2](https://nghttp2.org) | v1.58.0, v1.62.0 | MIT License |
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
-| [OkIO](https://github.com/square/OkIO) | 3.6.0, 3.8.0 | Apache License 2.0 |
+| [OkIO](https://square.github.io/okio/) | 3.6.0, 3.8.0 | Apache License 2.0 |
 | [Open Computer Vision Library (OpenCV)](http://opencv.org/) | 4.2.0, 4.5.2 | BSD 3-clause "New" or "Revised" License |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | (Eclipse Distribution License - v 1.0 OR Eclipse Public License 2.0) |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.7.21, 1.8.0, 1.8.22 | Apache License 2.0 |
@@ -248,7 +251,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.32.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.32.0 | MIT License |
 | [SLF4J API Module](http://www.slf4j.org) | 1.7.25, 2.0.12, 2.0.3 | MIT License |
-| [sml](https://boost-ext.github.io/sml/) | v1.1.3 | Boost Software License 1.0 |
+| [sml](https://boost-ext.github.io/sml/) | 0.1.0, v1.1.3 | BSD 3-clause "New" or "Revised" License |
 | [sparsehash](http://code.google.com/p/google-sparsehash) | 2.0.3 | (X11 License AND BSD 3-clause "New" or "Revised" License AND Christian Michelsen Research License) |
 | [SQLDelight Android Driver](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
 | [SQLDelight Async Driver Extensions](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
