@@ -60,7 +60,7 @@ internal class AccountLoginViewModel(panel: AccountLoginPanel) :
      */
     @Suppress("unused")
     val allAccountsPagingDataFlow: Flow<PagingData<Account>> = accountsServiceApi.accounts
-        .mapPagingData(pagingConfig, allAccountsQuery, this)
+        .mapPagingData(pagingConfig, allAccountsQuery)
 
     fun onLoginClick() {
         isLoginEnabled.valueUpToDate?.takeIf { it }?.let {
