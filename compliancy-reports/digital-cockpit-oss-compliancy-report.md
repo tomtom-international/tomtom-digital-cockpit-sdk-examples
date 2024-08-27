@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7632-4319
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7671-4349
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -69,7 +69,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.7 | Apache License 2.0 |
 | [Android Support Grid Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.7.1, 1.8.1 | Apache License 2.0 |
+| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.3.0, 1.7.1, 1.8.2 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.4.0 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.1, 1.7.0 | Apache License 2.0 |
@@ -106,7 +106,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Test Library - core](https://developer.android.com/testing) | 1.5.0 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-contrib](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-core](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
-| [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.4.0, 3.5.1 | Apache License 2.0 |
+| [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-intents](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
 | [AndroidX Test Library - junit](https://developer.android.com/testing) | 1.1.5 | Apache License 2.0 |
 | [AndroidX Test Library - junit-ktx](https://developer.android.com/testing) | 1.1.5 | Apache License 2.0 |
@@ -177,7 +177,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-runtime](https://mvnrepository.com/artifact/androidx.databinding/databinding-runtime) | 7.1.0, 8.2.1, 8.5.0 | Apache License 2.0 |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.1, 2.28.3 | Apache License 2.0 |
 | [differ](https://github.com/dropbox/differ/) | 0.0.1 | Apache License 2.0 |
-| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.18.0, 2.21.1 | Apache License 2.0 |
+| [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.18.0, 2.21.1, 2.27.0 | Apache License 2.0 |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
 | [exoplayer-common](https://plugins.gradle.org/m2/com/google/android/exoplayer/exoplayer-common/) | 2.13.3, 2.15.1 | Apache License 2.0 |
@@ -197,12 +197,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
-| [google-gson](https://github.com/google/gson) | 2.10, 2.10.1, 2.8.9 | Apache License 2.0 |
-| [google-guava](https://github.com/google/guava) | 32.1.3-android | Apache License 2.0 |
+| [google-gson](https://github.com/google/gson) | 2.10, 2.10.1, 2.11.0, 2.8.9 | Apache License 2.0 |
 | [google/gnd-android](https://github.com/google/ground-android) | 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/JacquardSDKAndroid]() | v0.1.0 | Apache 2.0 License with Commons Clause Restriction |
 | [google/mobly-bundled-snippets]() | 20230602-snapshot-ce2fd0fc | Apache License 2.0 |
-| [googleguava](https://github.com/google/guava) | v32.0.1 | Apache License 2.0 |
+| [googleguava](https://github.com/google/guava) | 32.1.3-android, v32.0.1 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | 8.12.34 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.2.0, 7.6.4, 8.6.0 | Apache License 2.0 |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
@@ -375,4 +374,5 @@ This offer is valid for a period of three years from the date of distribution of
 | [VersionedParcelable and friends](http://developer.android.com/tools/extras/support-library.html) | 1.1.1, 1.2.0 | Apache License 2.0 |
 | [versioning](http://robolectric.org) | 4.11.1 | MIT License |
 | [viewbinding](https://mvnrepository.com/artifact/androidx.databinding/viewbinding) | 7.1.0, 8.2.1, 8.5.0 | Apache License 2.0 |
+| [XZ Utils](http://tukaani.org/xz/) | 5.2.4 | (GNU Lesser General Public License v2.1 or later AND Public Domain AND GNU General Public License v2.0 or later AND GNU General Public License v3.0 or later) |
 | [ZXing Core](http://nexus.sonatype.org/oss-repository-hosting.html/core) | 3.4.1 | Apache License 2.0 |
