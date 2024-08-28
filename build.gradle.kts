@@ -156,10 +156,6 @@ subprojects {
                         }
                 }
             }
-            dependencySubstitution {
-                substitute(module("org.hamcrest:hamcrest-core:1.3"))
-                    .using(module("org.hamcrest:hamcrest:2.2"))
-            }
         }
     }
 
