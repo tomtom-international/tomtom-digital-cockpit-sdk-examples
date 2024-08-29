@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7673-4351
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7680-4357
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -192,6 +192,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Fragment Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 1.8.0 | Apache License 2.0 |
 | [Fragment Test Extensions](https://developer.android.com/reference/androidx/fragment/app/testing/package-summary.html) | 1.8.0 | Apache License 2.0 |
 | [Fragment Testing Manifest dependency](https://developer.android.com/jetpack/androidx/releases/fragment#1.6.0-alpha04) | 1.8.0 | Apache License 2.0 |
+| [funsee-logger](https://github.com/TheSecondLab/FunSeeLogger#readme) | 1.0.8 | ISC License |
 | [Glide](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
