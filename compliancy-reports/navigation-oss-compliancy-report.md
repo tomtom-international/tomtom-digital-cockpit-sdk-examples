@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7690-4365
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7700-4373
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -78,7 +78,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
 | [Animal Sniffer Annotations](https://www.mojohaus.org/animal-sniffer/animal-sniffer-annotations/) | 1.24 | MIT License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.16.0 | Apache License 2.0 |
+| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.17.0 | Apache License 2.0 |
 | [Apache Harmony](http://harmony.apache.org) | 2006-11-27 | Apache License 2.0 |
 | [Apache OpenOffice.org Templates]() | 1 | TomTom Internal License |
 | [Apache Thrift](http://thrift.apache.org/) | 0.16.0, 0.2.0, 0.5.0, 0.6.0, 0.7.0, 0.8.0, 0.9.0, 1.0.0-dev, hier, r938206 | Apache License 2.0 |
