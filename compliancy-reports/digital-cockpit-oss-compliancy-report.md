@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7732-4394
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7738-4397
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -342,11 +342,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
 | [Semver4k](https://github.com/voize-gmbh/semver4k) | 4.2.1 | MIT License |
 | [sensorsdata/sa-sdk-android-plugin2](https://github.com/sensorsdata/sa-sdk-android-plugin2) | 20240407-snapshot-0653cf45 | Apache License 2.0 |
-| [Sentry SDK](https://github.com/getsentry/sentry-java) | 6.32.0 | MIT License |
-| [sentry-android-core](https://sentry.io) | 6.32.0 | MIT License |
-| [sentry-android-ndk](https://sentry.io) | 6.32.0 | MIT License |
-| [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 6.32.0 | MIT License |
-| [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 6.32.0 | MIT License |
+| [Sentry SDK](https://github.com/getsentry/sentry-java) | 7.14.0 | MIT License |
+| [sentry-android-core](https://sentry.io) | 7.14.0 | MIT License |
+| [sentry-android-ndk](https://sentry.io) | 7.14.0 | MIT License |
+| [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 7.14.0 | MIT License |
+| [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 7.14.0 | MIT License |
 | [shadowapi](http://robolectric.org) | 4.11.1 | MIT License |
 | [Shark](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [Shark for Android heaps](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
