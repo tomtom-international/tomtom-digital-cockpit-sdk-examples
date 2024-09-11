@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7762-4412
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7766-4414
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -116,7 +116,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [exposed-core](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-core/) | 0.39.2 | Apache License 2.0 |
 | [exposed-jdbc](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-jdbc/) | 0.39.2 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
-| [fmtlib/fmt](https://github.com/fmtlib/fmt) | 6.2.1 | MIT License |
+| [fmtlib/fmt](https://github.com/fmtlib/fmt) | 6.2.1 | (MIT License AND fmt exception) |
 | [Fragment Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 1.8.0 | Apache License 2.0 |
 | [GLEW](http://glew.sourceforge.net/) | 1.12.0, 20140726 | (MIT License AND BSD 3-clause "New" or "Revised" License) |
 | [GLFW](http://glfw.sourceforge.net/) | 3.3.1 | zlib License |
