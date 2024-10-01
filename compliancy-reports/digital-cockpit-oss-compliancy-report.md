@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7816-4457
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7828-4465
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -126,6 +126,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Apache POI](http://poi.apache.org/) | 5.2.3, 5.2.4 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
+| [app.softwork KOBOL](https://github.com/hfhbd/kobol) | 0.2.15 | Apache License 2.0 |
 | [AppAuth for Android](https://github.com/openid/AppAuth-Android) | 0.11.1 | Apache License 2.0 |
 | [ASM](http://asm.ow2.org/) | 9.6 | BSD 3-clause "New" or "Revised" License |
 | [ASM Commons](http://asm.ow2.io/) | 9.6 | BSD 3-clause "New" or "Revised" License |
@@ -148,7 +149,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [coil-test](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
 | [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.1.0, 1.4.0 | Apache License 2.0 |
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 4.1.0 | Apache License 2.0 |
-| [common-gradle-dependencies](https://plugins.gradle.org/m2/com/huanshankeji/common-gradle-dependencies/) | 0.7.1-20240314-boostrap | Apache License 2.0 |
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [Compose Android Core Text](https://developer.android.com/jetpack/androidx) | 1.5.4 | Apache License 2.0 |
 | [Compose Animation Core](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
