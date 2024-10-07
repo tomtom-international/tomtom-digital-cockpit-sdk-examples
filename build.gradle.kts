@@ -129,13 +129,6 @@ subprojects {
                                 useVersion(versions.kotlinxSerialization.get())
                         }
                     }
-                    "com.google.protobuf" -> if (requested.name == "protobuf-java") {
-                        useVersion(iviDependencies.versions.protobufJava.get())
-                        because(
-                            "protobuf-java versions before 3.21.7 have CVE-2022-3510," +
-                                "CVE-2022-3509 and CVE-2022-3171.",
-                        )
-                    }
                     "com.google.guava" -> {
                         if (requested.name == "guava") {
                             useVersion(versions.guava.get())

@@ -96,6 +96,4 @@ dependencies {
     implementation(libraries.iviPlatformThemingApiCommonRegistry)
     implementation(libraries.iviPlatformThemingApiThemingGeneric)
     implementation(libraries.iviPlatformThemingApiThemingStock)
-
-    implementation(iviDependencies.tomtomNavAppCoreTheme)
 }
