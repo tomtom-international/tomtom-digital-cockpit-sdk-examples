@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7861-4482
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7882-4499
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -45,6 +45,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Paging-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 3.1.1 | Apache License 2.0 |
 | [Android Paging-Common Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 3.1.1 | Apache License 2.0 |
 | [Android Paging-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 3.1.1 | Apache License 2.0 |
+| [Android platform-frameworks-base](http://github.com/android/platform_system_core/) | android-1.0 | Apache License 2.0 |
 | [Android Resource Inspection - Annotations](https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.0-alpha01) | 1.0.1 | Apache License 2.0 |
 | [Android Resources Library](https://developer.android.com/jetpack/androidx/releases/appcompat) | 1.6.1 | Apache License 2.0 |
 | [Android Room-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0 | Apache License 2.0 |
@@ -103,7 +104,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
 | [cppimgui](https://github.com/ocornut/imgui) | v1.63 | MIT License |
 | [Cucumber-Cpp](https://github.com/cucumber/cucumber-cpp) | v0.5 | MIT License |
-| [curl](https://curl.se/) | 7.66.0, 8.10.0, 8.2.1, 8.7.1 | curl License |
+| [curl](https://curl.se/) | 7.66.0, 7.74.0, 7.76.1, 8.10.0, 8.2.1, 8.7.1 | curl License |
 | [Dagger 2](http://google.github.io/dagger) | 2.46.1 | Apache License 2.0 |
 | [Dagger for Android](https://github.com/square/dagger/dagger-android) | 2.46.1 | Apache License 2.0 |
 | [Dagger Lint Rules AAR Distribution](https://github.com/google/dagger) | 2.46.1 | Apache License 2.0 |
@@ -165,11 +166,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [jkuhlmann/cgltf](https://github.com/jkuhlmann/cgltf) | v1.4 | MIT License |
 | [JsonCpp](https://github.com/open-source-parsers/jsoncpp) | 1.8.4 | MIT License |
 | [Kolasu language server testing](https://github.com/Strumenta/kolasu-languageserver-library) | 1.0.0 | Apache License 2.0 |
-| [Kotlin](http://kotlin.jetbrains.org) | 1.9.20, 1.9.22, 1.9.24 | Apache License 2.0 |
+| [Kotlin](http://kotlin.jetbrains.org) | 1.9.20, 1.9.22, 1.9.25 | Apache License 2.0 |
 | [kotlin-android-extensions-runtime](http://kotlinlang.org/tools/kotlin-android-extensions-runtime/) | 1.8.22 | Apache License 2.0 |
 | [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) | 3.0.4, 3.0.5 | Apache License 2.0 |
-| [kotlin-reflect](https://kotlinlang.org/) | 1.7.10, 1.9.24 | Apache License 2.0 |
-| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.9.20, 1.9.22, 1.9.24 | Apache License 2.0 |
+| [kotlin-reflect](https://kotlinlang.org/) | 1.7.10, 1.9.25 | Apache License 2.0 |
+| [kotlin-stdlib-common](http://kotlinlang.org/kotlin-stdlib-common/) | 1.9.20, 1.9.22, 1.9.25 | Apache License 2.0 |
 | [kotlinx-coroutines-android](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-bom](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
 | [kotlinx-coroutines-core](https://github.com/Kotlin/kotlinx.coroutines) | 1.6.4, 1.7.3 | Apache License 2.0 |
@@ -230,9 +231,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
 | [Open Computer Vision Library (OpenCV)](http://opencv.org/) | 4.2.0, 4.5.2 | BSD 3-clause "New" or "Revised" License |
 | [Org.eclipse.paho.client.mqttv3](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3) | 1.2.5 | (Eclipse Distribution License - v 1.0 OR Eclipse Public License 2.0) |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.0, 1.9.24 | Apache License 2.0 |
-| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.8.0, 1.9.24 | Apache License 2.0 |
-| [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22, 1.9.24 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.8.0, 1.9.25 | Apache License 2.0 |
+| [org.jetbrains.kotlin:kotlin-stdlib-jdk8](https://kotlinlang.org/) | 1.8.0, 1.9.25 | Apache License 2.0 |
+| [Parcelize Runtime](https://kotlinlang.org/) | 1.8.22, 1.9.25 | Apache License 2.0 |
 | [Passenger (mod_rails for Apache)](http://code.google.com/p/phusion-passenger) | 6.0.13 | MIT License |
 | [perfmark:perfmark-api](https://github.com/perfmark/perfmark) | 0.27.0 | Apache License 2.0 |
 | [protobuf-java](http://code.google.com/p/protobuf) | 3.25.5 | BSD 3-clause "New" or "Revised" License |
@@ -248,7 +249,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [rapidjson](http://rapidjson.org/) | 1.1.0, 1.1.1 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [RATreeView](https://github.com/Augustyniak/RATreeView) | 2.1.2 | MIT License |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
-| [redis - Official](http://redis.io) | 7.2.4 | BSD 3-clause "New" or "Revised" License |
+| [redis - Official](http://redis.io) | 7.2-rc1, 7.2.4 | BSD 3-clause "New" or "Revised" License |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
 | [semver](https://github.com/swiftzer/semver) | 1.1.1 | MIT License |
 | [Sentry SDK](https://github.com/getsentry/sentry-java) | 7.14.0 | MIT License |
@@ -256,7 +257,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [sentry-android-ndk](https://sentry.io) | 7.14.0 | MIT License |
 | [Sentry-Java client](https://github.com/getsentry/sentry-java/sentry) | 7.14.0 | MIT License |
 | [Sentry-Java for Android](https://github.com/getsentry/sentry-java/sentry-android) | 7.14.0 | MIT License |
-| [SLF4J API Module](http://www.slf4j.org) | 1.7.25, 2.0.12, 2.0.3 | MIT License |
+| [SLF4J API Module](http://www.slf4j.org) | 1.7.25, 2.0.16, 2.0.3 | MIT License |
 | [sml](https://boost-ext.github.io/sml/) | 0.1.0, v1.1.3 | BSD 3-clause "New" or "Revised" License |
 | [sparsehash](http://code.google.com/p/google-sparsehash) | 2.0.3 | (X11 License AND BSD 3-clause "New" or "Revised" License AND Christian Michelsen Research License) |
 | [SQLDelight Android Driver](https://github.com/cashapp/sqldelight/) | 2.0.2 | Apache License 2.0 |
