@@ -69,7 +69,6 @@ dependencies {
     implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiUicontrols)
     implementation(iviDependencies.tomtomToolsApiViewprovider)
-    implementation(libraries.iviPlatformFrameworkApiProductDebugPermissions)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformFrontendApiTemplateNotificationPanel)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)

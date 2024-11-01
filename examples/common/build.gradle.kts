@@ -43,7 +43,6 @@ ivi {
 
 dependencies {
     implementation(iviDependencies.tomtomAutomotiveAndroidCar)
-    implementation(libraries.iviPlatformFrameworkApiProductDebugPermissions)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultApplication)
     implementation(libraries.iviPlatformThemingApiCommonAttributes)

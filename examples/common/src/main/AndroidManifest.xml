@@ -17,7 +17,7 @@
         android:theme="@style/TtiviApplicationTheme">
 
         <activity
-            android:name="com.tomtom.ivi.platform.framework.api.product.debugpermissions.SetupProxyActivity"
+            android:name="com.tomtom.ivi.platform.framework.api.product.activity.ProxyActivity"
             android:clearTaskOnLaunch="true"
             android:exported="true"
             android:launchMode="singleTask"

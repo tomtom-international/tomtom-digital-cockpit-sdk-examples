@@ -50,7 +50,6 @@ dependencies {
     implementation(iviDependencies.tomtomToolsApiUicontrols)
     implementation(iviDependencies.tomtomToolsApiViewprovider)
     implementation(iviDependencies.tomtomToolsCoreAnimation)
-    implementation(libraries.iviPlatformFrameworkApiProductDebugPermissions)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformFrontendApiCommonAdaptiveness)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)

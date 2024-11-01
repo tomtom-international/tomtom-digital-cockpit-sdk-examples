@@ -44,7 +44,6 @@ dependencies {
     implementation(iviDependencies.androidxConstraintlayout)
     implementation(iviDependencies.tomtomToolsApiDatabinding)
     implementation(iviDependencies.tomtomToolsApiLivedata)
-    implementation(libraries.iviPlatformFrameworkApiProductDebugPermissions)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
     implementation(libraries.iviPlatformSystemuiApiStockSystemuihost)
 }

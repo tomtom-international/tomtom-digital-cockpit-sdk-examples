@@ -158,13 +158,17 @@ subprojects {
 
         defaultConfig {
             minSdk = examplesAppVersions.examplesAppMinSdk.get().toInt()
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
             // AutomotiveUI has enabled flavorized publication of their modules, because of
             // this, it is now needed on the integrator side to specify which flavor to use.
             missingDimensionStrategy("engine", "navkit1")
             // TTDC uses flavorized publication of modules, because of
             // this, it is now needed on the integrator side to specify which flavor to use.
             missingDimensionStrategy("navigationEngine", "navkit1")
-            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            // Navkit 1 uses Native Development Kit r19, so we need a flavor which is compatible
+            // with this version. If not using Navkit 1, use `ndk23` instead.
+            missingDimensionStrategy("ndk", "ndk19")
         }
 
         if (isApplicationProject) {

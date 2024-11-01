@@ -12,6 +12,12 @@
 
 projects:
   - name: as-ivi-ttdc-docs
+    exclude_folders:
+      - .azure-pipeline
+      - .github
+      - docs
+      - .idea
+      - resources
     passthrough:
       - --detect.gradle.included.configurations=releaseRuntimeClasspath
       - --detect.parallel.processors=0

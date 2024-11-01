@@ -30,6 +30,5 @@ ivi {
 
 dependencies {
     implementation(project(":examples_common"))
-    implementation(libraries.iviPlatformFrameworkApiProductDebugPermissions)
     implementation(libraries.iviPlatformFrameworkApiProductDefaultActivity)
 }

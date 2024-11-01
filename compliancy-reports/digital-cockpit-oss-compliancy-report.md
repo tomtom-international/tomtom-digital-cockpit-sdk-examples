@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7882-4499
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7942-4532
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -69,7 +69,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.7 | Apache License 2.0 |
 | [Android Support Grid Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.7.1, 1.8.2 | Apache License 2.0 |
+| [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.7.1, 1.9.0 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.4.0 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.12.0, 1.13.1 | Apache License 2.0 |
@@ -81,7 +81,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support Library Custom View - androidx.swiperefreshlayout:swiperefreshlayout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Document File](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Drawer Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.1 | Apache License 2.0 |
-| [Android Support Library fragment](https://developer.android.com/jetpack/androidx) | 1.0.0, 1.3.6, 1.5.4, 1.8.0 | Apache License 2.0 |
+| [Android Support Library fragment](https://developer.android.com/jetpack/androidx) | 1.0.0, 1.3.6, 1.5.4, 1.8.0, 1.8.4 | Apache License 2.0 |
 | [Android Support Library Interpolators](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library loader](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Local Broadcast Manager](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -122,7 +122,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [annotations](http://robolectric.org) | 4.11.1 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
+| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
 | [Apache POI](http://poi.apache.org/) | 5.2.3, 5.2.4 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
@@ -189,10 +189,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [Experimental annotation](https://developer.android.com/jetpack/androidx) | 1.3.0, 1.4.0 | Apache License 2.0 |
 | [Extensions](http://tomtom.com/extensions) | 1.8.3 | Apache License 2.0 |
 | [FindBugs jsr305](http://code.google.com/p/jsr-305) | 2.0.2, 3.0.2 | Apache License 2.0 |
-| [Fragment Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 1.8.0 | Apache License 2.0 |
-| [Fragment Test Extensions](https://developer.android.com/reference/androidx/fragment/app/testing/package-summary.html) | 1.8.0 | Apache License 2.0 |
-| [Fragment Testing Manifest dependency](https://developer.android.com/jetpack/androidx/releases/fragment#1.6.0-alpha04) | 1.8.0 | Apache License 2.0 |
-| [funsee-logger](https://github.com/TheSecondLab/FunSeeLogger#readme) | 1.0.8 | ISC License |
+| [Fragment Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 1.8.0, 1.8.4 | Apache License 2.0 |
+| [Fragment Test Extensions](https://developer.android.com/reference/androidx/fragment/app/testing/package-summary.html) | 1.8.0, 1.8.4 | Apache License 2.0 |
+| [Fragment Testing Manifest dependency](https://developer.android.com/jetpack/androidx/releases/fragment#1.6.0-alpha04) | 1.8.0, 1.8.4 | Apache License 2.0 |
 | [Glide](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Annotations](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
@@ -302,7 +301,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [MockK Java Agent](http://mockk.io) | 1.13.10, 1.13.3 | Apache License 2.0 |
 | [MockK Java Agent API](http://mockk.io) | 1.13.10, 1.13.3 | Apache License 2.0 |
 | [MockK Java DSL](http://mockk.io) | 1.13.10, 1.13.3 | Apache License 2.0 |
-| [Moshi](https://github.com/square/moshi/moshi) | 1.14.0, 1.15.1 | Apache License 2.0 |
+| [Moshi](https://github.com/square/moshi/moshi) | 1.15.1 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.11.1 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
 | [objenesis](http://code.google.com/p/objenesis) | 3.3 | Apache License 2.0 |
