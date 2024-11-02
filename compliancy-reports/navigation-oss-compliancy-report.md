@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7942-4532
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7954-4540
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -10,7 +10,6 @@ This offer is valid for a period of three years from the date of distribution of
 | :-------- | :------ | :------ |
 | [999.zlib](https://zlib.net/) | 1.2.13 | zlib License |
 | [aantron/better-enums](http://aantron.github.io/better-enums) | 0.11.2 | BSD 2-clause "Simplified" License |
-| [abseil/googletest](https://github.com/google/googletest/) | v1.10.x | BSD 3-clause "New" or "Revised" License |
 | [Activity](http://developer.android.com/tools/extras/support-library.html) | 1.7.2 | Apache License 2.0 |
 | [Activity Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.7.2 | Apache License 2.0 |
 | [Android App Startup Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.1 | Apache License 2.0 |
@@ -125,7 +124,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [glm](http://glm.g-truc.net) | 0.9.9.4 | MIT License |
 | [gmock-devel](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [Google Android Annotations Library](http://source.android.com/) | 4.1.1.4 | Apache License 2.0 |
-| [Google C++ Testing Framework](https://github.com/google/googletest/) | 1.8.1 | BSD 3-clause "New" or "Revised" License |
+| [Google C++ Testing Framework](https://github.com/google/googletest/) | v1.15.2 | BSD 3-clause "New" or "Revised" License |
 | [Google Mock](http://code.google.com/p/googlemock/) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [google-gson](https://github.com/google/gson) | 2.10, 2.10.1 | Apache License 2.0 |
 | [google-maps-services-java](http://github.com/googlemaps/google-maps-services-java/) | v0.2.9 | Apache License 2.0 |
@@ -157,7 +156,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [io.grpc:grpc-stub](https://github.com/grpc/grpc-java) | 1.68.0 | Apache License 2.0 |
 | [io.grpc:grpc-util](https://github.com/grpc/grpc-java) | 1.68.0 | Apache License 2.0 |
 | [IoT Hub Java Device Client](http://azure.github.io/azure-iot-sdks/) | 2.2.0 | MIT License |
-| [iptux](http://code.google.com/p/iptux/) | 0.8.3+git20211122 | GNU General Public License v2.0 or later |
 | [javax.inject:javax.inject](http://code.google.com/p/atinject/) | 1 | Apache License 2.0 |
 | [jemalloc](http://github.com/jemalloc/jemalloc/) | 5.3.0 | BSD 2-clause "Simplified" License |
 | [Jetbrains annotations](http://www.jetbrains.org) | 13.0, 23.0.0 | Apache License 2.0 |
@@ -209,6 +207,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [libjpeg](https://www.ijg.org) | 9d | Independent JPEG Group License |
 | [libpng](http://www.libpng.org/pub/png/libpng.html) | 1.6.36, v1.6.43 | PNG Reference Library version 2 |
 | [libprotozero-dev](https://github.com/mapbox/protozero) | 1.6.3 | BSD 2-clause FreeBSD License |
+| [libspatialindex](http://libspatialindex.github.com) | 2.0.0 | MIT License |
 | [libtext-template-perl](https://metacpan.org/release/Text-Template/) | 1.46 | OpenSSL Combined License |
 | [libunibreak](https://github.com/adah1972/libunibreak) | libunibreak_4_2-1 | zlib License |
 | [LiveData Core Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 2.7.0 | Apache License 2.0 |
