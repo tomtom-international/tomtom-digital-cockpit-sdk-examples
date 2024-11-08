@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7954-4540
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7968-4549
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -35,17 +35,17 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0, 1.3.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0, 1.3.0 | Apache License 2.0 |
 | [Android KTX Core](https://github.com/android/android-ktx) | 1.13.1 | Apache License 2.0 |
-| [Android Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle LiveData Core](https://developer.android.com/jetpack/androidx/releases/lifecycle) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle Process](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle Service](https://developer.android.com/reference/androidx/lifecycle/LifecycleService) | 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle ViewModel with SavedState](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.6 | Apache License 2.0 |
-| [Android Lifecycle-Common for Java 8 Language](https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common-java8) | 2.8.6 | Apache License 2.0 |
+| [Android Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle LiveData](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle LiveData Core](https://developer.android.com/jetpack/androidx/releases/lifecycle) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle Process](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle Service](https://developer.android.com/reference/androidx/lifecycle/LifecycleService) | 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle ViewModel](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle ViewModel Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle ViewModel with SavedState](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.6.2, 2.8.7 | Apache License 2.0 |
+| [Android Lifecycle-Common for Java 8 Language](https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common-java8) | 2.8.7 | Apache License 2.0 |
 | [Android Navigation Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.5.3 | Apache License 2.0 |
 | [Android Navigation Common Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.3 | Apache License 2.0 |
 | [Android Navigation Fragment](https://developer.android.com/topic/libraries/architecture/index.html) | 2.5.1, 2.5.3 | Apache License 2.0 |
@@ -68,7 +68,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support DynamicAnimation](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.7 | Apache License 2.0 |
 | [Android Support Grid Layout](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [Android Support Library Annotations](https://developer.android.com/jetpack/androidx/releases/annotation#1.6.0-alpha01) | 1.9.0 | Apache License 2.0 |
+| [Android Support Library Annotations](https://developer.android.com/jetpack/androidx/releases/annotation#1.6.0-alpha01) | 1.9.1 | Apache License 2.0 |
 | [Android Support Library Async Layout Inflater](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library collections](http://developer.android.com/tools/extras/support-library.html) | 1.0.0, 1.1.0, 1.4.0 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.13.1 | Apache License 2.0 |
@@ -255,12 +255,12 @@ This offer is valid for a period of three years from the date of distribution of
 | [LeakCanary Object Watcher for Android extension: Android support library fragments support](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [LeakCanary Object Watcher for Android extension: Android X fragments support](http://github.com/square/leakcanary/) | 2.14 | Apache License 2.0 |
 | [libnghttp2](https://nghttp2.org) | 1.43.0 | MIT License |
-| [Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.6 | Apache License 2.0 |
-| [Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.6 | Apache License 2.0 |
-| [Lifecycle ViewModel](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.6 | Apache License 2.0 |
-| [Lifecycle-Common](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.6 | Apache License 2.0 |
-| [LiveData Core Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 2.8.6 | Apache License 2.0 |
-| [LiveData Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 2.8.6 | Apache License 2.0 |
+| [Lifecycle Kotlin Extensions](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.7 | Apache License 2.0 |
+| [Lifecycle Runtime](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.7 | Apache License 2.0 |
+| [Lifecycle ViewModel](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.7 | Apache License 2.0 |
+| [Lifecycle-Common](https://developer.android.com/jetpack/androidx/releases/lifecycle#2.8.0-alpha02) | 2.8.7 | Apache License 2.0 |
+| [LiveData Core Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 2.8.7 | Apache License 2.0 |
+| [LiveData Kotlin Extensions](https://developer.android.com/kotlin/ktx) | 2.8.7 | Apache License 2.0 |
 | [maccandroid](https://github.com/alexa/alexa-auto-sdk) | 4.1 | Apache License 2.0 |
 | [mapbox/mapbox-navigation-android](https://www.mapbox.com/android-docs/navigation/overview/) | v0.42.0 | MIT License |
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.8.0 | Apache License 2.0 |
@@ -282,7 +282,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.15.1 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.11.1 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
-| [objenesis](http://code.google.com/p/objenesis) | 3.3 | Apache License 2.0 |
+| [objenesis](http://objenesis.org) | 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.9.24 | Apache License 2.0 |

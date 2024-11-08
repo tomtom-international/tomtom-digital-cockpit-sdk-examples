@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7954-4540
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7968-4549
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -52,7 +52,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support CardView v7](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support ExifInterface](http://developer.android.com/tools/extras/support-library.html) | 1.3.7 | Apache License 2.0 |
 | [Android Support Library Annotations](http://developer.android.com/tools/extras/support-library.html) | 1.7.0 | Apache License 2.0 |
-| [Android Support Library collections](https://developer.android.com/jetpack/androidx/releases/collection#1.3.0-alpha01) | 1.4.0, 1.4.4 | Apache License 2.0 |
+| [Android Support Library collections](https://developer.android.com/jetpack/androidx/releases/collection#1.3.0-alpha01) | 1.4.0, 1.4.5 | Apache License 2.0 |
 | [Android Support Library compat](http://developer.android.com/tools/extras/support-library.html) | 1.13.1 | Apache License 2.0 |
 | [Android Support Library core utils](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
 | [Android Support Library Cursor Adapter](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
@@ -67,8 +67,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android Support SQLite - Framework Implementation](https://developer.android.com/topic/libraries/architecture/index.html) | 2.4.0 | Apache License 2.0 |
 | [Android Tracing](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.0 | Apache License 2.0 |
 | [Android Transition Support Library](http://developer.android.com/tools/extras/support-library.html) | 1.4.1 | Apache License 2.0 |
-| [AndroidX Futures](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.0 | Apache License 2.0 |
-| [AndroidX Futures Kotlin Extensions](https://developer.android.com/topic/libraries/architecture/index.html) | 1.1.0 | Apache License 2.0 |
 | [AndroidX Preference](http://developer.android.com/tools/extras/support-library.html) | 1.2.0 | Apache License 2.0 |
 | [AndroidX Test Library - core](https://developer.android.com/testing) | 1.6.1 | Apache License 2.0 |
 | [AndroidX Test Library - espresso-idling-resource](https://developer.android.com/testing) | 3.5.1 | Apache License 2.0 |
@@ -96,7 +94,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [coil](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
 | [coil-base](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
 | [coil-test](https://github.com/coil-kt/coil) | 2.6.0 | Apache License 2.0 |
-| [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.4.4 | Apache License 2.0 |
+| [Collections Kotlin Extensions](http://developer.android.com/tools/extras/support-library.html) | 1.4.0, 1.4.5 | Apache License 2.0 |
 | [com.google.api.grpc:proto-google-common-protos](https://github.com/googleapis/googleapis) | 2.41.0 | Apache License 2.0 |
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 5.0.0 | Apache License 2.0 |
 | [Commons: Suncalc](http://commons.shredzone.org) | 3.7 | Apache License 2.0 |
@@ -222,6 +220,9 @@ This offer is valid for a period of three years from the date of distribution of
 | [Material Components for Android - com.google.android.material:material](http://developer.android.com/tools/extras/support-library.html) | 1.8.0 | Apache License 2.0 |
 | [MockK](http://mockk.io) | 1.12.1, 1.13.3 | Apache License 2.0 |
 | [MockK Android](http://mockk.io) | 1.13.3 | Apache License 2.0 |
+| [MOKO graphics](https://github.com/icerockdev/moko-graphics) | 0.9.0 | Apache License 2.0 |
+| [MOKO parcelize](https://github.com/icerockdev/moko-parcelize) | 0.8.0 | Apache License 2.0 |
+| [MOKO resources](https://github.com/icerockdev/moko-resources) | 0.23.0 | Apache License 2.0 |
 | [Moshi](https://github.com/square/moshi/moshi) | 1.15.1 | Apache License 2.0 |
 | [multimethods](https://pypi.python.org/pypi/multimethods/) | 1.0.0 | MIT License |
 | [nemtrif/utfcpp](https://github.com/nemtrif/utfcpp) | 3.1.2 | Boost Software License 1.0 |
