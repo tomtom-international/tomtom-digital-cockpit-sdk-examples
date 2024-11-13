@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7968-4549
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7969-4550
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -77,7 +77,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [Animal Sniffer Annotations](https://www.mojohaus.org/animal-sniffer/animal-sniffer-annotations/) | 1.24 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11, 3.17.0 | Apache License 2.0 |
+| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11, 3.14.0, 3.17.0 | Apache License 2.0 |
+| [Apache Commons Text](https://github.com/apache/commons-text) | 1.12.0 | Apache License 2.0 |
 | [Apache Harmony](http://harmony.apache.org) | 2006-11-27 | Apache License 2.0 |
 | [Apache OpenOffice.org Templates]() | 1 | TomTom Internal License |
 | [Apache Thrift](http://thrift.apache.org/) | hier | Apache License 2.0 |
@@ -125,10 +126,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Google C++ Testing Framework](https://github.com/google/googletest/) | v1.15.2 | BSD 3-clause "New" or "Revised" License |
 | [Google Mock](http://code.google.com/p/googlemock/) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [google-gson](https://github.com/google/gson) | 2.10, 2.10.1 | Apache License 2.0 |
+| [google-guava](https://github.com/google/guava) | 33.2.1-android | Apache License 2.0 |
 | [google-maps-services-java](http://github.com/googlemaps/google-maps-services-java/) | v0.2.9 | Apache License 2.0 |
 | [google/breakpad](https://github.com/google/breakpad) | v2022.07.12 | BSD 3-clause "New" or "Revised" License |
 | [google/shaka-packager](https://github.com/write-for-CHRIST/node-shaka-packager#readme) | v1.4.0 | BSD 3-clause "New" or "Revised" License |
-| [googleguava](https://github.com/google/guava) | 33.2.1-android | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | 8.12.34 | Apache License 2.0 |
 | [gpuimage](https://github.com/cats-oss/android-gpuimage) | 2.1.0 | Apache License 2.0 |
 | [GPUOpen-Tools/Compressonator](https://github.com/GPUOpen-Tools/Compressonator) | V2.3.2953 | MIT License |

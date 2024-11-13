@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7968-4549
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7969-4550
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -119,7 +119,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [annotations](http://robolectric.org) | 4.11.1 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
 | [Apache Commons Codec](https://github.com/apache/commons-codec) | 1.14 | Apache License 2.0 |
-| [Apache Commons Lang](https://github.com/apache/commons-lang) | 3.11 | Apache License 2.0 |
+| [Apache Commons Lang](http://commons.apache.org/lang/) | 3.11 | Apache License 2.0 |
 | [Apache POI](http://poi.apache.org/) | 5.2.3, 5.2.4 | Apache License 2.0 |
 | [Apache Tomcat](http://tomcat.apache.org/) | 3.1 | Apache License 2.0 |
 | [apl](https://github.com/alexa/alexa-auto-sdk) | 3.2, 3.2.1 | Apache License 2.0 |
@@ -157,6 +157,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [databinding-ktx](https://mvnrepository.com/artifact/androidx.databinding/databinding-ktx) | 8.2.1, 8.5.0 | Apache License 2.0 |
 | [databinding-runtime](https://mvnrepository.com/artifact/androidx.databinding/databinding-runtime) | 8.2.1, 8.5.0 | Apache License 2.0 |
 | [dexmaker](https://github.com/linkedin/dexmaker) | 2.28.3 | Apache License 2.0 |
+| [easymockobjenesis](http://objenesis.org) | 3.3 | Apache License 2.0 |
 | [error-prone annotations](https://github.com/google/error-prone/tree/master/annotations) | 2.15.0, 2.18.0, 2.27.0 | Apache License 2.0 |
 | [EventBus](http://greenrobot.org/eventbus/) | 3.2.0 | Apache License 2.0 |
 | [ExoPlayer](http://github.com/google/ExoPlayer/) | r2.10.0, r2.8.0 | Apache License 2.0 |
@@ -177,10 +178,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Glide Disk LRU Cache Library](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [Glide GIF Decoder Library](https://github.com/bumptech/glide) | 4.11.0, 4.13.0 | (BSD 2-clause "Simplified" License AND Apache License 2.0) |
 | [google-gson](https://github.com/google/gson) | 2.10, 2.11.0, 2.8.9 | Apache License 2.0 |
+| [google-guava](https://github.com/google/guava) | v32.0.1 | Apache License 2.0 |
 | [google/gnd-android](https://github.com/google/ground-android) | 20181012-snapshot-9ae5cae8 | Apache License 2.0 |
 | [google/JacquardSDKAndroid]() | v0.1.0 | Apache 2.0 License with Commons Clause Restriction |
 | [google/mobly-bundled-snippets]() | 20230602-snapshot-ce2fd0fc | Apache License 2.0 |
-| [googleguava](https://github.com/google/guava) | v32.0.1 | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | 8.12.34 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.6.4, 8.6.0 | Apache License 2.0 |
 | [Gradle Conventions Plugin](https://github.com/eygraber/gradle-conventions/) | 0.0.77 | MIT License |
@@ -282,7 +283,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [Moshi](https://github.com/square/moshi/moshi) | 1.15.1 | Apache License 2.0 |
 | [nativeruntime](http://robolectric.org) | 4.11.1 | MIT License |
 | [navigation](https://github.com/alexa/alexa-auto-sdk) | 3.1, 3.3 | Apache License 2.0 |
-| [objenesis](http://objenesis.org) | 3.3 | Apache License 2.0 |
 | [OkHttp](https://github.com/square/okhttp) | 4.12.0 | Apache License 2.0 |
 | [org.conscrypt:conscrypt-openjdk-uber](https://conscrypt.org/) | 2.5.2 | Apache License 2.0 |
 | [org.jetbrains.kotlin:kotlin-stdlib-jdk7](https://kotlinlang.org/) | 1.9.24 | Apache License 2.0 |
