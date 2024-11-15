@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7969-4550
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.7993-4565
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -29,8 +29,8 @@ This offer is valid for a period of three years from the date of distribution of
 | [Android AppCompat Library](https://developer.android.com/jetpack/androidx/releases/appcompat) | 1.0.2, 1.6.1, 1.7.0 | Apache License 2.0 |
 | [Android Arch-Common](https://developer.android.com/topic/libraries/architecture/index.html) | 2.2.0 | Apache License 2.0 |
 | [Android Arch-Runtime](https://developer.android.com/topic/libraries/architecture/index.html) | 2.2.0 | Apache License 2.0 |
-| [Android ConstraintLayout](http://tools.android.com) | 2.1.4 | Apache License 2.0 |
-| [Android ConstraintLayout Core](http://tools.android.com) | 1.0.4 | Apache License 2.0 |
+| [Android ConstraintLayout](http://tools.android.com) | 2.1.4, 2.2.0 | Apache License 2.0 |
+| [Android ConstraintLayout Core](http://tools.android.com) | 1.0.4, 1.1.0 | Apache License 2.0 |
 | [Android DB](https://developer.android.com/topic/libraries/architecture/index.html) | 2.3.0, 2.4.0 | Apache License 2.0 |
 | [Android Emoji2 Compat](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0, 1.3.0 | Apache License 2.0 |
 | [Android Emoji2 Compat view helpers](https://developer.android.com/jetpack/androidx/releases/emoji2#1.0.0-alpha01) | 1.2.0, 1.3.0 | Apache License 2.0 |
@@ -114,7 +114,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [AndroidX Test Library - storage](https://developer.android.com/testing) | 1.4.2 | Apache License 2.0 |
 | [AndroidX Test Library - uiautomator](https://developer.android.com/testing) | 2.3.0 | Apache License 2.0 |
 | [AndroidX Widget ViewPager2](http://developer.android.com/tools/extras/support-library.html) | 1.0.0 | Apache License 2.0 |
-| [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.1 | Apache License 2.0 |
+| [androidx.profileinstaller:profileinstaller](https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.0.0-beta01) | 1.3.1, 1.4.0 | Apache License 2.0 |
 | [androidx.savedstate:savedstate](http://developer.android.com/tools/extras/support-library.html) | 1.2.1 | Apache License 2.0 |
 | [annotations](http://robolectric.org) | 4.11.1 | MIT License |
 | [antlr](http://antlr.org) | 4.10.1 | BSD 3-clause "New" or "Revised" License |
