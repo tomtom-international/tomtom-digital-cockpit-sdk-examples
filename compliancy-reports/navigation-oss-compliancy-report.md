@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.8041-4597
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.8052-4605
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -27,7 +27,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [com.liferay.blade.cli](https://repo1.maven.org/maven2/com/liferay/blade/com.liferay.blade.cli/) | 5.0.0 | Apache License 2.0 |
 | [cppimgui](https://github.com/ocornut/imgui) | v1.63 | MIT License |
 | [Cucumber-Cpp](https://github.com/cucumber/cucumber-cpp) | v0.5 | MIT License |
-| [curl](https://curl.se/) | 7.66.0, 7.87.0, 8.10.0, 8.10.1, 8.2.1, 8.7.1 | curl License |
+| [curl](https://curl.se/) | 7.66.0, 7.87.0, 8.11.0, 8.2.1, 8.7.1 | curl License |
 | [detekt](https://github.com/arturbosch/detekt) | 1.18.1 | Apache License 2.0 |
 | [eidheim/Simple-Web-Server](https://github.com/eidheim/Simple-Web-Server) | v3.0.0-rc2 | MIT License |
 | [exposed-core](https://plugins.gradle.org/m2/org/jetbrains/exposed/exposed-core/) | 0.39.2 | Apache License 2.0 |
@@ -38,14 +38,14 @@ This offer is valid for a period of three years from the date of distribution of
 | [glm](http://glm.g-truc.net) | 0.9.9.4 | MIT License |
 | [gmock-devel](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
 | [Google C++ Testing Framework](https://github.com/google/googletest/) | v1.15.2 | BSD 3-clause "New" or "Revised" License |
-| [Google Mock](http://code.google.com/p/googlemock/) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
+| [Google Mock](http://code.google.com/p/googlemock/) | 1.11.0, 1.8.1 | BSD 3-clause "New" or "Revised" License |
 | [google-gson](https://github.com/google/gson) | 2.10 | Apache License 2.0 |
 | [google-maps-services-java](http://github.com/googlemaps/google-maps-services-java/) | v0.2.9 | Apache License 2.0 |
 | [google/breakpad](https://github.com/google/breakpad) | v2022.07.12 | BSD 3-clause "New" or "Revised" License |
 | [google/shaka-packager](https://github.com/write-for-CHRIST/node-shaka-packager#readme) | v1.4.0 | BSD 3-clause "New" or "Revised" License |
 | [GPUOpen-Tools/Compressonator](https://github.com/GPUOpen-Tools/Compressonator) | V2.3.2953 | MIT License |
 | [gradle](https://gradle.org) | 7.4.2 | Apache License 2.0 |
-| [greg7mdp/parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) | 1.3.8, 1.31 | Apache License 2.0 |
+| [greg7mdp/parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) | 1.31 | Apache License 2.0 |
 | [gsl-lite](https://github.com/gsl-lite/gsl-lite) | 0.39.0 | MIT License |
 | [gsl-lite/gsl-lite](http://github.com/martinmoene/gsl-lite/) | v0.39.0 | MIT License |
 | [gtest](https://github.com/google/googletest) | 1.8.1 | (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License) |
@@ -72,13 +72,11 @@ This offer is valid for a period of three years from the date of distribution of
 | [kotlinx-serialization-json](https://github.com/Kotlin/kotlinx.serialization) | 1.5.0 | Apache License 2.0 |
 | [kotlinx.html JVM](https://github.com/Kotlin/kotlinx.html) | 0.8.0 | Apache License 2.0 |
 | [ktlint-gradle]() | 10.2.0 | Apache License 2.0 |
-| [libboost-type-erasure1.74.0](http://www.boost.org/libs/iostreams/) | 1.74.0 | Boost Software License 1.0 |
 | [libboost1.81-dev](https://www.boost.org/) | 1.81.0 | Boost Software License 1.0 |
 | [libglfw3-doc](http://www.glfw.org/) | 3.3.2 | zlib License |
 | [libjpeg](https://www.ijg.org) | 9d | Independent JPEG Group License |
 | [libpng](http://www.libpng.org/pub/png/libpng.html) | 1.6.36, v1.6.43 | PNG Reference Library version 2 |
 | [libprotozero-dev](https://github.com/mapbox/protozero) | 1.6.3 | BSD 2-clause FreeBSD License |
-| [libspatialindex](http://libspatialindex.github.com) | 2.0.0 | MIT License |
 | [libtext-template-perl](https://metacpan.org/release/Text-Template/) | 1.46 | OpenSSL Combined License |
 | [libunibreak](https://github.com/adah1972/libunibreak) | libunibreak_4_2-1 | zlib License |
 | [llvm](https://crates.io/crates/llvm) | 0.0.1 | MIT License |
@@ -88,6 +86,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [mapcode](http://www.mapcode.com/) | 2.5.2 | Apache License 2.0 |
 | [MockK](http://mockk.io) | 1.12.1 | Apache License 2.0 |
 | [multimethods](https://pypi.python.org/pypi/multimethods/) | 1.0.0 | MIT License |
+| [nagisa/rust_tracy_client](https://github.com/nagisa/rust_tracy_client) | tracy-client-v0.14.1 | Apache License 2.0 |
 | [nemtrif/utfcpp](https://github.com/nemtrif/utfcpp) | 3.1.2 | Boost Software License 1.0 |
 | [nghttp2](https://nghttp2.org) | v1.58.0, v1.62.0 | MIT License |
 | [Open Computer Vision Library (OpenCV)](http://opencv.org/) | 4.2.0, 4.5.2 | BSD 3-clause "New" or "Revised" License |
@@ -116,7 +115,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [TinyXML2](https://github.com/leethomason/tinyxml2) | 8.1.0+really8.0.0 | (zlib License OR libpng License) |
 | [TomTom Maps SDK](https://developer.tomtom.com/maps-sdk-web/downloads) | 4.44.7 | Apache License 2.0 |
 | [tracy](https://github.com/wolfpld/tracy) | 0.8.1, 0.8.2.1 | BSD 3-clause "New" or "Revised" License |
-| [tracy-client-sys](https://github.com/nagisa/rust_tracy_client) | 0.13.0, 0.18.0, 0.7.0 | (MIT License OR Apache License 2.0) |
+| [tracy-client-sys](https://github.com/nagisa/rust_tracy_client) | 0.13.0, 0.7.0 | (MIT License OR Apache License 2.0) |
 | [travisdoor/bl](https://github.com/travisdoor/bl) | 0.10.0 | MIT License |
 | [vladimir](https://github.com/vdeturckheim/vladimir#readme) | 2.0.2 | ISC License |
 | [vtzero](https://pypi.org/project/vtzero/) | 0.0.1b3 | MIT License |
