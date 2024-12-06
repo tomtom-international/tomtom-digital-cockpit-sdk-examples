@@ -11,6 +11,7 @@
 
 package com.example.ivi.example.applauncher.common.webapp
 
+import android.os.Bundle
 import com.tomtom.ivi.appsuite.appstore.api.common.model.App
 import com.tomtom.tools.android.api.resourceresolution.drawable.DrawableResolver
 import com.tomtom.tools.android.api.resourceresolution.string.StringResolver
@@ -22,6 +23,7 @@ class WebApp(
     override val displayName: StringResolver,
     override val summary: StringResolver,
     override val icon: DrawableResolver,
+    override val extras: Bundle? = null,
 ) : App {
 
     override val id: String = "${this::class.java.simpleName}.$url"
