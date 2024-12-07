@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.8089-4635
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.8094-4639
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -143,6 +143,7 @@ This offer is valid for a period of three years from the date of distribution of
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 3.0 | BSD 3-clause "New" or "Revised" License |
 | [hiredis](http://github.com/antirez/hiredis) | v1.2.0 | BSD 3-clause "New" or "Revised" License |
+| [HiveMQ MQTT Client](https://github.com/hivemq/hivemq-mqtt-client) | 1.3.4 | Apache License 2.0 |
 | [HowardHinnant/date](https://github.com/HowardHinnant/date) | 2.4.1 | MIT License |
 | [ICU for C/C++ (ICU4C)](https://github.com/unicode-org/icu/) | 63.1, 72-1, release-63-rc | ICU License |
 | [ImageMagick](http://www.imagemagick.org/) | 6.7.0-9, 6.9.0 | ImageMagick License |
@@ -247,8 +248,10 @@ This offer is valid for a period of three years from the date of distribution of
 | [Quarkus - Dev tools - Project Core Extension Codestarts](https://github.com/quarkusio/quarkus/quarkus-build-parent/quarkus-devtools-all/quarkus-project-core-extension-codestarts) | 2.16.12.Final | Apache License 2.0 |
 | [rapidjson](http://rapidjson.org/) | 1.1.0, 1.1.1 | (MIT License AND MIT Not Evil License AND BSD 3-clause "New" or "Revised" License) |
 | [RATreeView](https://github.com/Augustyniak/RATreeView) | 2.1.2 | MIT License |
+| [reactive-streams](http://www.reactive-streams.org/) | 1.0.4 | MIT No Attribution |
 | [Redacted Compiler Plugin Annotations](https://github.com/ZacSweers/redacted-compiler-plugin/) | 1.4.0 | Apache License 2.0 |
 | [redis - Official](http://redis.io) | 7.2.4, 7.2.6 | BSD 3-clause "New" or "Revised" License |
+| [RxJava](http://reactivex.io/) | 2.2.21 | Apache License 2.0 |
 | [SavedState Kotlin Extensions](https://developer.android.com/jetpack/androidx) | 1.2.1 | Apache License 2.0 |
 | [semver](https://github.com/swiftzer/semver) | 1.1.1 | MIT License |
 | [Sentry SDK](https://github.com/getsentry/sentry-java) | 7.14.0 | MIT License |
