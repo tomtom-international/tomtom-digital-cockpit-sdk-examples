@@ -1,4 +1,4 @@
-# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.8102-4645
+# OSS report for TomTom _Digital Cockpit SDK_ version 1.0.8105-4648
 
 TomTom will provide on request the source code of software licensed under GPL, LGPL and certain other open source licenses where this is a requirement of the applicable license terms.
 
@@ -204,7 +204,6 @@ This offer is valid for a period of three years from the date of distribution of
 | [google/mobly-bundled-snippets]() | 20230602-snapshot-ce2fd0fc | Apache License 2.0 |
 | [googlei18n/libphonenumber](https://github.com/googlei18n/libphonenumber) | 8.12.34 | Apache License 2.0 |
 | [Gradle](https://gradle.org) | 7.6.4, 8.6.0 | Apache License 2.0 |
-| [Gradle Conventions Plugin](https://github.com/eygraber/gradle-conventions/) | 0.0.77 | MIT License |
 | [Guava InternalFutureFailureAccess and InternalFutures](https://github.com/google/guava/failureaccess) | 1.0.1 | Apache License 2.0 |
 | [Guava ListenableFuture only](https://mvnrepository.com/artifact/com.google.guava/listenablefuture) | 1.0, 9999.0-empty-to-avoid-conflict-with-guava | Apache License 2.0 |
 | [Hamcrest](http://hamcrest.org/) | 1.3, v2.2 | BSD 3-clause "New" or "Revised" License |
