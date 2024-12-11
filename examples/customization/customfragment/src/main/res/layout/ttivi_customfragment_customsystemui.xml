@@ -27,49 +27,54 @@
             type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
         android:id="@+id/ttivi_systemui"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipChildren="false"
-        tools:ignore="ContentDescription">
+        android:layout_height="match_parent">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
-            android:id="@+id/example_customization_task_panel_stack_container"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:minWidth="800dp"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintLeft_toRightOf="@id/example_customization_menu_container"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}" />
-
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.DismissablePanelListContainer
-            android:id="@+id/example_notification_container"
-            style="@style/TtiviNotificationPanelContainer"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipChildren="false"
-            android:clipToPadding="false"
-            android:layout_marginStart="?attr/tt_spacing_10"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintLeft_toRightOf="@id/example_customization_menu_container"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviIgnoreTouchEvents="@{panelRegistry.notificationPanelData.activeNotificationPanels.isEmpty()}"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{panelRegistry.notificationPanelData.activeNotificationPanels}"
-            auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationpanel_subcontainer" />
+            tools:ignore="ContentDescription">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
-            android:id="@+id/example_customization_menu_container"
-            android:layout_width="?attr/ttivi_mainmenu_panel_size"
-            android:layout_height="0dp"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintStart_toStartOf="parent"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
+                android:id="@+id/example_customization_task_panel_stack_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minWidth="800dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/example_customization_menu_container"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.DismissablePanelListContainer
+                android:id="@+id/example_notification_container"
+                style="@style/TtiviNotificationPanelContainer"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_marginStart="?attr/tt_spacing_10"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/example_customization_menu_container"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviIgnoreTouchEvents="@{panelRegistry.notificationPanelData.activeNotificationPanels.isEmpty()}"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.notificationPanelData.activeNotificationPanels}"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationpanel_subcontainer" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/example_customization_menu_container"
+                android:layout_width="?attr/ttivi_mainmenu_panel_size"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintStart_toStartOf="parent"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
 </layout>

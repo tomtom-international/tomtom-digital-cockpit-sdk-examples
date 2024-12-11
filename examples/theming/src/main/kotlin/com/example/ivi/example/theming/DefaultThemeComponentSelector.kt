@@ -37,13 +37,6 @@ private val defaultThemeComponents: Set<IviThemeComponent> =
         customStylesThemeComponents.single(),
         customTextAppearanceThemeComponents.single(),
         customTextSizeThemeComponents.single(),
-        // NavApp
-        customNavAppDrivingUiStyleThemeComponents.single(),
-        customNavAppDrivingUiHorizonPanelStyleThemeComponents.single(),
-        customNavAppMapStyleThemeComponents.single(),
-        customNavAppResponsiveSpacingThemeComponents.single(),
-        customNavAppSearchUiStyleThemeComponents.single(),
-        customNavAppShortcutStripStyleThemeComponents.single(),
     )
 
 @OptIn(IviExperimental::class)

@@ -12,12 +12,6 @@
 package com.example.ivi.example.theming
 
 import com.tomtom.ivi.platform.framework.api.common.annotations.IviExperimental
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppDrivingUiHorizonPanelStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppDrivingUiStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppMapStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppResponsiveSpacingThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppSearchUiStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppShortcutStripStyleThemeCategory
 import com.tomtom.ivi.platform.theming.api.common.attributes.IviThemeComponent
 import com.tomtom.ivi.platform.theming.api.common.attributes.animatorThemeCategory
 import com.tomtom.ivi.platform.theming.api.common.attributes.colorThemeCategory
@@ -154,66 +148,3 @@ val customTextAppearanceThemeComponents:
 val customTextSizeThemeComponents:
     Set<IviThemeComponent.WithStylingFlavorType<CustomTextSizeThemeCategoryStylingFlavor>> =
         textSizeThemeCategory.createCustomThemeComponents()
-
-/**
- * Custom __NavApp DrivingUi Style__ [IviThemeComponent]s.
- */
-@OptIn(IviExperimental::class)
-val customNavAppDrivingUiStyleThemeComponents:
-    Set<IviThemeComponent.WithStylingFlavorType<
-            CustomNavAppDrivingUiStyleThemeCategoryStylingFlavor,
-            >,
-        > =
-        navAppDrivingUiStyleThemeCategory.createCustomThemeComponents()
-
-/**
- * Custom __NavApp DrivingUi HorizontalPanel Style__ [IviThemeComponent]s.
- */
-@OptIn(IviExperimental::class)
-val customNavAppDrivingUiHorizonPanelStyleThemeComponents:
-    Set<IviThemeComponent.WithStylingFlavorType<
-            CustomNavAppDrivingUiHorizonPanelStyleThemeCategoryStylingFlavor,
-            >,
-        > =
-        navAppDrivingUiHorizonPanelStyleThemeCategory.createCustomThemeComponents()
-
-/**
- * Custom __NavApp Map Style__ [IviThemeComponent]s.
- */
-@OptIn(IviExperimental::class)
-val customNavAppMapStyleThemeComponents:
-    Set<IviThemeComponent.WithStylingFlavorType<CustomNavAppMapStyleThemeCategoryStylingFlavor>> =
-        navAppMapStyleThemeCategory.createCustomThemeComponents()
-
-/**
- * Custom __NavApp Shortcut Strip Style__ [IviThemeComponent]s.
- */
-@OptIn(IviExperimental::class)
-val customNavAppShortcutStripStyleThemeComponents:
-    Set<IviThemeComponent.WithStylingFlavorType<
-            CustomNavAppShortcutStripStyleThemeCategoryStylingFlavor,
-            >,
-        > =
-        navAppShortcutStripStyleThemeCategory.createCustomThemeComponents()
-
-/**
- * Custom __NavApp Responsive Spacing__ [IviThemeComponent]s.
- */
-@OptIn(IviExperimental::class)
-val customNavAppResponsiveSpacingThemeComponents:
-    Set<IviThemeComponent.WithStylingFlavorType<
-            CustomNavAppResponsiveSpacingThemeCategoryStylingFlavor,
-            >,
-        > =
-        navAppResponsiveSpacingThemeCategory.createCustomThemeComponents()
-
-/**
- * Custom __NavApp SearchUi style__ [IviThemeComponent]s.
- */
-@OptIn(IviExperimental::class)
-val customNavAppSearchUiStyleThemeComponents:
-    Set<IviThemeComponent.WithStylingFlavorType<
-            CustomNavAppSearchUiStyleThemeCategoryStylingFlavor,
-            >,
-        > =
-        navAppSearchUiStyleThemeCategory.createCustomThemeComponents()

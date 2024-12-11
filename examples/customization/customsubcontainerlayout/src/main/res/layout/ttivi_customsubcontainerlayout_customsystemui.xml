@@ -25,37 +25,42 @@
             type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
         android:id="@+id/ttivi_systemui"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipChildren="false"
-        tools:ignore="ContentDescription">
+        android:layout_height="match_parent">
 
-        <!--
-          This panel container is using the custom sub-container layout,
-          note the `ttiviSubContainerLayoutId` parameter that points to the custom layout.
-        -->
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
-            android:id="@+id/example_systemui_task_panel_stack_container"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintLeft_toRightOf="@id/example_systemui_menu_container"
-            auto:layout_constraintRight_toRightOf="parent"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}"
-            auto:ttiviSubContainerLayoutId="@layout/ttivi_customsubcontainerlayout_custom_subcontainer" />
+            android:clipChildren="false"
+            tools:ignore="ContentDescription">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
-            android:id="@+id/example_systemui_menu_container"
-            android:layout_width="?attr/ttivi_mainmenu_panel_size"
-            android:layout_height="0dp"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintStart_toStartOf="parent"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{panelRegistry.mainMenuPanel}" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--
+              This panel container is using the custom sub-container layout,
+              note the `ttiviSubContainerLayoutId` parameter that points to the custom layout.
+            -->
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
+                android:id="@+id/example_systemui_task_panel_stack_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toRightOf="@id/example_systemui_menu_container"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.taskPanelStackData}"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_customsubcontainerlayout_custom_subcontainer" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/example_systemui_menu_container"
+                android:layout_width="?attr/ttivi_mainmenu_panel_size"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintStart_toStartOf="parent"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.mainMenuPanel}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
 </layout>

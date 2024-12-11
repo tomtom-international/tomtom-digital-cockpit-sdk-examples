@@ -15,12 +15,6 @@ import com.example.ivi.example.theming.CustomAnimatorThemeCategoryStylingFlavor.
 import com.example.ivi.example.theming.CustomColorThemeCategoryStylingFlavor.CUSTOM_DARK
 import com.example.ivi.example.theming.CustomColorThemeCategoryStylingFlavor.CUSTOM_LIGHT
 import com.tomtom.ivi.platform.framework.api.common.annotations.IviExperimental
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppDrivingUiHorizonPanelStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppDrivingUiStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppMapStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppResponsiveSpacingThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppSearchUiStyleThemeCategory
-import com.tomtom.ivi.platform.navappcomponents.api.common.attributes.navAppShortcutStripStyleThemeCategory
 import com.tomtom.ivi.platform.theming.api.common.attributes.IviThemeCategory
 import com.tomtom.ivi.platform.theming.api.common.attributes.IviThemeCategoryStylingFlavor
 import com.tomtom.ivi.platform.theming.api.common.attributes.animatorThemeCategory
@@ -254,90 +248,6 @@ enum class CustomTextSizeThemeCategoryStylingFlavor(
 
     /**
      * The custom text size flavor.
-     */
-    CUSTOM("custom", "Custom"),
-}
-
-/**
- * Defines the [CUSTOM] flavor for [navAppDrivingUiStyleThemeCategory].
- */
-enum class CustomNavAppDrivingUiStyleThemeCategoryStylingFlavor(
-    override val componentId: String,
-    override val styleFlavorName: String,
-) : CustomThemeCategoryStylingFlavor {
-
-    /**
-     * The custom NavApp DrivingUi style flavor.
-     */
-    CUSTOM("custom", "Custom"),
-}
-
-/**
- * Defines the [CUSTOM] flavor for [navAppDrivingUiHorizonPanelStyleThemeCategory].
- */
-enum class CustomNavAppDrivingUiHorizonPanelStyleThemeCategoryStylingFlavor(
-    override val componentId: String,
-    override val styleFlavorName: String,
-) : CustomThemeCategoryStylingFlavor {
-
-    /**
-     * The custom NavApp DrivingUi Horizon Panel style flavor.
-     */
-    CUSTOM("custom", "Custom"),
-}
-
-/**
- * Defines the [CUSTOM] flavor for [navAppMapStyleThemeCategory].
- */
-enum class CustomNavAppMapStyleThemeCategoryStylingFlavor(
-    override val componentId: String,
-    override val styleFlavorName: String,
-) : CustomThemeCategoryStylingFlavor {
-
-    /**
-     * The custom NavApp map style flavor.
-     */
-    CUSTOM("custom", "Custom"),
-}
-
-/**
- * Defines the [CUSTOM] flavor for [navAppShortcutStripStyleThemeCategory].
- */
-enum class CustomNavAppShortcutStripStyleThemeCategoryStylingFlavor(
-    override val componentId: String,
-    override val styleFlavorName: String,
-) : CustomThemeCategoryStylingFlavor {
-
-    /**
-     * The custom NavApp Shortcut Strip style flavor.
-     */
-    CUSTOM("custom", "Custom"),
-}
-
-/**
- * Defines the [CUSTOM] flavor for [navAppResponsiveSpacingThemeCategory].
- */
-enum class CustomNavAppResponsiveSpacingThemeCategoryStylingFlavor(
-    override val componentId: String,
-    override val styleFlavorName: String,
-) : CustomThemeCategoryStylingFlavor {
-
-    /**
-     * The custom NavApp responsive spacing flavor.
-     */
-    CUSTOM("custom", "Custom"),
-}
-
-/**
- * Defines the [CUSTOM] flavor for [navAppSearchUiStyleThemeCategory].
- */
-enum class CustomNavAppSearchUiStyleThemeCategoryStylingFlavor(
-    override val componentId: String,
-    override val styleFlavorName: String,
-) : CustomThemeCategoryStylingFlavor {
-
-    /**
-     * The custom NavApp SearchUi style flavor.
      */
     CUSTOM("custom", "Custom"),
 }

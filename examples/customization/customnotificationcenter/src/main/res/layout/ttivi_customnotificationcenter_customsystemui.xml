@@ -36,47 +36,52 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
         android:id="@+id/ttivi_systemui"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipChildren="false"
-        tools:ignore="ContentDescription">
+        android:layout_height="match_parent">
 
-        <!--
-          This panel container uses a custom header and custom empty state layout.
-          Note the `ttiviHeaderLayoutId` and `ttiviEmptyStateLayoutId` parameters that point to
-          custom layouts.
-        -->
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.NotificationCenterPanelContainer
-            android:id="@+id/example_systemui_notificationcenter_container"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:clipChildren="false"
-            android:orientation="vertical"
-            auto:layout_constraintBottom_toTopOf="@id/example_systemui_control_center_container"
-            auto:layout_constraintLeft_toLeftOf="parent"
-            auto:layout_constraintRight_toRightOf="parent"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviEmptyStateLayoutId="@layout/ttivi_customnotificationcenter_emptystate"
-            auto:ttiviHeaderLayoutId="@layout/ttivi_customnotificationcenter_header"
-            auto:ttiviOnCloseClicked="@{() -> notificationDisplayViewModel.closeNotificationCenter()}"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{notificationDisplayViewModel.notificationCenterPanels}"
-            auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationcenter_notificationpanel_subcontainer"
-            auto:ttiviUseStockNotificationPanelAnimations="@{true}"
-            auto:visibleIf="@{notificationDisplayViewModel.isNotificationCenterContainerVisible}" />
+            tools:ignore="ContentDescription">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
-            android:id="@+id/example_systemui_control_center_container"
-            android:layout_width="0dp"
-            android:layout_height="?attr/ttivi_controlcenter_panel_height"
-            android:background="?attr/ttivi_mainmenu_color"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintLeft_toLeftOf="parent"
-            auto:layout_constraintRight_toRightOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{controlCenterPanelViewModel.getControlCenterPanel(ControlCenterPanel.Type.SYSTEM_STATUS_DRIVER)}" />
+            <!--
+              This panel container uses a custom header and custom empty state layout.
+              Note the `ttiviHeaderLayoutId` and `ttiviEmptyStateLayoutId` parameters that point to
+              custom layouts.
+            -->
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.NotificationCenterPanelContainer
+                android:id="@+id/example_systemui_notificationcenter_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipChildren="false"
+                android:orientation="vertical"
+                auto:layout_constraintBottom_toTopOf="@id/example_systemui_control_center_container"
+                auto:layout_constraintLeft_toLeftOf="parent"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviEmptyStateLayoutId="@layout/ttivi_customnotificationcenter_emptystate"
+                auto:ttiviHeaderLayoutId="@layout/ttivi_customnotificationcenter_header"
+                auto:ttiviOnCloseClicked="@{() -> notificationDisplayViewModel.closeNotificationCenter()}"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{notificationDisplayViewModel.notificationCenterPanels}"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_systemui_notificationcenter_notificationpanel_subcontainer"
+                auto:ttiviUseStockNotificationPanelAnimations="@{true}"
+                auto:visibleIf="@{notificationDisplayViewModel.isNotificationCenterContainerVisible}" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/example_systemui_control_center_container"
+                android:layout_width="0dp"
+                android:layout_height="?attr/ttivi_controlcenter_panel_height"
+                android:background="?attr/ttivi_mainmenu_color"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintLeft_toLeftOf="parent"
+                auto:layout_constraintRight_toRightOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{controlCenterPanelViewModel.getControlCenterPanel(ControlCenterPanel.Type.SYSTEM_STATUS_DRIVER)}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
 </layout>

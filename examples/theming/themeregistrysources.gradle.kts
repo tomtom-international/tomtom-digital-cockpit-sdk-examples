@@ -99,13 +99,6 @@ val customMediaThemeRegistrySource by extra {
     )
 }
 
-val customNavAppComponentsThemeRegistrySource by extra {
-    IviThemeRegistrySourceConfig(
-        registrySourceBuilderName = "CustomNavAppComponentsThemeRegistrySourceBuilder",
-        implementationModule = themingModule,
-    )
-}
-
 val customSystemStatusThemeRegistrySource by extra {
     IviThemeRegistrySourceConfig(
         registrySourceBuilderName = "CustomSystemStatusThemeRegistrySourceBuilder",

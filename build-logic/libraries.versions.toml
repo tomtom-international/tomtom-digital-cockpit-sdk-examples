@@ -14,7 +14,7 @@
 [versions]
 # TomTom Digital Cockpit platform.
 # This line is being parsed using a regex. And should not be altered carelessly.
-iviPlatform = "1.0.8105"
+iviPlatform = "1.0.8106"
 
 examplesAppMinSdk = "29"
 examplesAppTargetSdk = "34"
@@ -59,8 +59,6 @@ iviPlatformLocationSimulationApiServiceLocationSimulation = { module = "com.tomt
 iviPlatformMainmenuApiCommonAttributes = { module = "com.tomtom.ivi.platform:platform_mainmenu_api_common_attributes", version.ref = "iviPlatform" }
 iviPlatformMainmenuApiTestingFrontend = { module = "com.tomtom.ivi.platform:platform_mainmenu_api_testing_frontend", version.ref = "iviPlatform" }
 iviPlatformMainmenuApiThemingStock = { module = "com.tomtom.ivi.platform:platform_mainmenu_api_theming_stock", version.ref = "iviPlatform" }
-iviPlatformNavappcomponentsApiCommonAttributes = { module = "com.tomtom.ivi.platform:platform_navappcomponents_api_common_attributes", version.ref = "iviPlatform" }
-iviPlatformNavappcomponentsApiThemingStock = { module = "com.tomtom.ivi.platform:platform_navappcomponents_api_theming_stock", version.ref = "iviPlatform" }
 iviPlatformRecentcallsApiServiceRecentcalls = { module = "com.tomtom.ivi.platform:platform_recentcalls_api_service_recentcalls", version.ref = "iviPlatform" }
 iviPlatformSettingsApiServicesSettingsManagement = { module = "com.tomtom.ivi.platform:platform_settings_api_service_settingsmanagement", version.ref = "iviPlatform" }
 iviPlatformSystemuiApiCommonAttributes = { module = "com.tomtom.ivi.platform:platform_systemui_api_common_attributes", version.ref = "iviPlatform" }

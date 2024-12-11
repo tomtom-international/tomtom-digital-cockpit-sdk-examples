@@ -27,33 +27,38 @@
             type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
     </data>
 
-    <LinearLayout
+    <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
         android:id="@+id/ttivi_systemui"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
-            android:id="@+id/example_customization_custompanel_container"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{viewModel.customPanel}" />
+            android:orientation="horizontal">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
-            android:id="@+id/example_customization_menu_container"
-            android:layout_width="?attr/ttivi_mainmenu_panel_size"
-            android:layout_height="match_parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/example_customization_custompanel_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{viewModel.customPanel}" />
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
-            android:id="@+id/example_customization_task_panel_stack_container"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:minWidth="800dp"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{panelRegistry.iviPanelRegistry.taskPanelStackData}" />
-    </LinearLayout>
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/example_customization_menu_container"
+                android:layout_width="?attr/ttivi_mainmenu_panel_size"
+                android:layout_height="match_parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.TaskPanelStackContainer
+                android:id="@+id/example_customization_task_panel_stack_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minWidth="800dp"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{panelRegistry.iviPanelRegistry.taskPanelStackData}" />
+        </LinearLayout>
+    </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
 </layout>

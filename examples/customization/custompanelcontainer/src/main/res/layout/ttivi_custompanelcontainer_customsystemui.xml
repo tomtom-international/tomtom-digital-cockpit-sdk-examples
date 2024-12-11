@@ -25,33 +25,38 @@
             type="com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.PanelContainerContext" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer
         android:id="@+id/ttivi_systemui"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipChildren="false"
-        tools:ignore="ContentDescription">
+        android:layout_height="match_parent">
 
-        <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
-            android:id="@+id/example_systemui_menu_container"
-            android:layout_width="?attr/ttivi_mainmenu_panel_size"
-            android:layout_height="0dp"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintStart_toStartOf="parent"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
-
-        <com.example.ivi.example.customization.custompanelcontainer.container.DualPanelContainer
-            android:id="@+id/example_systemui_dualpanelcontainer"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            auto:layout_constraintBottom_toBottomOf="parent"
-            auto:layout_constraintEnd_toEndOf="parent"
-            auto:layout_constraintStart_toEndOf="@id/example_systemui_menu_container"
-            auto:layout_constraintTop_toTopOf="parent"
-            auto:ttiviPanelContainerContext="@{panelContainerContext}"
-            auto:ttiviPanelContainerData="@{viewModel.dualPanelData}"
-            auto:ttiviSubContainerLayoutId="@layout/ttivi_custompanelcontainer_dualsubcontainer" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:clipChildren="false"
+            tools:ignore="ContentDescription">
+
+            <com.tomtom.ivi.platform.systemui.api.common.systemuihost.panelcontainer.SinglePanelContainer
+                android:id="@+id/example_systemui_menu_container"
+                android:layout_width="?attr/ttivi_mainmenu_panel_size"
+                android:layout_height="0dp"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintStart_toStartOf="parent"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{viewModel.menuPanel}" />
+
+            <com.example.ivi.example.customization.custompanelcontainer.container.DualPanelContainer
+                android:id="@+id/example_systemui_dualpanelcontainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                auto:layout_constraintBottom_toBottomOf="parent"
+                auto:layout_constraintEnd_toEndOf="parent"
+                auto:layout_constraintStart_toEndOf="@id/example_systemui_menu_container"
+                auto:layout_constraintTop_toTopOf="parent"
+                auto:ttiviPanelContainerContext="@{panelContainerContext}"
+                auto:ttiviPanelContainerData="@{viewModel.dualPanelData}"
+                auto:ttiviSubContainerLayoutId="@layout/ttivi_custompanelcontainer_dualsubcontainer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.tomtom.tools.android.api.uicontrols.toast.TtToastContainer>
 </layout>

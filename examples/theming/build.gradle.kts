@@ -27,7 +27,6 @@ val customCommunicationsThemeRegistrySource: IviThemeRegistrySourceConfig by pro
 val customHvacThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
 val customMainMenuThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
 val customMediaThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
-val customNavAppComponentsThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
 val customSystemStatusThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
 val customSystemUiThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
 val defaultThemeComponentsSelectorThemeRegistrySource: IviThemeRegistrySourceConfig by project.extra
@@ -56,7 +55,6 @@ ivi {
                         customHvacThemeRegistrySource,
                         customMainMenuThemeRegistrySource,
                         customMediaThemeRegistrySource,
-                        customNavAppComponentsThemeRegistrySource,
                         customSystemStatusThemeRegistrySource,
                         customSystemUiThemeRegistrySource,
                         // While new theming sources are added, this source selects the defined
@@ -89,8 +87,6 @@ dependencies {
     implementation(libraries.iviAppsuiteSystemStatusApiThemingStock)
     implementation(libraries.iviPlatformMainmenuApiCommonAttributes)
     implementation(libraries.iviPlatformMainmenuApiThemingStock)
-    implementation(libraries.iviPlatformNavappcomponentsApiCommonAttributes)
-    implementation(libraries.iviPlatformNavappcomponentsApiThemingStock)
     implementation(libraries.iviPlatformSystemuiApiCommonAttributes)
     implementation(libraries.iviPlatformSystemuiApiThemingStock)
     implementation(libraries.iviPlatformThemingApiCommonRegistry)
